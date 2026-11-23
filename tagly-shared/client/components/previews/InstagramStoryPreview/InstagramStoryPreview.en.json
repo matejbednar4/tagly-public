@@ -1,0 +1,8 @@
+{
+  "//": "Used in: tagly-shared/client/components/previews/InstagramStoryPreview (instagramStoryPreview namespace). Compact 'time ago' for when a story was posted + the withheld-media placeholder string.",
+  "justNow": "now",
+  "minutesAgo": "{{count}}m",
+  "hoursAgo": "{{count}}h",
+  "daysAgo": "{{count}}d",
+  "mediaWithheld": "Can't be shown. May contain copyrighted music. Post without music to share."
+}

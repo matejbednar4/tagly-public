@@ -1,0 +1,6 @@
+{
+  "//": "Used in: tagly-shared/client/services/media/pickMedia.ts (pickMedia namespace). Image picker + banner cropper strings.",
+  "cropBannerTitle": "Crop banner",
+  "pickerErrorTitle": "Couldn't open photos",
+  "pickerErrorBody": "Please try again."
+}

@@ -1,0 +1,142 @@
+{
+  "//": "Used in: src/app/[lng]/cafes/page.tsx — hero, problem cards, how-it-works flow, examples, why-cafes, use cases, FAQ, internal links, CTA. faq.costInline/influencerInline render with <Trans>.",
+  "meta": {
+    "title": "Tagly pro kavárny | Z fotky kávy lokální marketing",
+    "description": "Marketing kaváren, který funguje v okolí. Zákazníci přidávají na Instagram story se svou kávou a vaším prostorem a vy platíte jen za dosah mezi lidmi, kteří se u vás můžou zastavit. Bez reklam, bez influencerů, bez práce navíc."
+  },
+  "hero": {
+    "title": "Vaši zákazníci si kávu fotí tak jako tak. Teď z toho může mít něco i vaše kavárna.",
+    "intro": "Latte art, vitrína s dezerty, útulný interiér. Tohle vaši zákazníci fotí při každé návštěvě a většina těch fotek skončí v galerii v mobilu. Tagly jim dá důvod jednu z nich přidat na Instagram jako story, na kterém je vidět jméno vaší kavárny. Fotka, která by nikam nedošla, se tak dostane k lidem, co bydlí a pracují pár ulic od vás."
+  },
+  "broken": {
+    "title": "Kavárny mají jiný problém",
+    "intro": "Kavárny žijí z nízkých marží a malých útrat. Většina marketingových kanálů je stavěná pro podniky, které si můžou dovolit za jednoho zákazníka utratit hodně. Když je typická objednávka jedna káva, tahle matematika nevychází.",
+    "items": [
+      {
+        "title": "Za reklamu platíte, i když poblíž nikdo není",
+        "description": "Instagram i Google si účtují za impresi nebo za proklik bez ohledu na to, jak daleko ten člověk bydlí. Při kavárenských cenách se prokliky nasčítají dávno předtím, než z nich někdo doopravdy přijde. Potřebujete kanál, kde se platí za dosah mezi lidmi, kteří se u vás můžou zastavit.",
+        "link": "Porovnejte Tagly s instagramovými reklamami"
+      },
+      {
+        "title": "Influencer přivede sledující, ne zákazníky",
+        "description": "Food bloger s 50 000 sledujícími vám nasype lajky, jenže většina jeho publika k vám nemá jak dojít. Potřebujete lidi, kteří se u vás můžou zítra ráno cestou do práce zastavit, ne publikum rozeseté po celé republice.",
+        "link": "Porovnejte Tagly s influencer marketingem"
+      },
+      {
+        "title": "Růst vám dělají stálí zákazníci",
+        "description": "Kavárny rostou z doporučení a z lidí, kteří se vracejí. To nejcennější, co máte, je host, který k vám chodí každé ráno a řekne o vás kolegům. Jen dosud nebylo jak takové chování podpořit a ocenit. Přesně to dělá Tagly."
+      }
+    ]
+  },
+  "how": {
+    "title": "Jak Tagly funguje v kavárně",
+    "intro": "Tagly nic nemění na tom, jak kavárna funguje. Zákazník přijde, dá si to svoje a vyfotí si to. Tagly k tomu přidá důvod, proč fotku opravdu zveřejnit.",
+    "steps": [
+      {
+        "title": "Zákazník si dá svou obvyklou kávu",
+        "description": "Vaši kavárnu našel na mapě v aplikaci Tagly, i s odhadem, kolik si může za story z návštěvy vydělat. Objedná si jako vždycky a zaplatí plnou cenu. Na jeho návštěvě se nemění nic."
+      },
+      {
+        "title": "Přidá story na Instagram",
+        "description": "Detail latte art, dezert, výhled z jeho oblíbeného místa u okna. Označí u toho vaši kavárnu nebo přidá polohovou nálepku, aby byl váš název na story vidět. Zveřejní ho proto, že ví, že ho za to Tagly odmění."
+      },
+      {
+        "title": "Story uvidí jeho sledující z okolí",
+        "description": "Zhruba za den Instagram nahlásí, kolik lidí story vidělo, a Tagly ho ocení podle toho dosahu a podle toho, jak blízko vaší kavárně to publikum bydlí. Zákazník dostane odměnu z vašeho rozpočtu. Sdílet vás může kdokoli, ale platíte jen za lidi, kteří se u vás opravdu můžou zastavit."
+      }
+    ],
+    "fullGuide": "Podívejte se na celý návod krok za krokem"
+  },
+  "examples": {
+    "title": "Jaká story budou vaši zákazníci sdílet",
+    "intro": "Kávu i dezerty si vaši zákazníci fotí tak jako tak, jen to nikdy nezveřejní. Tagly jim dá důvod jednu fotku dát na Instagram i s názvem vaší kavárny.",
+    "alts": [
+      "Dvě latte s lístkovým motivem na tmavém dřevěném stole v Green House Cafe",
+      "Brunch s míchanými vejci, toastem a čerstvým ovocem u bazénu v Good Morning Cafe",
+      "Francouzský toast s čerstvými bobulemi, fíky a šlehačkou v Main Street Cafe",
+      "Latte art, fialové taro latte a dezert red velvet v Coffee Corner",
+      "Ledové kávy a kousek quiche na venkovním stole na terase v Daily Grind Cafe",
+      "Wafle se zmrzlinou a čokoládovou polevou vedle cappuccina v Brunch House"
+    ]
+  },
+  "why": {
+    "title": "Proč kavárnám Tagly sedí",
+    "intro": "Z každé návštěvy kavárny je fotka. Většina jich zůstane v galerii. Tagly to mění.",
+    "items": [
+      {
+        "title": "Kavárna je vizuální sama o sobě",
+        "description": "Latte art, hezký interiér, vitrína s dezerty, pour-over. Kavárna vytváří fotogenické momenty každý den. Vaši zákazníci je fotí už teď, jenže většina snímků skončí v galerii a nikdy se nikam nedostane. Tagly jim dá důvod jeden z nich na Instagram opravdu dát."
+      },
+      {
+        "title": "Útrata zůstane v měřítku kavárny",
+        "description": "Nedomlouváte se na žádné pevné částce a nekryjete žádnou cenu za proklik. Platíte za jednotlivá story podle dosahu, který doopravdy měla, a až ve chvíli, kdy je story zaplacené. Zákazníci k vám chodí několikrát týdně, takže story přibývají průběžně, a žádné jednotlivé vás nevyjde jako celá kampaň."
+      },
+      {
+        "title": "Ze stálých zákazníků se stane váš marketingový tým",
+        "description": "Ranní štamgast k vám zajde několikrát týdně a každá návštěva je příležitost na story. Tagly počítá za vaši kavárnu jedno story na zákazníka a den, takže z toho neteče proud, ale pramínek. Za pár měsíců vidí jeho známí vaši kavárnu ve svém feedu pořád dokola, a přesně tak vznikají noví stálí zákazníci."
+      },
+      {
+        "title": "Rozhoduje okolí, ne celé město",
+        "description": "Do kavárny se chodí pěšky, z pár ulic kolem. Nepotřebujete virální story, potřebujete, aby o vás věděli lidé z okolí. Sdílet vás může kdokoli, a čím blíž vaší adrese jeho publikum bydlí, tím vyšší hodnotu story má. Rozpočet tak jde na lidi, kteří se u vás opravdu můžou zastavit."
+      }
+    ]
+  },
+  "useCases": {
+    "title": "Jak Tagly používají různé kavárny",
+    "items": [
+      {
+        "title": "Specialty kavárny",
+        "description": "Do každého šálku dáváte kus řemesla a zákazníci se tím rádi pochlubí. Detail latte art, video z přípravy filtru, flat white z jednoho původu. Každé story ukáže vaši kavárnu lidem, ze kterých se můžou stát stálí zákazníci, a jeden zákazník vás může sdílet jednou denně."
+      },
+      {
+        "title": "Brunche a pekařské kavárny",
+        "description": "Brunch podniky a pekařské kavárny žijí z víkendu. Stálý proud zákaznických story s vaším avokádovým toastem, croissanty nebo palačinkami drží vaši kavárnu lidem v hlavě přesně ve chvíli, kdy se v sobotu rozhodují, kam vyrazit. Nic z toho neplánujete. Nastavíte rozpočet a o zbytek se postarají zákazníci."
+      },
+      {
+        "title": "Kavárny na cestě do práce",
+        "description": "Jste místo, kde se lidé ráno zastaví cestou do práce. Tagly vás udrží ve čtvrti vidět, aniž byste museli trávit hodiny na sociálních sítích. Ranní štamgasti přidají story, jejich známí z okolí ho vidí a zákazníků přibývá jedno story po druhém."
+      }
+    ]
+  },
+  "faq": {
+    "heading": "Časté dotazy k marketingu kaváren",
+    "items": [
+      {
+        "question": "Kolik Tagly stojí kavárnu?",
+        "answer": "Žádné předplatné, žádná smlouva. Buď připojíte kartu a platíte průběžně: nic se nestrhne dřív, než je story skutečně zaplacené, takže žádná záloha a žádné minimum, jen 0,30 $ za každou platbu. Nebo si kredity předplatíte: 1 kredit = 1 $, nejmenší nákup je 50 $ a kredity nikdy nevyprší. U kreditů platí, že s aspoň 15 $ dostupných kreditů zůstáváte v aplikaci vidět. Kolik může jedno story stát, má navíc svůj strop, takže vás jedno story nemůže připravit o celý rozpočet. Účtujeme v dolarech a v aplikaci se částky přepočítávají do korun aktuálním kurzem."
+      },
+      {
+        "question": "Musím kvůli tomu něco tvořit?",
+        "answer": "Ne. Obsah tvoří vaši zákazníci tím, že přidávají story se svou kávou, s jídlem nebo s vaším prostorem. Nemusíte plánovat obsah, fotit, vymýšlet popisky ani hlídat kalendář sociálních sítí."
+      },
+      {
+        "question": "Funguje Tagly i pro kavárny s malou průměrnou útratou?",
+        "answer": "Ano. Kolik story stojí, nikdy nezávisí na tom, kolik u vás zákazník utratil. Vychází to z toho, kolik lidí story vidělo a jak blízko vám to publikum bydlí. Nedomlouváte se na žádné pevné částce a nekryjete žádnou cenu za proklik, takže platíte přesně podle dosahu, který story mělo."
+      },
+      {
+        "question": "Jak se zákazníci dozvědí, že je moje kavárna na Tagly?",
+        "answer": "Najdou vás na mapě v aplikaci Tagly, i s odhadem, kolik si můžou za story ze své návštěvy vydělat. Nemusíte nic tisknout, rozdávat ani dávat na stoly."
+      },
+      {
+        "question": "V čem se to liší od najmutí food influencera?",
+        "answer": "Influencer si řekne o pevnou částku dopředu, ať už to nakonec přinese cokoli, a jeho sledující bývají rozesetí po celé republice. U Tagly se dopředu nedomlouvá nic. Každé story se ocení podle dosahu, který opravdu mělo, a podle toho, jak blízko vaší kavárně to publikum bydlí. Ne podle počtu sledujících."
+      }
+    ],
+    "costInline": "Žádné předplatné, žádná smlouva. Buď připojíte kartu a platíte průběžně: nic se nestrhne dřív, než je story skutečně zaplacené, takže žádná záloha a žádné minimum, jen 0,30 $ za každou platbu. Nebo si kredity předplatíte: 1 kredit = 1 $, nejmenší nákup je 50 $ a kredity nikdy nevyprší. U kreditů platí, že s aspoň 15 $ dostupných kreditů zůstáváte v aplikaci vidět. Kolik může jedno story stát, má navíc svůj strop, takže vás jedno story nemůže připravit o celý rozpočet. Účtujeme v dolarech a v aplikaci se částky přepočítávají do korun aktuálním kurzem. Podívejte se, <link>jak funguje cena</link>.",
+    "influencerInline": "Influencer si řekne o pevnou částku dopředu, ať už to nakonec přinese cokoli, a jeho sledující bývají rozesetí po celé republice. U Tagly se dopředu nedomlouvá nic. Každé story se ocení podle dosahu, který opravdu mělo, a podle toho, jak blízko vaší kavárně to publikum bydlí. Ne podle počtu sledujících. Přečtěte si <link>celé porovnání</link>."
+  },
+  "internalLinks": {
+    "compareHeading": "Jak si Tagly stojí proti ostatním",
+    "instagramAds": "Instagramové reklamy",
+    "influencerMarketing": "Influencer marketing",
+    "marketingAgencies": "Marketingové agentury",
+    "learnMoreHeading": "Zjistit více",
+    "howItWorks": "Jak to funguje",
+    "pricing": "Ceník",
+    "faq": "Časté dotazy"
+  },
+  "cta": {
+    "heading": "Chcete, aby vaši kavárnu doporučovali vaši zákazníci?",
+    "description": "Přidejte se k Tagly a proměňte fotky kávy, které vaši zákazníci pořizují tak jako tak, ve skutečný lokální marketing."
+  }
+}

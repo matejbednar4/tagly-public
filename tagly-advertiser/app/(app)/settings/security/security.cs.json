@@ -1,0 +1,17 @@
+{
+  "//": "Used in: app/(app)/settings/security/index.tsx (settingsSecurity namespace).",
+  "title": "Zabezpečení",
+
+  "sessionsSection": "Zařízení",
+  "signOutAllHeading": "Odhlásit ze všech ostatních zařízení",
+  "signOutAllDescription": "Odhlásí tě všude kromě tohoto zařízení. Udělej to, pokud si myslíš, že k tvému účtu má přístup někdo jiný.",
+  "signOutAllButton": "Odhlásit ostatní zařízení",
+
+  "confirmTitle": "Odhlásit ostatní zařízení?",
+  "confirmBody": "Odhlásí tě to na všech ostatních zařízeních. Tady zůstaneš přihlášený/á.",
+  "confirmAction": "Odhlásit",
+  "cancel": "Zrušit",
+
+  "signedOutTitle": "Hotovo",
+  "signedOutBody": "Byl/a jsi odhlášen/a na všech ostatních zařízeních."
+}

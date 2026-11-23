@@ -1,0 +1,17 @@
+{
+  "//": "Used in: components/billing/LockedBudgetSheet (lockedBudgetSheet namespace). Explains locked credits via a share-lifecycle timeline.",
+  "title": "Locked credits",
+  "intro": "Locked credits belong to shares that haven't been paid out yet. We set them aside so there's always enough to pay the customer.",
+  "shared": {
+    "title": "A customer shares your business",
+    "body": "We estimate what they could earn for the post and lock that amount from your credits."
+  },
+  "price": {
+    "title": "We calculate the final price",
+    "body": "After 24 hours we measure how many people actually saw the post and what it was really worth to your business."
+  },
+  "paid": {
+    "title": "The customer gets paid",
+    "body": "The reward comes out of the locked amount. Anything left over returns straight to your available credits."
+  }
+}

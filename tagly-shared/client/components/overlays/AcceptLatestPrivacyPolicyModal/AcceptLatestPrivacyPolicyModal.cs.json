@@ -1,0 +1,7 @@
+{
+  "//": "Used in: tagly-shared/client/components/overlays/AcceptLatestPrivacyPolicyModal (acceptPrivacy namespace). Blocking app-open modal shown when the Privacy Policy has been updated.",
+  "title": "Aktualizovali jsme Zásady ochrany osobních údajů",
+  "body": "Provedli jsme změny v tom, jak nakládáme s vašimi údaji. Přečtěte si prosím Zásady ochrany osobních údajů a odsouhlaste je, abyste mohli Tagly dál používat.",
+  "agreeLine": "Přečetl/a jsem si <policy>Zásady ochrany osobních údajů</policy> a souhlasím s nimi.",
+  "agree": "Souhlasím a pokračovat"
+}

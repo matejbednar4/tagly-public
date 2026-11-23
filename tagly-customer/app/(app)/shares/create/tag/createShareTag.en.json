@@ -1,0 +1,12 @@
+{
+  "//": "Used in: app/(app)/shares/create/tag/index.tsx (createShareTag namespace). Shown when a created share is rejected because the story didn't clearly tag the business (error 4100). Friendly guidance, not a scolding.",
+  "topTitle": "Tag the business",
+  "thisBusiness": "this business",
+  "heading": "Your story needs to mention {{business}}",
+  "body": "We couldn't find the business tagged in your story. Make sure it shows one of these:",
+  "noTags": "Make sure your story clearly shows the business's name or Instagram, then share a new story.",
+  "tipTitle": "Already tagged it?",
+  "tipBody": "Try making the tag bigger and post the story again. This is usually enough.",
+  "tryAnother": "Choose or post another story",
+  "contactSupport": "Contact support"
+}

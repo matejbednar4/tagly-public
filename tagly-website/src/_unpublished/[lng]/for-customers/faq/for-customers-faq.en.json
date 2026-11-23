@@ -1,0 +1,119 @@
+{
+  "//": "Used in: src/app/[lng]/for-customers/faq/page.tsx — hero (Trans support link), 4 FaqSection groups, CTA. *Inline keys render with <Trans>; plain `answer` strings feed FAQ JSON-LD.",
+  "meta": {
+    "title": "Customer FAQ",
+    "description": "Frequently asked questions about using Tagly as a customer. How to earn money posting Instagram stories about local businesses, how rewards work, and how to cash out."
+  },
+  "hero": {
+    "title": "Frequently asked questions",
+    "intro": "Everything you need to know about earning money with Tagly. If your question is not here, <support>reach out to us</support> and we will help."
+  },
+  "groups": {
+    "gettingStarted": "Getting started",
+    "posting": "Posting and submitting",
+    "rewards": "Rewards and withdrawals",
+    "account": "Account and privacy"
+  },
+  "gettingStarted": {
+    "items": [
+      {
+        "question": "Why do I need a professional Instagram account?",
+        "answer": "Instagram only shares story insights like reach and views with professional accounts, which means a Business or Creator account. Those are the numbers Tagly measures your story with and works out your reward from. Switching is free, takes about 30 seconds, and you do not lose anything. You also get more information about how your own content performs."
+      },
+      {
+        "question": "Can I use Tagly with a private account?",
+        "answer": "Tagly needs a professional Instagram account, and Instagram only offers those on public profiles. It matters after you post, too: keep your profile public until Tagly has collected the story's numbers, and your reward is paid as normal."
+      },
+      {
+        "question": "What is Tagly?",
+        "answer": "Tagly is an app that pays you for posting Instagram stories about local businesses. You visit a business, post a story about it, submit that story in the app, and earn a reward based on how many people saw it and how close those people are to that business. It is not influencer marketing and there is no follower minimum. Businesses on Tagly pay for the promotion, so the app is completely free for you."
+      },
+      {
+        "question": "Do I need a lot of followers?",
+        "answer": "No, there is no follower minimum. What counts is how many people actually saw your story and how close they are to the business, not how many followers you have. Before you post, the map in the app shows an estimated reward for every business near you, so you can see roughly what a story is worth."
+      },
+      {
+        "question": "Is Tagly free?",
+        "answer": "Yes, completely free. You never pay anything to use Tagly. Businesses fund the rewards, so all you do is post and earn."
+      },
+      {
+        "question": "How do I sign up?",
+        "answer": "Download the Tagly app and create an account with a one-time code sent to your email, or with Apple or Google. There are no passwords. We only ask for your name and email. Connecting Instagram is a separate step that you can do later, and it is what unlocks earning."
+      }
+    ],
+    "q3Inline": "Tagly is an app that pays you for posting Instagram stories about local businesses. You visit a business, post a story about it, submit that story in the app, and earn a reward based on how many people saw it and how close those people are to that business. It is not influencer marketing and there is no follower minimum. Businesses on Tagly pay for the promotion, so the app is completely free for you. <hiw>See how it works</hiw>.",
+    "q6Inline": "Download the <app>Tagly app</app> and create an account with a one-time code sent to your email, or with Apple or Google. There are no passwords. We only ask for your name and email. Connecting Instagram is a separate step that you can do later, and it is what unlocks earning."
+  },
+  "posting": {
+    "items": [
+      {
+        "question": "What kind of content can I post?",
+        "answer": "Instagram stories, not feed posts and not reels. Post what you would normally post when visiting a place: a photo of your food, a gym selfie, a coffee shot. The one requirement is that the business name is visible on the story, so tag the business, add the location sticker, or just type the name."
+      },
+      {
+        "question": "Will people know I am getting paid for the story?",
+        "answer": "You never have to mention Tagly, and your story looks exactly like anything else you post. Your followers do not see Tagly anywhere. What you do have to do is follow the disclosure rules where you live. This is a paid promotion, so if your local rules ask you to mark it as one, please do."
+      },
+      {
+        "question": "Does Tagly post anything on my account?",
+        "answer": "No. Tagly reads the story you submit and its stats. It cannot post, send DMs, or change anything on your account, and it never sees your Instagram password."
+      },
+      {
+        "question": "Can I post about any business?",
+        "answer": "You earn for the businesses you can see on the map in the app. Every business on the map has budget ready for rewards, so if it is there, you can earn there. Have a look at the map before you post."
+      },
+      {
+        "question": "Do I have to buy something at the business?",
+        "answer": "There is no check-in, no receipt and no proof of purchase. Tagly is meant for places you actually go, so post a story from a real visit and you are set."
+      },
+      {
+        "question": "How often can I post about the same business?",
+        "answer": "Once a day per business. You can post about a different business on the same day. Each story earns once, so the next time you want to earn, post a new story."
+      },
+      {
+        "question": "What if I forget to tag the business?",
+        "answer": "Tagly checks for the business name when you submit the story and tells you right away if it cannot see it. Post a new story with the name visible and submit that one instead."
+      }
+    ],
+    "q1Inline": "Instagram stories, not feed posts and not reels. Post what you would normally post when visiting a place: a photo of your food, a gym selfie, a coffee shot. The one requirement is that the business name is visible on the story, so tag the business, add the location sticker, or just type the name. <hiw>See the full step-by-step guide</hiw>."
+  },
+  "rewards": {
+    "items": [
+      {
+        "question": "How much can I earn per story?",
+        "answer": "There is no fixed rate. What decides it is how many people actually saw your story and how close those people are to the business, so a genuinely local audience goes a long way. Before you post, the map in the app shows an estimate for every business near you. That figure is an estimate; the final reward is worked out from the real numbers once your story has ended."
+      },
+      {
+        "question": "How long until I get paid?",
+        "answer": "About 24 hours. That is how long Instagram takes to report how many people saw your story. After that Tagly calculates the reward and adds it to your balance."
+      },
+      {
+        "question": "How do I cash out?",
+        "answer": "Open the Tagly app and tap “Cash Out”. Stripe handles the transfer, so you connect a Stripe account once, which takes about a minute. The minimum cash out is $1, amounts are also shown in Czech koruna at the current exchange rate, there is no withdrawal fee, and the money usually reaches your bank in 1 to 2 business days."
+      },
+      {
+        "question": "How long should I leave my story up?",
+        "answer": "Leave it up for its full 24 hours and keep your profile public. That is how Tagly gets the numbers from Instagram and pays your reward."
+      }
+    ]
+  },
+  "account": {
+    "items": [
+      {
+        "question": "What data does Tagly access from my Instagram?",
+        "answer": "The stories you submit and their stats, plus your follower count and a rough breakdown of where your audience is and its age and gender. Your reward is worked out from the story's reach and how close your audience is to the business. Tagly does not access your DMs, your password, or anything private."
+      },
+      {
+        "question": "Can I disconnect my Instagram account?",
+        "answer": "Yes, anytime from your account settings. Let your latest stories finish first: disconnecting closes any story that is still waiting for its reward, so wait until those have been paid. You can reconnect whenever you like and carry on submitting straight away. You can also request deletion of all Instagram data Tagly has stored about you."
+      }
+    ],
+    "q2Inline": "Yes, anytime from your account settings. Let your latest stories finish first: disconnecting closes any story that is still waiting for its reward, so wait until those have been paid. You can reconnect whenever you like and carry on submitting straight away. You can also request <dataDeletion>deletion of all Instagram data</dataDeletion> Tagly has stored about you."
+  },
+  "cta": {
+    "heading": "Ready to start earning?",
+    "description": "Download Tagly, find a business near you, and earn your first reward today.",
+    "download": "Download Tagly",
+    "seeHowItWorks": "See how it works"
+  }
+}

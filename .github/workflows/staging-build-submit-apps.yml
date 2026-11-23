@@ -1,0 +1,234 @@
+name: Staging - Build and Submit apps
+
+on:
+  workflow_dispatch:
+    inputs:
+      app:
+        description: Which app? (both = customer + advertiser; all = customer + advertiser + admin)
+        type: choice
+        required: true
+        options: [customer, advertiser, admin, both, all]
+      platform:
+        description: Which platform? (admin is iOS only)
+        type: choice
+        required: true
+        default: both
+        options: [ios, android, both]
+      action:
+        description: Build and submit, or submit only?
+        type: choice
+        required: true
+        default: build_and_submit
+        options: [build_and_submit, submit_only]
+  workflow_call:
+    inputs:
+      app:
+        type: string
+        default: both
+      platform:
+        type: string
+        default: both
+      action:
+        type: string
+        default: build_and_submit
+
+permissions:
+  contents: read
+
+jobs:
+  build_submit:
+    if: ${{ github.ref_name == 'staging' }}
+    runs-on: ubuntu-latest
+    environment: staging
+    env:
+      # The auto-fingerprint step adds minutes per build and gates nothing here.
+      EAS_SKIP_AUTO_FINGERPRINT: "1"
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: staging
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      # ---- Phase 1: queue every requested build on EAS up front (--no-wait),
+      # so they run concurrently up to the plan's concurrency (the rest queue).
+      # iOS builds use --auto-submit: EAS submits to TestFlight server-side the
+      # moment the build finishes — the runner never runs `eas submit` for them.
+      # Android staging is side-loaded via Firebase App Distribution, so it is
+      # queued without auto-submit and its APK is downloaded in phase 2.
+
+      - name: Start customer iOS build (staging, auto-submit)
+        if: ${{ (inputs.app == 'customer' || inputs.app == 'both' || inputs.app == 'all') && (inputs.platform == 'ios' || inputs.platform == 'both') && inputs.action == 'build_and_submit' }}
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: bash .github/scripts/eas-start-build.sh tagly-customer ios staging CUSTOMER_IOS_BUILD_ID auto_submit
+
+      - name: Start customer Android build (staging)
+        if: ${{ (inputs.app == 'customer' || inputs.app == 'both' || inputs.app == 'all') && (inputs.platform == 'android' || inputs.platform == 'both') && inputs.action == 'build_and_submit' }}
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: bash .github/scripts/eas-start-build.sh tagly-customer android staging-android CUSTOMER_ANDROID_BUILD_ID
+
+      - name: Start advertiser iOS build (staging, auto-submit)
+        if: ${{ (inputs.app == 'advertiser' || inputs.app == 'both' || inputs.app == 'all') && (inputs.platform == 'ios' || inputs.platform == 'both') && inputs.action == 'build_and_submit' }}
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: bash .github/scripts/eas-start-build.sh tagly-advertiser ios staging ADVERTISER_IOS_BUILD_ID auto_submit
+
+      # Advertiser Android (staging) — side-loaded via Firebase App Distribution,
+      # same pattern as the customer app. Requires the repo variable
+      # FIREBASE_ADVERTISER_ANDROID_APP_ID (set after the advertiser Android app
+      # is created in the Firebase console).
+      - name: Start advertiser Android build (staging)
+        if: ${{ (inputs.app == 'advertiser' || inputs.app == 'both' || inputs.app == 'all') && (inputs.platform == 'android' || inputs.platform == 'both') && inputs.action == 'build_and_submit' }}
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: bash .github/scripts/eas-start-build.sh tagly-advertiser android staging-android ADVERTISER_ANDROID_BUILD_ID
+
+      # Admin iOS (staging) — TestFlight on the staging ASC app
+      # (com.flaer.admin.staging). Admin is iOS only — never add an Android step.
+      - name: Start admin iOS build (staging, auto-submit)
+        if: ${{ (inputs.app == 'admin' || inputs.app == 'all') && (inputs.platform == 'ios' || inputs.platform == 'both') && inputs.action == 'build_and_submit' }}
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: bash .github/scripts/eas-start-build.sh tagly-admin ios staging ADMIN_IOS_BUILD_ID auto_submit
+
+      # ---- Phase 2: wait for the Android builds (all builds are already
+      # running on EAS in parallel), download their APKs, and side-load them
+      # via Firebase App Distribution.
+
+      - name: Wait for customer Android build + download APK (staging)
+        if: ${{ (inputs.app == 'customer' || inputs.app == 'both' || inputs.app == 'all') && (inputs.platform == 'android' || inputs.platform == 'both') && inputs.action == 'build_and_submit' }}
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: bash .github/scripts/eas-wait-build.sh tagly-customer "$CUSTOMER_ANDROID_BUILD_ID" app.apk
+
+      # Distribution uses the official firebase-tools CLI (pinned), not a
+      # third-party action — the GCP service-account JSON must never be handed
+      # to code we don't control on a mutable tag (E094). The SA JSON is
+      # written to RUNNER_TEMP (outside the workspace), never echoed.
+      - name: Upload customer Android to Firebase App Distribution (staging)
+        if: ${{ (inputs.app == 'customer' || inputs.app == 'both' || inputs.app == 'all') && (inputs.platform == 'android' || inputs.platform == 'both') && inputs.action == 'build_and_submit' }}
+        env:
+          FIREBASE_SA_JSON: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_STAGING }}
+        run: |
+          export GOOGLE_APPLICATION_CREDENTIALS="$RUNNER_TEMP/firebase-sa.json"
+          printf '%s' "$FIREBASE_SA_JSON" > "$GOOGLE_APPLICATION_CREDENTIALS"
+          npx -y firebase-tools@15.25.1 appdistribution:distribute app.apk \
+            --app 1:188527258217:android:c07bb8580971169b3ed0f8 \
+            --groups testers
+          rm -f "$GOOGLE_APPLICATION_CREDENTIALS"
+
+      - name: Wait for advertiser Android build + download APK (staging)
+        if: ${{ (inputs.app == 'advertiser' || inputs.app == 'both' || inputs.app == 'all') && (inputs.platform == 'android' || inputs.platform == 'both') && inputs.action == 'build_and_submit' }}
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: bash .github/scripts/eas-wait-build.sh tagly-advertiser "$ADVERTISER_ANDROID_BUILD_ID" advertiser-app.apk
+
+      - name: Upload advertiser Android to Firebase App Distribution (staging)
+        if: ${{ (inputs.app == 'advertiser' || inputs.app == 'both' || inputs.app == 'all') && (inputs.platform == 'android' || inputs.platform == 'both') && inputs.action == 'build_and_submit' }}
+        env:
+          FIREBASE_SA_JSON: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_STAGING }}
+        run: |
+          export GOOGLE_APPLICATION_CREDENTIALS="$RUNNER_TEMP/firebase-sa.json"
+          printf '%s' "$FIREBASE_SA_JSON" > "$GOOGLE_APPLICATION_CREDENTIALS"
+          npx -y firebase-tools@15.25.1 appdistribution:distribute advertiser-app.apk \
+            --app "${{ vars.FIREBASE_ADVERTISER_ANDROID_APP_ID }}" \
+            --groups testers
+          rm -f "$GOOGLE_APPLICATION_CREDENTIALS"
+
+      # ---- Phase 3: wait for the iOS builds so a failed build fails this run.
+      # Their TestFlight submissions were queued by --auto-submit and run on
+      # EAS servers; a (rare) submission failure surfaces on expo.dev, not here.
+
+      - name: Wait for customer iOS build (staging)
+        if: ${{ (inputs.app == 'customer' || inputs.app == 'both' || inputs.app == 'all') && (inputs.platform == 'ios' || inputs.platform == 'both') && inputs.action == 'build_and_submit' }}
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: bash .github/scripts/eas-wait-build.sh tagly-customer "$CUSTOMER_IOS_BUILD_ID"
+
+      - name: Wait for advertiser iOS build (staging)
+        if: ${{ (inputs.app == 'advertiser' || inputs.app == 'both' || inputs.app == 'all') && (inputs.platform == 'ios' || inputs.platform == 'both') && inputs.action == 'build_and_submit' }}
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: bash .github/scripts/eas-wait-build.sh tagly-advertiser "$ADVERTISER_IOS_BUILD_ID"
+
+      - name: Wait for admin iOS build (staging)
+        if: ${{ (inputs.app == 'admin' || inputs.app == 'all') && (inputs.platform == 'ios' || inputs.platform == 'both') && inputs.action == 'build_and_submit' }}
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: bash .github/scripts/eas-wait-build.sh tagly-admin "$ADMIN_IOS_BUILD_ID"
+
+      # ---- submit_only paths: re-submit / re-distribute the latest existing
+      # build without building anything.
+
+      - name: Submit only customer iOS (staging)
+        if: ${{ (inputs.app == 'customer' || inputs.app == 'both' || inputs.app == 'all') && (inputs.platform == 'ios' || inputs.platform == 'both') && inputs.action == 'submit_only' }}
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: |
+          cd tagly-customer
+          yarn actions:submit:staging
+
+      - name: Submit only advertiser iOS (staging)
+        if: ${{ (inputs.app == 'advertiser' || inputs.app == 'both' || inputs.app == 'all') && (inputs.platform == 'ios' || inputs.platform == 'both') && inputs.action == 'submit_only' }}
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: |
+          cd tagly-advertiser
+          yarn actions:submit:staging
+
+      - name: Submit only admin iOS (staging)
+        if: ${{ (inputs.app == 'admin' || inputs.app == 'all') && (inputs.platform == 'ios' || inputs.platform == 'both') && inputs.action == 'submit_only' }}
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: |
+          cd tagly-admin
+          yarn actions:submit:staging
+
+      - name: Download customer Android build for submit only (staging)
+        if: ${{ (inputs.app == 'customer' || inputs.app == 'both' || inputs.app == 'all') && (inputs.platform == 'android' || inputs.platform == 'both') && inputs.action == 'submit_only' }}
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: |
+          APK_URL=$(cd tagly-customer && npx eas-cli build:list --platform android --profile staging-android --limit 1 --json --non-interactive | jq -r '.[0].artifacts.buildUrl')
+          curl -L "$APK_URL" -o app.apk
+
+      - name: Upload customer Android to Firebase App Distribution - submit only (staging)
+        if: ${{ (inputs.app == 'customer' || inputs.app == 'both' || inputs.app == 'all') && (inputs.platform == 'android' || inputs.platform == 'both') && inputs.action == 'submit_only' }}
+        env:
+          FIREBASE_SA_JSON: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_STAGING }}
+        run: |
+          export GOOGLE_APPLICATION_CREDENTIALS="$RUNNER_TEMP/firebase-sa.json"
+          printf '%s' "$FIREBASE_SA_JSON" > "$GOOGLE_APPLICATION_CREDENTIALS"
+          npx -y firebase-tools@15.25.1 appdistribution:distribute app.apk \
+            --app 1:188527258217:android:c07bb8580971169b3ed0f8 \
+            --groups testers
+          rm -f "$GOOGLE_APPLICATION_CREDENTIALS"
+
+      - name: Download advertiser Android build for submit only (staging)
+        if: ${{ (inputs.app == 'advertiser' || inputs.app == 'both' || inputs.app == 'all') && (inputs.platform == 'android' || inputs.platform == 'both') && inputs.action == 'submit_only' }}
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: |
+          APK_URL=$(cd tagly-advertiser && npx eas-cli build:list --platform android --profile staging-android --limit 1 --json --non-interactive | jq -r '.[0].artifacts.buildUrl')
+          curl -L "$APK_URL" -o advertiser-app.apk
+
+      - name: Upload advertiser Android to Firebase App Distribution - submit only (staging)
+        if: ${{ (inputs.app == 'advertiser' || inputs.app == 'both' || inputs.app == 'all') && (inputs.platform == 'android' || inputs.platform == 'both') && inputs.action == 'submit_only' }}
+        env:
+          FIREBASE_SA_JSON: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_STAGING }}
+        run: |
+          export GOOGLE_APPLICATION_CREDENTIALS="$RUNNER_TEMP/firebase-sa.json"
+          printf '%s' "$FIREBASE_SA_JSON" > "$GOOGLE_APPLICATION_CREDENTIALS"
+          npx -y firebase-tools@15.25.1 appdistribution:distribute advertiser-app.apk \
+            --app "${{ vars.FIREBASE_ADVERTISER_ANDROID_APP_ID }}" \
+            --groups testers
+          rm -f "$GOOGLE_APPLICATION_CREDENTIALS"

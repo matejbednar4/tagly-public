@@ -1,0 +1,172 @@
+{
+  "//": "Used in: src/app/[lng]/faq/page.tsx — hero, 5 FaqSection groups, standalone links, CTA. *Inline keys are rendered with <Trans> for inline PressableText links; the plain `answer` strings feed the single page-level FAQ JSON-LD. RULE: an *Inline string must be its `answer` twin with link tags added and nothing else changed, so the structured data mirrors the visible copy exactly. Edit both or neither.",
+  "meta": {
+    "title": "Časté dotazy k Tagly pro majitele podniků",
+    "description": "Časté dotazy majitelů podniků k Tagly. Kolik to stojí, jak se počítá cena sdílení, kdy se platí a jak začít."
+  },
+  "hero": {
+    "title": "Časté dotazy",
+    "intro": "Na co se majitelé podniků ptají nejčastěji: jak Tagly funguje i kolik stojí. Pokud tu svoji odpověď nenajdete, <contact>napište nám</contact> a poradíme."
+  },
+  "groups": {
+    "general": "Obecné",
+    "gettingStarted": "Jak začít",
+    "pricing": "Ceny a kredity",
+    "howItWorks": "Jak to funguje",
+    "results": "Výsledky a měření"
+  },
+  "general": {
+    "items": [
+      {
+        "question": "Co je Tagly?",
+        "answer": "Tagly je platforma, díky které vás na Instagramu propagují vaši vlastní zákazníci. Zákazník přidá story o vašem podniku, v aplikaci Tagly ho vybere a dostane za něj malou odměnu. Vy získáte autentickou propagaci ve svém okolí, aniž byste tvořili obsah, řídili kampaně nebo cokoli schvalovali. Podívejte se, jak to funguje."
+      },
+      {
+        "question": "Pro koho je Tagly?",
+        "answer": "Tagly je pro lokální podniky, které žijí z toho, že si je lidé mezi sebou doporučují: restaurace, kavárny, fitness centra, salony a další lokální podniky. Pokud k vám zákazníci chodí do provozovny a mohli by ji ukázat na Instagramu, Tagly bude fungovat i vám."
+      },
+      {
+        "question": "Čím se Tagly liší od influencer marketingu?",
+        "answer": "Influencer marketing platí lidi s velkým počtem sledujících. Tagly platí vaše běžné zákazníky, které sledují hlavně kamarádi, rodina a sousedé. Rozhoduje relevance, ne velikost: čím blíž je publikum story vašim dveřím, tím větší má story hodnotu, a publikum vzdálené stovky kilometrů nemá hodnotu skoro žádnou. Sdílet vás může kdokoli, platíte ale jen za lidi, kteří k vám opravdu mohou přijít. Podívejte se na podrobné srovnání."
+      },
+      {
+        "question": "Musím tvořit obsah?",
+        "answer": "Ne. Story si zákazníci natočí a zveřejní sami: jídlo, selfie z posilovny, kávu. Nepíšete žádné popisky, netočíte videa, nezadáváte žádné pokyny a nespravujete žádný profil na sociálních sítích. Neexistuje žádný scénář a není co schvalovat."
+      },
+      {
+        "question": "Funguje Tagly pro každý typ podniku?",
+        "answer": "Tagly funguje nejlíp tam, kam zákazníci fyzicky chodí. Restaurace, kavárny, fitness centra, salony a další lokální podniky jsou ideální. Pokud podnikáte čistě online nebo nemáte provozovnu, kam za vámi lidé chodí, Tagly nejspíš není to pravé."
+      },
+      {
+        "question": "Kdo mě může sdílet? Musí mít hodně sledujících?",
+        "answer": "Kdokoli ze zákazníků Tagly, kdo o vašem podniku přidá story. Žádná minimální hranice sledujících neexistuje a o velké publikum tu nejde: dosah blízko vás má mnohem větší hodnotu než dosah rozesetý po celé republice a cena to odráží. Sdílet vás může kdokoli, platíte ale jen za lidi, kteří k vám opravdu mohou přijít. Zákazník potřebuje profesionální instagramový účet, na který se dá přepnout zdarma. Instagram ho vyžaduje kvůli číslům, ze kterých cenu počítáme."
+      }
+    ],
+    "q1Inline": "Tagly je platforma, díky které vás na Instagramu propagují vaši vlastní zákazníci. Zákazník přidá story o vašem podniku, v aplikaci Tagly ho vybere a dostane za něj malou odměnu. Vy získáte autentickou propagaci ve svém okolí, aniž byste tvořili obsah, řídili kampaně nebo cokoli schvalovali. <hiw>Podívejte se, jak to funguje</hiw>.",
+    "q2Inline": "Tagly je pro lokální podniky, které žijí z toho, že si je lidé mezi sebou doporučují: <restaurants>restaurace</restaurants>, <cafes>kavárny</cafes>, <gyms>fitness centra</gyms>, <salons>salony</salons> a <local>další lokální podniky</local>. Pokud k vám zákazníci chodí do provozovny a mohli by ji ukázat na Instagramu, Tagly bude fungovat i vám.",
+    "q3Inline": "Influencer marketing platí lidi s velkým počtem sledujících. Tagly platí vaše běžné zákazníky, které sledují hlavně kamarádi, rodina a sousedé. Rozhoduje relevance, ne velikost: čím blíž je publikum story vašim dveřím, tím větší má story hodnotu, a publikum vzdálené stovky kilometrů nemá hodnotu skoro žádnou. Sdílet vás může kdokoli, platíte ale jen za lidi, kteří k vám opravdu mohou přijít. <compare>Podívejte se na podrobné srovnání</compare>.",
+    "q5Inline": "Tagly funguje nejlíp tam, kam zákazníci fyzicky chodí. <restaurants>Restaurace</restaurants>, <cafes>kavárny</cafes>, <gyms>fitness centra</gyms>, <salons>salony</salons> a <local>další lokální podniky</local> jsou ideální. Pokud podnikáte čistě online nebo nemáte provozovnu, kam za vámi lidé chodí, Tagly nejspíš není to pravé."
+  },
+  "gettingStarted": {
+    "items": [
+      {
+        "question": "Jak se zaregistruji?",
+        "answer": "Stáhněte si aplikaci Tagly Partner a přihlaste se e-mailem, přes Apple nebo přes Google. Hesla nepoužíváme, pošleme vám jednorázový kód. Pak vyplníte název podniku, typ, adresu a úvodní fotku. Stránka podniku je online hned a zákazníkům se začne zobrazovat ve chvíli, kdy budete mít z čeho platit odměny."
+      },
+      {
+        "question": "Kolik stojí začít?",
+        "answer": "Žádné předplatné, žádný měsíční poplatek, žádný poplatek za zřízení. Na odměny máte dvě cesty. Buď připojíte kartu a platíte průběžně, bez jakékoli platby předem: strhneme vám až poté, co je za nějaké story zaplacená odměna, plus 0,30 $ za každou platbu. Nebo si koupíte kredity dopředu, kde 1 kredit je 1 $ a nejmenší nákup je 50 $. V aplikaci Tagly se podnik zobrazí, jakmile máte připojenou kartu nebo alespoň 15 $ dostupných kreditů. Účtujeme v dolarech, v aplikaci ale všechny částky vidíte i v korunách podle aktuálního kurzu. Zobrazit kompletní ceník."
+      },
+      {
+        "question": "Potřebuje můj podnik vlastní účet na Instagramu?",
+        "answer": "Ne. Zákazníci zveřejňují ze svých vlastních účtů a Tagly za vás nikdy nic nezveřejní. Vyplnit v aplikaci svůj instagramový účet je dobrovolné, ale vyplatí se to: aby se story počítalo, musí v něm být čitelně vidět váš název, a přes označení účtu to zákazník zvládne nejsnáz."
+      },
+      {
+        "question": "Musím podepsat smlouvu nebo se k něčemu zavázat?",
+        "answer": "Žádné smlouvy, žádné vázání, žádná výpovědní lhůta. Kredity kupujete, kdy chcete, kartu připojíte nebo odpojíte, kdy chcete, a přestat můžete, kdy chcete. Kredity nikdy nevyprší, takže to, co jste na účet dali, počká na další story."
+      },
+      {
+        "question": "Je Tagly aplikace, nebo existuje i webová verze?",
+        "answer": "Je to aplikace. Tagly Partner běží na iPhonu i na Androidu a je v ní úplně všechno: peníze na odměny, stránka podniku, každé sdílení i statistiky. Webová verze neexistuje, takže kvůli Tagly nikdy nemusíte sednout k počítači."
+      },
+      {
+        "question": "Jak se o Tagly dozvědí moji stálí zákazníci?",
+        "answer": "Většina si vás najde přímo v aplikaci: podnik se zobrazuje na mapě Tagly i v objevování, jakmile máte z čeho platit odměny. Své stálé zákazníky můžete oslovit i přímo, stačí jim poslat odkaz nebo kód na pozvání z aplikace Tagly Partner. Kdo se přes něj zaregistruje, zůstane s vámi propojený a vy máte podíl z toho, co si vydělá. Skvěle funguje i to, když lidem u pultu prostě řeknete, že jste na Tagly. Více o pozvánkách."
+      }
+    ],
+    "q1Inline": "Stáhněte si <app>aplikaci Tagly Partner</app> a přihlaste se e-mailem, přes Apple nebo přes Google. Hesla nepoužíváme, pošleme vám jednorázový kód. Pak vyplníte název podniku, typ, adresu a úvodní fotku. Stránka podniku je online hned a zákazníkům se začne zobrazovat ve chvíli, kdy budete mít z čeho platit odměny.",
+    "q2Inline": "Žádné předplatné, žádný měsíční poplatek, žádný poplatek za zřízení. Na odměny máte dvě cesty. Buď připojíte kartu a platíte průběžně, bez jakékoli platby předem: strhneme vám až poté, co je za nějaké story zaplacená odměna, plus 0,30 $ za každou platbu. Nebo si koupíte kredity dopředu, kde 1 kredit je 1 $ a nejmenší nákup je 50 $. V aplikaci Tagly se podnik zobrazí, jakmile máte připojenou kartu nebo alespoň 15 $ dostupných kreditů. Účtujeme v dolarech, v aplikaci ale všechny částky vidíte i v korunách podle aktuálního kurzu. <pricing>Zobrazit kompletní ceník</pricing>.",
+    "q6Inline": "Většina si vás najde přímo v aplikaci: podnik se zobrazuje na mapě Tagly i v objevování, jakmile máte z čeho platit odměny. Své stálé zákazníky můžete oslovit i přímo, stačí jim poslat odkaz nebo kód na pozvání z <app>aplikace Tagly Partner</app>. Kdo se přes něj zaregistruje, zůstane s vámi propojený a vy máte podíl z toho, co si vydělá. Skvěle funguje i to, když lidem u pultu prostě řeknete, že jste na Tagly. <referrals>Více o pozvánkách</referrals>."
+  },
+  "pricing": {
+    "items": [
+      {
+        "question": "Kolik stojí jedno sdílení?",
+        "answer": "Cenu určuje Tagly u každého sdílení zvlášť, ze skutečných čísel daného story. Vychází z toho, kolik lidí story opravdu vidělo, a pak z toho, jak blízko vašemu podniku tito lidé jsou. Story, které vidí několik set opravdu místních lidí, obvykle stojí jednotky až nižší desítky dolarů. Taková čísla jsou jen orientační, ne nabídka: cena se vždycky řídí konkrétním story. Zobrazit kompletní rozpis cen."
+      },
+      {
+        "question": "Kolik nejvíc můžu za jedno sdílení zaplatit?",
+        "answer": "Tagly hlídá strop toho, kolik může jedno story stát, takže vám jedno sdílení nikdy neutrhne celý rozpočet. Vy rozhodujete, kolik peněz na odměny dáte, a my hlídáme, aby je jedno story nespolklo. V praxi stojí skoro každé sdílení jen zlomek tohoto stropu."
+      },
+      {
+        "question": "Co jsou průběžné platby?",
+        "answer": "Průběžné platby jsou způsob, jak platit odměny bez jakékoli platby předem. Připojíte kartu a podnik je vidět okamžitě, i s nulovým kreditem. Nic se nestrhne, dokud není za nějaké story zaplacená odměna, a pak jen ta část, kterou nepokryjí vaše kredity, plus 0,30 $ za každou platbu. Kredity se použijí vždycky jako první. Když chcete průběžné platby zastavit, odpojíte kartu."
+      },
+      {
+        "question": "Můžu si nastavit rozpočet na jedno sdílení nebo strop útraty?",
+        "answer": "Ne. Rozhodujete o svém rozpočtu, ne o ceně. Nenastavujete žádnou sazbu, nepřihazujete, nevolíte si vlastní strop na sdílení a neurčujete cílení ani načasování. Vaše rozhodnutí je, kolik peněz na odměny dáte. Kolik může stát jedno sdílení, hlídá strop od Tagly, a v praxi stojí skoro každé story jen zlomek téhle částky."
+      },
+      {
+        "question": "Vyprší kredity?",
+        "answer": "Ne. Kredity zůstávají na účtu, dokud z nich nezaplatíte nějaké sdílení. Nemají datum expirace ani poplatek za nečinnost."
+      },
+      {
+        "question": "Dají se kredity vrátit?",
+        "answer": "Ve výchozím nastavení se kredity nevracejí. Pokud řešíte nějakou zvláštní situaci, ozvěte se naší podpoře a váš případ posoudíme."
+      },
+      {
+        "question": "Kdy se můj podnik v aplikaci Tagly zobrazuje?",
+        "answer": "Vždycky, když máte z čeho platit odměny. Zákazníkům se podnik ukazuje, jakmile máte připojenou kartu nebo alespoň 15 $ dostupných kreditů, a zobrazuje se tak dlouho, dokud to platí. Připojená karta k tomu stačí sama."
+      }
+    ],
+    "q1Inline": "Cenu určuje Tagly u každého sdílení zvlášť, ze skutečných čísel daného story. Vychází z toho, kolik lidí story opravdu vidělo, a pak z toho, jak blízko vašemu podniku tito lidé jsou. Story, které vidí několik set opravdu místních lidí, obvykle stojí jednotky až nižší desítky dolarů. Taková čísla jsou jen orientační, ne nabídka: cena se vždycky řídí konkrétním story. <pricing>Zobrazit kompletní rozpis cen</pricing>.",
+    "q6Inline": "Ve výchozím nastavení se kredity nevracejí. Pokud řešíte nějakou zvláštní situaci, <support>ozvěte se naší podpoře</support> a váš případ posoudíme."
+  },
+  "howItWorks": {
+    "items": [
+      {
+        "question": "Jak Tagly ověří, že je sdílení skutečné?",
+        "answer": "Váš podnik musí být vidět přímo ve story. Zákazník vás označí nebo zmíní, přidá polohovou nálepku, nebo prostě napíše váš název, a my to ve story kontrolujeme. To samé story pak zákazník vybere v aplikaci Tagly, dokud je ještě zveřejněné. Platíte vždycky jen za story, ve kterém je váš podnik jasně vidět, a vy sami nemusíte dělat vůbec nic."
+      },
+      {
+        "question": "Co zákazníci vlastně sdílejí?",
+        "answer": "Co jim přijde přirozené: talíř s jídlem, selfie z posilovny, kávu, prostor, ve kterém sedí. Žádné scénáře, žádné šablony, žádné zadání od vás. Jediná podmínka je, že story je o vašem podniku a je v něm čitelně vidět váš název. Nejlíp funguje autentický obsah, a přesně k tomu Tagly vede."
+      },
+      {
+        "question": "Můžu ovlivnit, co se o mně sdílí?",
+        "answer": "Předem ne. Ve chvíli, kdy story uvidíte, je už zveřejněné na Instagramu zákazníka a není co schvalovat. Zpětně můžete každé sdílení ohodnotit od půl hvězdičky do pěti, a když je něco špatně, stačí to nahlásit a náš tým se na to podívá."
+      },
+      {
+        "question": "Jak dlouho musí story zůstat na Instagramu?",
+        "answer": "Celých 24 hodin. Tagly pracuje jen s instagramovými stories, ne s příspěvky v profilu ani s reely, a čísla story čteme z Instagramu těsně předtím, než vyprší. Platíte za story, které zůstalo zveřejněné celých 24 hodin a bylo změřené."
+      },
+      {
+        "question": "Kdy se mi účtuje?",
+        "answer": "Zhruba den poté, co story vyjde. Instagram potřebuje asi 24 hodin, aby nahlásil, kolik lidí ho doopravdy vidělo, a teprve pak je známá konečná cena a vyplácí se odměna. V tu chvíli se story vyúčtuje z vašeho účtu."
+      },
+      {
+        "question": "Co když někdo sdílí spam nebo nekvalitní obsah?",
+        "answer": "Nahlaste to v aplikaci Tagly Partner, jsou to dvě klepnutí. Po dobu posuzování je platba pozastavená, a pokud vám dáme za pravdu dřív, než odměna odejde, nic vám neúčtujeme. V praxi se to stává málokdy: lidé sdílejí místa, která mají opravdu rádi, a to ze svého vlastního instagramového účtu."
+      }
+    ]
+  },
+  "results": {
+    "items": [
+      {
+        "question": "Jak sleduji výsledky?",
+        "answer": "V aplikaci Tagly Partner vidíte u každého sdílení, co přineslo. Ke každému máte čísla z Instagramu: dosah, zobrazení, odpovědi, návštěvy profilu, nové sledující a přesdílení, a k tomu přesnou cenu. Navíc máte souhrn za celý účet: celkový dosah, sdílení celkem, celkovou útratu, průměrnou cenu sdílení a nakoupené kredity. Je tam i kompletní historie transakcí, takže vždycky víte, kam peníze šly."
+      },
+      {
+        "question": "Jak rychle uvidím výsledky?",
+        "answer": "Záleží na tom, kde jste a kolik uživatelů Tagly máte v okolí. Některé podniky mají první sdílení už pár dní poté, co si účet nabijí. Nejrychleji to rozjedete tím, že svým stálým zákazníkům pošlete odkaz na pozvání. Jakmile je story venku, dalších 24 hodin se měří jeho čísla, takže výsledek uvidíte druhý den."
+      },
+      {
+        "question": "Jak poznám, že Tagly opravdu funguje?",
+        "answer": "Oprávněná otázka, a platí pro každou formu lokálního marketingu. Ať máte billboard, instagramové reklamy, nebo rozdáváte letáky, nikdo vám přesně neřekne, kolik lidí přišlo právě kvůli tomu. Tagly vám ale přesně ukáže, co jste si koupili. Vidíte každé story, jaký mělo dosah a kolik stálo, a k tomu souhrn dosahu, sdílení a útraty za celou dobu. A platíte vždycky jen za story, které bylo opravdu zveřejněné a změřené."
+      },
+      {
+        "question": "Můžu Tagly používat vedle jiného marketingu?",
+        "answer": "Ano, i když spoustě podniků nakonec stačí samotné Tagly. Jakmile máte na účtu peníze na odměny, Tagly běží samo. Není co spravovat, není co tvořit a není co optimalizovat. Marketing za vás obstarají vaši zákazníci. Když jako majitel nestíháte a na marketing nemáte čas, Tagly ho ze seznamu úkolů odškrtne a vy se můžete věnovat podniku. Vedle ostatních kanálů ale Tagly funguje dobře taky. Podívejte se, jak si stojí proti instagramovým reklamám, influencer marketingu a marketingovým agenturám."
+      }
+    ],
+    "q4Inline": "Ano, i když spoustě podniků nakonec stačí samotné Tagly. Jakmile máte na účtu peníze na odměny, Tagly běží samo. Není co spravovat, není co tvořit a není co optimalizovat. Marketing za vás obstarají vaši zákazníci. Když jako majitel nestíháte a na marketing nemáte čas, Tagly ho ze seznamu úkolů odškrtne a vy se můžete věnovat podniku. Vedle ostatních kanálů ale Tagly funguje dobře taky. Podívejte se, jak si stojí proti <iads>instagramovým reklamám</iads>, <influencer>influencer marketingu</influencer> a <agencies>marketingovým agenturám</agencies>."
+  },
+  "links": {
+    "seePricing": "Zobrazit kompletní ceník",
+    "learnMoreHowItWorks": "Přečtěte si, jak Tagly funguje"
+  },
+  "cta": {
+    "heading": "Máte ještě otázky?",
+    "description": "Ozvěte se a všechno vám vysvětlíme. Bez závazku a bez tlaku."
+  }
+}

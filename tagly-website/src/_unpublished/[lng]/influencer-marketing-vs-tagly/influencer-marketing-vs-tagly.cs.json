@@ -1,0 +1,87 @@
+{
+  "//": "Used in: src/app/[lng]/influencer-marketing-vs-tagly/page.tsx — hero (Trans links), comparison table (8 rows), why-better cards, where-influencers-work cards, bottom line (Trans on p2), other comparisons (Trans), CTA. Shared headings from `comparison` namespace.",
+  "meta": {
+    "title": "Influencer marketing vs Tagly | Co je lepší pro lokální podniky?",
+    "description": "Srovnání influencer marketingu a Tagly pro lokální podniky. Influenceři sedí velkým značkám. Tagly platí přímo vašim zákazníkům za to, že vás ukážou ve svých story na Instagramu. Přečtěte si, co dává větší smysl restauracím, kavárnám a fitness centrům."
+  },
+  "hero": {
+    "title": "Influencer marketing vs Tagly",
+    "subtitle": "Poctivé srovnání pro lokální podniky",
+    "intro": "Influencer marketing může některým značkám fungovat výborně. Když ale provozujete <restaurants>restauraci</restaurants>, <cafes>kavárnu</cafes>, <gyms>fitko</gyms> nebo jiný <local>lokální podnik</local>, bývá najímání influencerů drahé, těžko odhadnutelné a míří jinam, než potřebujete. Tagly jde na to jinak. Staví na marketingu z doporučení: mluví o vás lidé, kteří k vám už chodí. Porovnali jsme obojí bod po bodu."
+  },
+  "table": {
+    "competitor": "Influencer marketing",
+    "rows": [
+      { "label": "Hodí se pro", "competitor": "Velké značky, uvedení nových produktů, celostátní kampaně", "tagly": "Lokální podniky s kamennou provozovnou" },
+      { "label": "Kdo vás propaguje", "competitor": "Najatí tvůrci, které musíte najít a domluvit se s nimi", "tagly": "Lidé, kteří vás sdílejí z vlastního instagramového účtu. Může kdokoli, filtruje to cena" },
+      { "label": "Publikum", "competitor": "Sledující influencera, ať bydlí kdekoli", "tagly": "Kamarádi a sledující toho, kdo vás sdílel. Za lidi ve vašem okolí platíte nejvíc, za vzdálené skoro nic" },
+      { "label": "Jak vzniká cena", "competitor": "Řekne si o ni influencer u každé domluvy a nemáte ji podle čeho poměřit", "tagly": "Spočítá ji Tagly ze skutečných čísel na Instagramu, až když je story venku" },
+      { "label": "Cena za jedno story", "competitor": "Podle domluvy a odvíjí se spíš od počtu sledujících než od dosahu ve vašem okolí", "tagly": "Počítá se u každého story zvlášť a je zastropovaná, takže vám s rozpočtem žádné neuteče" },
+      { "label": "Obsah", "competitor": "Podle scénáře nebo zadání, často je z toho cítit reklama", "tagly": "Vlastní story zákazníka, jeho vlastními slovy. Nikdo mu nic nezadává" },
+      { "label": "Jak často", "competitor": "Pevně daný balíček. Domluva skončí a skončí to", "tagly": "Tolik story, kolik jich zákazníci přidají, pokaždé od někoho jiného, dokud máte z čeho platit" },
+      { "label": "Kolik to zabere času", "competitor": "Hledat, domlouvat, zadávat, schvalovat, hlídat", "tagly": "Jednou nastavíte. Pak už jen dobíjíte, když dochází kredit, a hodnotíte story, která přijdou" }
+    ]
+  },
+  "whyBetter": {
+    "intro": "Jakmile váš podnik stojí na tom, že k vám lidé přijdou, naráží influencer marketing na několik zásadních problémů, které Tagly nemá. Lokální podnik totiž potřebuje marketing z doporučení od skutečných zákazníků. A přesně to Tagly dělá.",
+    "items": [
+      {
+        "title": "Publikum influencera není vaše publikum",
+        "description": "Řekněme, že influencer má 50 000 sledujících. Když jich ve vašem okolí bydlí pár set, platíte za to, aby se vaše jméno dostalo k desítkám tisíc lidí, kteří k vám stejně nikdy nepřijdou. A na kvalitě obsahu to nic nemění. Tagly to má obráceně. Sdílet vás může kdokoli a cena story se počítá z toho, kde jeho publikum doopravdy je: divák z vašeho města má nejvyšší hodnotu, divák o stovky kilometrů dál skoro žádnou. Platíte tak jen za lidi, kteří k vám opravdu mohou přijít."
+      },
+      {
+        "title": "Cenu si na vás nikdo neřekne",
+        "description": "V influencer marketingu určuje cenu prodávající a nemáte ji podle čeho poměřit, takže dva tvůrci s podobným publikem si můžou říct o úplně jiné částky. U Tagly se nevyjednává a žádný ceník neexistuje. Každá cena vzniká až poté, co je story venku, a to z čísel samotného Instagramu: kolik lidí ho doopravdy vidělo a jak blízko jsou ti lidé k vašemu podniku. Kolik může jedno story stát, navíc zastropujeme, takže vám s rozpočtem žádné neuteče."
+      },
+      {
+        "title": "Jedna domluva, jeden okamžik",
+        "description": "Když zaplatíte influencerovi, dostanete pevně daný balíček: domluvený počet příspěvků, a tím to končí, dokud nepodepíšete znovu. Tagly stojí na story, takže každé z nich je do dne pryč. A to je záměr. Místo jednoho vyladěného okamžiku vám průběžně chodí nová, pokaždé od někoho jiného, dokud máte na účtu z čeho platit. Hodnota je v tom, že je to pořád čerstvé a pořád se to opakuje, ne v jednom příspěvku, který zůstane viset."
+      },
+      {
+        "title": "Někdo, kdo u vás opravdu byl",
+        "description": "Influencera si najmete, aby propagoval něco, co třeba nikdy nezkusil. Zákazník na Tagly přidá story, jaké přidává běžně, a odměna je spíš poděkování než platba za přístup k publiku. Zaplaceno dostane taky, a tam, kde to Instagram nebo zákon vyžaduje, to označí. Samotné doporučení je ale jeho a jde k lidem, kteří ho znají."
+      },
+      {
+        "title": "Není s kým vyjednávat ani co schvalovat",
+        "description": "Spolupráce s influencery je celý projekt. Najít ty správné lidi, oslovit je, domluvit sazby, poslat zadání, schválit obsah, hlídat, že to opravdu vyjde, a zaplatit. Pro majitele podniku, který má na krku provoz, je to skoro práce na půl úvazku. Tagly nic z toho nechce. Není s kým vyjednávat a nic vám nechodí ke schválení. Chce po vás jen dvě věci: ať má podnik z čeho platit a ať každému story, které vám přijde, dáte pár hvězdiček."
+      },
+      {
+        "title": "Klidně můžete mít obojí",
+        "description": "Tagly nenahrazuje všechny formy marketingu. Když narazíte na influencera, který váš podnik doopravdy má rád a sledují ho lidé z okolí, může z toho být skvělá spolupráce. Tagly vám ale drží základ: pravidelnou, dostupnou a lokální propagaci, která běží sama. Berte to jako kanál, který jede pořád, zatímco domluvy s influencery jsou občasný bonus."
+      }
+    ]
+  },
+  "worksWell": {
+    "title": "Influencer marketing funguje dobře, jen ne lokálním podnikům",
+    "intro": "Influencer marketing není vždycky špatná volba. Některým typům podniků a některým cílům sedí výborně.",
+    "items": [
+      {
+        "title": "Uvedení nového produktu",
+        "description": "Když značka uvádí nový produkt a potřebuje o něm rychle rozvířit řeč, influenceři na něj během jediného dne přitáhnou tisíce lidí. U zboží, které rozvážíte po celé republice, se takový dosah umí proměnit ve skutečné objednávky."
+      },
+      {
+        "title": "Móda, kosmetika a technika",
+        "description": "Nejvíc z influencer marketingu těží obory, kde lidé objevují novinky přímo na sociálních sítích. Kosmetická značka pošle produkt padesáti influencerům a vzniknou z toho tisíce kusů obsahu. Funguje to proto, že se produkt může dostat ke komukoli a kamkoli."
+      },
+      {
+        "title": "Známost značky ve velkém",
+        "description": "Když je cílem dostat jméno před co nejvíc lidí, influenceři s velkým publikem to zvládnou. Pro značky, které jsou už známé a chtějí lidem zůstat v hlavě, má takový dosah smysl."
+      },
+      {
+        "title": "Obsah v profesionální kvalitě",
+        "description": "Někteří influenceři dělají opravdu působivý obsah. Pokud potřebujete vyladěné fotky nebo videa pro svou značku, může se spolupráce se správným tvůrcem vyplatit, zvlášť když ten obsah pak použijete i na vlastních kanálech."
+      }
+    ]
+  },
+  "bottomLine": {
+    "p1": "Influencer marketing dává smysl značkám, které prodávají ve velkém, jedou celostátní kampaně nebo shánějí obsah v profesionální kvalitě. Pokud se v tom poznáváte, může to být chytrá investice.",
+    "p2": "Když ale provozujete lokální podnik a potřebujete, aby k vám chodilo víc lidí, Tagly vám dá stejný druh propagace: skutečné lidi, kteří o vás přidají story na Instagram. Jenže jsou to vaši vlastní zákazníci, cenu určujeme my ze skutečných čísel z Instagramu, a ne ten, komu platíte, a platíte především za dosah ve svém okolí. Než se do toho pustíte, podívejte se na <pricing>ceník</pricing> nebo si přečtěte <faq>časté dotazy</faq>."
+  },
+  "other": {
+    "intro": "Přečtěte si i srovnání Tagly s <iads>reklamami na Instagramu</iads> a s <agencies>marketingovými agenturami</agencies>."
+  },
+  "cta": {
+    "heading": "Chcete Tagly vyzkoušet?",
+    "description": "Založte si stránku podniku, připojte kartu nebo si dobijte kredity a nechte zákazníky, ať vás začnou sdílet na Instagramu."
+  }
+}

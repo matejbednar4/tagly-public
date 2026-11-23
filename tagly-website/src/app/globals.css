@@ -1,0 +1,271 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+
+  /* Surfaces */
+  --color-background: #fffcf2; /* cream page background */
+  --color-surface: #ffffff; /* cards, input fills, white tiles */
+
+  /* Ink + warm text tiers. Text is never grey — grey looks dead on cream. */
+  --color-ink: #382724;
+  --color-text: var(--color-ink);
+  --color-text-secondary: #8a6f5f;
+  --color-text-tertiary: #b59a7e;
+
+  /* Accents. Butter and blue stay small, and never touch each other. */
+  --color-brand: #fff3b0;
+  --color-accent: #c1dbe8;
+  --color-on-brand: #382724;
+  --color-on-accent: #2e4a55;
+  --color-on-ink: #fff3b0;
+
+  /* Status — green is money/success only, red is errors only. */
+  --color-success: #3f9b6e;
+  --color-danger: #d4523e;
+
+  /* Hairlines. Dividers and input edges only — never a card border. */
+  --color-divider: rgba(56, 39, 36, 0.08);
+  --color-border-strong: rgba(56, 39, 36, 0.25);
+
+  /* Elevation. Always warm burgundy-tinted, never black. Values mirror
+     tagly-shared/client/theme/theme.ts (the source of truth; keep in sync). */
+  --shadow-chip: 0 1px 2px rgba(56, 39, 36, 0.08);
+  --shadow-card: 0 1px 2px rgba(56, 39, 36, 0.1), 0 4px 14px rgba(56, 39, 36, 0.07);
+  --shadow-float: 0 2px 4px rgba(56, 39, 36, 0.12), 0 12px 32px rgba(56, 39, 36, 0.12);
+  --shadow-bar: 0 2px 12px rgba(56, 39, 36, 0.08); /* sticky navbar */
+  --shadow-pinned: 0 -2px 12px rgba(56, 39, 36, 0.08); /* pinned bottom bar */
+
+  --spacing-page-max-width: 1360px;
+  --spacing-page-horizontal-padding: 24px;
+  --spacing-page-horizontal-padding-lg: 64px;
+  --spacing-section-gap: 64px;
+  --spacing-block-gap: 32px;
+  --spacing-element-gap: 16px;
+  --spacing-tight-gap: 8px;
+  --spacing-card-padding: 12px;
+  /* scroll-margin-top for anchored sections: clears the sticky navbar
+     (~60px) plus breathing room, so /#pricing never lands under the bar. */
+  --spacing-anchor-offset: 80px;
+  /* The desktop hero fills the first viewport minus the sticky navbar (same
+     ~60px figure the anchor offset is built on), so the scroll cue pinned at
+     the hero's bottom sits exactly at the fold. */
+  --spacing-hero-min-height: calc(100svh - 60px);
+
+  --breakpoint-desktop: 1200px;
+
+  /* 4 button · 8 structure · 999 pill */
+  --radius-sm: 4px;
+  --radius-lg: 8px;
+  --radius-max: 9999px;
+}
+
+/* Cards are separated by shadow, never by a border. This one rule replaces the
+   card class string that was repeated inline across every page. */
+@layer components {
+  .card {
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-card);
+  }
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+/* Spacing — desktop overrides */
+@media (min-width: 1200px) {
+  :root {
+    --spacing-section-gap: 96px;
+    --spacing-block-gap: 48px;
+    --spacing-element-gap: 24px;
+  }
+}
+
+/* Custom scrollbar */
+html {
+  scrollbar-color: var(--color-text-tertiary) transparent;
+  scrollbar-width: auto;
+  scroll-behavior: smooth;
+}
+
+/* Typography — mobile-first, desktop override at 1200px.
+   Headings are Playfair, which is never set below 18px or below weight 600;
+   bigger means bolder. Everything functional is Stack Sans at 400 or 500 —
+   emphasis comes from size and color, not from a heavier weight. That is why
+   h4 (16/18px) is a sans style despite being a heading. */
+.text-style-h1 {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+/* Companion to .text-style-h1 for the hero title, whose copy carries a \n
+   after the comma in BOTH locales and must render as EXACTLY those two lines
+   at every width (Matej's call 2026-08-14). `pre` honours the \n and forbids
+   any soft wrap; the size shrinks fluidly below the h1 sizes whenever the
+   widest line wouldn't fit the hero text column (a size container, hence
+   cqw). 11.8 = the widest line's measured width — CS "Lidé věří svým
+   kamarádům," at 11.43em advance width, minus letter-spacing, plus ~5%
+   margin. Re-derive if the title copy changes. */
+.text-style-h1-fit {
+  white-space: pre;
+  font-size: min(32px, calc(100cqw / 11.8));
+}
+
+.text-style-h2 {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+  line-height: 1.2;
+}
+
+.text-style-h3 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.3;
+}
+
+.text-style-h4 {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Hero and section subtitles — one step above body. */
+.text-style-lead {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.text-style-body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.text-style-body-bold {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.text-style-small-body {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.text-style-small-body-bold {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Metadata below caption (timestamps, overlines) — the app's `micro` (11/500). */
+.text-style-micro {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Money figures — the app's `amount` (24/500). Always sans, never serif, for
+   legibility; color comes separately (money is `text-success`). */
+.text-style-amount {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+@media (min-width: 1200px) {
+  .text-style-h1 {
+    font-size: 48px;
+  }
+
+  /* Must stay after .text-style-h1's desktop size (same specificity). */
+  .text-style-h1-fit {
+    font-size: min(48px, calc(100cqw / 11.8));
+  }
+
+  .text-style-h2 {
+    font-size: 32px;
+  }
+
+  .text-style-h3 {
+    font-size: 24px;
+  }
+
+  .text-style-h4 {
+    font-size: 18px;
+  }
+
+  .text-style-lead {
+    font-size: 20px;
+  }
+}
+
+/* Scroll fade-in animation — scoped under .js-ready so content stays visible without JS */
+.js-ready .fade-in-section {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+@media (min-width: 1200px) {
+  .js-ready .fade-in-section {
+    transform: translateY(24px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+}
+
+.js-ready .fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js-ready .fade-in-section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Marquee / partner scroll */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation: marquee 35s linear infinite;
+}
+
+@media (min-width: 1200px) {
+  .marquee-outer:hover .marquee-track {
+    animation-play-state: paused;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}

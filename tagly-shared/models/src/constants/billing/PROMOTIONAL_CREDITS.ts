@@ -1,0 +1,3 @@
+export const PROMOTIONAL_CREDITS = {
+  MAX_AMOUNT_CENTS: 350_00, // $350.00
+};

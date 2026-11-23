@@ -1,0 +1,21 @@
+{
+  "//": "Used in: app/(app)/referrals/index.tsx (referrals namespace).",
+  "title": "Pozvi a vydělej",
+  "statEarnings": "Výdělky z pozvání",
+  "statBusinesses": "Pozvaných podniků",
+  "statUsers": "Pozvaných uživatelů",
+  "howTitle": "Jak to funguje",
+  "inviteBusiness": "Pozvi podnik a získej",
+  "businessBase": "z jejich útrat",
+  "inviteFriend": "Pozvi uživatele a získej",
+  "friendBase": "z jejich výdělků",
+  "boostNote": "Plnou sazbu získáváš prvních {{months}} měsíců od jejich registrace. Poté se sníží na polovinu, ale platí napořád.",
+  "ratesChangeNote": "Sazby za pozvání se mohou v budoucnu změnit.",
+  "inviteTitle": "Tvůj kód a odkaz",
+  "yourCode": "Tvůj kód",
+  "yourLink": "Tvůj odkaz",
+  "shareLink": "Sdílet odkaz",
+  "codeCopied": "Kód zkopírován",
+  "linkCopied": "Odkaz zkopírován",
+  "shareMessage": "Rozjeď svůj podnik s Tagly. Skuteční zákazníci o tobě přidávají příspěvky na Instagram a odměnu jim platíš jen za ověřený dosah. {{link}}"
+}

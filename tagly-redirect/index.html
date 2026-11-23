@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Opening Tagly…</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <!-- Same icon as the join page (tagly-join/public/favicon.png). The old
+         favicon.ico stays in place so any direct/cached references keep
+         resolving (additive rule). -->
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <style>
+      /* Colours mirror the cream theme in tagly-shared/client/theme/theme.ts
+         (background #FFFCF2, ink #382724, secondary text #8A6F5F). Kept as
+         literals because this is a standalone static page that cannot import
+         the design tokens — if the theme moves, update these too. */
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+        line-height: 1.4;
+        padding: 24px;
+        background: #fffcf2;
+        color: #382724;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        text-align: center;
+      }
+      .spinner {
+        width: 28px;
+        height: 28px;
+        border: 3px solid rgba(56, 39, 36, 0.15);
+        border-top-color: #382724;
+        border-radius: 50%;
+        animation: spin 0.9s linear infinite;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      /* Respect reduced-motion: pulse instead of spin. */
+      @media (prefers-reduced-motion: reduce) {
+        .spinner {
+          animation: pulse 1.6s ease-in-out infinite;
+        }
+        @keyframes pulse {
+          50% {
+            opacity: 0.35;
+          }
+        }
+      }
+      .msg {
+        margin: 0;
+        font-size: 16px;
+      }
+      .hide {
+        display: none;
+      }
+      .manual {
+        margin: 0;
+        font-size: 14px;
+        color: #8a6f5f;
+      }
+      .btn {
+        display: inline-block;
+        margin-top: 8px;
+        padding: 12px 18px;
+        min-height: 44px; /* tap target */
+        box-sizing: border-box;
+        border-radius: 4px;
+        background: #382724;
+        color: #fff3b0;
+        font-weight: 500;
+        text-decoration: none;
+      }
+    </style>
+
+    <script>
+      (function () {
+        // Paths actually emitted today (see docs/LINKING_AND_REDIRECTS.md for
+        // the full map; the parser accepts any '/{app}[/{env}]/{rest}'), all on
+        // the tagly hosts (env inferred from host):
+        //   '/customer/open'            ← email CTAs ("open the app", OneLink fallback)
+        //   '/advertiser/open'          ← email CTAs ("open the app", OneLink fallback)
+        //   '/customer/instagram/oauth' ← IG OAuth return (backend CUSTOMER_APP_INSTAGRAM_OAUTH_REDIRECT_URI)
+        //   '/customer/withdraw'        ← Stripe Connect return AND refresh (CUSTOMER_APP_WITHDRAW_RETURN_URI)
+        //
+        // The '/{app}/{env}/{rest}' form ({env} = development|staging|production)
+        // is accepted for backwards compatibility with even older shipped URIs;
+        // nothing current emits it. Any other '{rest}' (e.g. a path a retired
+        // backend once emitted) is still bounced verbatim into the app scheme —
+        // the app decides what to do with it.
+
+        // NO WEB FALLBACK for mid-flow returns — those paths never navigate
+        // away (decision 2026-08-04).
+        //
+        // The page used to bounce to https://www.flaer.app after 1s. Two
+        // problems: the host was the old brand, and — worse — the timer fired
+        // while iOS was still showing its "Open in Tagly?" prompt, yanking the
+        // user to a marketing site mid-decision. Everyone who reaches an
+        // OAuth/Stripe return is mid-flow and therefore HAS the app; dumping
+        // them on a website was never the right answer. Those paths hold the
+        // loading state and only reveal a manual "open the app" link.
+        //
+        // ONE deliberate exception (2026-08-05): the '/open' paths. Those are
+        // marketing-email CTAs handed to people who may NOT have the app
+        // (pending signups), so after the scheme attempt they fall back to the
+        // app's AppsFlyer OneLink (app-or-store bounce + attribution). On iOS
+        // with the app installed this page usually never loads at all — the
+        // hosts are claimed universal-link domains, so the tap opens the app
+        // directly; reaching the page means a webview/Android/desktop/no-app
+        // context, where the OneLink fallback is exactly right.
+
+        // OneLink templates per app+env, mirroring the stage mapping in
+        // tagly-backend EMAIL_BRAND (no dev template — dev uses staging's).
+        var ONELINK = {
+          customer: {
+            development: "https://staging-tagly.onelink.me/nT6m/default",
+            staging: "https://staging-tagly.onelink.me/nT6m/default",
+            production: "https://tagly.onelink.me/fxW4/default",
+          },
+          advertiser: {
+            development: "https://staging-tagly-business.onelink.me/TAsn/default",
+            staging: "https://staging-tagly-business.onelink.me/TAsn/default",
+            production: "https://tagly-business.onelink.me/fBbP/default",
+          },
+        };
+
+        // One scheme family, on every host. The apps register only the tagly-*
+        // schemes (the flaer-* family lived only in v1 builds, which are retired
+        // behind the min-version wall), so a link that reaches this page on a
+        // legacy *.flaer.app host is also sent to the tagly scheme — that is the
+        // only app the user can have. (Sign-off 2026-08-31, v1 cutover.)
+        var schemes = {
+          customer: {
+            development: "tagly-dev",
+            staging: "tagly-staging",
+            production: "tagly",
+          },
+          advertiser: {
+            development: "tagly-business-dev",
+            staging: "tagly-business-staging",
+            production: "tagly-business",
+          },
+        };
+
+        var allowedEnvs = ["development", "staging", "production"];
+
+        function segs() {
+          return (window.location.pathname || "/").split("/").filter(Boolean);
+        }
+
+        function envFromHost(hostname) {
+          // Exact subdomain match is simplest/clearest:
+          //   dev.redirect.tagly.dev      -> development
+          //   staging.redirect.tagly.dev  -> staging
+          //   redirect.taglyapp.com       -> production
+          if (!hostname) return null;
+
+          // Tagly hosts (prod on taglyapp.com, non-prod on tagly.dev).
+          if (hostname === "dev.redirect.tagly.dev") return "development";
+          if (hostname === "staging.redirect.tagly.dev") return "staging";
+          if (hostname === "redirect.taglyapp.com") return "production";
+
+          // Legacy flaer.app hosts — kept resolving per the additive-migration
+          // rule (root CLAUDE.md: old hosts keep working until explicitly
+          // retired). They serve this same page and, since the v1 cutover, the
+          // same tagly scheme family. Only the env mapping is host-specific.
+          // Detaching these custom domains from the Amplify app is a separate,
+          // explicitly signed-off step.
+          if (hostname === "dev.redirect.flaer.app") return "development";
+          if (hostname === "staging.redirect.flaer.app") return "staging";
+          if (hostname === "redirect.flaer.app") return "production";
+
+          return "production"; // default/fallback
+        }
+
+        function parse() {
+          var s = segs();
+          var app = s[0] || ""; // "customer" | "advertiser"
+
+          // First try env from host (new desired behavior)
+          var hostEnv = envFromHost(window.location.hostname);
+
+          // Backwards compatibility: if 2nd segment is an env, use it (old behavior)
+          var maybeEnv = s[1] || "";
+          var hasEnvInPath = allowedEnvs.indexOf(maybeEnv) !== -1;
+
+          var env = null;
+          var restSegments = [];
+
+          if (hasEnvInPath) {
+            env = maybeEnv;
+            restSegments = s.slice(2);
+          } else {
+            env = hostEnv;
+            restSegments = s.slice(1);
+          }
+
+          var rest = restSegments.join("/"); // feature path
+          return { app: app, env: env, rest: rest };
+        }
+
+        function isAllowedRoute(app, rest) {
+          // Only constraint: the link must target a known app, so we pick the
+          // correct deep-link scheme (a customer link can't open the advertiser
+          // app or vice-versa). The `rest` is an in-app path and is intentionally
+          // unrestricted — this redirect can only ever open OUR OWN app scheme
+          // (never an external site), so there's no open-redirect surface. The
+          // real security boundary is the backend: every action is auth +
+          // ownership checked, so no screen may perform a sensitive action from
+          // deep-link params without a server-side check (e.g. PAYG `reconcile`
+          // validates that the Stripe session belongs to the logged-in advertiser).
+          return (app === "customer" || app === "advertiser") && !!rest;
+        }
+
+        function buildDeepLink(app, env, rest, qs, hash) {
+          var scheme = (schemes[app] || {})[env];
+          if (!scheme) return null;
+
+          // Keep path if present; otherwise open the app root.
+          var pathPart = rest ? "://" + rest.replace(/^\/+/, "") : "://";
+          var q = qs ? "?" + qs : "";
+          var h = hash || "";
+          return scheme + pathPart + q + h;
+        }
+
+        function revealManual() {
+          var el = document.getElementById("manual");
+          if (el) el.className = "";
+        }
+
+        function tryOpen(url, fallbackUrl) {
+          var iframe = document.createElement("iframe");
+          iframe.style.display = "none";
+          iframe.src = url;
+          document.body.appendChild(iframe);
+
+          setTimeout(function () {
+            window.location.href = url;
+          }, 50);
+
+          // After a beat, either bounce to the fallback ('/open' → OneLink,
+          // app-or-store) or reveal the manual link (mid-flow returns — an
+          // escape hatch, never a redirect). 2.5s is deliberately slower than
+          // the old 1s bounce so a slow "Open in Tagly?" prompt is never
+          // interrupted.
+          var after = setTimeout(function () {
+            if (fallbackUrl) {
+              window.location.replace(fallbackUrl);
+            } else {
+              revealManual();
+            }
+          }, 2500);
+
+          // If the app took over, the tab goes hidden — cancel the follow-up.
+          document.addEventListener("visibilitychange", function () {
+            if (document.hidden) clearTimeout(after);
+          });
+
+          setTimeout(function () {
+            try {
+              document.body.removeChild(iframe);
+            } catch (_) {}
+          }, 3000);
+        }
+
+        function main() {
+          var p = parse();
+          var sp = new URLSearchParams(window.location.search || "");
+          var hash = window.location.hash || "";
+
+          // Unresolvable link (no env, unknown app, or no in-app path): hold the
+          // loading state rather than navigating anywhere. There is no manual
+          // link to offer — we have no target to build one from — and these URLs
+          // are not ones a real user is ever handed.
+          if (!p.env) return;
+          if (!isAllowedRoute(p.app, p.rest)) return;
+
+          // '/customer/open' + '/advertiser/open' — the email-CTA "open the
+          // app" route: deep-link to the app ROOT (the app's +native-intent
+          // routes any unmatched path home anyway), and fall back to the
+          // OneLink app-or-store bounce for people without the app.
+          if (p.rest === "open") {
+            if (p.app === "advertiser") {
+              var msgEl = document.querySelector(".msg");
+              if (msgEl) msgEl.textContent = "Opening Tagly Partner…";
+            }
+            var oneLink = (ONELINK[p.app] || {})[p.env];
+            var rootTarget = buildDeepLink(p.app, p.env, "", sp.toString(), hash);
+            if (!rootTarget) return;
+
+            var manualEl = document.getElementById("fallback-link");
+            if (manualEl) manualEl.href = oneLink || rootTarget;
+
+            tryOpen(rootTarget, oneLink);
+            return;
+          }
+
+          var target = buildDeepLink(p.app, p.env, p.rest, sp.toString(), hash);
+          if (!target) return;
+
+          var fallbackEl = document.getElementById("fallback-link");
+          if (fallbackEl) fallbackEl.href = target;
+
+          tryOpen(target);
+        }
+
+        window.addEventListener("DOMContentLoaded", main);
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div class="spinner" role="status" aria-label="Opening the Tagly app"></div>
+    <p class="msg">Opening the Tagly app…</p>
+
+    <!-- Manual escape hatch. Hidden until `revealManual()` clears the class
+         (~2.5s), and never revealed if the app took over and hid the tab.
+         Previously this carried a permanent `hide` class that nothing ever
+         removed, so it could not appear at all. -->
+    <p id="manual" class="hide">
+      <span class="manual">Still here?</span><br />
+      <a id="fallback-link" class="btn" href="#">Open the Tagly app</a>
+    </p>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "//": "Used in: components/businesses/NoBusinessCard (noBusinessCard namespace). The create-your-business-page prompt card.",
+  "notVisible": "Not visible",
+  "title": "Create your business page",
+  "body": "Add a business so customers can find you and start sharing.",
+  "cta": "Create business page"
+}

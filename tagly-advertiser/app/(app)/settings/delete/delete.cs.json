@@ -1,0 +1,26 @@
+{
+  "//": "Used in: app/(app)/settings/delete/index.tsx (settingsDelete namespace).",
+
+  "warningHeading": "Tuto akci nelze vrátit",
+  "warningBalanceNote": "Zbývající kredit {{balance}} propadne.",
+  "warningPoint1": "Tvůj účet a profil budou natrvalo smazány.",
+  "warningPoint2": "Tvoje stránky podniku budou odebrány a přestanou se zobrazovat.",
+  "warningPoint3": "Jakýkoli nevyužitý kredit propadne.",
+  "sendCodeButton": "Smazat můj účet",
+
+  "verifyHeading": "Potvrď, že jsi to ty",
+  "verifyBody": "Zadej kód, který jsme poslali na {{email}}.",
+  "resend": "Poslat kód znovu",
+  "resendIn": "Znovu za {{seconds}} s",
+  "deleteButton": "Smazat účet",
+  "back": "Ponechat účet",
+
+  "deletedTitle": "Účet smazán",
+  "deletedBody": "Tvůj účet byl smazán. Mrzí nás, že odcházíš.",
+  "deletedWithBalanceBody": "Tvůj účet byl smazán. Nevyužitý kredit propadl.",
+
+  "owesMoneyTitle": "Nezaplacený zůstatek",
+  "owesMoneyBody": "Na účtu máš nezaplacený zůstatek. Před smazáním účtu ho prosím vyřeš s podporou.",
+  "noPendingTitle": "Zkusíme to znovu",
+  "noPendingBody": "Tvůj potvrzovací kód vypršel. Pošli si nový a pokračuj."
+}

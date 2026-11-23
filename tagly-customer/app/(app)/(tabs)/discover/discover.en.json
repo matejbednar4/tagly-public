@@ -1,0 +1,14 @@
+{
+  "//": "Used in: app/(app)/(tabs)/discover/index.tsx (discover namespace). The Discover tab — recommended/top-earning/nearest shelves + search.",
+  "title": "Discover",
+  "searchPlaceholder": "Search businesses",
+  "recommendedTitle": "Recommended for you",
+  "topEarningTitle": "Earn the most",
+  "nearestTitle": "Near you",
+  "resultsTitle": "Results",
+  "browseAll": "Browse all businesses",
+  "noBusinesses": "No businesses available",
+  "noBusinessesHint": "There are no businesses on Tagly near you yet. Check back soon.",
+  "empty": "No businesses found",
+  "emptyHint": "Try a different name."
+}

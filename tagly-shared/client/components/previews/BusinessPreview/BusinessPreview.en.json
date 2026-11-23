@@ -1,0 +1,9 @@
+{
+  "//": "Used in: components/previews/BusinessPreview/index.tsx (businessPreview namespace).",
+  "earnHereButton": "Earn here",
+  "previewEstReward": "est. {{amount}}",
+  "previewEstRewardCapped": "up to {{amount}}",
+  "previewReach": "for {{reach}} reach",
+  "subsidizedByPlatform": "Subsidized by Tagly",
+  "endingSoon": "Ending soon"
+}

@@ -1,0 +1,7 @@
+{
+  "//": "Used in: app/(onboarding)/consent/index.tsx (consent namespace). Marketing opt-in (email + push), shown to EVERY locale. The body MUST name both channels (email + push notifications): Apple 4.5.4 and GDPR informed consent require the channels in the visible consent language, not just this comment. Keep DISTINCT from the notifications permission step users hit right before this: frame this as optional promotions so it doesn't read as a repeat.",
+  "heading": "Nová místa a nabídky",
+  "body": "Budeme ti posílat ty nejlepší nabídky z okolí a připomínky e-mailem i push notifikacemi. Kdykoli to můžeš vypnout.",
+  "allow": "Ano, to chci",
+  "deny": "Ne, děkuji"
+}

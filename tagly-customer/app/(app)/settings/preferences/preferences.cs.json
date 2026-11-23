@@ -1,0 +1,28 @@
+{
+  "//": "Used in: app/(app)/settings/preferences/index.tsx (settingsPreferences namespace).",
+  "title": "Předvolby",
+
+  "languageSection": "Jazyk",
+  "languageEn": "English",
+  "languageCs": "Čeština",
+
+  "distanceSection": "Vzdálenost",
+  "distanceKm": "Kilometry",
+  "distanceMi": "Míle",
+
+  "regionSection": "Region",
+  "regionUs": "Spojené státy",
+  "regionCz": "Česko",
+  "regionNote": "Určuje, jaké podniky uvidíš, tvoji měnu a zemi, do které ti budeme posílat výběry.",
+  "regionLockedNote": "Účet pro výběry už máš nastavený, takže region tady změnit nejde. Pokud ho potřebuješ změnit, <support>napiš podpoře</support>.",
+  "regionSwitchTitle": "Změnit region?",
+  "regionSwitchBody": "Uvidíš podniky v {{country}}, změní se ti měna a výběry budou chodit na tamní banku.",
+  "regionSwitchConfirm": "Přepnout",
+  "regionUpdatedToast": "Region byl změněn",
+  "cancel": "Zrušit",
+
+  "country": {
+    "US": "USA",
+    "CZ": "Česku"
+  }
+}

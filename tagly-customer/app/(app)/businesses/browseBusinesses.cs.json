@@ -1,0 +1,16 @@
+{
+  "//": "Used in: app/(app)/businesses/index.tsx (browseBusinesses namespace). The paginated browse-all-businesses directory with sort + vertical filters.",
+  "title": "Všechny podniky",
+  "marketNote": "Zobrazujeme jen podniky v {{market}}.",
+  "marketUS": "USA",
+  "marketCZ": "Česku",
+  "sortBy": "Řadit podle",
+  "sortName": "Názvu",
+  "sortDistance": "Nejbližší",
+  "categories": "Kategorie",
+  "chooseCategories": "Vyber kategorie",
+  "selectedCount": "{{count}} vybráno",
+  "filterDone": "Hotovo",
+  "empty": "Žádné podniky nenalezeny",
+  "emptyHint": "Zkus odebrat filtr."
+}

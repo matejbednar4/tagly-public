@@ -1,0 +1,11 @@
+{
+  "//": "Used in: contexts/instagram/InstagramConnectionContext.tsx (instagramConnection namespace). Reconnect-flow alerts + the shared connection-status line (useInstagramStatusLabel).",
+  "connectFailedTitle": "Instagram se nepodařilo připojit",
+  "alreadyLinked": "Tento Instagramový účet je už připojený k jinému Tagly účtu.",
+  "accountMismatch": "Ke tvému Tagly účtu je již připojen jiný Instagramový účet. Připoj prosím ten stejný.",
+  "connectFailedBody": "Při připojování Instagramu se něco pokazilo. Zkus to prosím znovu.",
+  "statusNotConnected": "Instagram není připojený",
+  "statusMissingPermission": "Chybí oprávnění",
+  "statusDisconnected": "Instagram byl odpojen",
+  "statusExpired": "Platnost přihlášení vypršela"
+}

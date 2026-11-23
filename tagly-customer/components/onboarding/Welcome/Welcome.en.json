@@ -1,0 +1,32 @@
+{
+  "//": "Used in: components/onboarding/Welcome (onboarding namespace) — the explainer carousel, shown both at first-run (app/(onboarding)/index.tsx) and as the authed 'How it works' guide (app/(app)/how-it-works).",
+  "skip": "Skip",
+  "continue": "Continue",
+  "getStarted": "Get started",
+  "done": "Done",
+  "slides": {
+    "find": {
+      "kicker": "Step 1",
+      "heading": "Find a business on Tagly",
+      "body": "Cafés, gyms and restaurants near you.",
+      "short": "Find a place"
+    },
+    "post": {
+      "kicker": "Step 2",
+      "heading": "Post an Instagram story from your visit",
+      "body": "And don't forget to tag the business.",
+      "short": "Post a story"
+    },
+    "earn": {
+      "kicker": "Step 3",
+      "heading": "Earn money the next day",
+      "body": "You're paid based on how many people saw your story.",
+      "short": "Earn the next day"
+    },
+    "why": {
+      "kicker": "Why it works",
+      "heading": "Your story is a local business's best ad",
+      "body": "And that's exactly what you're paid for."
+    }
+  }
+}

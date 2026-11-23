@@ -1,0 +1,42 @@
+{
+  "cli": {
+    "version": ">= 13.0.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "staging": {
+      "node": "22.13.0",
+      "distribution": "store",
+      "autoIncrement": true,
+      "channel": "staging",
+      "environment": "preview"
+    },
+    "staging-dev-client": {
+      "extends": "staging",
+      "distribution": "internal",
+      "developmentClient": true,
+      "autoIncrement": false
+    },
+    "production": {
+      "node": "22.13.0",
+      "distribution": "store",
+      "autoIncrement": true,
+      "channel": "production",
+      "environment": "production"
+    }
+  },
+  "submit": {
+    "staging": {
+      "ios": {
+        "ascAppId": "6797418710",
+        "bundleIdentifier": "com.flaer.admin.staging"
+      }
+    },
+    "production": {
+      "ios": {
+        "ascAppId": "6797418817",
+        "bundleIdentifier": "com.flaer.admin"
+      }
+    }
+  }
+}

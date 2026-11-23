@@ -1,0 +1,11 @@
+{
+  "//": "Used in: components/billing/FundingSurface + its BalanceCard / HowYouPayCard / FundingPitch (fundingSurface namespace). Only this surface's own chrome — every method name, status word, schedule line and verb comes from the shared billing namespace.",
+  "available": "Available credits",
+  "locked": "Locked credits",
+  "addCredits": "Add credits",
+  "payBalance": "Pay balance",
+  "negativeHint": "Your balance is negative: a share reward was paid out that it didn't cover. Pay it off to clear your account.",
+  "belowMinHint": "You need {{min}} available to stay visible.",
+  "monthlyFault": "Update your card to start it again",
+  "paygLeadIn": "Prefer not to pay upfront?"
+}

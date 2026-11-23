@@ -1,0 +1,7 @@
+{
+  "//": "Used in: app/(onboarding)/finishing/index.tsx (finishing namespace). Auto-runs finish-registration; only the retry state is interactive.",
+  "settingUp": "Setting up your account…",
+  "errorHeading": "Almost there",
+  "errorBody": "We couldn't finish setting up your account. Please try again.",
+  "retry": "Try again"
+}

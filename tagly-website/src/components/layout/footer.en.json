@@ -1,0 +1,57 @@
+{
+  "//": "Used in: src/components/layout/Footer.tsx — section titles, link labels, copyright line, and social aria labels.",
+  "sections": {
+    "forBusiness": "For Business",
+    "industries": "Industries",
+    "compare": "Compare",
+    "apps": "Apps",
+    "company": "Company",
+    "forCustomers": "For Customers",
+    "legal": "Legal & Compliance"
+  },
+  "forBusiness": {
+    "howItWorks": "How It Works",
+    "pricing": "Pricing",
+    "referrals": "Referrals",
+    "faq": "FAQ",
+    "getInTouch": "Leave your contact"
+  },
+  "industries": {
+    "restaurants": "Restaurants",
+    "cafes": "Cafes",
+    "gyms": "Gyms",
+    "salons": "Salons",
+    "other": "Other Industries"
+  },
+  "compare": {
+    "instagramAds": "Instagram Ads vs Tagly",
+    "influencerMarketing": "Influencer Marketing vs Tagly",
+    "marketingAgencies": "Marketing Agencies vs Tagly"
+  },
+  "apps": {
+    "business": "Tagly Partner",
+    "customer": "Tagly"
+  },
+  "company": {
+    "about": "About",
+    "careers": "Careers",
+    "contact": "Contact"
+  },
+  "forCustomers": {
+    "howItWorks": "How It Works",
+    "faq": "FAQ"
+  },
+  "legal": {
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "monetization": "Terms of Monetization",
+    "instagramDataDeletion": "Instagram Data Deletion"
+  },
+  "aria": {
+    "instagram": "Tagly on Instagram",
+    "linkedin": "Tagly on LinkedIn",
+    "tiktok": "Tagly on TikTok",
+    "taglyHome": "Tagly home"
+  },
+  "copyright": "© {{year}} Flaer, Inc. All rights reserved."
+}

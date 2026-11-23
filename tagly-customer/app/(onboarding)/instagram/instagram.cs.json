@@ -1,0 +1,31 @@
+{
+  "//": "Used in: app/(onboarding)/instagram/index.tsx (instagram namespace).",
+  "heading": "Připoj Instagram",
+  "body": "Tagly ti platí za příspěvky z podniků, které navštívíš. Abychom ti za ně mohli dát odměnu, připoj svůj Instagramový účet.",
+  "why": "Proč potřebuji profesionální účet?",
+  "connect": "Připojit Instagram",
+  "skip": "Zatím přeskočit",
+
+  "skipAlertTitle": "Přeskočit Instagram?",
+  "skipAlertBody": "Instagram můžeš připojit i později v Nastavení, ale dokud to neuděláš, nebudeš moct vydělávat.",
+  "skipAlertCancel": "Zrušit",
+  "skipAlertConfirm": "Zatím přeskočit",
+
+  "failedNote": "Stránka se nenačetla nebo se zasekla? Instagram občas selže, ale anonymní okno by to mělo vyřešit.",
+  "incognito": "Otevřít v anonymním okně",
+
+  "takenTitle": "Instagram už je propojený",
+  "takenBody": "Tento Instagram je už propojený s jiným účtem Tagly. Chceš se místo toho přihlásit k tomu účtu?",
+  "takenLogin": "Přihlásit se",
+  "takenCancel": "Zrušit",
+
+  "whyHeading": "Proč potřebuji profesionální účet?",
+  "whyBody": "Instagram umožňuje připojit jen profesionální účty, ty běžné bohužel ne.",
+  "whyBenefits": "Jaké jsou výhody profesionálního účtu?",
+  "whyInsightsTitle": "Více statistik",
+  "whyInsightsBody": "Instagram ti ukáže víc statistik o tom, jak si tvoje příspěvky vedou.",
+  "whyFreeTitle": "Je to zdarma",
+  "whyFreeBody": "Přepnutí na profesionální účet je zdarma a kdykoli ho můžeš vrátit zpět na osobní.",
+  "whyPrivacyTitle": "Jen čteme, nic neměníme",
+  "whyPrivacyBody": "Tagly si tvoje statistiky jen přečte, aby ti spočítalo odměnu. Nikdy nic nepřidáváme, neupravujeme ani neposíláme zprávy."
+}

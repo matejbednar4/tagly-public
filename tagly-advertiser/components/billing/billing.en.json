@@ -1,0 +1,72 @@
+{
+  "//": "THE canonical funding vocabulary for the whole billing feature (billing namespace), at the feature root rather than inside a component folder — every card, row and sheet renders these exact words. THE RULE: if a string names a method, a state, an amount or an action, it belongs here; if it narrates a flow (consent, verifying, success, failure, confirm), it belongs to that sheet's own namespace. Point counts are fixed by MethodBenefits' ROWS (credits + payg: 2, monthlyBudget: 3) — change both together. {{surcharge}} = formatted PAYG.SURCHARGE_CENTS.",
+  "howYouPay": "How you pay",
+  "credits": {
+    "title": "Prepaid credits",
+    "tagline": "Buy credits that fund the shares of your business",
+    "benefitsTitle": "Benefits of prepaid credits",
+    "cta": "Add credits",
+    "point1": "Only spent when someone shares you",
+    "point1Sub": "One reward per share of your business",
+    "point2": "Credits never expire",
+    "point2Sub": "Unused credits stay on your account until you spend them",
+    "available": "Available credits",
+    "locked": "Locked credits",
+    "rate": "1 credit = $1"
+  },
+  "payg": {
+    "title": "Pay as you go",
+    "tagline": "When someone shares you, we charge the amount for that share to your card",
+    "benefitsTitle": "Benefits of pay as you go",
+    "cta": "Set up pay as you go",
+    "point1": "Nothing to pay upfront",
+    "point1Sub": "Your card is charged only when someone shares you",
+    "point2": "Nothing to keep an eye on",
+    "point2Sub": "No topping up and no balance to watch",
+    "afterCredits": "Used after your credits run out",
+    "surcharge": "{{surcharge}} per charge",
+    "chargedToCard": "Shares are charged to your card. Credits are always used first."
+  },
+  "monthlyBudget": {
+    "title": "Monthly top-up",
+    "tagline": "Start every month with a full budget",
+    "benefitsTitle": "Benefits of monthly top-up",
+    "cta": "Set up monthly top-up",
+    "point1": "Be charged automatically",
+    "point1Sub": "No need to check your balance or top up by hand",
+    "point2": "Only pay the difference",
+    "point2Sub": "On the 1st of the month, we charge just what's missing up to your monthly amount",
+    "point3": "Predictable spend",
+    "point3Sub": "Your budget is the maximum you spend in a month",
+    "perMonth": "{{amount}} / month",
+    "chargeLine": "At your current balance we'll charge {{amount}} on {{date}}",
+    "chargeLineZero": "At your current balance nothing will be charged on {{date}}"
+  },
+  "card": {
+    "title": "Payment card",
+    "onFile": "{{brand}} •••• {{last4}}",
+    "expires": "Expires {{month}}/{{year}}",
+    "none": "None",
+    "declined": "Declined",
+    "jobsHeading": "This card is used for:"
+  },
+  "action": {
+    "payBalance": "Pay balance",
+    "turnOff": "Turn off",
+    "changeAmount": "Change amount",
+    "updateCard": "Update card",
+    "replaceCard": "Replace card",
+    "removeCard": "Remove card",
+    "addCard": "Add card",
+    "manage": "Manage",
+    "card": "Card"
+  },
+  "state": {
+    "on": "On",
+    "off": "Off",
+    "active": "Active",
+    "paused": "Paused",
+    "retrying": "Retrying",
+    "cardIssue": "Card issue"
+  }
+}

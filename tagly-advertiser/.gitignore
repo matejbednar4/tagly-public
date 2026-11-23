@@ -1,0 +1,46 @@
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# local env files
+.env*.local
+
+# typescript
+*.tsbuildinfo
+
+app-example
+
+# CNG: generated native projects. Also ignored at the repo root, but that file
+# is invisible to @expo/fingerprint on the EAS builder (no .git there, so its
+# ignore scan is scoped to this app dir) — without these lines the builder
+# fingerprints the prebuilt android/ dir as "bare" and the runtime version
+# stops matching the one computed locally (fingerprint policy).
+/android/
+/ios/

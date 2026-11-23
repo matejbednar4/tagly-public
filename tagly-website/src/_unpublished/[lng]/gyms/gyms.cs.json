@@ -1,0 +1,140 @@
+{
+  "//": "Used in: src/app/[lng]/gyms/page.tsx — hero, problem cards, how-it-works flow, examples (4 photos), why-gyms, use cases, FAQ, internal links, CTA. faq.costInline/influencerInline render with <Trans>.",
+  "meta": {
+    "title": "Tagly pro fitness centra | Ať vás na Instagramu propagují vlastní členové",
+    "description": "Marketing fitka, který zůstane lokální. Vaši členové dávají tréninky na Instagram do story, Tagly jim za to zaplatí a vy platíte jen za dosah ve svém okolí. Žádné reklamy, žádní influenceři, nic k vymýšlení."
+  },
+  "hero": {
+    "title": "Vaši členové se svými tréninky rádi chlubí. Ať se pochlubí i vaším fitkem.",
+    "intro": "Selfie u zrcadla, fotky pokroku, snímek po tréninku. Vaši členové je dělají pořád a spousta z nich skončí ve story, ze kterého nikdo nepozná, kde vlastně vznikla. Tagly jim dá důvod ukázat ve story i vaše fitko a zaplatí jim za lidi z vašeho okolí, kteří ho viděli."
+  },
+  "broken": {
+    "title": "Marketing fitek umí nabírat, ale ne udržet",
+    "intro": "Klasická reklama někoho přivede dovnitř a tím to končí. Nepomůže vám k tomu, aby se vracel, a už vůbec ne k tomu, aby o vás mluvili členové, které máte dávno.",
+    "items": [
+      {
+        "title": "Získat nového člena je drahé",
+        "description": "Akce na vstupné, reklamy ve vyhledávání, trénink na zkoušku zdarma. Za všechno zaplatíte předem, dávno předtím, než zjistíte, jestli u vás nováček vydrží déle než měsíc. Peníze odejdou tak jako tak, ať to vyjde, nebo ne.",
+        "link": "Srovnání s reklamami na Instagramu"
+      },
+      {
+        "title": "Fitness influencer vám lokální členy nepřivede",
+        "description": "Spolupráce s fitness influencerem možná vypadá dobře na profilu, jenže jeho sledující jsou rozesetí po celé republice. Do fitka chodí lidé, kteří to k vám mají čtvrt hodiny, ne někdo z druhého konce země. Tagly počítá cenu obráceně: čím dál od vašich dveří publikum story bydlí, tím blíž je jeho hodnota nule.",
+        "link": "Srovnání s influencer marketingem"
+      },
+      {
+        "title": "O vašich nejlepších členech se nikdo nedozví",
+        "description": "Lidé, kteří k vám chodí pětkrát týdně a mají vaše fitko rádi, jsou to nejlepší, co pro vás marketing může udělat. Většinu z nich přitom nikdy nenapadne doporučit vás veřejně. Fotí se u zrcadla, sdílejí, jak se posunuli, a nikde není poznat, kde vlastně trénují. Přesně tohle Tagly řeší."
+      }
+    ]
+  },
+  "how": {
+    "title": "Jak Tagly funguje ve fitku",
+    "intro": "Členové dají po tréninku na Instagram story, ve kterém je vidět vaše fitko. Zhruba o den později zaplatíte podle dosahu, který mělo.",
+    "steps": [
+      {
+        "title": "Člen dotrénuje",
+        "description": "Vaše fitko našel v aplikaci Tagly na mapě nebo ve vyhledávání, nebo k vám chodí dávno a aplikaci už má. Odtrénuje úplně stejně jako jindy. Na tréninku se nemění nic a vy nemusíte nic tisknout ani rozdávat."
+      },
+      {
+        "title": "Dá story na Instagram",
+        "description": "Selfie u zrcadla, váha, kterou právě dal, skupinová lekce, fotka před a po. Ve story musí být vaše fitko vidět, takže vás označí nebo přidá polohovou nálepku, a pak si tohle story v aplikaci Tagly vybere. Počítá se jen story a v době odeslání musí být pořád aktivní."
+      },
+      {
+        "title": "Zhruba o den později zaplatíte za dosah",
+        "description": "Zhruba 24 hodin po zveřejnění nám Instagram nahlásí, kolik lidí story vidělo. Z toho dosahu, z toho, jaká jeho část byla blízko vašeho fitka, a z několika dalších faktorů spočítáme odměnu. Členovi ji zaplatíme z vašeho rozpočtu a teprve v tu chvíli vás story něco stojí."
+      }
+    ],
+    "fullGuide": "Přečíst celý návod krok za krokem"
+  },
+  "examples": {
+    "title": "Jaká story budou vaši členové sdílet",
+    "intro": "Ve fitku se lidé fotí tak jako tak. Většina fotek pak zůstane v galerii. Tagly je důvod, proč jedna z nich skončí ve story, kde je vidět i vaše fitko.",
+    "alts": [
+      "Mrtvý tah v posilovně Mania Gym, sdíleno na Instagramu",
+      "Dřepový stojan a činky Eleiko ve Strength Fit, sdíleno na Instagramu",
+      "Prostor posilovny a stroje v Heavyweight, sdíleno na Instagramu",
+      "Rozložené jógové podložky a deky v Relax Yoga Studio, sdíleno na Instagramu"
+    ]
+  },
+  "why": {
+    "title": "Proč Tagly sedí fitkům obzvlášť dobře",
+    "intro": "Fitka mají něco, co většina podniků nemá: lidi, kteří přijdou několikrát týdně a členství si platí na měsíce dopředu. Přesně z toho Tagly ve fitku těží.",
+    "items": [
+      {
+        "title": "Obsah vzniká i bez vás",
+        "description": "Story z tréninku, fotky pokroku a selfie u zrcadla vznikají tak jako tak. Nikoho nemusíte přemlouvat, aby se vyfotil. Dáváte mu jen důvod, aby při sdílení bylo vidět i vaše jméno. Sport a fitness navíc leží na škále typů podniku v Tagly kousek nad průměrem, takže stejný dosah má u fitka o něco vyšší hodnotu než u běžného podniku, pro člena i pro váš rozpočet."
+      },
+      {
+        "title": "Objem dělá členská základna, ne jeden nadšenec",
+        "description": "Kdo to myslí vážně, trénuje třikrát až šestkrát týdně, takže důvod vás sdílet má pořád. Jeden člověk ale může za sdílení vašeho fitka dostat odměnu nejvýš jednou za 24 hodin, a čím častěji někdo sdílí v krátké době, tím menší hodnotu má každé další story. Stálý přísun proto dělá velikost základny, ne jeden nadšenec. Platíte za každé zaplacené story zvlášť a kolik může jedno story stát, má svůj strop."
+      },
+      {
+        "title": "Fitko si člověk vybírá podle vzdálenosti",
+        "description": "Nikdo nejezdí cvičit 45 minut přes celou Prahu. Lidé si vyberou fitko kousek od domova nebo od práce, a většina jejich sledujících proto bydlí ve stejné části města. Tagly staví cenu přesně na tomhle: dosah blízko vaší adresy má nejvyšší hodnotu, dosah o stovky kilometrů dál skoro žádnou."
+      },
+      {
+        "title": "Story od člena zvládne to, co reklama neumí",
+        "description": "Když vidíte, že někam chodí cvičit člověk, kterého znáte, je to úplně jiné doporučení. Stojí za ním konkrétní člověk, jeho vlastní slova a jeho vlastní účet. Tagly zařídí, aby se to dělo pravidelně, a ne jednou za čas náhodou."
+      }
+    ]
+  },
+  "useCases": {
+    "title": "Jak Tagly využívají různá fitka",
+    "items": [
+      {
+        "title": "CrossFit boxy a butiková studia",
+        "description": "V CrossFitu a butikových studiích komunita funguje sama od sebe. Členové jsou na tréninky hrdí a už teď je sdílejí. Tagly to nasměruje do story, ve kterém je vidět váš box, a uvidí ho hlavně lidé, kteří cvičí ve stejné čtvrti nebo tam cvičit chtějí."
+      },
+      {
+        "title": "Velká fitka, která bojují s odlivem členů",
+        "description": "Udržet členy je na provozu velkého fitka to nejtěžší. Tagly to samo nevyřeší, ale dostane vás před lidi, u kterých je největší šance, že přijdou: před kamarády členů, kterým se u vás líbí. A člen, který vás právě sdílel, se k vám navíc veřejně přihlásil."
+      },
+      {
+        "title": "Nové pobočky, které teprve nabírají",
+        "description": "Otevíráte novou pobočku? Právě první členové o ní mají co říct. Tagly jim dá důvod říct to veřejně, kamarádům a kolegům, kteří bydlí v okolí, na které míříte. Na tom, jak dlouho máte otevřeno, v Tagly nezáleží."
+      }
+    ]
+  },
+  "faq": {
+    "heading": "Časté dotazy k marketingu fitness center",
+    "items": [
+      {
+        "question": "Kolik Tagly stojí fitko?",
+        "answer": "Platit jde dvěma způsoby a ani jeden není smlouva ani předplatné. První jsou průběžné platby: připojíte kartu a jste hned vidět. Nic se nestrhne dřív, než je nějaké story doopravdy zaplacené, a i pak jen ta část, kterou nepokryjí kredity, plus 0,30 $ za každou platbu. Žádná záloha, žádné minimum. Druhá možnost jsou kredity předem: 1 kredit = 1 $, nejmenší nákup je 50 $ a kredity nikdy nevyprší. S kredity vyjde story o kousek levněji, protože se neplatí poplatek za platbu, a s aspoň 15 $ dostupných kreditů zůstáváte v aplikaci vidět. Tak či tak platíte za každé zaplacené story zvlášť a kolik může jedno story stát, má svůj strop, takže vám žádné story neodčerpá celý rozpočet. Částky vidíte v aplikaci i v korunách podle aktuálního kurzu."
+      },
+      {
+        "question": "Musím sám tvořit nějaký obsah?",
+        "answer": "Ne. Obsah dělají vaši členové: fotky z tréninku, selfie u zrcadla, snímky pokroku, všechno ve vlastních instagramových story. Nic neplánujete, nefotíte, nepíšete popisky a nespravujete žádný kalendář na sociální sítě. Zároveň jim ale nemůžete nic zadat, story před zveřejněním schválit ani jim říct, co mají napsat."
+      },
+      {
+        "question": "Bude to fungovat i fitku, které právě otevřelo?",
+        "answer": "Ano. Na tom, jak dlouho máte otevřeno, ve fungování Tagly nezáleží. Potřebujete stránku podniku, rozpočet a členy s profesionálním účtem na Instagramu, což je nastavení Business nebo Creator, které Instagram nabízí zdarma. První členové bývají nejnadšenější a jejich kamarádi jsou přesně ti lidé, co bydlí kolem vaší nové pobočky."
+      },
+      {
+        "question": "Jak se členové dozvědí, že je moje fitko na Tagly?",
+        "answer": "Najdou vás přímo v aplikaci Tagly: na mapě, ve vyhledávání a v seznamech, které aplikace ukazuje lidem v okolí. Není co tisknout ani co rozdávat. Stálým členům to můžete prostě říct. Aplikaci si nainstalují a najdou vás stejně jako kdokoli jiný."
+      },
+      {
+        "question": "Jak se to liší od placené spolupráce s fitness influencerem?",
+        "answer": "Influencer si řekne o paušál bez ohledu na výsledek a jeho sledující jsou obvykle rozesetí po celé republice. Přes Tagly vás sdílejí vaši vlastní členové svým vlastním sledujícím a platíte za každé story zvlášť, podle dosahu, který mělo, a podle toho, jaká jeho část byla blízko vašeho fitka. Počty sledujících si nekupujete a kolik může jedno story stát, má svůj strop."
+      }
+    ],
+    "costInline": "Platit jde dvěma způsoby a ani jeden není smlouva ani předplatné. První jsou průběžné platby: připojíte kartu a jste hned vidět. Nic se nestrhne dřív, než je nějaké story doopravdy zaplacené, a i pak jen ta část, kterou nepokryjí kredity, plus 0,30 $ za každou platbu. Žádná záloha, žádné minimum. Druhá možnost jsou kredity předem: 1 kredit = 1 $, nejmenší nákup je 50 $ a kredity nikdy nevyprší. S kredity vyjde story o kousek levněji, protože se neplatí poplatek za platbu, a s aspoň 15 $ dostupných kreditů zůstáváte v aplikaci vidět. Tak či tak platíte za každé zaplacené story zvlášť a kolik může jedno story stát, má svůj strop, takže vám žádné story neodčerpá celý rozpočet. Částky vidíte v aplikaci i v korunách podle aktuálního kurzu. Podívejte se, <link>jak se počítá cena</link>.",
+    "influencerInline": "Influencer si řekne o paušál bez ohledu na výsledek a jeho sledující jsou obvykle rozesetí po celé republice. Přes Tagly vás sdílejí vaši vlastní členové svým vlastním sledujícím a platíte za každé story zvlášť, podle dosahu, který mělo, a podle toho, jaká jeho část byla blízko vašeho fitka. Počty sledujících si nekupujete a kolik může jedno story stát, má svůj strop. Přečtěte si <link>celé srovnání</link>."
+  },
+  "internalLinks": {
+    "compareHeading": "Srovnání s alternativami",
+    "instagramAds": "Instagramové reklamy",
+    "influencerMarketing": "Influencer marketing",
+    "marketingAgencies": "Marketingové agentury",
+    "learnMoreHeading": "Další informace",
+    "howItWorks": "Jak to funguje",
+    "pricing": "Ceník",
+    "faq": "Časté dotazy"
+  },
+  "cta": {
+    "heading": "Chcete, aby vaše fitko propagovali vlastní členové?",
+    "description": "Přidejte se k Tagly a proměňte tréninková story svých členů v lokální marketing, který jste nemuseli vymýšlet."
+  }
+}

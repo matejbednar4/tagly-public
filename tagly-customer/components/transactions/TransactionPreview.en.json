@@ -1,0 +1,23 @@
+{
+  "//": "Used in: components/transactions/TransactionPreview (transactionPreview namespace).",
+  "earnedFrom": "Earned at {{business}}",
+  "earnedShare": "Share reward",
+  "referralBonus": "Referral bonus",
+  "adjustment": "Balance adjustment",
+  "withdrawal": "Withdrawal",
+  "stateProcessing": "On its way",
+  "stateDelayed": "Action needed",
+  "statePaidOut": "In your bank",
+  "stateFailed": "Failed",
+  "stateReversed": "Returned",
+  "explainShare": "A business paid you for an Instagram share.",
+  "explainReferral": "Your share of Tagly's revenue from someone you referred.",
+  "explainAdjustment": "A manual correction to your balance by the Tagly team.",
+  "explainProcessing": "This money left your Tagly balance and is on its way to your bank. Transfers usually arrive within a few business days.",
+  "explainDelayed": "Your bank couldn't accept this transfer, so the money is waiting safely in your Stripe account. Fix your bank details below and we'll send it again automatically.",
+  "explainPaidOut": "This money arrived in your bank account.",
+  "explainFailed": "This withdrawal couldn't start, so nothing left your account. The full amount is still in your Tagly balance and you can withdraw it again.",
+  "explainReversed": "This transfer came back to us, so we returned the full amount to your Tagly balance. You can withdraw it again anytime.",
+  "fixBankDetails": "Fix bank details",
+  "viewShare": "View share"
+}

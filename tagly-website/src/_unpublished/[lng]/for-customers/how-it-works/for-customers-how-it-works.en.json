@@ -1,0 +1,49 @@
+{
+  "//": "Used in: src/app/[lng]/for-customers/how-it-works/page.tsx — hero, 4 steps (s1 ScrollLink, s2/s4 app link via <Trans>; s3 has no image, shows a 24h badge), examples, CTA.",
+  "meta": {
+    "title": "How It Works for Customers",
+    "description": "Earn money by posting Instagram stories about your favorite local businesses. Post a story, submit it in the Tagly app, and get paid via Stripe. Here is exactly how it works."
+  },
+  "hero": {
+    "title": "How to earn money with Tagly",
+    "intro": "You go to a local business, post an Instagram story about it, and get paid for it. No follower minimum, no applications, no brand deals. All you need is a professional Instagram account, which is free to switch to, and a business near you on Tagly."
+  },
+  "steps": {
+    "s1": {
+      "title": "Post a story about a business",
+      "alt": "Instagram Story composer with a photo of coffee on a cafe table and a Bloom Cafe location sticker added, ready to be shared to Your story",
+      "desc": "Go to a local business that is on Tagly, grab something you like, and post it to your Instagram story. It has to be a story, not a feed post and not a reel. Make sure the business name is visible on the story: tag the business, add the location sticker, or simply type the name. That is what Tagly looks for. Everything else is up to you. Post whatever feels right. Scroll down to see <examples>examples of content you can share</examples>."
+    },
+    "s2": {
+      "title": "Submit the story in the Tagly app",
+      "alt": "Tagly app showing a map of Prague with nearby businesses including Bloom Cafe, Grind Gym, and Flow Yoga, each labelled with an estimated reward such as $4.6 for 236 reach, and an Earn here button",
+      "desc": "Open the <app>Tagly app</app> and create an account with your email, Apple, or Google. There are no passwords. Then connect Instagram, find the business on the map, and tap \"Earn here\". Pick the story you just posted and you are done, in about 30 seconds. The story just has to still be live when you submit it. Each story earns once, and you can earn from the same business once a day. Tagly never posts anything on your behalf and cannot read your DMs or change anything on your Instagram account."
+    },
+    "s3": {
+      "title": "Wait about 24 hours",
+      "desc": "Instagram needs about a day to report how many people saw your story. Once it does, Tagly calculates your reward and that number is final. You do not need to do anything while you wait. Leave the story up for the full day and keep your profile public, and you get your reward."
+    },
+    "s4": {
+      "title": "Get paid and cash out anytime",
+      "alt": "Share details in the Tagly app showing a Paid status, a four and a half star rating, a reward earned of $4.2, and insights of 193 reach and 23 interactions",
+      "desc": "Your reward lands in your Tagly balance. To cash out you connect a Stripe account, which takes about a minute, and Stripe handles the transfer and your bank details. The minimum cash out is $1, amounts are also shown in Czech koruna at the current exchange rate, there is no withdrawal fee, and the money usually reaches your bank in 1 to 2 business days. Open the <app>Tagly app</app>, tap cash out, and that is it."
+    }
+  },
+  "examples": {
+    "title": "Examples of content you can get paid for",
+    "alts": [
+      "Two lattes with leaf art on a dark wooden table at Green House Cafe",
+      "French toast with fresh berries, figs, and whipped cream at Main Street Cafe",
+      "Waffles topped with ice cream and chocolate drizzle beside a cappuccino at Brunch House",
+      "Steak with green beans and roasted potatoes on a yellow tablecloth at Joe's Steak House",
+      "Squat rack and Eleiko weights at Strength Fit shared on Instagram",
+      "Two wood-fired pizzas with prosciutto and egg at Italian Corner"
+    ]
+  },
+  "cta": {
+    "heading": "Ready to start earning?",
+    "description": "Download Tagly, find a business near you, and earn your first reward today.",
+    "download": "Download Tagly",
+    "readFaq": "Read the FAQ"
+  }
+}

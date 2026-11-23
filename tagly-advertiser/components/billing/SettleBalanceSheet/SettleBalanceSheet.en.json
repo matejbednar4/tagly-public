@@ -1,0 +1,21 @@
+{
+  "//": "Used in: components/billing/SettleBalanceSheet (settleBalanceSheet namespace). Pay off a negative available balance. A balance goes negative EITHER because a share reward cost more than the credits covered (E069: the customer is always paid in full) OR because a PAYG card charge could not be collected, so the copy must not name only the card. Voice: 'share' not 'post'; plain punctuation, no em dashes.",
+  "title": "Settle your balance",
+  "intro": "A share reward was paid out that your balance didn't cover, so it's negative. Pay it off to clear your account and lift the block.",
+  "owedHeading": "Amount owed",
+  "cta": "Pay {{amount}}",
+  "amountNote": "Double-check the amount in the payment sheet. It may differ if your balance changed since this screen loaded.",
+  "footnote": "Secured by Stripe",
+  "alertTitle": "Payment not completed",
+  "alertBody": "Please try again.",
+  "failedBody": "Your payment didn't go through. Please try again.",
+  "alreadySettledTitle": "Nothing to pay",
+  "alreadySettledBody": "Your balance is already settled. It may have been paid from another device.",
+  "verifyingTitle": "Confirming your payment",
+  "verifyingBody": "This usually takes a few seconds.",
+  "successTitle": "Balance settled",
+  "successBody": "We charged {{amount}}. Your balance is back to zero.",
+  "unverifiedTitle": "We couldn't verify your payment yet",
+  "unverifiedBody": "If it went through, your balance will update shortly and we'll let you know.",
+  "unverifiedCta": "Got it"
+}

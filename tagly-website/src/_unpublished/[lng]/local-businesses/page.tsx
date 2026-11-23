@@ -1,0 +1,362 @@
+import type { Metadata } from "next";
+import {
+  MapPin,
+  Camera,
+  Users,
+  Film,
+  Gamepad2,
+  KeyRound,
+  Trophy,
+  FerrisWheel,
+  Wine,
+  IceCreamCone,
+  PawPrint,
+  HandCoins,
+  MessageCircle,
+  Clock,
+  Scale,
+} from "lucide-react";
+import { Trans } from "react-i18next/TransWithoutContext";
+import { Button } from "@/components/ui/Button";
+import { PressableText } from "@/components/ui/PressableText";
+import { CtaSection } from "@/components/sections/CtaSection";
+import { FaqSection } from "@/components/sections/FaqSection";
+import { getTranslation } from "@/lib/i18n";
+import { buildAlternates } from "@/lib/i18n/metadata";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lng: string }>;
+}): Promise<Metadata> {
+  const { lng } = await params;
+  const { t } = await getTranslation(lng, "local-businesses");
+  const title = t("meta.title");
+  const description = t("meta.description");
+
+  return {
+    title,
+    description,
+    alternates: buildAlternates(lng, "/local-businesses"),
+    openGraph: { title, description },
+  };
+}
+
+const sectionClass =
+  "mx-auto max-w-page-max-width px-(--spacing-page-horizontal-padding) pb-(--spacing-section-gap) desktop:px-(--spacing-page-horizontal-padding-lg)";
+
+function FlowchartArrow() {
+  return (
+    <div className="flex items-center justify-center py-(--spacing-card-padding)">
+      <svg width="24" height="32" viewBox="0 0 24 32" fill="none" className="text-ink">
+        <path d="M12 0 L12 24 M6 18 L12 26 L18 18" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    </div>
+  );
+}
+
+function FlowchartArrowHorizontal() {
+  return (
+    <div className="hidden desktop:flex items-center justify-center px-(--spacing-card-padding)">
+      <svg width="32" height="24" viewBox="0 0 32 24" fill="none" className="text-ink">
+        <path d="M0 12 L24 12 M18 6 L26 12 L18 18" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    </div>
+  );
+}
+
+function FlowStep({
+  number,
+  title,
+  description,
+}: {
+  number: string;
+  title: string;
+  description: string;
+}) {
+  return (
+    <div className="flex-1 card p-(--spacing-element-gap)">
+      <div className="mb-(--spacing-card-padding) flex h-10 w-10 items-center justify-center rounded-max bg-brand text-style-body-bold text-on-brand">
+        {number}
+      </div>
+      <h3 className="text-style-h3 text-text">{title}</h3>
+      <p className="mt-(--spacing-card-padding) text-style-body text-text-secondary">
+        {description}
+      </p>
+    </div>
+  );
+}
+
+const fitIcons = [MapPin, Camera, Users];
+const industryIcons = [
+  Film,
+  Gamepad2,
+  KeyRound,
+  Trophy,
+  FerrisWheel,
+  Wine,
+  IceCreamCone,
+  PawPrint,
+];
+const whyIcons = [HandCoins, MessageCircle, Clock, Scale];
+
+export default async function LocalBusinessesPage({
+  params,
+}: {
+  params: Promise<{ lng: string }>;
+}) {
+  const { lng } = await params;
+  const { t } = await getTranslation(lng, ["local-businesses", "common"]);
+
+  const fitItems = t("fit.items", { returnObjects: true }) as Array<{
+    title: string;
+    description: string;
+  }>;
+  const industryItems = t("industries.items", { returnObjects: true }) as Array<{
+    title: string;
+    description: string;
+  }>;
+  const howSteps = t("how.steps", { returnObjects: true }) as Array<{
+    title: string;
+    description: string;
+  }>;
+  const whyItems = t("why.items", { returnObjects: true }) as Array<{
+    title: string;
+    description: string;
+  }>;
+  const faqItems = t("faq.items", { returnObjects: true }) as Array<{
+    question: string;
+    answer: string;
+  }>;
+
+  return (
+    <main>
+      <section className={`${sectionClass} pt-(--spacing-section-gap)`}>
+        <div className="mx-auto max-w-200">
+          <h1 className="text-style-h1 text-text desktop:text-center">
+            {t("hero.title")}
+          </h1>
+          <p className="mt-(--spacing-element-gap) text-style-lead text-text-secondary desktop:text-center">
+            {t("hero.intro")}
+          </p>
+          <div className="mt-(--spacing-block-gap) flex flex-row items-center desktop:justify-center">
+            <Button type="primary" size="large" label={t("common:getInTouch")} href="/#contact" />
+            <div className="ml-(--spacing-card-padding)">
+              <Button type="secondary" size="large" label={t("common:seeHowItWorks")} href="/how-it-works" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={sectionClass}>
+        <h2 className="text-style-h2 text-text desktop:text-center">
+          {t("fit.title")}
+        </h2>
+        <p className="mt-(--spacing-element-gap) mx-auto max-w-160 text-style-body text-text-secondary desktop:text-center">
+          {t("fit.intro")}
+        </p>
+
+        <div className="mt-(--spacing-block-gap) grid grid-cols-1 sm:grid-cols-3">
+          {fitItems.map((item, index) => {
+            const Icon = fitIcons[index];
+            return (
+              <article
+                key={index}
+                className={`card p-(--spacing-element-gap) ${
+                  index > 0 ? "mt-(--spacing-element-gap) sm:mt-0" : ""
+                } ${index < 2 ? "sm:mr-(--spacing-card-padding)" : ""}`}
+              >
+                <Icon className="text-ink" size={36} aria-hidden="true" />
+                <h3 className="mt-(--spacing-card-padding) text-style-h3 text-text">
+                  {item.title}
+                </h3>
+                <p className="mt-(--spacing-element-gap) text-style-body text-text-secondary">
+                  {item.description}
+                </p>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className={sectionClass}>
+        <h2 className="text-style-h2 text-text desktop:text-center">
+          {t("industries.title")}
+        </h2>
+        <p className="mt-(--spacing-element-gap) mx-auto max-w-160 text-style-body text-text-secondary desktop:text-center">
+          {t("industries.intro")}
+        </p>
+
+        <div className="mt-(--spacing-block-gap) grid grid-cols-1 sm:grid-cols-2">
+          {industryItems.map((industry, index) => {
+            const Icon = industryIcons[index];
+            return (
+              <article
+                key={index}
+                className={`card p-(--spacing-element-gap) ${
+                  index % 2 === 0
+                    ? "sm:mr-(--spacing-card-padding)"
+                    : "sm:ml-(--spacing-card-padding)"
+                } ${index >= 2 ? "mt-(--spacing-element-gap)" : index === 1 ? "mt-(--spacing-element-gap) sm:mt-0" : ""}`}
+              >
+                <Icon className="text-ink" size={36} aria-hidden="true" />
+                <h3 className="mt-(--spacing-card-padding) text-style-h3 text-text">
+                  {industry.title}
+                </h3>
+                <p className="mt-(--spacing-element-gap) text-style-body text-text-secondary">
+                  {industry.description}
+                </p>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className={sectionClass}>
+        <h2 className="text-style-h2 text-text desktop:text-center">
+          {t("how.title")}
+        </h2>
+        <p className="mt-(--spacing-element-gap) mx-auto max-w-160 text-style-body text-text-secondary desktop:text-center">
+          {t("how.intro")}
+        </p>
+
+        <div className="mt-(--spacing-block-gap) flex flex-col desktop:hidden">
+          {howSteps.map((step, index) => (
+            <div key={index} className="contents">
+              <FlowStep number={String(index + 1)} title={step.title} description={step.description} />
+              {index < howSteps.length - 1 && <FlowchartArrow />}
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-(--spacing-block-gap) hidden desktop:flex desktop:items-stretch">
+          {howSteps.map((step, index) => (
+            <div key={index} className="contents">
+              <FlowStep number={String(index + 1)} title={step.title} description={step.description} />
+              {index < howSteps.length - 1 && <FlowchartArrowHorizontal />}
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-(--spacing-block-gap) desktop:text-center">
+          <Button type="secondary" size="small" label={t("how.fullGuide")} href="/how-it-works" />
+        </div>
+      </section>
+
+      <section className="pb-(--spacing-section-gap) desktop:mx-auto desktop:max-w-page-max-width desktop:px-(--spacing-page-horizontal-padding-lg)">
+        <div className="bg-ink p-(--spacing-element-gap) overflow-hidden desktop:rounded-lg desktop:p-(--spacing-block-gap)">
+          <div className="mx-auto max-w-160">
+            <h2 className="text-style-h2 text-on-ink desktop:text-center">
+              {t("why.title")}
+            </h2>
+            <p className="mt-(--spacing-element-gap) text-style-body text-on-ink/80 desktop:text-center">
+              {t("why.intro")}
+            </p>
+          </div>
+
+          <div className="mt-(--spacing-block-gap) grid grid-cols-1 sm:grid-cols-2">
+            {whyItems.map((benefit, index) => {
+              const Icon = whyIcons[index];
+              return (
+                <article
+                  key={index}
+                  className={`rounded-lg bg-surface p-(--spacing-element-gap) ${
+                    index % 2 === 0
+                      ? "sm:mr-(--spacing-card-padding)"
+                      : "sm:ml-(--spacing-card-padding)"
+                  } ${index >= 2 ? "mt-(--spacing-element-gap)" : index === 1 ? "mt-(--spacing-element-gap) sm:mt-0" : ""}`}
+                >
+                  <Icon className="text-ink" size={36} aria-hidden="true" />
+                  <h3 className="mt-(--spacing-card-padding) text-style-h3 text-text">
+                    {benefit.title}
+                  </h3>
+                  <p className="mt-(--spacing-element-gap) text-style-body text-text-secondary">
+                    {benefit.description}
+                  </p>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className={sectionClass}>
+        <div className="mx-auto max-w-160 desktop:text-center">
+          <h2 className="text-style-h2 text-text">{t("notSure.title")}</h2>
+          <p className="mt-(--spacing-element-gap) text-style-body text-text-secondary">
+            <Trans
+              t={t}
+              i18nKey="notSure.intro"
+              components={{ contact: <PressableText href="/#contact" /> }}
+            />
+          </p>
+        </div>
+      </section>
+
+      <FaqSection
+        heading={t("faq.heading")}
+        items={[
+          {
+            question: faqItems[0].question,
+            answer: faqItems[0].answer,
+            answerContent: (
+              <Trans t={t} i18nKey="faq.costInline" components={{ link: <PressableText href="/pricing" /> }} />
+            ),
+          },
+          { question: faqItems[1].question, answer: faqItems[1].answer },
+          { question: faqItems[2].question, answer: faqItems[2].answer },
+          {
+            question: faqItems[3].question,
+            answer: faqItems[3].answer,
+            answerContent: (
+              <Trans t={t} i18nKey="faq.notListedInline" components={{ link: <PressableText href="/#contact" /> }} />
+            ),
+          },
+          {
+            question: faqItems[4].question,
+            answer: faqItems[4].answer,
+            answerContent: (
+              <Trans t={t} i18nKey="faq.adsInline" components={{ link: <PressableText href="/instagram-ads-vs-tagly" /> }} />
+            ),
+          },
+        ]}
+      />
+
+      <section className={sectionClass}>
+        <div className="card p-(--spacing-element-gap) desktop:p-(--spacing-block-gap)">
+          <div className="grid grid-cols-1 sm:grid-cols-2 desktop:text-center">
+            <div className="sm:pr-(--spacing-element-gap)">
+              <h3 className="text-style-h3 text-text">{t("internalLinks.industriesHeading")}</h3>
+              <div className="mt-(--spacing-tight-gap) flex flex-col gap-(--spacing-card-padding) text-style-body desktop:flex-row desktop:items-center desktop:justify-center desktop:gap-0">
+                <PressableText href="/restaurants">{t("internalLinks.restaurants")}</PressableText>
+                <span className="mx-(--spacing-card-padding) text-text-tertiary hidden desktop:inline"> · </span>
+                <PressableText href="/cafes">{t("internalLinks.cafes")}</PressableText>
+                <span className="mx-(--spacing-card-padding) text-text-tertiary hidden desktop:inline"> · </span>
+                <PressableText href="/gyms">{t("internalLinks.gyms")}</PressableText>
+                <span className="mx-(--spacing-card-padding) text-text-tertiary hidden desktop:inline"> · </span>
+                <PressableText href="/salons">{t("internalLinks.salons")}</PressableText>
+              </div>
+            </div>
+            <div className="mt-(--spacing-element-gap) sm:mt-0 sm:pl-(--spacing-element-gap)">
+              <h3 className="text-style-h3 text-text">{t("internalLinks.compareHeading")}</h3>
+              <div className="mt-(--spacing-tight-gap) flex flex-col gap-(--spacing-card-padding) text-style-body desktop:flex-row desktop:items-center desktop:justify-center desktop:gap-0">
+                <PressableText href="/instagram-ads-vs-tagly">{t("internalLinks.instagramAds")}</PressableText>
+                <span className="mx-(--spacing-card-padding) text-text-tertiary hidden desktop:inline"> · </span>
+                <PressableText href="/influencer-marketing-vs-tagly">{t("internalLinks.influencerMarketing")}</PressableText>
+                <span className="mx-(--spacing-card-padding) text-text-tertiary hidden desktop:inline"> · </span>
+                <PressableText href="/marketing-agencies-vs-tagly">{t("internalLinks.marketingAgencies")}</PressableText>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <CtaSection
+        heading={t("cta.heading")}
+        description={t("cta.description")}
+        primaryAction={{ label: t("common:getInTouch"), href: "/#contact" }}
+        secondaryAction={{ label: t("common:seePricing"), href: "/pricing" }}
+      />
+    </main>
+  );
+}

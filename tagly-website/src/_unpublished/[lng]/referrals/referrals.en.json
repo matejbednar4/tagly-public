@@ -1,0 +1,119 @@
+{
+  "//": "Used in: src/app/[lng]/referrals/page.tsx — hero, steps, rate cards (PieChartSvg rateLabel passed as prop), 6-month boost timeline, good-to-know, FAQ, learn-more links, CTA. Terminology aligned with the apps: invite (verb, app screen 'Invite & earn'), invite link and code, referral (noun); a story 'is paid', never 'settles'. Keep line-for-line with referrals.cs.json.",
+  "meta": {
+    "title": "Invite & Earn | Refer a Business or Customer to Tagly",
+    "description": "Invite a business and earn 16% of the price of every story about them. Invite a customer and earn 8%. Full rate for the first 6 months, half after that, forever.",
+    "ogTitle": "Invite & Earn | Refer a Business or Customer to Tagly",
+    "ogDescription": "You earn a share of what Tagly makes on the stories of people you bring in. 16% for an invited business, 8% for an invited customer."
+  },
+  "hero": {
+    "title": "How inviting people to Tagly works",
+    "intro": "Anyone with a Tagly account can invite others, business or customer. When a customer posts an Instagram Story about a business through Tagly and that story is paid, Tagly takes a cut of its price. And part of that cut goes to you, if you brought the customer or the business to Tagly."
+  },
+  "steps": {
+    "title": "Three steps to start earning",
+    "intro": "Send your invite link or code, they sign up, and you earn a share of every story of theirs that gets paid.",
+    "items": [
+      {
+        "title": "Send your link or code",
+        "description": "Every Tagly account has its own invite link and code. You will find both in the Tagly app and in the Tagly Partner app. Send either one to businesses you know, or to friends who would enjoy Tagly."
+      },
+      {
+        "title": "They join and use Tagly",
+        "description": "When someone signs up with your link or code, they are linked to your account permanently. From then on you earn a share of every story they are part of."
+      },
+      {
+        "title": "You earn when a story is paid",
+        "description": "About a day after a story goes up, Instagram reports how many people saw it and the story is paid. Your share lands in your balance at that moment. Your share always comes from a specific paid story, never from sign-ups."
+      }
+    ]
+  },
+  "rates": {
+    "title": "Your invite rates",
+    "intro": "How much you earn depends on who you invited. Businesses pay the higher rate. The form your share takes follows your own account, not theirs: invite from the Tagly app and you get money you can withdraw, invite from the Tagly Partner app and you get credits to promote your own business.",
+    "rateLabel": "of the story price",
+    "business": {
+      "title": "Invite a business",
+      "description": "You earn every time a story about this business is paid, calculated from the price the business paid for that story",
+      "legendBoosted": "16% of the story price (first 6 months)",
+      "legendStandard": "8% of the story price (forever)"
+    },
+    "customer": {
+      "title": "Invite a customer",
+      "description": "You earn every time this customer gets paid for a story about any business",
+      "legendBoosted": "8% of the story price (first 6 months)",
+      "legendStandard": "4% of the story price (forever)"
+    },
+    "stack": {
+      "title": "Invites stack up",
+      "text": "If the customer and the business in one story were each brought in by a different person, Tagly pays both in full. There is no limit to how many people you can invite."
+    }
+  },
+  "boost": {
+    "title": "The 6-month boost",
+    "intro": "For the first 6 months after someone joins through your link or code, you earn the boosted rate. After that the rate halves. You keep earning at the standard rate for as long as they stay active on Tagly.",
+    "firstLabel": "First 6 months",
+    "firstSub": "Boosted rate",
+    "afterLabel": "After 6 months",
+    "afterSub": "Standard rate, forever",
+    "firstRates": "Business: 16% · Customer: 8%",
+    "afterRates": "Business: 8% · Customer: 4%"
+  },
+  "good": {
+    "title": "Good to know",
+    "items": [
+      {
+        "title": "Paid by Tagly",
+        "description": "Your share comes out of Tagly's cut of the story. Nothing is taken from the person or business you invited. The customer's reward and the business's balance are exactly the same whether an invite is behind them or not."
+      },
+      {
+        "title": "Automatic linking",
+        "description": "When someone joins Tagly with your invite link or code, they are linked to your account automatically. Neither side has to do anything else."
+      },
+      {
+        "title": "Rates may change",
+        "description": "The percentages shown on this page reflect current rates. Tagly reserves the right to adjust them at any time. Any change applies to future activity only."
+      }
+    ]
+  },
+  "faq": {
+    "heading": "Invite questions",
+    "items": [
+      {
+        "question": "Who can invite?",
+        "answer": "Anyone with a Tagly account, business or customer. Every account has its own invite link and code, and both are right in the app."
+      },
+      {
+        "question": "When do I get paid?",
+        "answer": "The moment a story is paid, which is about a day after it goes up, once Instagram has reported how many people saw it. Your share always comes from a specific paid story, never from sign-ups."
+      },
+      {
+        "question": "What's the difference between the boosted and standard rate?",
+        "answer": "For the first 6 months after someone joins through your link or code, you earn the higher boosted rate on every story they are part of. After that the rate halves and stays at that level. Both rates are a percentage of the story price."
+      },
+      {
+        "question": "Is there a limit on how many people I can invite?",
+        "answer": "No. You can invite as many businesses and customers as you want. Each invite earns independently, so your total earnings grow with every active one."
+      },
+      {
+        "question": "Can I invite both businesses and customers?",
+        "answer": "Yes, both. An invited business pays double the rate of an invited customer."
+      },
+      {
+        "question": "Do I get paid in money or credits?",
+        "answer": "That follows your own account, not who you invited. The share lands in the balance of the account the invite came from: money you can withdraw in the Tagly app, credits to promote your own business in the Tagly Partner app. So a customer who invites a business gets money."
+      }
+    ]
+  },
+  "learnMore": {
+    "title": "Learn more about Tagly",
+    "howItWorks": "How Tagly works",
+    "pricing": "Pricing",
+    "faq": "FAQ"
+  },
+  "cta": {
+    "heading": "Ready to invite someone?",
+    "description": "Your invite link and code are in the Tagly app and the Tagly Partner app. Earn from every business and customer you bring to Tagly.",
+    "readFaq": "Read the FAQ"
+  }
+}

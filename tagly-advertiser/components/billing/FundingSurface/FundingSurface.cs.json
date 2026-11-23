@@ -1,0 +1,11 @@
+{
+  "//": "Used in: components/billing/FundingSurface + its BalanceCard / HowYouPayCard / FundingPitch (fundingSurface namespace). Only this surface's own chrome — every method name, status word, schedule line and verb comes from the shared billing namespace.",
+  "available": "Dostupné kredity",
+  "locked": "Rezervované kredity",
+  "addCredits": "Přidat kredity",
+  "payBalance": "Vyrovnat zůstatek",
+  "negativeHint": "Tvůj zůstatek je záporný: za sdílení jsme zaplatili odměnu, kterou nepokryl. Zaplať ho a odblokuj svůj účet.",
+  "belowMinHint": "Abys byl/a vidět, potřebuješ mít dostupných aspoň {{min}}.",
+  "monthlyFault": "Aktualizuj kartu, ať to zase běží",
+  "paygLeadIn": "Nechceš platit předem?"
+}

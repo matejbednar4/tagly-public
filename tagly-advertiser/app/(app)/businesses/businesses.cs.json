@@ -1,0 +1,5 @@
+{
+  "//": "Used in: app/(app)/businesses/index.tsx (businessesList namespace). The business pages list reached from Settings.",
+  "title": "Stránky podniku",
+  "addPage": "Přidat stránku podniku"
+}

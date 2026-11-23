@@ -1,0 +1,69 @@
+{
+  "//": "Used in: src/app/[lng]/how-it-works/page.tsx — hero, 5 step sections, why-it-works highlight, industry links, CTA.",
+  "meta": {
+    "title": "Jak Tagly funguje pro lokální podniky",
+    "description": "Jak Tagly funguje pro restaurace, kavárny, fitness centra a další lokální podniky. Zákazníci o vás dají story na Instagram a vy platíte podle toho, kolik lidí ho vidělo."
+  },
+  "hero": {
+    "title": "Jak Tagly funguje pro váš podnik",
+    "intro": "Provozovat podnik dá dost práce i bez toho, abyste trávili hodiny marketingem. Tady je celý postup od registrace až po chvíli, kdy platíte. Pět kroků, a po prvním nastavení vás zaměstná už jen jeden z nich."
+  },
+  "steps": {
+    "s1": {
+      "title": "Zaregistrujte se a založte si stránku podniku",
+      "alt": "Stránka podniku Bloom Cafe v aplikaci Tagly Partner: fotka brunche, popis, kontaktní e-mail a Instagram vedle prázdného pole „Přidat telefon“ a schválený odkaz na web",
+      "desc": "Žádná hesla se tu nepoužívají. Do aplikace Tagly Partner se přihlásíte jednorázovým kódem, který vám přijde e-mailem, nebo přes Apple či Google. Pak si založíte stránku podniku: název, typ podniku, adresa a jedna fotka na šířku jako banner. Víc po vás nechceme. Další fotky, popis, otevírací doba, instagramový profil, odkazy, telefon i e-mail jsou dobrovolné a klidně počkají. Stránka je živá hned po uložení a podle adresy se objevíte na mapě Tagly, takže vás lidé z okolí najdou."
+    },
+    "s2": {
+      "title": "Vyberte si, z čeho se odměny budou platit",
+      "alt": "Úvodní obrazovka aplikace Tagly Partner: štítek „Jsi vidět“, 300 $ dostupných kreditů, průběžné platby se stavem „Karta nepřipojena“ a tlačítko „Spravovat v peněžence“",
+      "desc": "Odměny se strhávají z vašeho zůstatku v Tagly a naplnit ho jde dvěma způsoby. Průběžné platby: připojíte kartu, dopředu neplatíte nic a jste vidět hned. Z karty vám strhneme peníze až poté, co je story zaplacené, a to jen tu část, kterou nepokryjí kredity, plus 0,30 $ za každou platbu. Nebo si kredity předplatíte: 1 kredit = 1 $, nejmenší nákup je 50 $, kredity nikdy nevyprší a za jednotlivé platby neplatíte nic navíc. Když jedete jen na kredity, jste vidět od 15 $ dostupných výš. Ani jedna cesta není předplatné ani smlouva. Všechny částky se v aplikaci ukazují i v korunách podle aktuálního kurzu."
+    },
+    "s3": {
+      "title": "Zákazníci vás najdou a dají o vás story",
+      "alt": "Editor instagramového story s fotkou kávy na stole v kavárně a přidanou polohovou nálepkou Bloom Cafe, připravený ke zveřejnění",
+      "desc": "Kdo si prochází mapu Tagly, vidí váš podnik a odhad, kolik si sdílením vydělá. Přijde k vám a zaplatí plnou cenu, protože Tagly nemá žádné slevy ani kupony. Ze své návštěvy pak dá story na Instagram a vybere ho v aplikaci. Ze story musí být poznat, o koho jde: zákazník vás označí, zmíní, nebo přidá polohovou nálepku, aby v něm byl váš název vidět. Musí to být story, ne příspěvek na profilu ani reel. Sdílet vás může kdokoli a platíte za lidi, kteří k vám opravdu můžou zajít: čím blíž vám něčí publikum bydlí, tím větší cenu jeho story má."
+    },
+    "s4": {
+      "title": "Cenu spočítá Tagly a vy platíte zhruba za den",
+      "alt": "Detail sdílení v aplikaci Tagly Partner se stavem „Zaplaceno“ a odměnou 97 Kč, zaplacenou 29. července 2026",
+      "desc": "Ve chvíli, kdy story vyjde, se nestrhává nic. Zhruba za 24 hodin Instagram nahlásí, kolik lidí ho doopravdy vidělo, a teprve pak se odměna zaplatí a peníze odejdou z vašeho zůstatku. Cena vychází ze dvou skutečných čísel: kolik lidí story doopravdy vidělo a jak blízko vám tihle lidé jsou. Tagly zároveň hlídá strop, kolik může jedno story stát, takže vám žádné story nikdy nespolyká celý rozpočet. Sazbu nikde nenastavujete a v žádné aukci nepřihazujete. Jediné číslo, které si volíte, je váš rozpočet.",
+      "cta": "Jak počítáme odměny"
+    },
+    "s5": {
+      "title": "Ohodnoťte každé story, které dostanete",
+      "alt": "Detail sdílení v aplikaci Tagly Partner s hodnocením čtyři a půl hvězdy a kartou výkonu, kde je dosah 193 a 23 interakcí",
+      "desc": "V aplikaci Tagly Partner vidíte každé story, které o vašem podniku někdo sdílel. Ohodnotíte ho jednou a hodnocení zůstává zákazníkovi, takže kdo sdílí dobře, ten si postupem času vydělá víc. Když je na story něco špatně, místo hodnocení ho nahlásíte a náš tým se na to podívá. Než rozhodne, nestrhne se vám nic, a když story nahlásíte hned první den, ještě než je zaplacené, nezaplatíte za něj nic."
+    }
+  },
+  "why": {
+    "title": "Proč story od skutečných zákazníků fungují",
+    "intro": "Klasická reklama lidi vyrušuje. Story od někoho, koho sledujete, si pustíte sami od sebe. A právě v tom je pro lokální podnik zásadní rozdíl.",
+    "cards": [
+      {
+        "title": "Lidé věří svým známým, ne reklamě",
+        "description": "Doporučení od někoho, koho znáte, porazí jakoukoli reklamu. Když o vás zákazník dá story, jeho sledující vidí upřímný tip od člověka, kterému věří, ne značku, která si kupuje pozornost. A platíte jen za tu část publika, která je dost blízko, aby k vám mohla zajít. Malé místní publikum tak pro vás znamená víc než velké roztroušené."
+      },
+      {
+        "title": "Obsah za vás vytvoří a rozšíří sami zákazníci",
+        "description": "Nemusíte natáčet reklamu, vymýšlet texty ani nikomu nic zadávat. Zákazníci vyfotí to, co by fotili tak jako tak, jídlo, kávu nebo selfie z posilovny, a pošlou to svým sledujícím. Není co navrhovat a není co plánovat. Vám zbude jediné: story potom ohodnotit."
+      }
+    ]
+  },
+  "industry": {
+    "title": "Jak to funguje ve vašem oboru",
+    "intro": "Podle typu podniku se liší i to, co vám Tagly přinese. Vyberte si ten svůj.",
+    "links": {
+      "restaurants": "Restaurace",
+      "cafes": "Kavárny",
+      "gyms": "Fitness centra",
+      "salons": "Salony",
+      "other": "Další lokální podniky"
+    }
+  },
+  "cta": {
+    "heading": "Chcete vědět víc?",
+    "description": "Ozvěte se nám a projdeme si s vámi, jak by Tagly fungovalo právě u vás.",
+    "readFaq": "Přečíst časté dotazy"
+  }
+}

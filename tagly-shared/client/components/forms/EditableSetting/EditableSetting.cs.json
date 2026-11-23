@@ -1,0 +1,9 @@
+{
+  "//": "Used in: components/forms/EditableSetting (editableSetting namespace). Generic edit-control labels; callers can override via props.",
+  "edit": "Upravit",
+  "save": "Uložit",
+  "cancel": "Zrušit",
+  "confirmTitle": "Potvrdit změnu",
+  "confirmBody": "Změnit {{field}} na {{value}}?",
+  "confirmAction": "Změnit"
+}

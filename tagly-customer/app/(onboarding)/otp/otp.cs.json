@@ -1,0 +1,9 @@
+{
+  "//": "Used in: app/(onboarding)/otp/index.tsx (otp namespace)",
+  "heading": "Zadej svůj kód",
+  "sentTo": "Poslali jsme kód na {{email}}. Pokud ho nevidíš, zkontroluj spam.",
+  "verify": "Ověřit",
+  "resend": "Poslat kód znovu",
+  "resendIn": "Poslat znovu za {{seconds}}s",
+  "backA11y": "Zpět na přihlášení"
+}

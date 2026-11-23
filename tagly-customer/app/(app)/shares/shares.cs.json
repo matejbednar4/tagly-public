@@ -1,0 +1,12 @@
+{
+  "//": "Used in: app/(app)/shares/index.tsx (shares namespace).",
+  "title": "Tvá sdílení",
+  "empty": "Zatím jsi nesdílel žádný podnik.",
+  "emptyHint": "Přidej na Instagram příspěvek o místě, které máš rád, a získej svou první odměnu.",
+  "sortBy": "Seřadit podle",
+  "done": "Hotovo",
+  "sortNewest": "Nejnovější",
+  "sortOldest": "Nejstarší",
+  "sortHighest": "Nejvyšší odměna",
+  "sortLowest": "Nejnižší odměna"
+}

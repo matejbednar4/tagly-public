@@ -1,0 +1,6 @@
+{
+  "//": "Used in: app/+not-found.tsx (notFound namespace).",
+  "notFoundHeading": "Promiň, tuto stránku jsme nenašli",
+  "goBack": "Zpět",
+  "goHome": "Domů"
+}

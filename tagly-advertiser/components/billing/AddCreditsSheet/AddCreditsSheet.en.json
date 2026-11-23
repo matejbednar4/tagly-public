@@ -1,0 +1,20 @@
+{
+  "//": "Used in: components/billing/AddCreditsSheet (addCreditsSheet namespace). The credit purchase — a pure transaction in every state. Buying credits and the monthly top-up are separate features, so nothing recurring is named here; the method identity comes from the shared billing namespace.",
+  "amountQuestion": "How much do you want to buy?",
+  "customLabel": "Custom amount",
+  "minNote": "Minimum {{min}}",
+  "maxNote": "Amount is too high",
+  "cta": "Purchase {{amount}} worth of credits",
+  "ctaInvalid": "Add credits",
+  "footnote": "Secured by Stripe",
+  "alertTitle": "Payment not completed",
+  "alertBody": "Please try again.",
+  "failedBody": "Your payment didn't go through. Please try again.",
+  "verifyingTitle": "Confirming your payment",
+  "verifyingBody": "This usually takes a few seconds.",
+  "successTitle": "{{amount}} added",
+  "successBody": "Your credits are ready to promote.",
+  "unverifiedTitle": "We couldn't verify your payment yet",
+  "unverifiedBody": "If it went through, your credits will appear shortly and we'll let you know.",
+  "unverifiedCta": "Got it"
+}

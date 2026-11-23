@@ -1,0 +1,97 @@
+name: Production - Deploy Backend
+
+on:
+  workflow_dispatch:
+  workflow_call:
+
+concurrency:
+  group: production-backend
+  cancel-in-progress: false
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    if: ${{ github.ref_name == 'main' }}
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: aws-actions/configure-aws-credentials@v5
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+
+      - name: Trigger App Runner deployment
+        run: |
+          echo "Starting App Runner deployment..."
+          OPERATION_ID=$(aws apprunner start-deployment \
+            --service-arn "${{ vars.APPRUNNER_SERVICE_ARN }}" \
+            --query 'OperationId' \
+            --output text)
+          # StartDeployment returns PascalCase `OperationId`; JMESPath is
+          # case-sensitive, so querying `operationId` silently yields the string
+          # "None" and the poll below then waits 30 min on an id that can never
+          # match. Fail fast instead of timing out (E051 follow-up).
+          if [ -z "$OPERATION_ID" ] || [ "$OPERATION_ID" = "None" ]; then
+            echo "::error::start-deployment returned no OperationId — aborting."
+            exit 1
+          fi
+          echo "Operation ID: $OPERATION_ID"
+          echo "OPERATION_ID=$OPERATION_ID" >> $GITHUB_ENV
+
+      - name: Wait for deployment
+        # Poll the OPERATION started above, not Service.Status — the service
+        # reports RUNNING both before the operation starts and after a rollback,
+        # so a status poll returns success for failed/rolled-back deploys (E051).
+        # On failure/timeout, dump the service + application CloudWatch logs so
+        # the real boot error (env validation, migrations, the catalog seeders'
+        # startup checks — E341) shows up in the workflow output instead of
+        # only in the AWS console. The CI role already holds
+        # logs:FilterLogEvents; no other logs permission is needed.
+        run: |
+          SERVICE_ARN="${{ vars.APPRUNNER_SERVICE_ARN }}"
+          dump_logs() {
+            SERVICE_NAME=$(echo "$SERVICE_ARN" | cut -d/ -f2)
+            SERVICE_ID=$(echo "$SERVICE_ARN" | cut -d/ -f3)
+            SINCE_MS=$(( ( $(date +%s) - 1800 ) * 1000 ))
+            for KIND in service application; do
+              GROUP="/aws/apprunner/${SERVICE_NAME}/${SERVICE_ID}/${KIND}"
+              echo "::group::App Runner $KIND logs (last 30 min) — $GROUP"
+              aws logs filter-log-events \
+                --log-group-name "$GROUP" \
+                --start-time "$SINCE_MS" \
+                --query 'events[].message' \
+                --output text 2>&1 | tail -120 || true
+              echo "::endgroup::"
+            done
+          }
+          echo "Waiting for App Runner operation $OPERATION_ID to complete..."
+          for i in $(seq 1 120); do
+            OP_STATUS=$(aws apprunner list-operations \
+              --service-arn "$SERVICE_ARN" \
+              --query "OperationSummaryList[?Id=='${OPERATION_ID}'].Status | [0]" \
+              --output text)
+            echo "Attempt $i: Operation status = $OP_STATUS"
+            case "$OP_STATUS" in
+              SUCCEEDED)
+                echo "Deployment succeeded!"
+                exit 0
+                ;;
+              FAILED|ROLLBACK_SUCCEEDED|ROLLBACK_FAILED)
+                echo "::error::Deployment failed with operation status: $OP_STATUS"
+                dump_logs
+                exit 1
+                ;;
+            esac
+            sleep 15
+          done
+          echo "::error::Deployment timed out after 30 minutes"
+          dump_logs
+          exit 1
+
+  deploy_workers:
+    needs: deploy
+    uses: ./.github/workflows/production-deploy-workers.yml
+    secrets: inherit

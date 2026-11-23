@@ -1,0 +1,10 @@
+{
+  "//": "Used in: app/(app)/setup/payment/index.tsx (setupPayment namespace). Step chrome ONLY — the funding body is the shared FundingSurface, so every method name, pitch and CTA lives in the billing / fundingSurface namespaces.",
+  "title": "Jak budeš platit",
+  "subtitle": "Kdykoli to můžeš změnit v Peněžence.",
+  "skip": "Nastavit později",
+  "skipAlertTitle": "Přeskočit platbu?",
+  "skipAlertBody": "Stránka podniku nebude viditelná, dokud nepřidáš peníze. Můžeš to udělat kdykoli v Peněžence.",
+  "skipAlertCancel": "Zpět",
+  "skipAlertConfirm": "Zatím přeskočit"
+}

@@ -1,0 +1,13 @@
+{
+  "//": "Used in: app/(app)/shares/create/confirm/index.tsx (confirmShare namespace). Krok 2 vytvoření share: potvrď, že story doopravdy propaguje podnik + explicitní souhlas s monetizací. Dvě krátké sekce s ikonou (pozitivní + varovná). Drž to stručné a přátelské, ne děsivé. <terms> v agreeLabel je klikací odkaz na Podmínky monetizace.",
+  "topTitle": "Potvrď sdílení",
+  "thisBusiness": "tento podnik",
+  "heading": "Propaguje tvoje story {{business}}?",
+  "section1": "{{business}} ti platí za autentickou propagaci. Tvoje story je musí označit.",
+  "section1Subsidized": "Tagly ti platí za autentickou propagaci. Tvoje story musí {{business}} označit.",
+  "section2": "Za falešné story nebo cizí fotku nedostaneš odměnu a klesne ti hodnocení.",
+  "section2Bold": "Opakované zneužívání povede k zablokování účtu.",
+  "agreeLabel": "Souhlasím s <terms>Podmínkami monetizace</terms> a potvrzuji, že toto story propaguje {{business}}.",
+  "monetize": "Získat odměnu za vybrané story",
+  "successToast": "Story odesláno ke kontrole"
+}

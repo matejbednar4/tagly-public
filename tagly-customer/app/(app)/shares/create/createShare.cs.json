@@ -1,0 +1,19 @@
+{
+  "//": "Used in: app/(app)/shares/create/index.tsx (createShare namespace). COPY RULE: uživatel postuje na svůj Instagram sám, takže to nikdy nerámuj jako 'sdílet podnik' (matoucí + nadbytečné). Story už je postnutá; tady jen VYBÍRÁ story, ve kterém je podnik.",
+  "title": "Vyber story",
+  "fromBusiness": "z {{business}}",
+  "thisBusiness": "tento podnik",
+  "tagsHint": "Ve story musí být vidět aspoň jedno z těchto označení:",
+  "continue": "Pokračovat",
+  "uploadToInstagram": "Nahrát na Instagram",
+  "igRequiredHeading": "Připoj svůj Instagram",
+  "igRequiredBody": "Za story z {{business}} získáš odměnu. Připoj Instagram a můžeš začít.",
+  "emptyHeading": "Zatím žádné story",
+  "emptySubheading": "Dej na Instagram story z {{business}} a potom obnov stránku.",
+  "copyrightTitle": "Story nejde sdílet",
+  "copyrightMessage": "Instagram nám story neposkytuje, nejspíš kvůli hudbě chráněné autorskými právy. Zveřejni story bez hudby, aby šlo sdílet.",
+  "errorHeading": "Story se nepodařilo načíst",
+  "errorSubheading": "Obnov stránku a zkus to znovu.",
+  "loadingTooLong": "Trvá to déle než obvykle. Zkontroluj připojení a zkus to znovu.",
+  "loadingTooLongRetry": "Zkusit znovu"
+}

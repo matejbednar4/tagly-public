@@ -1,0 +1,9 @@
+{
+  "//": "Used in: tagly-shared/client/components/support/SupportSheet (support namespace). The contact-support bottom sheet, shared by the customer + advertiser apps.",
+  "title": "Contact support",
+  "subtitle": "Tell us what's going on and we'll get back to you by email.",
+  "placeholder": "Describe your issue...",
+  "send": "Send message",
+  "sentToastTitle": "Message sent",
+  "sentToastBody": "We'll reply to your email soon."
+}

@@ -1,0 +1,17 @@
+{
+  "//": "Used in: src/app/[lng]/careers/page.tsx.",
+  "meta": {
+    "title": "Kariéra",
+    "description": "Tagly je malý startup v rané fázi a sídlí v Praze. Otevřené pozice teď žádné nemáme, ale ozvat se nám může kdokoli, kdo chce od prvního dne něco skutečně ovlivnit.",
+    "ogTitle": "Kariéra v Tagly"
+  },
+  "hero": {
+    "title": "Kariéra v Tagly",
+    "subtitle": "Tagly je startup v rané fázi a je nás pár. Žádná patra, žádná byrokracie, každý pracuje s každým napřímo. Kdo přijde teď, má reálný vliv na to, kam se firma posune."
+  },
+  "openPositions": "Otevřené pozice",
+  "noOpenPositions": "Zrovna teď žádnou otevřenou pozici nemáme.",
+  "links": {
+    "text": "Chcete o nás vědět víc? <about>Poznejte náš tým</about> nebo se nám <contact>ozvěte</contact>."
+  }
+}

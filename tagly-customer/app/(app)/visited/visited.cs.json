@@ -1,0 +1,8 @@
+{
+  "//": "Used in: app/(app)/visited/index.tsx (visited namespace).",
+  "title": "Sdílená místa",
+  "empty": "Zatím žádná sdílená místa",
+  "emptyHint": "Sdílej podnik na Instagramu a začni budovat svou historii.",
+  "visits": "Sdíleno {{count}}×",
+  "earned": "vyděláno"
+}

@@ -1,0 +1,46 @@
+{
+  "//": "Used in: app/(app)/settings/index.tsx + the settings/* shell screens (settings namespace).",
+  "title": "Nastavení",
+
+  "accountSection": "Účet a zabezpečení",
+  "profile": "Profil",
+  "security": "Zabezpečení",
+  "referrals": "Pozvánky",
+
+  "connectedSection": "Připojené účty",
+  "instagram": "Instagram",
+  "stripe": "Stripe",
+
+  "preferencesSection": "Předvolby",
+  "appPreferences": "Jazyk a jednotky",
+  "storyViews": "Zhlédnutí story",
+  "storyViewsSet": "Zhruba {{views}} zhlédnutí na story",
+  "storyViewsUnset": "Zatím nenastaveno",
+
+  "notificationsSection": "Oznámení",
+  "pushNotifications": "Push notifikace",
+  "emailNotifications": "E-mail",
+
+  "legalSection": "Právní informace",
+  "privacyPolicy": "Zásady ochrany osobních údajů",
+  "termsOfService": "Obchodní podmínky",
+  "termsOfMonetization": "Podmínky monetizace",
+
+  "dangerSection": "Nebezpečná zóna",
+  "deleteAccount": "Smazat účet",
+
+  "//subtitles": "Row subtitles — only where the label alone doesn't say what's inside.",
+  "profileSub": "Jméno, e-mail a zájmy",
+  "referralsSub": "Tvůj kód a kdo tě pozval",
+  "stripeSub": "Výběry peněz",
+
+  "//titles": "Sub-screen top-bar titles.",
+  "profileTitle": "Profil",
+  "securityTitle": "Zabezpečení",
+  "instagramTitle": "Instagram",
+  "stripeTitle": "Stripe",
+  "preferencesTitle": "Předvolby",
+  "pushTitle": "Push notifikace",
+  "emailTitle": "E-mailová oznámení",
+  "deleteTitle": "Smazat účet"
+}

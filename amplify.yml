@@ -1,0 +1,74 @@
+version: 1
+applications:
+  - appRoot: tagly-join
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - yarn install
+        build:
+          commands:
+            # CANONICAL_HOST (non-secret) arms the canonical-domain redirect
+            # middleware; unset (the default, and always on staging) it is a
+            # no-op. See docs/LINKING_AND_REDIRECTS.md § Canonical domains.
+            - env | grep -E '^CANONICAL_HOST=' >> .env.production || true
+            - yarn build
+      artifacts:
+        baseDirectory: .next
+        files:
+          - "**/*"
+      cache:
+        paths:
+          - node_modules/**/*
+          - .next/cache/**/*
+
+  - appRoot: tagly-website
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - yarn install --frozen-lockfile
+        build:
+          commands:
+            # RESEND_API_KEY lives in SSM SecureString (never a plaintext Amplify env
+            # var) and is baked into .env.production for the SSR runtime. The source
+            # marker line lets build logs prove which path ran without printing values.
+            - RESEND_API_KEY="$(aws ssm get-parameter --name /amplify/d3p9jakxhc1wfc/RESEND_API_KEY --with-decryption --query Parameter.Value --output text 2>/dev/null || true)"; if [ -n "$RESEND_API_KEY" ] && [ "$RESEND_API_KEY" != "None" ]; then printf 'RESEND_API_KEY=%s\n' "$RESEND_API_KEY" >> .env.production; echo 'RESEND source ssm'; else env | grep -E '^RESEND_' >> .env.production; echo 'RESEND source env-fallback'; fi
+            # API_BASE_URL (public backend API base, not a secret) feeds the landing
+            # page's live social-proof counters. Optional by design: when the console
+            # env var isn't set, the hero just renders without the chips.
+            - env | grep -E '^API_BASE_URL=' >> .env.production || true
+            # CANONICAL_HOST (non-secret) arms the canonical-domain redirect
+            # middleware; unset (the default, and always on staging) it is a
+            # no-op. See docs/LINKING_AND_REDIRECTS.md § Canonical domains.
+            - env | grep -E '^CANONICAL_HOST=' >> .env.production || true
+            - yarn build
+      artifacts:
+        baseDirectory: .next
+        files:
+          - "**/*"
+      cache:
+        paths:
+          - node_modules/**/*
+          - .next/cache/**/*
+
+  - appRoot: tagly-redirect
+    frontend:
+      phases:
+        build:
+          commands:
+            - echo "Static site - no build needed"
+            - ls -la
+            - test -f index.html
+            - test -f .well-known/apple-app-site-association
+      artifacts:
+        baseDirectory: .
+        files:
+          - "**/*"
+          # Amplify's `**/*` does NOT match dot-directories — without this
+          # explicit include, .well-known never deploys and universal links /
+          # Android App Links silently break (they were broken for exactly
+          # this reason until 2026-07-25).
+          - ".well-known/**/*"
+      cache:
+        paths: []

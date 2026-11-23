@@ -1,0 +1,12 @@
+{
+  "//": "Used in: components/instagram/InstagramPermissionSheet (instagramPermission namespace). Opened on connect error 4099 (insights permission missing / personal account).",
+  "title": "Allow insights access",
+  "intro": "Your Instagram connected, but without the insights permission Tagly can't work out your rewards.",
+  "pointsHeading": "What Tagly does with it",
+  "readsTitle": "It prices your reward",
+  "readsBody": "Tagly reads how many people your story reached and uses that number to calculate what you earn.",
+  "privacyTitle": "We only read, never post",
+  "privacyBody": "Tagly never posts, messages anyone, or changes anything on your account, and it can't see your password or DMs.",
+  "reconnect": "Connect again",
+  "notNow": "Not now"
+}

@@ -1,0 +1,14 @@
+{
+  "//": "Used in: src/components/layout/Navbar.tsx — landing page anchor links and aria labels. CTA button reuses common:getInTouch.",
+  "sections": {
+    "howItWorks": "How it works",
+    "whyTagly": "Why Tagly",
+    "examples": "Examples",
+    "pricing": "Pricing"
+  },
+  "aria": {
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "taglyHome": "Tagly home"
+  }
+}

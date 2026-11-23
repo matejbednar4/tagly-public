@@ -1,0 +1,21 @@
+{
+  "//": "Used in: components/billing/SettleBalanceSheet (settleBalanceSheet namespace). Vyrovnání záporného zůstatku. Zůstatek jde do mínusu BUĎ protože odměna za sdílení byla vyšší, než pokryly kredity (E069), NEBO protože se nepodařilo strhnout platbu z karty (PAYG), copy proto nesmí zmiňovat jen kartu. Informal register (tykání); plain punctuation, no em dashes.",
+  "title": "Vyrovnej zůstatek",
+  "intro": "Za sdílení jsme zaplatili odměnu, kterou tvůj zůstatek nepokryl, proto je záporný. Zaplať ho a odblokuj svůj účet.",
+  "owedHeading": "Dlužná částka",
+  "cta": "Zaplatit {{amount}}",
+  "amountNote": "Zkontroluj přesnou částku v platebním okně. Může se lišit, pokud se tvůj zůstatek od načtení této obrazovky změnil.",
+  "footnote": "Zabezpečeno přes Stripe",
+  "alertTitle": "Platba neproběhla",
+  "alertBody": "Zkus to prosím znovu.",
+  "failedBody": "Platba neprošla. Zkus to prosím znovu.",
+  "alreadySettledTitle": "Není co platit",
+  "alreadySettledBody": "Tvůj zůstatek už je vyrovnaný. Možná byl zaplacen z jiného zařízení.",
+  "verifyingTitle": "Potvrzujeme platbu",
+  "verifyingBody": "Obvykle to trvá pár sekund.",
+  "successTitle": "Zůstatek vyrovnán",
+  "successBody": "Strhli jsme {{amount}}. Tvůj zůstatek je zpět na nule.",
+  "unverifiedTitle": "Platbu se zatím nepodařilo ověřit",
+  "unverifiedBody": "Pokud proběhla, zůstatek se brzy aktualizuje a dáme ti vědět.",
+  "unverifiedCta": "Rozumím"
+}

@@ -1,0 +1,9 @@
+{
+  "//": "Used in: components/instagram/InstagramConnectionPrompt.tsx (instagramConnectionPrompt namespace). The connect/fix/reconnect action buttons (incl. incognito retry). The status line copy lives with its renderer (e.g. customerDrawer).",
+  "actionConnect": "Připojit Instagram",
+  "actionFix": "Opravit připojení Instagramu",
+  "actionReconnect": "Znovu připojit Instagram",
+
+  "retryNote": "Nefungovalo to? Instagram občas selže, ale anonymní okno by to mělo vyřešit.",
+  "actionIncognito": "Zkusit v anonymním okně"
+}

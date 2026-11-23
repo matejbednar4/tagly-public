@@ -1,0 +1,98 @@
+{
+  "//": "Used in: src/app/[lng]/pricing/page.tsx — hero, the two funding routes (pay as you go first, then credits, then the visibility rule) plus the caveats paragraph, what decides the price, two real cost examples, FAQ, compare links, CTA. Every figure here is verified against the platform: $50 minimum credit purchase, $15 available credits to stay visible, $0.30 PAYG surcharge. A per-story price cap exists but is DELIBERATELY not published anywhere on the site (it leaks the pricing model, and the US/CZ pair leaks the country multiplier) — say a cap exists, never the number. Same for the customer/Tagly split and any other pricing lever: reach plus locality is the ceiling of detail. Keep line-for-line with pricing.cs.json.",
+  "meta": {
+    "title": "Tagly Pricing for Local Businesses",
+    "description": "No subscriptions, no monthly fees, no tiers. Link a card and pay only once a customer's story has been paid out, or prepay with credits. See what a story really costs."
+  },
+  "hero": {
+    "title": "How much Tagly costs",
+    "intro": "There is no subscription, no monthly fee and no tier to pick. You pay for one thing: a story a real customer posted about your business, and only once that story has actually been paid out. You can fund it with a card, with prepaid credits, or with both."
+  },
+  "funding": {
+    "title": "Two ways to fund your business",
+    "intro": "Both routes end up in the same place once a story is paid out. The difference is when the money leaves your account.",
+    "items": [
+      {
+        "title": "Pay as you go",
+        "description": "Link a card and your business is live straight away, with nothing paid up front. No deposit, no minimum, no subscription. The card is charged only after a customer's story has been paid out, and only for the part your credits do not cover. Each charge carries a $0.30 card processing fee."
+      },
+      {
+        "title": "Prepaid credits",
+        "description": "Prefer to pay in advance? One credit costs one dollar. The smallest purchase is $50, and that applies to every top up rather than only the first. Credits never expire, and there is no per charge fee on this route, so the same story costs a little less than it would on a card."
+      }
+    ],
+    "visibility": {
+      "title": "Staying on the map",
+      "description": "Customers find you and share you while your business is visible in the app. An active card keeps you visible on its own. On the credits route, your business is shown whenever you have at least $15 in available credits, so a small buffer on the account is all it takes to stay on the map."
+    }
+  },
+  "factors": {
+    "title": "What decides the price of a story",
+    "intro": "Tagly works out what each story is worth. You do not set a rate, place a bid, or pick a target audience. The price comes from how many people really saw the story and how close those people are to your business.",
+    "items": [
+      {
+        "label": "Biggest factor",
+        "title": "Where the audience is",
+        "description": "This is the whole point of Tagly. The closer a story's audience is to your business, the more that story is worth. The further away they are, the closer the price falls to zero, down to a few cents. Anyone can share you, but you only really pay for the people who could walk in."
+      },
+      {
+        "label": "Real data",
+        "title": "Reach",
+        "description": "Not follower counts. About a day after a story goes up, Instagram reports how many people actually saw it, and that number is what the price is built on. A story seen by 1,000 people nearby is worth more than one seen by 200."
+      }
+    ]
+  },
+  "examples": {
+    "title": "What a story actually costs",
+    "intro": "Every story is different, so there is no price list. These are two real shares from Prague businesses on Tagly: the reach each one got, and what the business paid for it.",
+    "items": [
+      {
+        "title": "152 people reached",
+        "description": "A real share from a customer's visit to a Prague business. The business paid about $7 for it. Most stories look like this: an everyday customer, a few hundred people nearby, a few dollars."
+      },
+      {
+        "title": "526 people reached",
+        "description": "A real share with a wider local audience. The business paid about $12.50. More people saw it, so it was worth more, and the price followed."
+      }
+    ],
+    "footnote": "The price you see is the whole cost of a story, with nothing added on top. There is no way to predict exactly how a story will perform, so treat these as illustrations rather than a quote. Tagly also caps what a single story can cost, so one story can never run away with your budget. We bill in dollars, and the app also shows every amount in Czech koruna at the current rate."
+  },
+  "faq": {
+    "heading": "Frequently asked questions about pricing",
+    "items": [
+      {
+        "question": "Is there a minimum to get started?",
+        "answer": "Not if you pay as you go. Link a card and you are live with nothing paid up front. Credits are the route with a minimum: the smallest purchase is $50, and it applies to every top up, not only the first one. Either way there are no contracts and no monthly minimums."
+      },
+      {
+        "question": "Can I set a maximum price per story?",
+        "answer": "No, but Tagly caps it for you. One story can never run away with your budget, however well it does on Instagram. In practice almost every story costs a small fraction of that cap. What you control is how much you fund, not what any single story turns out to be worth."
+      },
+      {
+        "question": "Do credits expire?",
+        "answer": "No. Credits stay in your account until a story uses them. There is no expiry date and no dormancy fee."
+      },
+      {
+        "question": "Are credits refundable?",
+        "answer": "Credits are non-refundable by default. If you have a specific situation, contact our support team and we will review your case."
+      },
+      {
+        "question": "How do I stop spending?",
+        "answer": "Unlink your card and nothing more will be charged. Credits already in your account stay there until a story uses them, and your business keeps showing to customers while you have at least $15 in available credits. Nothing is lost either way, and you can start again whenever you want."
+      }
+    ],
+    "refundInline": "Credits are non-refundable by default. If you have a specific situation, <link>contact our support team</link> and we will review your case."
+  },
+  "compare": {
+    "title": "See how Tagly compares",
+    "intro": "Wondering how Tagly stacks up against other marketing options?",
+    "instagramAds": "Instagram Ads vs Tagly",
+    "influencerMarketing": "Influencer Marketing vs Tagly",
+    "marketingAgencies": "Marketing Agencies vs Tagly"
+  },
+  "cta": {
+    "heading": "Ready to get started?",
+    "description": "Set up your business in the Tagly Partner app and let real customers do the promoting. Link a card to go live without paying anything up front. No subscriptions, no commitments.",
+    "readFaq": "Read the FAQ"
+  }
+}

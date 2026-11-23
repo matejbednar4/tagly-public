@@ -1,0 +1,24 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./backend" },
+    { "path": "./tagly-advertiser" },
+    { "path": "./tagly-customer" },
+    { "path": "./tagly-shared/client" },
+    { "path": "./tagly-shared/models" },
+    { "path": "./tagly-shared/sdk" },
+    { "path": "./tagly-dashboard" }
+  ],
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true
+  }
+}

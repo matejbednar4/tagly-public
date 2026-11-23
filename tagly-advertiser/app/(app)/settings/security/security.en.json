@@ -1,0 +1,17 @@
+{
+  "//": "Used in: app/(app)/settings/security/index.tsx (settingsSecurity namespace).",
+  "title": "Security",
+
+  "sessionsSection": "Devices",
+  "signOutAllHeading": "Sign out of all other devices",
+  "signOutAllDescription": "Sign out everywhere except this device. Do this if you think someone else has access to your account.",
+  "signOutAllButton": "Sign out other devices",
+
+  "confirmTitle": "Sign out other devices?",
+  "confirmBody": "This signs you out on every other device. You'll stay signed in here.",
+  "confirmAction": "Sign out",
+  "cancel": "Cancel",
+
+  "signedOutTitle": "Done",
+  "signedOutBody": "You've been signed out on all other devices."
+}

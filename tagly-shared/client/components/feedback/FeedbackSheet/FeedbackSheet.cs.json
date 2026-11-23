@@ -1,0 +1,9 @@
+{
+  "//": "Used in: tagly-shared/client/components/feedback/FeedbackSheet (feedback namespace). The in-app feedback bottom sheet, shared by the customer + advertiser apps.",
+  "title": "Zpětná vazba",
+  "subtitle": "Dej nám vědět, co funguje nebo co bys chtěl vidět. Čteme každou zpětnou vazbu.",
+  "placeholder": "Tvoje zpětná vazba nebo nápad na funkci...",
+  "send": "Odeslat",
+  "sentToastTitle": "Díky za zpětnou vazbu",
+  "sentToastBody": "Moc si vážíme, že sis na to našel čas."
+}

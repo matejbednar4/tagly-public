@@ -1,0 +1,21 @@
+{
+  "//": "Used in: src/app/[lng]/{privacy-policy,terms-of-service,terms-of-monetization}/page.tsx — page metadata only. Body content lives in ../tagly-legal/<doc>/{en,cs}.md (monorepo canonical source).",
+  "privacyPolicy": {
+    "meta": {
+      "title": "Privacy Policy",
+      "description": "Tagly privacy policy. How we collect, use, and protect your data."
+    }
+  },
+  "termsOfService": {
+    "meta": {
+      "title": "Terms of Service",
+      "description": "Tagly terms of service. Read the terms and conditions for using Tagly."
+    }
+  },
+  "termsOfMonetization": {
+    "meta": {
+      "title": "Terms of Monetization",
+      "description": "Tagly terms of monetization. Understand the terms for earning rewards as a customer on Tagly."
+    }
+  }
+}

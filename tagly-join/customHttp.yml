@@ -1,0 +1,38 @@
+# Amplify Hosting response headers for the join page.
+#
+# WHY THIS EXISTS: `next.config.ts` already declares a `headers()` rule setting
+# `Content-Type: application/json` on the AASA path — and it is correct, but on
+# Amplify it never runs. Next.js `public/` assets are uploaded to S3 and served
+# by CloudFront directly, bypassing the Next compute layer entirely, so
+# `headers()` only applies locally (`next dev` / `next start`) or on a
+# self-hosted deployment. The hosting layer is the only place that can set the
+# header in production, which is what this file does.
+#
+# The file is extension-less (Apple requires exactly
+# `/.well-known/apple-app-site-association`, no suffix), so S3 cannot infer a
+# type and falls back to `application/octet-stream`. Apple documents
+# `application/json` as required for AASA.
+#
+# NOTE: headers set in the Amplify CONSOLE override this file. If the header
+# still comes back wrong after a deploy, check the console's custom-headers
+# section for a conflicting entry (same drift class as E004).
+#
+# VERIFY (a check that can fail):
+#   curl -sI https://staging.join.tagly.dev/.well-known/apple-app-site-association \
+#     | grep -i content-type
+#   -> must read `application/json`, not `application/octet-stream`.
+#
+# If it is STILL octet-stream after deploying, the fallback is the same trick
+# used by tagly-redirect: add an `apple-app-site-association.json` twin next to
+# it and an Amplify custom rule rewriting the extension-less path to it with a
+# 200 — S3 then infers `application/json` from the extension. See
+# `tagly-redirect/.well-known/README.md`.
+customHeaders:
+  - pattern: "/.well-known/apple-app-site-association"
+    headers:
+      - key: "Content-Type"
+        value: "application/json"
+  - pattern: "/.well-known/assetlinks.json"
+    headers:
+      - key: "Content-Type"
+        value: "application/json"

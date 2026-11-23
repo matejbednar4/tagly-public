@@ -1,0 +1,10 @@
+{
+  "//": "Used in: app/(app)/setup/business-page/index.tsx (setupBusiness namespace). The setup business-page step chrome.",
+  "overlineLabel": "Business page",
+  "skip": "Set up later",
+  "skipAlertTitle": "Skip for now?",
+  "skipAlertBody": "Without a business page, people can't discover you on Tagly. You can create one later from your account.",
+  "skipAlertCancel": "Go back",
+  "skipAlertConfirm": "Skip for now",
+  "createdToast": "{{name}} created"
+}

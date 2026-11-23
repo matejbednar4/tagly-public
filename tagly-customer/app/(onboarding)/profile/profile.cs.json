@@ -1,0 +1,21 @@
+{
+  "//": "Used in: app/(onboarding)/profile/index.tsx (profile namespace).",
+  "heading": "Řekni nám něco o sobě",
+  "subheading": "Pár údajů k dokončení tvého profilu.",
+  "nameLabel": "Celé jméno",
+  "namePlaceholder": "Tvé jméno",
+  "genderLabel": "Pohlaví",
+  "genderPlaceholder": "Vyber možnost",
+  "genderPickerHeading": "Pohlaví (nepovinné)",
+  "male": "Muž",
+  "female": "Žena",
+  "unspecified": "Nechci uvádět",
+  "interestsLabel": "Zájmy",
+  "interestsPlaceholder": "Vyber až 3",
+  "interestsHeading": "Tvé zájmy (nepovinné)",
+  "interestsSearch": "Hledat zájmy",
+  "interestsAll": "Vše",
+  "interestsDone": "Hotovo",
+  "continue": "Pokračovat",
+  "missingHint": "Ještě chybí: {{fields}}"
+}

@@ -1,0 +1,7 @@
+{
+  "//": "Used in: app/(onboarding)/notifications/index.tsx (notifications namespace). Keep DISTINCT from the consent step (marketing email): this is push alerts. Don't let the two copies converge — users hit both back-to-back (EU) and must not feel asked the same thing twice.",
+  "heading": "Zůstaň v obraze",
+  "body": "Dostávej oznámení, když někdo sdílí příspěvek o tvém podniku nebo v podobných situacích. Kdykoli to můžeš změnit v nastavení.",
+  "enable": "Zapnout oznámení",
+  "skip": "Možná později"
+}

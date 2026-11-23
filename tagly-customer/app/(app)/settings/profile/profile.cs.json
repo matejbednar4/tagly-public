@@ -1,0 +1,38 @@
+{
+  "//": "Used in: app/(app)/settings/profile/index.tsx + components/settings/{Gender,Interests}Field (settingsProfile namespace).",
+  "title": "Profil",
+
+  "detailsSection": "Tvoje údaje",
+
+  "nameHeading": "Celé jméno",
+  "namePlaceholder": "Tvoje jméno",
+  "nameRequired": "Zadej své jméno",
+  "nameFlaggedTitle": "Jméno neprošlo",
+  "nameFlaggedBody": "Tvoje jméno zřejmě obsahuje vulgární nebo urážlivý výraz. Použij prosím jiné jméno.",
+  "nameSaveFailedTitle": "Jméno se nepodařilo uložit",
+  "nameSaveFailedBody": "Zkus to prosím znovu.",
+
+  "emailHeading": "E-mail",
+  "changeEmail": "Změnit",
+
+  "aboutSection": "O tobě",
+
+  "edit": "Upravit",
+  "save": "Uložit",
+  "cancel": "Zrušit",
+
+  "genderHeading": "Pohlaví",
+  "male": "Muž",
+  "female": "Žena",
+  "unspecified": "Raději neuvádět",
+
+  "interestsHeading": "Zájmy sledujících",
+  "interestsConfirmLabel": "zájmy",
+  "interestsEmpty": "Nic nevybráno",
+  "interestsCooldown": "Změnit půjde znovu {{date}}.",
+  "interestsPlaceholder": "Přidej až 3 zájmy",
+  "interestsPickerHeading": "Co tvoje sledující baví?",
+  "interestsSearch": "Hledat zájmy",
+  "interestsAll": "Vše",
+  "interestsDone": "Hotovo"
+}

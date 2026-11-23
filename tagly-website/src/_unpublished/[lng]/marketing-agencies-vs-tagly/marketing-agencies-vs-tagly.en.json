@@ -1,0 +1,119 @@
+{
+  "//": "Used in: src/app/[lng]/marketing-agencies-vs-tagly/page.tsx — hero (Trans links), comparison table (8 rows), why-better cards, where-agencies-work cards, bottom line (Trans on p2), other comparisons (Trans), CTA. Shared headings from `comparison` namespace.",
+  "meta": {
+    "title": "Marketing Agencies vs Tagly | Which Is Better for Local Businesses?",
+    "description": "Comparing marketing agencies and Tagly for local business marketing. Agencies offer full-service strategy, but Tagly pays your customers to share you in their Instagram stories. See which works better for restaurants, cafes, and gyms."
+  },
+  "hero": {
+    "title": "Marketing agencies vs Tagly",
+    "subtitle": "An honest comparison for local businesses",
+    "intro": "Hiring a marketing agency can make sense for certain businesses. But if you run a <restaurants>restaurant</restaurants>, <cafes>cafe</cafes>, <gyms>gym</gyms>, or any other <local>local business</local>, you might be paying a monthly retainer for work you do not actually need. Tagly takes a different approach: word-of-mouth marketing from the people who already come in. Here is how the two compare."
+  },
+  "table": {
+    "competitor": "Marketing Agency",
+    "rows": [
+      {
+        "label": "Best for",
+        "competitor": "Businesses that need full-service strategy across multiple channels",
+        "tagly": "Local businesses with a physical location"
+      },
+      {
+        "label": "Pricing",
+        "competitor": "A monthly retainer, whatever the month brings",
+        "tagly": "Per story. No retainer, no contract. Pay as you go with no minimum, or credits from $50 (in the app, amounts are also shown in Czech koruna at the current exchange rate)"
+      },
+      {
+        "label": "Commitment",
+        "competitor": "Often a fixed-term contract, sometimes with an early termination fee",
+        "tagly": "No contracts and no notice period. Top up when you want, and stop whenever you want"
+      },
+      {
+        "label": "Who does the work",
+        "competitor": "Agency team you brief and manage",
+        "tagly": "Your customers, posting from their own Instagram account"
+      },
+      {
+        "label": "Content",
+        "competitor": "Produced by the agency, requires your input and approval",
+        "tagly": "Your customers' own Instagram stories. Nothing is briefed"
+      },
+      {
+        "label": "Audience",
+        "competitor": "Depends on channels they manage (ads, social, email)",
+        "tagly": "The sharer's friends and followers. You pay most for the ones near you and close to nothing for the ones far away"
+      },
+      {
+        "label": "Time required from you",
+        "competitor": "Regular meetings, approvals, feedback, and strategy calls",
+        "tagly": "Set up once. After that, top up when you run low and rate the stories you get"
+      },
+      {
+        "label": "Results timeline",
+        "competitor": "Often months before you see measurable results",
+        "tagly": "Your page can be live the same day. Stories arrive whenever your customers post, and each one is paid about a day later"
+      }
+    ]
+  },
+  "whyBetter": {
+    "intro": "Most local businesses do not need a full marketing department. They need more people through the door. That is a word-of-mouth problem, not a strategy problem, and Tagly is built to solve it.",
+    "items": [
+      {
+        "title": "You probably do not need a full-service agency",
+        "description": "A good agency does a lot: strategy, brand, multi-channel campaigns, paid media. The question is whether you need all of it. Most restaurants, cafes, and gyms do not have complex marketing needs. You need local people to know your business exists and to walk through the door. If that is the actual problem, a full monthly retainer is a very large answer to a fairly small question."
+      },
+      {
+        "title": "Agencies still need you to be involved",
+        "description": "Even with an agency, you are not hands-off. You attend meetings, review content, approve campaigns, provide photos, answer questions, and give feedback. For a restaurant owner already working 12-hour days, that is a real time cost. Tagly asks far less. Your customers create the content and post it themselves, nothing needs your approval before it goes out, and there are no meetings. The one recurring task is a quick star rating on each story you receive."
+      },
+      {
+        "title": "A retainer is a fixed cost whatever comes back",
+        "description": "An agency retainer is the same number every month regardless of results, and over a year it adds up to a serious amount for a local business. There is no guarantee it turns into more people through the door. Tagly is a different shape. On pay as you go there is no deposit and no minimum: you link a card and are charged only after a story has been paid out. If you would rather prepay, credits start at $50, never expire, and are only spent when a story is actually paid."
+      },
+      {
+        "title": "Agency content is not the same as customer content",
+        "description": "An agency can produce polished social media posts for your business. But polished posts from a business account do not carry the same weight as a real customer sharing their experience with their friends. People trust recommendations from people they know. A story from someone's friend who just had dinner at your restaurant is more convincing than any professionally produced content."
+      },
+      {
+        "title": "There is nothing to coordinate",
+        "description": "With an agency, marketing is an ongoing project: kickoff calls, strategy sessions, content calendars, revision rounds, performance reviews. With Tagly there is no one to brief and no calendar to fill. Stories arrive on their own whenever a customer decides to post one. Your side of it is keeping the account funded and rating each story that comes in."
+      },
+      {
+        "title": "You can use both if it makes sense",
+        "description": "Tagly does not have to replace an agency. If you already work with one and they do good work for you, keep going. But Tagly gives you a baseline of consistent, affordable, local word-of-mouth marketing that runs on its own. Think of it as the always-on layer while your agency handles the bigger picture, if you even need one."
+      }
+    ]
+  },
+  "worksWell": {
+    "title": "Marketing agencies work well, just not for most local businesses",
+    "intro": "Agencies are not always the wrong choice. For certain businesses and situations, they can be exactly what you need.",
+    "items": [
+      {
+        "title": "Full-service strategy",
+        "description": "If you need someone to handle your entire marketing operation across multiple channels (social media, email, ads, PR, events), an agency can do that. They bring expertise across disciplines and can coordinate everything in one place."
+      },
+      {
+        "title": "Brand building and identity",
+        "description": "Agencies are good at building a cohesive brand identity. If you need a new logo, brand guidelines, a website redesign, or a complete visual overhaul, that is agency territory. These are projects that require specialized creative skills."
+      },
+      {
+        "title": "Businesses with complex sales cycles",
+        "description": "If your customers do not make quick decisions (think B2B services, real estate, or high-end products), an agency can build the kind of multi-touch marketing funnel you need. That takes strategy and sustained execution."
+      },
+      {
+        "title": "Scaling fast with paid advertising",
+        "description": "If you have a significant ad budget and need someone to manage campaigns across Google, Meta, and other platforms, agencies have the tools and experience to do that well. Managing paid media at scale is genuinely hard."
+      }
+    ]
+  },
+  "bottomLine": {
+    "p1": "Marketing agencies make sense for businesses that need full-service strategy, brand building, or complex multi-channel campaigns. If you are a growing company with the budget and the need for that level of support, a good agency can be a great partner.",
+    "p2": "But if you run a local business and your main goal is getting more people through the door, Tagly aims straight at that. Your customers post about your business on Instagram, and the price you pay is highest for the viewers closest to you. No retainers, no contracts, no meetings, and no content to approve. Check out <pricing>pricing</pricing> or read the <faq>FAQ</faq> if you want to learn more before getting started."
+  },
+  "other": {
+    "intro": "See how Tagly compares to <iads>Instagram ads</iads> and <influencer>influencer marketing</influencer>."
+  },
+  "cta": {
+    "heading": "Ready to try Tagly?",
+    "description": "Create your business page, link a card or add credits, and let your customers start sharing you on Instagram."
+  }
+}

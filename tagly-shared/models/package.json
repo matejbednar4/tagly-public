@@ -1,0 +1,54 @@
+{
+  "name": "@tagly/models",
+  "version": "2.0.2",
+  "private": true,
+  "type": "module",
+
+  "main": "dist/index.shared.js",
+  "types": "dist/index.shared.d.ts",
+
+  "exports": {
+    "./shared": {
+      "react-native": "./src/index.shared.ts",
+      "default": "./dist/index.shared.js",
+      "types": "./dist/index.shared.d.ts"
+    },
+    "./v2/crossApp": {
+      "react-native": "./src/index.v2.crossApp.ts",
+      "default": "./dist/index.v2.crossApp.js",
+      "types": "./dist/index.v2.crossApp.d.ts"
+    },
+    "./v2/customerApp": {
+      "react-native": "./src/index.v2.customerApp.ts",
+      "default": "./dist/index.v2.customerApp.js",
+      "types": "./dist/index.v2.customerApp.d.ts"
+    },
+    "./v2/advertiserApp": {
+      "react-native": "./src/index.v2.advertiserApp.ts",
+      "default": "./dist/index.v2.advertiserApp.js",
+      "types": "./dist/index.v2.advertiserApp.d.ts"
+    },
+    "./v2/adminApp": {
+      "react-native": "./src/index.v2.adminApp.ts",
+      "default": "./dist/index.v2.adminApp.js",
+      "types": "./dist/index.v2.adminApp.d.ts"
+    }
+  },
+
+  "files": ["src", "dist"],
+
+  "peerDependencies": {
+    "zod": "^4.1"
+  },
+
+  "devDependencies": {
+    "@types/node": "^22.10.7",
+    "typescript": "^5.7.3",
+    "zod": "^4.1"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && npm run fix:imports:post-build",
+    "clean": "rm -rf dist",
+    "fix:imports:post-build": "node scripts/add-js-extensions-post-build.mjs"
+  }
+}

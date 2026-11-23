@@ -1,0 +1,18 @@
+{
+  "//": "Used in: components/drawer/CustomerDrawer.tsx (customerDrawer namespace). Profile + balance + nav rows (withdraw, settings, invite) + 'more' overline over the secondary rows (howItWorks, rewards, support, feedback, about) + log out. (IG status line copy lives in the instagramConnection namespace.)",
+  "banned": "Účet zablokován",
+  "balance": "Zůstatek",
+  "withdraw": "Vybrat peníze",
+  "settings": "Nastavení",
+  "invite": "Pozvi a vydělej",
+  "more": "Více",
+  "howItWorks": "Jak to funguje",
+  "rewards": "O odměnách",
+  "support": "Napsat na podporu",
+  "feedback": "Poslat zpětnou vazbu",
+  "about": "O nás",
+  "logOut": "Odhlásit se",
+  "logOutConfirmTitle": "Odhlásit se?",
+  "logOutConfirmBody": "Budeš se muset přihlásit znovu.",
+  "cancel": "Zrušit"
+}

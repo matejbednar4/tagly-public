@@ -1,0 +1,69 @@
+{
+  "//": "Used in: src/app/[lng]/instagram-data-deletion/page.tsx — the three real Instagram disconnection / data-deletion mechanisms (app disconnect, removal from Instagram's own settings, deletion request), what is retained, and the privacy contact. Must stay in agreement with tagly-legal/privacy-policy §8 and §9.3.",
+  "meta": {
+    "title": "Pokyny ke smazání dat z Instagramu",
+    "description": "Jak v aplikaci Tagly odpojit Instagram, jak Tagly odebrat v nastavení Instagramu a jak požádat o smazání dat z Instagramu, která o vás Tagly uchovává."
+  },
+  "hero": {
+    "title": "Spravujte svá instagramová data uložená v Tagly"
+  },
+  "nav": {
+    "label": "Na této stránce",
+    "disconnect": "Odpojit Instagram",
+    "deauthorize": "Odebrat oprávnění Instagramu",
+    "delete": "Smazat data z Instagramu"
+  },
+  "app": {
+    "title": "1. Odpojit Instagram",
+    "intro": "Instagram můžete odpojit přímo v aplikaci Tagly.",
+    "steps": [
+      "Otevřete aplikaci Tagly.",
+      "Přejděte do Nastavení → Instagram.",
+      "Klikněte na Odpojit účet.",
+      "Potvrďte odpojení Instagramu."
+    ],
+    "resultIntro": "Odpojením se smažou:",
+    "results": [
+      "Informace z vašeho instagramového profilu, které ukládáme (uživatelské jméno, profilová fotka, typ účtu)",
+      "Data o vašem publiku, včetně lokalit a demografických údajů o sledujících",
+      "Váš přístupový token k Instagramu, takže Tagly už z vašeho účtu nebude moci nic číst"
+    ],
+    "note": "Za sdílení, která zatím nebyla zaplacena, odměnu nedostanete. Sdílení, která už zaplacena byla, zůstávají, dokud nesmažete svůj účet Tagly nebo svá data z Instagramu (krok 3). Instagram můžete kdykoli znovu připojit."
+  },
+  "instagram": {
+    "title": "2. Odebrat oprávnění Instagramu",
+    "intro": "Náš přístup k vašim datům z Instagramu můžete zrušit v aplikaci Instagram.",
+    "steps": [
+      "Otevřete aplikaci Instagram.",
+      "Přejděte do Nastavení → Aplikace a weby.",
+      "Najděte Tagly mezi aktivními aplikacemi.",
+      "Klikněte na Odebrat."
+    ],
+    "helpText": "Pokud vaše menu vypadá jinak, Instagram ve své nápovědě <link>Správa nastavení soukromí pro aplikace a weby na Instagramu</link> popisuje, kde najít toto nastavení. Pokud nastavení stejně nemůžete najít, napište nám na <email>support@taglyapp.com</email> a pomůžeme vám.",
+    "note": "Odebráním oprávnění Instagramu se smaže pouze přístupový token. Všechno, co už máme uložené, zůstává, dokud nesmažete svůj účet Tagly nebo svá data z Instagramu (krok 3)."
+  },
+  "request": {
+    "title": "3. Smazat data z Instagramu",
+    "intro": "Žádost o smazání dat z Instagramu odstraní vše, co jsme z vašeho instagramového účtu uložili.",
+    "steps": [
+      "Otevřete aplikaci Instagram.",
+      "Přejděte do Nastavení → Aplikace a weby.",
+      "Najděte Tagly mezi aktivními aplikacemi.",
+      "Klikněte na Odebrat a zvolte také smazání svých dat."
+    ],
+    "resultIntro": "Smazání dat z Instagramu smaže:",
+    "results": [
+      "Uložené kopie médií z vašich sdílení",
+      "Statistiky vašich sdílení (dosah, zhlédnutí, nová sledování, přesdílení...)",
+      "Data o vašem publiku, včetně lokalit a demografických údajů o sledujících",
+      "Váš přístupový token k Instagramu",
+      "Informace z vašeho instagramového profilu, které ukládáme (uživatelské jméno, profilová fotka, typ účtu)",
+      "Vazbu mezi vašimi sdíleními a vaším instagramovým účtem"
+    ],
+    "note": "Váš účet Tagly se tímto nesmaže. Sdílení, která zatím nebyla zaplacena, se zruší a odměnu za ně nedostanete. Dokud Instagram znovu nepřipojíte, nebudete moci vytvářet nová sdílení."
+  },
+  "contact": {
+    "title": "Kontaktujte nás",
+    "intro": "Pokud máte ke smazání svých dat jakékoli otázky, napište nám na <email>support@taglyapp.com</email>."
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "//": "Used in: tagly-shared/client/components/feedback/FeedbackSheet (feedback namespace). The in-app feedback bottom sheet, shared by the customer + advertiser apps.",
+  "title": "Provide feedback",
+  "subtitle": "Tell us what's working or what you'd like to see. We read every piece of feedback.",
+  "placeholder": "Your feedback or feature idea...",
+  "send": "Send feedback",
+  "sentToastTitle": "Thanks for the feedback",
+  "sentToastBody": "We really appreciate you taking the time."
+}

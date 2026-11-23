@@ -1,0 +1,6 @@
+{
+  "//": "Used in: app/(app)/(tabs)/_layout.tsx (tabs namespace). The bottom-nav labels for the three main tabs.",
+  "map": "Mapa",
+  "discover": "Objevit",
+  "account": "Účet"
+}

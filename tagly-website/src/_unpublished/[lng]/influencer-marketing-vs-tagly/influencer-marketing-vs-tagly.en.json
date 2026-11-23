@@ -1,0 +1,87 @@
+{
+  "//": "Used in: src/app/[lng]/influencer-marketing-vs-tagly/page.tsx — hero (Trans links), comparison table (8 rows), why-better cards, where-influencers-work cards, bottom line (Trans on p2), other comparisons (Trans), CTA. Shared headings from `comparison` namespace.",
+  "meta": {
+    "title": "Influencer Marketing vs Tagly | Which Is Better for Local Businesses?",
+    "description": "Comparing influencer marketing and Tagly for local business marketing. Influencers suit big brands, but Tagly pays your own customers to share you in their Instagram stories. See which works better for restaurants, cafes, and gyms."
+  },
+  "hero": {
+    "title": "Influencer marketing vs Tagly",
+    "subtitle": "An honest comparison for local businesses",
+    "intro": "Influencer marketing can work well for the right business. But if you run a <restaurants>restaurant</restaurants>, <cafes>cafe</cafes>, <gyms>gym</gyms>, or any other <local>local business</local>, hiring influencers is usually expensive, unpredictable, and not built for your needs. Tagly takes a different approach: word-of-mouth marketing from the people who already come in. Here is how the two compare."
+  },
+  "table": {
+    "competitor": "Influencer Marketing",
+    "rows": [
+      { "label": "Best for", "competitor": "Big brands, product launches, national campaigns", "tagly": "Local businesses with a physical location" },
+      { "label": "Who promotes you", "competitor": "Hired creators you find and negotiate with", "tagly": "People who share you from their own Instagram account. Anyone can, and the price does the filtering" },
+      { "label": "Audience", "competitor": "The influencer's followers, wherever they happen to be", "tagly": "The sharer's friends and followers. You pay most for the ones near you and close to nothing for the ones far away" },
+      { "label": "Pricing", "competitor": "Set per deal by the influencer, with no public benchmark to check it against", "tagly": "Set by Tagly from the story's real Instagram numbers, after it has run" },
+      { "label": "Price per story", "competitor": "Quoted per deal, and it tracks follower count more than local reach", "tagly": "Worked out per story, with a cap so no single story can run away with your budget" },
+      { "label": "Content", "competitor": "Scripted or briefed, often feels like an ad", "tagly": "The customer's own Instagram story, in their own words. Nothing is briefed" },
+      { "label": "Frequency", "competitor": "A fixed deliverable. When the deal ends, it ends", "tagly": "As many stories as your customers post, from different people, for as long as you have budget" },
+      { "label": "Time required", "competitor": "Finding, negotiating, briefing, approving, managing", "tagly": "Set up once. After that, top up when you run low and rate the stories you get" }
+    ]
+  },
+  "whyBetter": {
+    "intro": "If your business depends on people walking through the door, influencer marketing has some fundamental problems that Tagly does not. What local businesses actually need is word-of-mouth marketing from real customers, and that is exactly what Tagly delivers.",
+    "items": [
+      {
+        "title": "The influencer's audience is not your audience",
+        "description": "Say an influencer has 50,000 followers. If only a few hundred of them live near your business, you are paying to reach tens of thousands of people who will never walk through your door, however good the content is. Tagly works the other way round. Anyone can share you, and the price of a story is worked out from where its audience actually is: viewers in your city are worth the most, and viewers hundreds of kilometres away are worth close to nothing. So you only pay for the people who could actually walk in."
+      },
+      {
+        "title": "Nobody quotes you a price",
+        "description": "In influencer marketing the seller sets the price, and there is no public benchmark to check it against, so two creators with similar audiences can ask for very different amounts. With Tagly there is no negotiation and no rate card. Every price is worked out after the story has run, from Instagram's own numbers: how many people really saw it, and how close those people are to your business. Tagly also caps what a single story can cost, so no one story can run away with your budget."
+      },
+      {
+        "title": "One deal buys one moment",
+        "description": "When you pay an influencer, you get a fixed deliverable: a set number of posts, and then it is over unless you sign again. Tagly is Instagram stories, so each one is gone within a day by design. That is the point. Instead of one polished moment you get a steady trickle of new ones, from different people, for as long as you keep budget on the account. The value is in freshness and frequency, not in one permanent post."
+      },
+      {
+        "title": "Someone who was actually there",
+        "description": "An influencer is hired to promote something they may never have used. A Tagly customer posts the kind of story they post anyway, and the reward is closer to a thank you than a fee for access to an audience. They are paid too, and where Instagram or the law requires it they say so, but the recommendation itself is theirs and it goes out to people who know them."
+      },
+      {
+        "title": "Nothing to negotiate, nothing to approve",
+        "description": "Working with influencers is a project. You find the right people, reach out, negotiate rates, send briefs, approve content, chase delivery, and handle payment. For a busy business owner that is practically a part-time job. Tagly needs none of it. There is no one to negotiate with, and nothing needs your approval before it goes out. What it does ask is that you keep the account funded and give each story you receive a quick star rating."
+      },
+      {
+        "title": "You can use both if you want",
+        "description": "Tagly does not replace every form of marketing. If you find an influencer who genuinely loves your business and has a local audience, that can be a great partnership. But Tagly gives you a baseline of consistent, affordable, local promotion that runs without any effort. Think of it as the always-on channel while influencer deals are the occasional bonus."
+      }
+    ]
+  },
+  "worksWell": {
+    "title": "Influencer marketing works well, just not for local businesses",
+    "intro": "Influencer marketing is not always a bad choice. For certain types of businesses and goals, it can be very effective.",
+    "items": [
+      {
+        "title": "Big product launches",
+        "description": "When a brand launches a new product and needs to generate buzz fast, influencers can get thousands of eyes on it in a single day. If you sell a product that ships nationally, that broad reach can translate into real sales."
+      },
+      {
+        "title": "Fashion, beauty, and tech",
+        "description": "Industries where people discover products through social media benefit the most from influencer marketing. A beauty brand can send a product to fifty influencers and generate thousands of pieces of content. That model works because the product can reach anyone, anywhere."
+      },
+      {
+        "title": "Brand awareness at scale",
+        "description": "If your goal is to get your name in front of as many people as possible, influencers with large followings can do that. For brands that are already well-known and want to stay top of mind, this kind of reach is valuable."
+      },
+      {
+        "title": "High-production content",
+        "description": "Some influencers produce genuinely impressive content. If you need polished photos or videos for your brand, working with the right creator can be worth the cost, especially if you can reuse the content across your own channels."
+      }
+    ]
+  },
+  "bottomLine": {
+    "p1": "Influencer marketing makes sense for brands selling products at scale, running national campaigns, or looking for high-production content. If that describes your business, it can be a smart investment.",
+    "p2": "But if you run a local business and need more people through the door, Tagly gives you the same kind of promotion, real people posting about your business on Instagram, except these are your own customers, the price is set by us from real Instagram numbers rather than by the person you are paying, and reach near you is what you are actually paying for. Check out <pricing>pricing</pricing> or read the <faq>FAQ</faq> if you want to learn more before getting started."
+  },
+  "other": {
+    "intro": "See how Tagly compares to <iads>Instagram ads</iads> and <agencies>marketing agencies</agencies>."
+  },
+  "cta": {
+    "heading": "Ready to try Tagly?",
+    "description": "Create your business page, link a card or add credits, and let your customers start sharing you on Instagram."
+  }
+}

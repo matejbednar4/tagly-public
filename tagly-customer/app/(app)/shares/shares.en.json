@@ -1,0 +1,12 @@
+{
+  "//": "Used in: app/(app)/shares/index.tsx (shares namespace).",
+  "title": "Your shares",
+  "empty": "You haven't shared any businesses yet.",
+  "emptyHint": "Post about a place you love on Instagram to earn your first reward.",
+  "sortBy": "Sort by",
+  "done": "Done",
+  "sortNewest": "Newest",
+  "sortOldest": "Oldest",
+  "sortHighest": "Highest reward",
+  "sortLowest": "Lowest reward"
+}

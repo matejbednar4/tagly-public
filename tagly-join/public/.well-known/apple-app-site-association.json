@@ -1,0 +1,9 @@
+{
+  "applinks": {
+    "details": [
+      { "appID": "S9BP8HQZ93.com.flaer.customer",         "paths": [ "*" ] },
+      { "appID": "S9BP8HQZ93.com.flaer.customer.staging", "paths": [ "*" ] },
+      { "appID": "S9BP8HQZ93.com.flaer.customer.dev",     "paths": [ "*" ] }
+    ]
+  }
+}

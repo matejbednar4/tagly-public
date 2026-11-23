@@ -1,0 +1,27 @@
+{
+  "//": "Used in: app/(app)/settings/email/index.tsx (settingsEmail namespace).",
+  "title": "Změna e-mailu",
+
+  "newEmailLabel": "Nový e-mail",
+  "newEmailPlaceholder": "honza@email.com",
+  "step1Description": "Pošleme kód na tvůj současný e-mail i na ten nový.",
+  "sendCodes": "Odeslat kódy",
+
+  "step2Heading": "Zadej oba kódy",
+  "step2Description": "Poslali jsme kód do každé schránky. Zadej oba pro potvrzení změny.",
+  "codeSentTo": "Kód odeslán na {{email}}",
+  "verify": "Změnit e-mail",
+  "resend": "Poslat kódy znovu",
+  "resendIn": "Poslat znovu za {{seconds}} s",
+  "cancel": "Zrušit",
+
+  "invalidEmailTitle": "Neplatný e-mail",
+  "invalidEmailBody": "Zadej platnou e-mailovou adresu.",
+  "emailInUseTitle": "E-mail se používá",
+  "emailInUseBody": "Tento e-mail už patří jinému účtu.",
+  "sameEmailTitle": "Stejný e-mail",
+  "sameEmailBody": "Tohle už je tvůj e-mail. Zadej jiný.",
+
+  "successTitle": "E-mail změněn",
+  "successBody": "Tvoje e-mailová adresa byla aktualizována."
+}

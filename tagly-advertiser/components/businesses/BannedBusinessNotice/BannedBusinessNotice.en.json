@@ -1,0 +1,6 @@
+{
+  "//": "Used in: components/businesses/BannedBusinessNotice (bannedBusinessNotice namespace). The banned-page notice shown to owners of a BANNED business.",
+  "title": "This page was banned",
+  "body": "Customers can't see it and it can't be edited. If you think this is a mistake, get in touch.",
+  "contactSupport": "Contact support"
+}

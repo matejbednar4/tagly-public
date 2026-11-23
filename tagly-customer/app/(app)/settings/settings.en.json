@@ -1,0 +1,46 @@
+{
+  "//": "Used in: app/(app)/settings/index.tsx + the settings/* shell screens (settings namespace).",
+  "title": "Settings",
+
+  "accountSection": "Account & security",
+  "profile": "Profile",
+  "security": "Security",
+  "referrals": "Referrals",
+
+  "connectedSection": "Connected accounts",
+  "instagram": "Instagram",
+  "stripe": "Stripe",
+
+  "preferencesSection": "Preferences",
+  "appPreferences": "Language & units",
+  "storyViews": "Story views",
+  "storyViewsSet": "About {{views}} views per story",
+  "storyViewsUnset": "Not set yet",
+
+  "notificationsSection": "Notifications",
+  "pushNotifications": "Push",
+  "emailNotifications": "Email",
+
+  "legalSection": "Legal",
+  "privacyPolicy": "Privacy Policy",
+  "termsOfService": "Terms of Service",
+  "termsOfMonetization": "Terms of Monetization",
+
+  "dangerSection": "Danger zone",
+  "deleteAccount": "Delete account",
+
+  "//subtitles": "Row subtitles — only where the label alone doesn't say what's inside.",
+  "profileSub": "Name, email and interests",
+  "referralsSub": "Your code and who invited you",
+  "stripeSub": "Withdrawals",
+
+  "//titles": "Sub-screen top-bar titles.",
+  "profileTitle": "Profile",
+  "securityTitle": "Security",
+  "instagramTitle": "Instagram",
+  "stripeTitle": "Stripe",
+  "preferencesTitle": "Preferences",
+  "pushTitle": "Push notifications",
+  "emailTitle": "Email notifications",
+  "deleteTitle": "Delete account"
+}

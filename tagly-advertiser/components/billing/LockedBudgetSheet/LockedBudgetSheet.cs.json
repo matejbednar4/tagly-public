@@ -1,0 +1,17 @@
+{
+  "//": "Used in: components/billing/LockedBudgetSheet (lockedBudgetSheet namespace). Explains locked credits via a share-lifecycle timeline.",
+  "title": "Rezervované kredity",
+  "intro": "Tyto kredity jsou rezervované na sdílení, která ještě nejsou zaplacená. Rezervujeme je, aby bylo vždy z čeho zaplatit odměnu zákazníkovi.",
+  "shared": {
+    "title": "Zákazník sdílí tvůj podnik",
+    "body": "Odhadneme, kolik si zákazník může za sdílení vydělat, a tuto částku z tvých kreditů rezervujeme."
+  },
+  "price": {
+    "title": "Spočítáme finální cenu sdílení",
+    "body": "Po 24 hodinách zjistíme, kolik lidí sdílení vidělo a jakou mělo pro tvůj podnik skutečnou hodnotu."
+  },
+  "paid": {
+    "title": "Zákazník dostane odměnu",
+    "body": "Odměnu zaplatíme z rezervovaných kreditů. Pokud jsme rezervovali víc, než byla finální cena, zbytek se vrátí mezi dostupné kredity."
+  }
+}

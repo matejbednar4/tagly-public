@@ -1,0 +1,69 @@
+{
+  "//": "Used in: src/app/[lng]/instagram-data-deletion/page.tsx — the three real Instagram disconnection / data-deletion mechanisms (app disconnect, removal from Instagram's own settings, deletion request), what is retained, and the privacy contact. Must stay in agreement with tagly-legal/privacy-policy §8 and §9.3.",
+  "meta": {
+    "title": "Instagram Data Deletion Instructions",
+    "description": "How to disconnect Instagram in the Tagly app, remove Tagly from your Instagram settings, and request deletion of the Instagram data Tagly holds about you."
+  },
+  "hero": {
+    "title": "Manage your Instagram data stored in Tagly"
+  },
+  "nav": {
+    "label": "On this page",
+    "disconnect": "Disconnect Instagram",
+    "deauthorize": "Deauthorize Instagram",
+    "delete": "Delete Instagram data"
+  },
+  "app": {
+    "title": "1. Disconnect Instagram",
+    "intro": "You can disconnect Instagram straight from the Tagly app.",
+    "steps": [
+      "Open the Tagly app.",
+      "Open Settings, then Instagram.",
+      "Tap Disconnect account.",
+      "Confirm disconnecting Instagram."
+    ],
+    "resultIntro": "Disconnecting deletes:",
+    "results": [
+      "The Instagram profile information we store (username, profile picture, account type)",
+      "Your audience snapshots, including follower locations and demographics",
+      "Your Instagram access token, so Tagly can no longer read anything from your account"
+    ],
+    "note": "Shares that have not yet been paid out will not be paid. Stories that were already paid for, and the copies of them we stored, stay until you delete your Tagly account or delete your Instagram data (step 3). You can reconnect Instagram again at any time."
+  },
+  "instagram": {
+    "title": "2. Deauthorize Instagram",
+    "intro": "You can deauthorize Tagly's access to your Instagram data from the Instagram app.",
+    "steps": [
+      "Open the Instagram app.",
+      "Open Settings, then Apps and websites.",
+      "Find Tagly under your active apps.",
+      "Tap Remove."
+    ],
+    "helpText": "If your menu looks different, Instagram explains where the setting lives in its own help article: <link>Manage the privacy settings for apps and websites on Instagram</link>. And if you still can't find the setting, message us at <email>support@taglyapp.com</email> and we'll help you through it.",
+    "note": "This only deletes the access token. Everything we already stored stays until you delete your Tagly account or delete your Instagram data (step 3)."
+  },
+  "request": {
+    "title": "3. Delete Instagram data",
+    "intro": "A deletion request removes everything we derived from your Instagram account, not just the connection.",
+    "steps": [
+      "Open the Instagram app.",
+      "Open Settings, then Apps and websites.",
+      "Find Tagly under your active apps.",
+      "Tap Remove and choose to also delete your data."
+    ],
+    "resultIntro": "Instagram data deletion deletes:",
+    "results": [
+      "The stored copies of the media from your stories",
+      "Story insights (reach, views, replies, profile visits, follows, reshares)",
+      "Your audience snapshots, including follower locations and demographics",
+      "Your Instagram access token",
+      "The Instagram profile information we store (username, profile picture, account type)",
+      "The link between your shares and your Instagram account"
+    ],
+    "note": "This does not delete your Tagly account. Shares that have not been paid out yet are cancelled and will not be paid, and you cannot earn from new stories until you connect Instagram again."
+  },
+  "contact": {
+    "title": "Contact us",
+    "intro": "If you have questions about deleting your data, email us at <email>support@taglyapp.com</email>."
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "//": "Used in: app/(onboarding)/finishing/index.tsx (finishing namespace). Auto-runs finish-registration; only the retry state is interactive.",
+  "settingUp": "Připravujeme tvůj účet…",
+  "errorHeading": "Už to skoro je",
+  "errorBody": "Nepodařilo se nám dokončit nastavení tvého účtu. Zkus to prosím znovu.",
+  "retry": "Zkusit znovu"
+}

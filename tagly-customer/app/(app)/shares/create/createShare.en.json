@@ -1,0 +1,19 @@
+{
+  "//": "Used in: app/(app)/shares/create/index.tsx (createShare namespace). COPY RULE: users post on their own Instagram, so never frame this as 'share the business' (redundant + ambiguous). The story is already posted; here they SELECT the one that features the business.",
+  "title": "Select a story",
+  "fromBusiness": "from {{business}}",
+  "thisBusiness": "this business",
+  "tagsHint": "Your story must mention at least one of these:",
+  "continue": "Continue",
+  "uploadToInstagram": "Upload to Instagram",
+  "igRequiredHeading": "Connect your Instagram",
+  "igRequiredBody": "Earn a reward for a story from {{business}}. Connect Instagram to get started.",
+  "emptyHeading": "No stories yet",
+  "emptySubheading": "Post a story featuring {{business}}, then refresh.",
+  "copyrightTitle": "Story can't be shared",
+  "copyrightMessage": "Instagram doesn't provide this story's media, usually because it contains copyrighted music. Post a story without music to share it.",
+  "errorHeading": "Couldn't load your stories",
+  "errorSubheading": "Refresh to try again.",
+  "loadingTooLong": "This is taking longer than usual. Check your connection and try again.",
+  "loadingTooLongRetry": "Try again"
+}

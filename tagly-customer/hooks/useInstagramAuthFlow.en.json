@@ -1,0 +1,5 @@
+{
+  "//": "Used in: hooks/useInstagramAuthFlow.ts (instagramAuthFlow namespace).",
+  "oopsTitle": "Oops.",
+  "securityCheckFailedBody": "Login security check failed. Please try again."
+}

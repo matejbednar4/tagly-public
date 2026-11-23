@@ -1,0 +1,21 @@
+{
+  "//": "Used in: src/app/[lng]/{privacy-policy,terms-of-service,terms-of-monetization}/page.tsx — page metadata only. Body content lives in ../tagly-legal/<doc>/{en,cs}.md (monorepo canonical source).",
+  "privacyPolicy": {
+    "meta": {
+      "title": "Zásady ochrany osobních údajů",
+      "description": "Zásady ochrany osobních údajů Tagly. Jaké údaje o vás shromažďujeme, k čemu je používáme a jak je chráníme."
+    }
+  },
+  "termsOfService": {
+    "meta": {
+      "title": "Obchodní podmínky",
+      "description": "Obchodní podmínky Tagly. Přečtěte si pravidla, kterými se používání Tagly řídí."
+    }
+  },
+  "termsOfMonetization": {
+    "meta": {
+      "title": "Podmínky monetizace",
+      "description": "Podmínky monetizace Tagly. Pravidla, podle kterých zákazníci na Tagly získávají odměny."
+    }
+  }
+}

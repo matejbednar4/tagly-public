@@ -1,0 +1,19 @@
+{
+  "//": "Used in: components/drawer/AdvertiserDrawer.tsx (advertiserDrawer namespace). Profile + visibility glance + main nav (invite, settings) + 'more' overline over the secondary rows (howItWorks, pricing, support, feedback, about) + log out.",
+  "memberSince": "Na Tagly od {{date}}",
+  "visibility": "Viditelnost",
+  "visible": "Jsi vidět",
+  "notVisible": "Nejsi vidět",
+  "invite": "Pozvi a vydělej",
+  "settings": "Nastavení",
+  "more": "Více",
+  "howItWorks": "Jak to funguje",
+  "pricing": "O cenách",
+  "support": "Napsat na podporu",
+  "feedback": "Poslat zpětnou vazbu",
+  "about": "O nás",
+  "logOut": "Odhlásit se",
+  "logOutConfirmTitle": "Odhlásit se?",
+  "logOutConfirmBody": "Pro návrat se budeš muset přihlásit znovu.",
+  "cancel": "Zrušit"
+}

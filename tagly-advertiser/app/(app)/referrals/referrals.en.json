@@ -1,0 +1,21 @@
+{
+  "//": "Used in: app/(app)/referrals/index.tsx (referrals namespace).",
+  "title": "Invite & earn",
+  "statEarnings": "Referral earnings",
+  "statBusinesses": "Businesses referred",
+  "statUsers": "Users referred",
+  "howTitle": "How it works",
+  "inviteBusiness": "Invite a business and earn",
+  "businessBase": "of what they spend",
+  "inviteFriend": "Invite a user and earn",
+  "friendBase": "of what they make",
+  "boostNote": "You earn the full rate for the first {{months}} months after they join. After that it halves, but keeps paying out forever.",
+  "ratesChangeNote": "Referral rates may change in the future.",
+  "inviteTitle": "Your code & link",
+  "yourCode": "Your code",
+  "yourLink": "Your link",
+  "shareLink": "Share invite link",
+  "codeCopied": "Code copied",
+  "linkCopied": "Link copied",
+  "shareMessage": "Grow your business with Tagly, word-of-mouth marketing that pays real customers to post. {{link}}"
+}

@@ -1,0 +1,119 @@
+{
+  "//": "Used in: src/app/[lng]/marketing-agencies-vs-tagly/page.tsx — hero (Trans links), comparison table (8 rows), why-better cards, where-agencies-work cards, bottom line (Trans on p2), other comparisons (Trans), CTA. Shared headings from `comparison` namespace.",
+  "meta": {
+    "title": "Marketingové agentury vs Tagly | Co je lepší pro lokální podniky?",
+    "description": "Srovnání marketingových agentur a Tagly pro lokální podniky. Agentury umí postavit celou strategii. Tagly platí přímo vašim zákazníkům za to, že vás ukážou ve svých story na Instagramu. Přečtěte si, co dává větší smysl restauracím, kavárnám a fitness centrům."
+  },
+  "hero": {
+    "title": "Marketingové agentury vs Tagly",
+    "subtitle": "Poctivé srovnání pro lokální podniky",
+    "intro": "Najmout si marketingovou agenturu dává některým firmám smysl. Když ale provozujete <restaurants>restauraci</restaurants>, <cafes>kavárnu</cafes>, <gyms>fitko</gyms> nebo jiný <local>lokální podnik</local>, možná platíte měsíční paušál za práci, kterou ve skutečnosti nepotřebujete. Tagly jde na to jinak. Staví na marketingu z doporučení: mluví o vás lidé, kteří k vám už chodí. Porovnali jsme obojí bod po bodu."
+  },
+  "table": {
+    "competitor": "Marketingová agentura",
+    "rows": [
+      {
+        "label": "Hodí se pro",
+        "competitor": "Firmy, které potřebují ucelenou strategii napříč více kanály",
+        "tagly": "Lokální podniky s kamennou provozovnou"
+      },
+      {
+        "label": "Jak vzniká cena",
+        "competitor": "Měsíční paušál, ať už měsíc dopadne jakkoli",
+        "tagly": "Za jednotlivá story. Žádný paušál, žádná smlouva. Průběžné platby bez minima, nebo kredity od 50 $ (částky se zobrazují v korunách podle aktuálního kurzu)"
+      },
+      {
+        "label": "Závazek",
+        "competitor": "Často smlouva na dobu určitou, někdy i s pokutou za předčasné ukončení",
+        "tagly": "Žádná smlouva, žádná výpovědní lhůta. Dobíjíte, kdy chcete, a kdykoli můžete přestat"
+      },
+      {
+        "label": "Kdo odvádí práci",
+        "competitor": "Tým agentury, kterému zadáváte a který řídíte",
+        "tagly": "Vaši zákazníci, ze svých vlastních instagramových účtů"
+      },
+      {
+        "label": "Obsah",
+        "competitor": "Vyrábí ho agentura a potřebuje od vás podklady i schválení",
+        "tagly": "Vlastní story vašich zákazníků. Nikdo jim nic nezadává"
+      },
+      {
+        "label": "Publikum",
+        "competitor": "Podle toho, jaké kanály vám spravuje (reklama, sítě, e-mail)",
+        "tagly": "Kamarádi a sledující toho, kdo vás sdílel. Za lidi ve vašem okolí platíte nejvíc, za vzdálené skoro nic"
+      },
+      {
+        "label": "Kolik to zabere času vám",
+        "competitor": "Pravidelné schůzky, schvalování, zpětná vazba, strategické hovory",
+        "tagly": "Jednou nastavíte. Pak už jen dobíjíte, když dochází kredit, a hodnotíte story, která přijdou"
+      },
+      {
+        "label": "Za jak dlouho jsou výsledky",
+        "competitor": "Často měsíce, než uvidíte něco měřitelného",
+        "tagly": "Stránku můžete mít spuštěnou ještě dnes. Story chodí, kdykoli je zákazníci přidají, a každé se vyúčtuje zhruba o den později"
+      }
+    ]
+  },
+  "whyBetter": {
+    "intro": "Většina lokálních podniků nepotřebuje celé marketingové oddělení. Potřebuje, aby k ní chodilo víc lidí. To není otázka strategie, ale marketingu z doporučení. A přesně na ten je Tagly stavěné.",
+    "items": [
+      {
+        "title": "Agenturu na všechno nejspíš nepotřebujete",
+        "description": "Dobrá agentura toho zvládne hodně: strategii, značku, kampaně napříč kanály, placená média. Otázka je, jestli to všechno potřebujete. Většina restaurací, kaváren a fitek nemá složité marketingové potřeby. Potřebujete, aby lidé z okolí věděli, že existujete, a přišli k vám. Pokud je tohle ten skutečný problém, je měsíční paušál hodně velká odpověď na docela malou otázku."
+      },
+      {
+        "title": "Agentura se bez vás stejně neobejde",
+        "description": "Ani s agenturou nemáte ruce volné. Chodíte na schůzky, čtete obsah, schvalujete kampaně, dodáváte fotky, odpovídáte na otázky, dáváte zpětnou vazbu. Pro majitele restaurace, který má za sebou dvanáctihodinovou směnu, je to čas, který někde chybí. Tagly chce podstatně míň. Obsah tvoří a zveřejňují sami zákazníci, nic vám nechodí ke schválení a žádné schůzky nejsou. Jediné, co se opakuje, je pár hvězdiček u každého story, které vám přijde."
+      },
+      {
+        "title": "Paušál platíte, ať se vrátí cokoli",
+        "description": "Paušál agentury je každý měsíc stejné číslo bez ohledu na výsledky a za rok z toho pro lokální podnik vyjde slušná suma. Přitom nikdo negarantuje, že se promění ve víc lidí u vás. Tagly funguje jinak. U průběžných plateb neskládáte zálohu a není žádné minimum: připojíte kartu a platíte, až když je nějaké story zaplacené. Když raději platíte dopředu, kredity si dobíjíte od 50 $, nikdy nevyprší a utratí se až ve chvíli, kdy je nějaké story skutečně zaplacené."
+      },
+      {
+        "title": "Obsah od agentury není totéž co obsah od zákazníka",
+        "description": "Agentura vám udělá vyladěné příspěvky na sociální sítě. Jenže vyladěný příspěvek z firemního účtu nemá stejnou váhu jako zákazník, který se o svůj zážitek podělí s kamarády. Lidé věří doporučení od lidí, které znají. Story od kamaráda, který u vás právě večeřel, přesvědčí víc než jakýkoli profesionálně vyrobený obsah."
+      },
+      {
+        "title": "Není co koordinovat",
+        "description": "S agenturou je marketing projekt, který nikdy nekončí: úvodní hovory, strategická sezení, obsahové kalendáře, kola připomínek, vyhodnocování. U Tagly není komu zadávat a není co plánovat. Story chodí sama od sebe, kdykoli se nějaký zákazník rozhodne jedno přidat. Na vás zbývá držet na účtu peníze a ohodnotit každé story, které dorazí."
+      },
+      {
+        "title": "Klidně můžete mít obojí",
+        "description": "Tagly nemusí agenturu nahradit. Když už s nějakou spolupracujete a odvádí vám dobrou práci, pokračujte. Tagly vám k tomu drží základ: pravidelný, dostupný a lokální marketing z doporučení, který běží sám. Berte to jako vrstvu, která jede pořád, zatímco agentura řeší velké věci. Pokud ji tedy vůbec potřebujete."
+      }
+    ]
+  },
+  "worksWell": {
+    "title": "Marketingové agentury fungují dobře, jen ne většině lokálních podniků",
+    "intro": "Agentura není vždycky špatná volba. Pro některé firmy a některé situace je přesně tím, co potřebujete.",
+    "items": [
+      {
+        "title": "Ucelená strategie",
+        "description": "Když potřebujete někoho, kdo si vezme celý váš marketing napříč kanály (sociální sítě, e-maily, reklamu, PR, akce), agentura to zvládne. Má lidi na jednotlivé obory a všechno drží pohromadě na jednom místě."
+      },
+      {
+        "title": "Budování značky a identity",
+        "description": "Postavit značku, která drží pohromadě, agentury umí. Nové logo, manuál značky, redesign webu, celková vizuální proměna. To je jejich území a chce to specializované kreativní řemeslo."
+      },
+      {
+        "title": "Firmy s dlouhým rozhodováním zákazníka",
+        "description": "Když se u vás zákazník nerozhoduje během minuty (B2B služby, reality, drahé zboží), agentura vám postaví cestu, po které ho povedete přes víc kroků. To chce strategii a vytrvalou práci."
+      },
+      {
+        "title": "Rychlý růst přes placenou reklamu",
+        "description": "Pokud máte na reklamu vážný rozpočet a potřebujete někoho, kdo bude řídit kampaně na Googlu, u Mety i jinde, agentury na to mají nástroje i zkušenosti. Spravovat placená média ve velkém je opravdu těžké."
+      }
+    ]
+  },
+  "bottomLine": {
+    "p1": "Marketingová agentura dává smysl firmám, které potřebují ucelenou strategii, budování značky nebo složité kampaně napříč kanály. Pokud rostete a máte na takovou podporu rozpočet i důvod, může být dobrá agentura skvělý partner.",
+    "p2": "Když ale provozujete lokální podnik a jde vám hlavně o to, aby k vám chodilo víc lidí, Tagly míří přesně sem. Vaši zákazníci o vás přidají story na Instagram a nejvíc zaplatíte za diváky, kteří jsou vám nejblíž. Žádný paušál, žádná smlouva, žádné schůzky a nic ke schvalování. Než se do toho pustíte, podívejte se na <pricing>ceník</pricing> nebo si přečtěte <faq>časté dotazy</faq>."
+  },
+  "other": {
+    "intro": "Přečtěte si i srovnání Tagly s <iads>reklamami na Instagramu</iads> a s <influencer>influencer marketingem</influencer>."
+  },
+  "cta": {
+    "heading": "Chcete Tagly vyzkoušet?",
+    "description": "Založte si stránku podniku, připojte kartu nebo si dobijte kredity a nechte zákazníky, ať vás začnou sdílet na Instagramu."
+  }
+}

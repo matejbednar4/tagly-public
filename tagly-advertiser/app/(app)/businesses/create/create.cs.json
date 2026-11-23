@@ -1,0 +1,5 @@
+{
+  "//": "Used in: app/(app)/businesses/create/index.tsx (createBusinessScreen namespace). The in-app add-business host.",
+  "title": "Nová stránka podniku",
+  "createdToast": "{{name}} vytvořeno"
+}

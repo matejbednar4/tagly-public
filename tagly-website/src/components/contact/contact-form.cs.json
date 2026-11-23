@@ -1,0 +1,41 @@
+{
+  "//": "Used in: src/components/contact/ContactForm.tsx (client) — the lead form embedded in the landing page's #contact section. Form strings only; the old /contact-sales page that used to host it was removed 2026-08-08 (301 -> /#contact).",
+  "form": {
+    "success": {
+      "title": "Zpráva odeslána",
+      "description": "Děkujeme, že jste se ozvali. Odpovíme vám do jednoho pracovního dne."
+    },
+    "name": {
+      "label": "Vaše jméno",
+      "placeholder": "Jan Novák"
+    },
+    "businessName": {
+      "label": "Název podniku",
+      "placeholder": "např. Kavárna na rohu"
+    },
+    "email": {
+      "label": "E-mail",
+      "placeholder": "jan@email.cz"
+    },
+    "phone": {
+      "label": "Telefon",
+      "placeholder": "+420 777 123 456"
+    },
+    "preferredContact": {
+      "label": "Jak vás máme kontaktovat",
+      "options": {
+        "email": "E-mailem",
+        "phone": "Telefonicky",
+        "either": "Nezáleží"
+      }
+    },
+    "message": {
+      "label": "Zpráva nebo dotaz",
+      "placeholder": "Napište nám o svém podniku nebo se na cokoli zeptejte"
+    },
+    "optional": "nepovinné",
+    "submit": "Odeslat zprávu",
+    "submitting": "Odesíláme...",
+    "error": "Něco se pokazilo. Zkuste to prosím znovu, nebo nám napište přímo na <email>hello@taglyapp.com</email>."
+  }
+}

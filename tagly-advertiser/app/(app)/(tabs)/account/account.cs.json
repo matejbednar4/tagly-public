@@ -1,0 +1,16 @@
+{
+  "//": "Used in: app/(app)/(tabs)/account/index.tsx (account namespace). The identity/results dashboard tab (Invite & earn lives in the drawer).",
+  "title": "Účet",
+  "memberSince": "Na Tagly od {{date}}",
+  "provideFeedback": "Zpětná vazba",
+  "businessesTitle": "Tvoje podniky",
+  "addBusiness": "Přidat podnik",
+  "statsTitle": "Statistiky",
+  "stats": {
+    "shares": "Sdílení celkem",
+    "reach": "Celkový dosah",
+    "spend": "Celková útrata",
+    "avgPrice": "Průměrná cena sdílení",
+    "creditsPurchased": "Nakoupené kredity"
+  }
+}

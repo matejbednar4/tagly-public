@@ -1,0 +1,21 @@
+{
+  "//": "Used in: app/(onboarding)/profile/index.tsx (profile namespace).",
+  "heading": "Tell us about you",
+  "subheading": "Just a few details to set up your profile.",
+  "nameLabel": "Full name",
+  "namePlaceholder": "Your name",
+  "genderLabel": "Gender",
+  "genderPlaceholder": "Select an option",
+  "genderPickerHeading": "Gender (optional)",
+  "male": "Male",
+  "female": "Female",
+  "unspecified": "Prefer not to say",
+  "interestsLabel": "Interests",
+  "interestsPlaceholder": "Pick up to 3",
+  "interestsHeading": "Your interests (optional)",
+  "interestsSearch": "Search interests",
+  "interestsAll": "All",
+  "interestsDone": "Done",
+  "continue": "Continue",
+  "missingHint": "Still needed: {{fields}}"
+}

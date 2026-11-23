@@ -1,0 +1,1 @@
+export const MAX_UID_COLLISION_RETRIES = 3

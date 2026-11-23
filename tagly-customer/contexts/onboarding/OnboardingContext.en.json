@@ -1,0 +1,17 @@
+{
+  "//": "Used in: contexts/onboarding/OnboardingContext.tsx (onboardingContext namespace).",
+  "googleSignInError": "Couldn't sign in with Google",
+  "appleSignInError": "Couldn't sign in with Apple",
+  "noInstagramAccountTitle": "No account found",
+  "noInstagramAccountBody": "We couldn't find a Tagly account linked to this Instagram. Sign up to get started.",
+  "noProviderEmailTitle": "Email needed",
+  "noProviderEmailBody": "{{provider}} didn't share a verified email with us, so we can't set up your account. Try another sign-in method.",
+  "noAccountTitle": "Let's start over",
+  "noAccountBody": "We couldn't find a sign-in in progress for this email. Go back and enter your email again.",
+  "nameFlaggedTitle": "Name not accepted",
+  "nameFlaggedBody": "Your name seems to contain explicit or offensive language. Please use a different name.",
+  "registrationExpiredTitle": "Let's start over",
+  "registrationExpiredBody": "Your sign-up session expired. Sign in with your email again to continue.",
+  "genericErrorTitle": "Something went wrong",
+  "genericErrorBody": "We couldn't finish signing you in. Please try again."
+}

@@ -1,0 +1,23 @@
+{
+  "//": "Used in: app/(app)/businesses/[uid]/settings/index.tsx (businessSettings namespace). The per-business settings hub (edit sections + delete).",
+  "title": "Nastavení stránky",
+  "editSection": "Uprav svou stránku",
+  "basicsRow": "Název, typ a adresa",
+  "basicsRowSubtitle": "Základy tvé stránky",
+  "mediaRow": "Banner a fotky",
+  "mediaRowSubtitle": "Obrázky, které zákazníci vidí",
+  "detailsRow": "Detaily a otevírací doba",
+  "detailsRowSubtitle": "Popis, odkazy, kontakt, otevírací doba",
+  "dangerSection": "Nebezpečná zóna",
+  "deleteRow": "Smazat tuto stránku",
+  "deleteRowSubtitle": "Odstraní stránku z Tagly",
+  "deleteConfirmTitle": "Smazat tuto stránku?",
+  "deleteConfirmBody": "{{name}} okamžitě zmizí z Tagly. Sdílení, která ještě nejsou zaplacena, se ale zaplatí.",
+  "deleteConfirmPrompt": "Pro potvrzení napiš název podniku",
+  "copyName": "Kopírovat název",
+  "nameCopied": "Název zkopírován",
+  "deleteCancel": "Zrušit",
+  "deleteConfirmCta": "Smazat",
+  "deleteAlertBody": "Tuto akci nelze vzít zpět.",
+  "deletedToast": "Stránka smazána"
+}

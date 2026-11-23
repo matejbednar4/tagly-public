@@ -1,0 +1,314 @@
+name: Production - Deploy Amplify
+
+# Amplify hosts the join page, the redirect page, and the marketing site. The
+# admin app and the advertiser dashboard are native mobile in v2 (no web
+# hosting).
+
+on:
+  workflow_dispatch:
+    inputs:
+      tagly-join:
+        description: "Deploy Join Page"
+        type: boolean
+        default: true
+      tagly-redirect:
+        description: "Deploy Redirect Page"
+        type: boolean
+        default: true
+      tagly-website:
+        description: "Deploy Marketing Site"
+        type: boolean
+        default: true
+  workflow_call:
+    inputs:
+      tagly-join:
+        type: boolean
+        default: true
+      tagly-redirect:
+        type: boolean
+        default: true
+      tagly-website:
+        type: boolean
+        default: true
+
+concurrency:
+  group: production-amplify
+  cancel-in-progress: false
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+
+
+  deploy-tagly-join:
+    if: ${{ github.ref_name == 'main' && inputs.tagly-join }}
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: aws-actions/configure-aws-credentials@v5
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            amplify.yml
+            tagly-join/amplify-custom-rules.json
+          sparse-checkout-cone-mode: false
+
+      # Custom rewrite rules live in CONSOLE state, invisible to code review — the
+      # same E004 drift class as buildSpec. The AASA rule routes the extension-less
+      # /.well-known/apple-app-site-association to its .json twin so the object is
+      # served with `application/json` (S3 cannot infer a type from an
+      # extension-less key and falls back to application/octet-stream, which Apple
+      # rejects). Same mechanism as tagly-redirect — one pattern for both apps.
+      # Order matters: the AASA rule must precede the /<*> catch-all, and that
+      # catch-all is reproduced verbatim from the app's existing console rules so
+      # routing behaviour is unchanged.
+      - name: Sync Amplify custom rules from repo
+        run: |
+          APP_ID="${{ vars.AMPLIFY_APP_ID_JOIN_PAGE }}"
+          aws amplify update-app --app-id "$APP_ID" \
+            --custom-rules file://tagly-join/amplify-custom-rules.json > /dev/null
+          STORED=$(aws amplify get-app --app-id "$APP_ID" --query 'app.customRules' --output json)
+          REPO_N=$(jq 'length' tagly-join/amplify-custom-rules.json)
+          STORED_N=$(printf '%s' "$STORED" | jq 'length')
+          AASA=$(printf '%s' "$STORED" | jq -r '.[0].source')
+          if [ "$REPO_N" != "$STORED_N" ] || [ "$AASA" != "/.well-known/apple-app-site-association" ]; then
+            echo "::error::Custom rules did not sync (stored=$STORED_N rules, first source='$AASA')"
+            exit 1
+          fi
+          echo "Amplify custom rules in sync ($STORED_N rules, AASA rewrite first)"
+
+      # The console-side app root and saved buildSpec override/duplicate the repo's
+      # amplify.yml, and nothing in the repo carries those values (E004) — so assert
+      # the root and re-sync the buildSpec before every build, failing loudly on drift.
+      - name: Sync Amplify build settings from repo
+        run: |
+          APP_ID="${{ vars.AMPLIFY_APP_ID_JOIN_PAGE }}"
+          EXPECTED_ROOT="tagly-join"
+          ROOT=$(aws amplify get-app --app-id "$APP_ID" \
+            --query 'app.environmentVariables.AMPLIFY_MONOREPO_APP_ROOT' --output text)
+          if [ "$ROOT" != "$EXPECTED_ROOT" ]; then
+            echo "::error::AMPLIFY_MONOREPO_APP_ROOT is '$ROOT', expected '$EXPECTED_ROOT' — fix the app's console env vars before deploying"
+            exit 1
+          fi
+          aws amplify update-app --app-id "$APP_ID" --build-spec file://amplify.yml > /dev/null
+          STORED=$(aws amplify get-app --app-id "$APP_ID" --query 'app.buildSpec' --output text)
+          REPO_SHA=$(printf '%s' "$(cat amplify.yml)" | sha256sum | cut -d' ' -f1)
+          STORED_SHA=$(printf '%s' "$STORED" | sha256sum | cut -d' ' -f1)
+          if [ "$REPO_SHA" != "$STORED_SHA" ]; then
+            echo "::error::Console buildSpec still differs from repo amplify.yml after sync"
+            exit 1
+          fi
+          echo "Amplify build settings in sync (root=$ROOT, buildSpec sha=$REPO_SHA)"
+
+      - name: Trigger Amplify build - Join Page
+        run: |
+          aws amplify start-job \
+            --app-id "${{ vars.AMPLIFY_APP_ID_JOIN_PAGE }}" \
+            --branch-name "${{ vars.AMPLIFY_BRANCH }}" \
+            --job-type RELEASE
+
+      - name: Wait for deployment
+        run: |
+          echo "Waiting for Amplify build to complete..."
+          for i in $(seq 1 60); do
+            STATUS=$(aws amplify list-jobs \
+              --app-id "${{ vars.AMPLIFY_APP_ID_JOIN_PAGE }}" \
+              --branch-name "${{ vars.AMPLIFY_BRANCH }}" \
+              --max-results 1 \
+              --query 'jobSummaries[0].status' \
+              --output text)
+            echo "Attempt $i: Status = $STATUS"
+            if [ "$STATUS" = "SUCCEED" ]; then
+              echo "Deployment succeeded!"
+              exit 0
+            elif [ "$STATUS" = "FAILED" ] || [ "$STATUS" = "CANCELLED" ]; then
+              echo "::error::Deployment $STATUS"
+              exit 1
+            fi
+            sleep 15
+          done
+          echo "::error::Deployment timed out after 15 minutes"
+          exit 1
+
+  deploy-tagly-redirect:
+    if: ${{ github.ref_name == 'main' && inputs.tagly-redirect }}
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: aws-actions/configure-aws-credentials@v5
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            amplify.yml
+            tagly-redirect/amplify-custom-rules.json
+          sparse-checkout-cone-mode: false
+
+      # See the join job's sync step — same E004 drift guard for the redirect app.
+      # Custom rewrite rules live in CONSOLE state, invisible to code review — the
+      # same E004 drift class as buildSpec. The AASA rule is load-bearing: the
+      # redirect page is a static site, so Amplify 301s the extensionless
+      # /.well-known/apple-app-site-association to a trailing slash before any
+      # header config runs, and Apple does NOT follow redirects — universal links
+      # and webcredentials silently die. Rewriting to the .json twin fixes it.
+      # Order matters: the AASA rule must precede the /<*> catch-all.
+      - name: Sync Amplify custom rules from repo
+        run: |
+          APP_ID="${{ vars.AMPLIFY_APP_ID_REDIRECT_PAGE }}"
+          aws amplify update-app --app-id "$APP_ID" \
+            --custom-rules file://tagly-redirect/amplify-custom-rules.json > /dev/null
+          STORED=$(aws amplify get-app --app-id "$APP_ID" --query 'app.customRules' --output json)
+          REPO_N=$(jq 'length' tagly-redirect/amplify-custom-rules.json)
+          STORED_N=$(printf '%s' "$STORED" | jq 'length')
+          AASA=$(printf '%s' "$STORED" | jq -r '.[0].source')
+          if [ "$REPO_N" != "$STORED_N" ] || [ "$AASA" != "/.well-known/apple-app-site-association" ]; then
+            echo "::error::Custom rules did not sync (stored=$STORED_N rules, first source='$AASA')"
+            exit 1
+          fi
+          echo "Amplify custom rules in sync ($STORED_N rules, AASA rewrite first)"
+
+      - name: Sync Amplify build settings from repo
+        run: |
+          APP_ID="${{ vars.AMPLIFY_APP_ID_REDIRECT_PAGE }}"
+          EXPECTED_ROOT="tagly-redirect"
+          ROOT=$(aws amplify get-app --app-id "$APP_ID" \
+            --query 'app.environmentVariables.AMPLIFY_MONOREPO_APP_ROOT' --output text)
+          if [ "$ROOT" != "$EXPECTED_ROOT" ]; then
+            echo "::error::AMPLIFY_MONOREPO_APP_ROOT is '$ROOT', expected '$EXPECTED_ROOT' — fix the app's console env vars before deploying"
+            exit 1
+          fi
+          aws amplify update-app --app-id "$APP_ID" --build-spec file://amplify.yml > /dev/null
+          STORED=$(aws amplify get-app --app-id "$APP_ID" --query 'app.buildSpec' --output text)
+          REPO_SHA=$(printf '%s' "$(cat amplify.yml)" | sha256sum | cut -d' ' -f1)
+          STORED_SHA=$(printf '%s' "$STORED" | sha256sum | cut -d' ' -f1)
+          if [ "$REPO_SHA" != "$STORED_SHA" ]; then
+            echo "::error::Console buildSpec still differs from repo amplify.yml after sync"
+            exit 1
+          fi
+          echo "Amplify build settings in sync (root=$ROOT, buildSpec sha=$REPO_SHA)"
+
+      - name: Trigger Amplify build - Redirect Page
+        run: |
+          aws amplify start-job \
+            --app-id "${{ vars.AMPLIFY_APP_ID_REDIRECT_PAGE }}" \
+            --branch-name "${{ vars.AMPLIFY_BRANCH }}" \
+            --job-type RELEASE
+
+      - name: Wait for deployment
+        run: |
+          echo "Waiting for Amplify build to complete..."
+          for i in $(seq 1 60); do
+            STATUS=$(aws amplify list-jobs \
+              --app-id "${{ vars.AMPLIFY_APP_ID_REDIRECT_PAGE }}" \
+              --branch-name "${{ vars.AMPLIFY_BRANCH }}" \
+              --max-results 1 \
+              --query 'jobSummaries[0].status' \
+              --output text)
+            echo "Attempt $i: Status = $STATUS"
+            if [ "$STATUS" = "SUCCEED" ]; then
+              echo "Deployment succeeded!"
+              exit 0
+            elif [ "$STATUS" = "FAILED" ] || [ "$STATUS" = "CANCELLED" ]; then
+              echo "::error::Deployment $STATUS"
+              exit 1
+            fi
+            sleep 15
+          done
+          echo "::error::Deployment timed out after 15 minutes"
+          exit 1
+
+  deploy-tagly-website:
+    if: ${{ github.ref_name == 'main' && inputs.tagly-website }}
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: aws-actions/configure-aws-credentials@v5
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            amplify.yml
+          sparse-checkout-cone-mode: false
+
+      # See the join job's sync step — same E004 drift guard. No custom-rules
+      # sync here: the website is a Next.js SSR app with no AASA/rewrite rules.
+      - name: Sync Amplify build settings from repo
+        run: |
+          APP_ID="${{ vars.AMPLIFY_APP_ID_WEBSITE }}"
+          EXPECTED_ROOT="tagly-website"
+          ROOT=$(aws amplify get-app --app-id "$APP_ID" \
+            --query 'app.environmentVariables.AMPLIFY_MONOREPO_APP_ROOT' --output text)
+          if [ "$ROOT" != "$EXPECTED_ROOT" ]; then
+            echo "::error::AMPLIFY_MONOREPO_APP_ROOT is '$ROOT', expected '$EXPECTED_ROOT' — fix the app's console env vars before deploying"
+            exit 1
+          fi
+          aws amplify update-app --app-id "$APP_ID" --build-spec file://amplify.yml > /dev/null
+          STORED=$(aws amplify get-app --app-id "$APP_ID" --query 'app.buildSpec' --output text)
+          REPO_SHA=$(printf '%s' "$(cat amplify.yml)" | sha256sum | cut -d' ' -f1)
+          STORED_SHA=$(printf '%s' "$STORED" | sha256sum | cut -d' ' -f1)
+          if [ "$REPO_SHA" != "$STORED_SHA" ]; then
+            echo "::error::Console buildSpec still differs from repo amplify.yml after sync"
+            exit 1
+          fi
+          echo "Amplify build settings in sync (root=$ROOT, buildSpec sha=$REPO_SHA)"
+
+      # APP_ENV decides indexability (non-production builds are fully
+      # noindexed) and the build fails without it — assert the branch's
+      # effective value BEFORE building so a misconfigured branch can never
+      # ship a noindexed production site or an indexable staging one.
+      - name: Assert branch APP_ENV is production
+        run: |
+          APP_ID="${{ vars.AMPLIFY_APP_ID_WEBSITE }}"
+          BRANCH_ENV=$(aws amplify get-branch --app-id "$APP_ID" --branch-name "${{ vars.AMPLIFY_BRANCH }}" \
+            --query 'branch.environmentVariables.APP_ENV' --output text)
+          APP_LEVEL=$(aws amplify get-app --app-id "$APP_ID" \
+            --query 'app.environmentVariables.APP_ENV' --output text)
+          EFFECTIVE="$BRANCH_ENV"
+          if [ "$EFFECTIVE" = "None" ] || [ -z "$EFFECTIVE" ]; then EFFECTIVE="$APP_LEVEL"; fi
+          if [ "$EFFECTIVE" != "production" ]; then
+            echo "::error::Effective APP_ENV for branch '${{ vars.AMPLIFY_BRANCH }}' is '$EFFECTIVE', expected 'production' — fix the Amplify branch env vars before deploying"
+            exit 1
+          fi
+          echo "Branch APP_ENV OK (production)"
+
+      - name: Trigger Amplify build - Marketing Site
+        run: |
+          aws amplify start-job \
+            --app-id "${{ vars.AMPLIFY_APP_ID_WEBSITE }}" \
+            --branch-name "${{ vars.AMPLIFY_BRANCH }}" \
+            --job-type RELEASE
+
+      - name: Wait for deployment
+        run: |
+          echo "Waiting for Amplify build to complete..."
+          for i in $(seq 1 60); do
+            STATUS=$(aws amplify list-jobs \
+              --app-id "${{ vars.AMPLIFY_APP_ID_WEBSITE }}" \
+              --branch-name "${{ vars.AMPLIFY_BRANCH }}" \
+              --max-results 1 \
+              --query 'jobSummaries[0].status' \
+              --output text)
+            echo "Attempt $i: Status = $STATUS"
+            if [ "$STATUS" = "SUCCEED" ]; then
+              echo "Deployment succeeded!"
+              exit 0
+            elif [ "$STATUS" = "FAILED" ] || [ "$STATUS" = "CANCELLED" ]; then
+              echo "::error::Deployment $STATUS"
+              exit 1
+            fi
+            sleep 15
+          done
+          echo "::error::Deployment timed out after 15 minutes"
+          exit 1

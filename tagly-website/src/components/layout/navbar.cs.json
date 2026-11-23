@@ -1,0 +1,14 @@
+{
+  "//": "Used in: src/components/layout/Navbar.tsx — landing page anchor links and aria labels. CTA button reuses common:getInTouch.",
+  "sections": {
+    "howItWorks": "Jak to funguje",
+    "whyTagly": "Proč Tagly",
+    "examples": "Ukázky",
+    "pricing": "Cena"
+  },
+  "aria": {
+    "openMenu": "Otevřít menu",
+    "closeMenu": "Zavřít menu",
+    "taglyHome": "Úvodní stránka Tagly"
+  }
+}

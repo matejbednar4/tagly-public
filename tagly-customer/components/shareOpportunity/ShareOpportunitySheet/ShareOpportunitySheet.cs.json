@@ -1,0 +1,16 @@
+{
+  "//": "Used in: components/shareOpportunity/ShareOpportunitySheet/index.tsx",
+  "inBusinessTitle": "Jsi v {{business}}?",
+  "inBusinessSubtitle": "Přidej story o tomto podniku a vydělej.",
+  "inBusinessCta": "Sdílet",
+  "storyTitle": "Chtěl/a jsi sdílet {{business}}?",
+  "storySubtitle": "Vypadá to, že tohle story je od nich.",
+  "rewardSentence": "Vydělej cca <amount>{{reward}}</amount> za dosah {{reach}}.",
+  "rewardSentenceNoReach": "Vydělej cca <amount>{{reward}}</amount> za tohle story.",
+  "rewardSentenceCapped": "Vydělej až <amount>{{reward}}</amount> za dosah {{reach}}.",
+  "rewardSentenceNoReachCapped": "Vydělej až <amount>{{reward}}</amount> za tohle story.",
+  "storyCta": "Vytvořit sdílení z {{business}}",
+  "agreeLabel": "Souhlasím s <terms>Podmínkami monetizace</terms> a potvrzuji, že tohle story propaguje {{business}}.",
+  "notNow": "Teď ne",
+  "successToast": "Sdílení vytvořeno a čeká na schválení"
+}

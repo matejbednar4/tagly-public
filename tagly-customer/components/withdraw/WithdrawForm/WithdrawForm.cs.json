@@ -1,0 +1,20 @@
+{
+  "//": "Used in: components/withdraw/WithdrawForm/index.tsx (withdrawForm namespace).",
+  "amountLabel": "Kolik chceš vybrat",
+  "availableAmount": "K dispozici {{amount}}",
+  "withdrawAll": "Vybrat vše",
+  "errorTooMuch": "To je víc než tvůj zůstatek",
+  "errorMin": "Minimum je {{min}}",
+  "errorInsufficientTitle": "Zůstatek se změnil",
+  "errorInsufficientBody": "Tvůj dostupný zůstatek je nižší než tato částka, takže se nic nevybralo. Zůstatek jsme obnovili, zkontroluj ho a zkus to znovu.",
+  "errorPayoutsOffTitle": "Výběry teď nejsou aktivní",
+  "errorPayoutsOffBody": "Tvůj účet pro výběr peněz teď nemůže přijímat platby. Zkontroluj jeho stav a zkus to znovu.",
+  "errorTransferFailedTitle": "Výběr se nepovedl",
+  "errorTransferFailedBody": "Výběr neproběhl a tvůj zůstatek zůstal beze změny. Zkus to prosím znovu.",
+  "errorGenericTitle": "Něco se pokazilo",
+  "errorGenericBody": "Výběr se nepodařilo zahájit. Zkus to prosím znovu.",
+  "withdraw": "Vybrat",
+  "withdrawAmount": "Vybrat {{amount}}",
+  "infoCta": "Jak fungují výběry",
+  "infoSubtitle": "Kroky a časování"
+}

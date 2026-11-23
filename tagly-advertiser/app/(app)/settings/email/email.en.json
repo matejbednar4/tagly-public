@@ -1,0 +1,27 @@
+{
+  "//": "Used in: app/(app)/settings/email/index.tsx (settingsEmail namespace).",
+  "title": "Change email",
+
+  "newEmailLabel": "New email",
+  "newEmailPlaceholder": "you@example.com",
+  "step1Description": "We'll send a code to your current email and to the new one.",
+  "sendCodes": "Send codes",
+
+  "step2Heading": "Enter both codes",
+  "step2Description": "We sent a code to each inbox. Enter both to confirm the change.",
+  "codeSentTo": "Code sent to {{email}}",
+  "verify": "Change email",
+  "resend": "Resend codes",
+  "resendIn": "Resend in {{seconds}}s",
+  "cancel": "Cancel",
+
+  "invalidEmailTitle": "Invalid email",
+  "invalidEmailBody": "Enter a valid email address.",
+  "emailInUseTitle": "Email in use",
+  "emailInUseBody": "That email is already registered to another account.",
+  "sameEmailTitle": "Same email",
+  "sameEmailBody": "That's already your email. Enter a different one.",
+
+  "successTitle": "Email changed",
+  "successBody": "Your email address has been updated."
+}

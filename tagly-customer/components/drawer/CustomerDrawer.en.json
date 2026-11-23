@@ -1,0 +1,18 @@
+{
+  "//": "Used in: components/drawer/CustomerDrawer.tsx (customerDrawer namespace). Profile + balance + nav rows (withdraw, settings, invite) + 'more' overline over the secondary rows (howItWorks, rewards, support, feedback, about) + log out. (IG status line copy lives in the instagramConnection namespace.)",
+  "banned": "Account banned",
+  "balance": "Balance",
+  "withdraw": "Withdraw money",
+  "settings": "Settings",
+  "invite": "Invite & earn",
+  "more": "More",
+  "howItWorks": "How it works",
+  "rewards": "About rewards",
+  "support": "Write to support",
+  "feedback": "Send feedback",
+  "about": "About us",
+  "logOut": "Log out",
+  "logOutConfirmTitle": "Log out?",
+  "logOutConfirmBody": "You'll need to sign in again.",
+  "cancel": "Cancel"
+}

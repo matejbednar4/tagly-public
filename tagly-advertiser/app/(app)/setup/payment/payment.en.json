@@ -1,0 +1,10 @@
+{
+  "//": "Used in: app/(app)/setup/payment/index.tsx (setupPayment namespace). Step chrome ONLY — the funding body is the shared FundingSurface, so every method name, pitch and CTA lives in the billing / fundingSurface namespaces.",
+  "title": "How you'll pay",
+  "subtitle": "Change this anytime in Wallet.",
+  "skip": "Set up later",
+  "skipAlertTitle": "Skip funding?",
+  "skipAlertBody": "Your business page won't be visible until you add funding. You can do it anytime in Wallet.",
+  "skipAlertCancel": "Go back",
+  "skipAlertConfirm": "Skip for now"
+}

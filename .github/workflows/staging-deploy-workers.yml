@@ -1,0 +1,113 @@
+name: Staging - Deploy workers
+
+on:
+  workflow_dispatch:
+  workflow_call:
+
+concurrency:
+  group: staging-workers
+  cancel-in-progress: true
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  build_and_push:
+    if: ${{ github.ref_name == 'staging' }}
+    runs-on: ubuntu-latest
+    environment: staging
+    outputs:
+      image: ${{ steps.meta.outputs.image }}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: staging
+
+      - uses: aws-actions/configure-aws-credentials@v5
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+
+      - uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Build and push image
+        id: meta
+        run: |
+          IMAGE="${{ vars.AWS_ACCOUNT_ID }}.dkr.ecr.${{ vars.AWS_REGION }}.amazonaws.com/${{ vars.ECR_REPOSITORY }}:${GITHUB_SHA}"
+          echo "image=$IMAGE" >> $GITHUB_OUTPUT
+
+          docker build --platform linux/amd64 -t "$IMAGE" .
+          docker push "$IMAGE"
+
+  deploy:
+    if: ${{ github.ref_name == 'staging' }}
+    runs-on: ubuntu-latest
+    environment: staging
+    needs: build_and_push
+
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        worker:
+          - taskdef: .aws/ecs/staging/worker-cleanup.json
+            service_var: ECS_SERVICE_CLEANUP
+          - taskdef: .aws/ecs/staging/worker-maintenance.json
+            service_var: ECS_SERVICE_MAINTENANCE
+          - taskdef: .aws/ecs/staging/worker-notifications.json
+            service_var: ECS_SERVICE_NOTIFICATIONS
+          - taskdef: .aws/ecs/staging/worker-igInsights.json
+            service_var: ECS_SERVICE_IGINSIGHTS
+          - taskdef: .aws/ecs/staging/worker-igSnapshots.json
+            service_var: ECS_SERVICE_IGSNAPSHOTS
+          - taskdef: .aws/ecs/staging/worker-stripe.json
+            service_var: ECS_SERVICE_STRIPE
+          - taskdef: .aws/ecs/staging/worker-sharePayment.json
+            service_var: ECS_SERVICE_SHAREPAYMENT
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: staging
+
+      - uses: aws-actions/configure-aws-credentials@v5
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+
+      - name: Render task definition (update image)
+        id: render
+        uses: aws-actions/amazon-ecs-render-task-definition@v1
+        with:
+          task-definition: ${{ matrix.worker.taskdef }}
+          container-name: worker
+          image: ${{ needs.build_and_push.outputs.image }}
+
+      - name: Deploy to ECS service
+        id: deploy
+        uses: aws-actions/amazon-ecs-deploy-task-definition@v2
+        with:
+          task-definition: ${{ steps.render.outputs.task-definition }}
+          service: ${{ vars[matrix.worker.service_var] }}
+          cluster: ${{ vars.ECS_CLUSTER }}
+          wait-for-service-stability: true
+
+      - name: Verify deployment succeeded (not rolled back)
+        run: |
+          DEPLOYED_TASK_DEF="${{ steps.deploy.outputs.task-definition-arn }}"
+          CURRENT_TASK_DEF=$(aws ecs describe-services \
+            --cluster ${{ vars.ECS_CLUSTER }} \
+            --services ${{ vars[matrix.worker.service_var] }} \
+            --query 'services[0].taskDefinition' \
+            --output text)
+
+          echo "Deployed: $DEPLOYED_TASK_DEF"
+          echo "Current:  $CURRENT_TASK_DEF"
+
+          if [ "$DEPLOYED_TASK_DEF" != "$CURRENT_TASK_DEF" ]; then
+            echo "::error::Deployment was rolled back! Current task definition differs from deployed."
+            exit 1
+          fi
+          echo "Deployment verified successfully."

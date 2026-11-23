@@ -1,0 +1,27 @@
+{
+  "//": "Used in: tagly-shared/client components/feedback/RewardInfoSheet - explainer 'co ovlivnuje odmenu/cenu'. Root = zakaznicky hlas (share detail + business detail); podstrom `advertiser` = STEJNYCH sest faktoru v inzerentskem (cenovem) hlase, pouziva advertiser share detail. Jen kvalitativni faktory, zadna cisla/algoritmus. Seznam faktoru se mezi hlasy nesmi rozjet. Tykani; 'story' je neutrum.",
+  "title": "Co ovlivňuje tvoje odměny",
+  "reachTitle": "Dosah",
+  "reachDesc": "Čím víc lidí tvoje story uvidí, tím větší odměna.",
+  "locationTitle": "Místo",
+  "locationDesc": "Vybírej podniky tam, kde máš sledující, a vyděláš víc.",
+  "audienceTitle": "Publikum",
+  "audienceDesc": "Skuteční sledující mají větší hodnotu než ti získaní vzájemným sledováním.",
+  "qualityTitle": "Kvalita",
+  "qualityDesc": "Autentické a poutavé stories jsou pro podnik lepší, takže vydělají víc.",
+  "frequencyTitle": "Frekvence",
+  "frequencyDesc": "Když postuješ příliš často, lidi tvé story méně ocení, takže se vyplatí dávat je s odstupem.",
+  "reshareTitle": "Přesdílení",
+  "reshareDesc": "Když tvoje story někdo přesdílí, platíme jen za dosah, který jsi podniku přinesl/a ty.",
+  "footer": "Odměny počítáme automaticky, tak aby byly vždy férové.",
+  "advertiser": {
+    "title": "Co ovlivňuje cenu",
+    "reachDesc": "Platíš za lidi, kteří sdílení opravdu viděli, ne za počet sledujících.",
+    "locationDesc": "Počítá se jen dosah v okolí tvého podniku. Za lidi z daleka neplatíš.",
+    "audienceDesc": "Skutečné publikum má větší hodnotu než sledující získaní vzájemným sledováním.",
+    "qualityDesc": "Povedená sdílení mají větší hodnotu a tvoje hodnocení hvězdami pomáhá určit, čí to jsou.",
+    "frequencyDesc": "Kdo sdílí moc často, získá menší pozornost. Taková sdílení tě stojí míň.",
+    "reshareDesc": "Když sdílení někdo přesdílí, platíš jen za dosah, který přinesl sám zákazník.",
+    "footer": "Cenu počítáme automaticky a férově."
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "//": "Used in: src/app/[lng]/local-businesses/page.tsx — hero, fit cards, industries grid (8), how-it-works flow, why cards, not-sure (Trans), FAQ, internal links, CTA.",
+  "meta": {
+    "title": "Tagly pro lokální podniky | Propagace na Instagramu od vlastních zákazníků",
+    "description": "Tagly pomáhá lokálním podnikům k propagaci na Instagramu od vlastních zákazníků. Kina, divadla, bowling, únikovky, bary, pekařství, kurty, coworky a všechny další typy podniku, které si vyberete při zakládání stránky."
+  },
+  "hero": {
+    "title": "Tagly funguje všude, kde si zákazníci fotí",
+    "intro": "Restaurace, kavárny, fitness centra a salony tu mají vlastní stránku. Stejně dobře ale Tagly funguje pro kina, divadla, bowling, únikovky, bary, pekařství, tenisové kurty i coworky. Když mají zákazníci u vás důvod vytáhnout telefon, může z té fotky být story na Instagramu, ve kterém padne vaše jméno. A vy platíte jen za lidi z okolí, kteří ho uvidí."
+  },
+  "fit": {
+    "title": "Pro jaký podnik se Tagly hodí",
+    "intro": "Tagly nekončí u jídla a fitka. Funguje pro každý podnik, na který sedí tyhle tři věci.",
+    "items": [
+      {
+        "title": "Máte adresu, kam lidé chodí",
+        "description": "Tagly je stavěné pro podniky se skutečnou provozovnou a skutečným spádovým okolím. Ať je jasno, co se nekontroluje: žádný check-in, žádná účtenka, žádný doklad o nákupu a žádná podmínka vzdálenosti. Sdílet vás může kdokoli. Lokální to dělá cena. Čím dál od vašich dveří publikum story bydlí, tím blíž je jeho hodnota nule, takže zaplatíte jen za lidi, kteří k vám opravdu mohou přijít."
+      },
+      {
+        "title": "Je u vás co vyfotit",
+        "description": "Nemusí to být talíř ani zrcadlo v posilovně. Filmový večer s partou, obrazovka s bowlingovým skóre, zápas na kurtu, vítězná fotka po únikovce. Když má zákazník jakýkoli důvod vytáhnout telefon, na story to stačí."
+      },
+      {
+        "title": "Vaši zákazníci jsou taky z okolí",
+        "description": "Hodnota story se odvíjí od toho, kde bydlí lidé, kteří ho vidí, ne od toho, kde kdo zrovna stál. Podnik se stálými zákazníky z okolních čtvrtí vytěží z Tagly mnohem víc než podnik, který žije z turistů, co tudy projdou jednou za život."
+      }
+    ]
+  },
+  "industries": {
+    "title": "Typy podniku, kterým Tagly sedí",
+    "intro": "Při zakládání stránky si vyberete typ podniku z pevného seznamu a ten pak vstupuje do toho, jakou hodnotu story má. Restaurace, kavárny, fitness centra a salony mají vlastní stránku. Tady je část zbytku, a na cokoli, co seznam nepojmenuje, je v něm položka „Ostatní“.",
+    "items": [
+      {
+        "title": "Kina a divadla",
+        "description": "Film nebo představení je společenská záležitost a lidé dávají vědět, že tam byli. Plátno před začátkem, lístky, program, celá parta. Podnik na Tagly tak dostává každý víkend proud story od lidí, kteří svým sledujícím ukazují, kde strávili večer."
+      },
+      {
+        "title": "Bowling, arkády, laser game a minigolf",
+        "description": "Narozeniny, rande, víkendové odpoledne. Tahle místa jsou z fotogenických momentů složená: obrazovky se skóre, skupinovky, svítící dráhy. A je to zároveň typ story, které lidé dokoukají, protože se v něm někdo známý viditelně baví."
+      },
+      {
+        "title": "Únikovky a zážitková místa",
+        "description": "Vítězná fotka po vyluštěné místnosti je prakticky tradice. Tagly zařídí, že skončí ve story, ve kterém je vidět vaše jméno, a ne jen ve skupinovém chatu."
+      },
+      {
+        "title": "Kurty, sportoviště a lezecké stěny",
+        "description": "Tenisové a padelové kurty, lezecké stěny, sportovní kluby. Stálí návštěvníci sdílejí zápas, trénink i výsledky a jejich sledující bývají lidé, kteří hrají to samé ve stejné části města."
+      },
+      {
+        "title": "Zoo, akvária a zábavní parky",
+        "description": "Místa na celodenní výlet se fotí víc než skoro cokoli jiného. Háček je v tom, že velká část toho dosahu jsou lidé, kteří nejsou nikde poblíž vás. Tagly je na tenhle případ nastavené: vzdálený divák má hodnotu skoro nulovou, takže z velkého výletního publika nevznikne velký účet."
+      },
+      {
+        "title": "Bary, pivovary, vinařství a noční kluby",
+        "description": "Večer venku se sdílí ve chvíli, kdy probíhá, a to je přirozený domov formátu story. Nápojové podniky navíc leží na škále typů podniku v Tagly kousek nad průměrem, takže stejný dosah u nich má o něco vyšší hodnotu než u běžného podniku, pro zákazníka i pro váš rozpočet."
+      },
+      {
+        "title": "Pekařství, cukrárny a zmrzlinárny",
+        "description": "Dort, kopeček, výloha plná pečiva. Malý, častý a mimořádně fotogenický nákup, a kdo si ho dopřeje, skoro vždycky bydlí nebo pracuje pár ulic odsud. Přesně takový zákazník má pro vás nejvyšší hodnotu."
+      },
+      {
+        "title": "Služby pro mazlíčky, coworky a second handy",
+        "description": "Pes po střihu, stůl v dobré ráno, úlovek na ramínku. Podniky, na které jsou lidé tiše pyšní, se stálou návštěvností, která je lokální z podstaty. Všechny tři si vyberete jako typ podniku při zakládání stránky."
+      }
+    ]
+  },
+  "how": {
+    "title": "Princip je pro každý podnik stejný",
+    "intro": "Ať máte jakýkoli typ podniku, na mechanice se nemění nic.",
+    "steps": [
+      {
+        "title": "Zákazník k vám přijde",
+        "description": "Našel vás v aplikaci Tagly na mapě nebo ve vyhledávání, nebo k vám šel tak jako tak. Přijde a užije si to, co nabízíte, přesně jako kterýkoli jiný zákazník."
+      },
+      {
+        "title": "Dá story na Instagram",
+        "description": "Fotka zážitku, místa, kamarádů nebo výsledku. Ve story musí být váš podnik vidět, takže vás označí nebo přidá polohovou nálepku, a pak si tohle story v aplikaci Tagly vybere. Počítá se jen story a v době odeslání musí být pořád aktivní."
+      },
+      {
+        "title": "Zhruba o den později zaplatíte za dosah",
+        "description": "Zhruba 24 hodin po zveřejnění nám Instagram nahlásí, kolik lidí story vidělo. Z toho dosahu, z toho, jaká jeho část byla blízko vás, a z několika dalších faktorů spočítáme odměnu. Zákazníkovi ji zaplatíme z vašeho rozpočtu a teprve v tu chvíli vás story něco stojí."
+      }
+    ],
+    "fullGuide": "Přečíst celý návod krok za krokem"
+  },
+  "why": {
+    "title": "Proč lokální podniky volí Tagly místo klasické reklamy",
+    "intro": "Klasická reklama nikdy nebyla stavěná pro lokální podnik s lokálním publikem. Tagly ano.",
+    "items": [
+      {
+        "title": "Platíte jen za lokální dosah",
+        "description": "Instagramová reklama vám naúčtuje každou impresi, i tu z druhé země. Tagly nefiltruje, kdo story smí vidět. Místo toho staví cenu na vzdálenosti: dosah hned u vašich dveří má nejvyšší hodnotu, dosah o stovky kilometrů dál skoro žádnou. Rozpočet tak skončí tam, kde se z něj ještě může stát návštěva."
+      },
+      {
+        "title": "Story od někoho známého je jiný kalibr",
+        "description": "Každé story na Tagly jde ven na vlastním účtu skutečného člověka, k lidem, kteří si ho sami začali sledovat. Tohle reklama napodobit neumí a přesně proto doporučení od známých vůbec funguje. Nikdo nedostane zadání, nikdo nedostane scénář a nikomu neříkáme, co má o vás napsat."
+      },
+      {
+        "title": "Skoro není co spravovat",
+        "description": "Žádný obsah k vymýšlení, žádné kampaně ke správě, žádné cílení k optimalizaci. Dvě věci ale pozornost chtějí. Každé story, které přijde, v aplikaci jednou ohodnotíte, zabere to pár vteřin a odemkne vám to jeho detaily. A pokud jedete jen na kredity, stačí držet aspoň 15 $ dostupných kreditů a váš podnik zůstává zákazníkům na očích."
+      },
+      {
+        "title": "Cena se nevyjednává, spočítá se",
+        "description": "Nikdy nenastavujete sazbu, nepřihazujete, nestropujete jednotlivá story ani nevybíráte publikum. Cenu každého story spočítáme z jeho dosahu, z toho, jak blízko vás ten dosah byl, jak relevantní je publikum, z vašeho typu podniku a z hodnocení, které zákazník dostal od jiných podniků. Ať vstupy dopadnou jakkoli, kolik může jedno story stát, má svůj strop, takže vám žádné story neodčerpá celý rozpočet."
+      }
+    ]
+  },
+  "notSure": {
+    "title": "Nejste si jistí, jestli Tagly sedne i vám?",
+    "intro": "Pokud máte provozovnu a zákazníky, kteří si během návštěvy můžou něco vyfotit, Tagly u vás nejspíš dává smysl. Nejrychleji to zjistíte tak, že se nám <contact>ozvete</contact>. Řekneme vám na rovinu, jestli se to k vám hodí."
+  },
+  "faq": {
+    "heading": "Časté dotazy k marketingu lokálních podniků",
+    "items": [
+      {
+        "question": "Kolik Tagly stojí?",
+        "answer": "Platit jde dvěma způsoby a ani jeden není smlouva ani předplatné. První jsou průběžné platby: připojíte kartu a jste hned vidět. Nic se nestrhne dřív, než je nějaké story doopravdy zaplacené, a i pak jen ta část, kterou nepokryjí kredity, plus 0,30 $ za každou platbu. Žádná záloha, žádné minimum. Druhá možnost jsou kredity předem: 1 kredit = 1 $, nejmenší nákup je 50 $ a kredity nikdy nevyprší. S kredity vyjde story o kousek levněji, protože se neplatí poplatek za platbu, a s aspoň 15 $ dostupných kreditů zůstáváte v aplikaci vidět. Tak či tak platíte za každé zaplacené story zvlášť a kolik může jedno story stát, má svůj strop, takže vám žádné story neodčerpá celý rozpočet. Částky vidíte v aplikaci i v korunách podle aktuálního kurzu."
+      },
+      {
+        "question": "Musím sám tvořit nějaký obsah?",
+        "answer": "Ne. Obsah dělají vaši zákazníci tím, že dají návštěvu u vás do vlastních instagramových story. Nic neplánujete, nefotíte, nepíšete popisky a nespravujete žádný kalendář na sociální sítě. Zároveň jim ale nemůžete nic zadat, story před zveřejněním schválit ani jim říct, co o vás mají napsat."
+      },
+      {
+        "question": "Jak se zákazníci dozvědí, že je můj podnik na Tagly?",
+        "answer": "Najdou vás přímo v aplikaci Tagly: na mapě, ve vyhledávání a v seznamech, které aplikace ukazuje lidem v okolí. Není co tisknout ani co vyvěšovat na dveře. Stálým zákazníkům to můžete prostě říct. Aplikaci si nainstalují a najdou vás stejně jako kdokoli jiný."
+      },
+      {
+        "question": "Co když tady typ mého podniku není?",
+        "answer": "Tahle stránka ukazuje jen část příkladů a seznam, ze kterého si vybíráte v aplikaci, je delší, na konci s položkou „Ostatní“. Pokud máte provozovnu a zákazníky, kteří si během návštěvy můžou něco vyfotit, Tagly u vás nejspíš dává smysl. Ozvěte se nám a řekneme vám na rovinu, jestli se to k vám hodí."
+      },
+      {
+        "question": "Jak se to liší od instagramové reklamy?",
+        "answer": "Instagramová reklama vám účtuje imprese od lidí, kteří se k vám možná nikdy ani nepřiblíží. Přes Tagly vás sdílejí vaši vlastní zákazníci svým vlastním sledujícím a platíte za každé story až poté, co je zaplacené, podle dosahu, který mělo, a podle toho, jaká jeho část byla lokální. Žádné prokliky ani imprese se nekupují."
+      }
+    ],
+    "costInline": "Platit jde dvěma způsoby a ani jeden není smlouva ani předplatné. První jsou průběžné platby: připojíte kartu a jste hned vidět. Nic se nestrhne dřív, než je nějaké story doopravdy zaplacené, a i pak jen ta část, kterou nepokryjí kredity, plus 0,30 $ za každou platbu. Žádná záloha, žádné minimum. Druhá možnost jsou kredity předem: 1 kredit = 1 $, nejmenší nákup je 50 $ a kredity nikdy nevyprší. S kredity vyjde story o kousek levněji, protože se neplatí poplatek za platbu, a s aspoň 15 $ dostupných kreditů zůstáváte v aplikaci vidět. Tak či tak platíte za každé zaplacené story zvlášť a kolik může jedno story stát, má svůj strop, takže vám žádné story neodčerpá celý rozpočet. Částky vidíte v aplikaci i v korunách podle aktuálního kurzu. Podívejte se, <link>jak se počítá cena</link>.",
+    "notListedInline": "Tahle stránka ukazuje jen část příkladů a seznam, ze kterého si vybíráte v aplikaci, je delší, na konci s položkou „Ostatní“. Pokud máte provozovnu a zákazníky, kteří si během návštěvy můžou něco vyfotit, Tagly u vás nejspíš dává smysl. <link>Ozvěte se nám</link> a řekneme vám na rovinu, jestli se to k vám hodí.",
+    "adsInline": "Instagramová reklama vám účtuje imprese od lidí, kteří se k vám možná nikdy ani nepřiblíží. Přes Tagly vás sdílejí vaši vlastní zákazníci svým vlastním sledujícím a platíte za každé story až poté, co je zaplacené, podle dosahu, který mělo, a podle toho, jaká jeho část byla lokální. Žádné prokliky ani imprese se nekupují. Přečtěte si <link>celé srovnání</link>."
+  },
+  "internalLinks": {
+    "industriesHeading": "Tagly pro konkrétní obory",
+    "restaurants": "Restaurace",
+    "cafes": "Kavárny",
+    "gyms": "Fitness centra",
+    "salons": "Salony",
+    "compareHeading": "Srovnání s alternativami",
+    "instagramAds": "Instagramové reklamy",
+    "influencerMarketing": "Influencer marketing",
+    "marketingAgencies": "Marketingové agentury"
+  },
+  "cta": {
+    "heading": "Chcete, aby vás propagovali vlastní zákazníci?",
+    "description": "Přidejte se k Tagly a nechte marketing na story, která vaši zákazníci sdílejí tak jako tak. Žádné reklamy, žádní influenceři, nic k vymýšlení."
+  }
+}

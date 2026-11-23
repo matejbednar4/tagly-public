@@ -1,0 +1,9 @@
+{
+  "//": "Used in: app/(onboarding)/otp/index.tsx (otp namespace)",
+  "heading": "Enter your code",
+  "sentTo": "We sent a code to {{email}}. Check your spam folder if it's not there.",
+  "verify": "Verify",
+  "resend": "Resend code",
+  "resendIn": "Resend code in {{seconds}}s",
+  "backA11y": "Back to sign in"
+}

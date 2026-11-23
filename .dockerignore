@@ -1,0 +1,63 @@
+# --- Env files (keep secrets out of build context) ---
+.env
+.env*.local
+.env.*
+
+# --- Git metadata ---
+.git
+.gitignore
+.github/instructions/**
+
+# --- macOS metadata ---
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# --- Dependencies / lockfiles ---
+node_modules/
+node_modules
+package-lock.json
+
+# --- Expo / RN web build artifacts ---
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+.eas/
+
+# --- Native build artifacts / keys ---
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.pem
+!tagly-backend/global-bundle.pem
+
+# --- Metro ---
+.metro-health-check*
+
+# --- Debug logs ---
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+*.log
+
+# --- TypeScript ---
+*.tsbuildinfo
+
+# --- iOS / Xcode ---
+ios/
+/ios/
+
+# --- Android ---
+android/
+/android/
+
+# --- Ruby ---
+Gemfile.lock
+
+# --- Mobile apps (not needed for tagly-backend/workers images) ---
+tagly-customer/
+tagly-advertiser/

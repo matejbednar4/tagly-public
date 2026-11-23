@@ -1,0 +1,32 @@
+{
+  "//": "Used in: components/onboarding/Welcome (onboarding namespace) — the explainer carousel, shown both at first-run (app/(onboarding)/index.tsx) and as the authed 'How it works' guide (app/(app)/how-it-works).",
+  "skip": "Přeskočit",
+  "continue": "Pokračovat",
+  "getStarted": "Začít",
+  "done": "Hotovo",
+  "slides": {
+    "find": {
+      "kicker": "Krok 1",
+      "heading": "Navštiv podnik, který je na Tagly",
+      "body": "Kavárny, posilovny a restaurace ve tvém okolí.",
+      "short": "Navštiv podnik"
+    },
+    "post": {
+      "kicker": "Krok 2",
+      "heading": "Dej na Instagram story ze své návštěvy",
+      "body": "A nezapomeň podnik označit.",
+      "short": "Sdílej story"
+    },
+    "earn": {
+      "kicker": "Krok 3",
+      "heading": "Druhý den získáš odměnu",
+      "body": "Platíme ti podle toho, kolik lidí vidělo tvoje story.",
+      "short": "Druhý den vyděláš"
+    },
+    "why": {
+      "kicker": "Proč to funguje",
+      "heading": "Tvoje sdílení je pro podniky nejlepší reklama",
+      "body": "A právě za to se platí."
+    }
+  }
+}

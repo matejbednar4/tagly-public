@@ -1,0 +1,7 @@
+{
+  "//": "Used in: app/(onboarding)/consent/index.tsx (consent namespace). Marketing opt-in (email + push), shown to EVERY locale. The body MUST name both channels (email + push notifications): Apple 4.5.4 and GDPR informed consent require the channels in the visible consent language, not just this comment. Keep DISTINCT from the notifications permission step users hit right before this: frame this as optional tips/offers so it doesn't read as a repeat.",
+  "heading": "Tips & offers",
+  "body": "We'll send you marketing tips, product updates, and offers by email and push notifications to help you get more from Tagly. Turn it off anytime.",
+  "allow": "Yes, keep me updated",
+  "deny": "No thanks"
+}

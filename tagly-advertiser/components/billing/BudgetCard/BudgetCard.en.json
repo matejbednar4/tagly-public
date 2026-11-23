@@ -1,0 +1,12 @@
+{
+  "//": "Used in: components/billing/BudgetCard (budgetCard namespace). The budget/visibility account card (home). The broken card shows only the NOT VISIBLE stamp; the cause prose lives in the visibilitySheet namespace (the sheet owns it).",
+  "visible": "Visible",
+  "notVisible": "Not visible",
+  "available": "Available credits",
+  "locked": "Locked credits",
+  "creditsBelowMin": "{{min}} minimum to be visible",
+  "payg": "Pay as you go",
+  "paygActive": "Active",
+  "paygCardIssue": "Card issue",
+  "cardNotLinked": "Card not linked"
+}

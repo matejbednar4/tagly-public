@@ -1,0 +1,28 @@
+{
+  "//": "Used in: app/(app)/settings/referrals/index.tsx (settingsReferrals namespace).",
+  "title": "Pozvánky",
+
+  "codeSection": "Tvůj kód na pozvání",
+  "codeHeading": "Tvůj kód",
+  "codeConfirmLabel": "svůj kód",
+  "codePlaceholder": "tvuj-kod",
+  "codeOnceWarning": "Kód můžeš změnit jen jednou, tak ho vyber pečlivě.",
+  "codeUsedNote": "Kód už jsi jednou změnil/a. Znovu ho změnit nelze.",
+  "codeInvalid": "Použij jen a-z, 0-9, tečku, pomlčku a podtržítko.",
+  "codeTakenTitle": "Kód je obsazený",
+  "codeTakenBody": "Tento kód na pozvání už někdo používá. Zkus jiný.",
+
+  "referrerSection": "Kód toho, kdo tě pozval",
+  "referrerHeading": "Kdo tě pozval",
+  "referrerConfirmLabel": "kód toho, kdo tě pozval",
+  "referrerPlaceholder": "jejich-kod",
+  "referrerNote": "Zadej kód toho, kdo tě pozval. Tohle jde udělat jen jednou.",
+  "addReferrer": "Přidat",
+  "referrerSetNote": "Byl/a jsi pozván/a tímto kódem.",
+  "referrerInvalidTitle": "Kód nenalezen",
+  "referrerInvalidBody": "Tento kód na pozvání se nepodařilo najít. Zkontroluj ho a zkus to znovu.",
+  "referrerSelfTitle": "To je tvůj vlastní kód",
+  "referrerSelfBody": "Nemůžeš pozvat sám/sama sebe. Zadej kód někoho jiného.",
+  "referrerErrorTitle": "Nepodařilo se uložit",
+  "referrerErrorBody": "Zkus to prosím znovu."
+}

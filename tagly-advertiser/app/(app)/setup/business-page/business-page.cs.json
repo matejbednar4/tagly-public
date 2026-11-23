@@ -1,0 +1,10 @@
+{
+  "//": "Used in: app/(app)/setup/business-page/index.tsx (setupBusiness namespace). The setup business-page step chrome.",
+  "overlineLabel": "Stránka podniku",
+  "skip": "Nastavit později",
+  "skipAlertTitle": "Zatím přeskočit?",
+  "skipAlertBody": "Bez stránky podniku tě lidé na Tagly neobjeví. Můžeš ji vytvořit později ve svém účtu.",
+  "skipAlertCancel": "Zpět",
+  "skipAlertConfirm": "Zatím přeskočit",
+  "createdToast": "{{name}} vytvořeno"
+}

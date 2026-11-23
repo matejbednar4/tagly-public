@@ -1,0 +1,15 @@
+{
+  "//": "Used in: components/feedback/AboutSheet (about namespace).",
+  "title": "O Tagly",
+  "story": "Tagly vzniklo z jednoduché myšlenky: nejlepší reklamou pro podnik jsou skuteční lidé, kteří ho sdílí. Postavili jsme proto aplikaci, ve které podniky platí běžným lidem za jejich dosah a lidé si tak vydělají za své příspěvky.",
+  "storyHighlight": "nejlepší reklamou pro podnik jsou skuteční lidé, kteří ho sdílí",
+  "storyTeam": "Jsme malý tým, který na aplikaci pracuje každý den, a čteme všechno, co nám pošleš.",
+  "storyTeamHighlight": "čteme všechno, co nám pošleš",
+  "followLabel": "Sleduj nás",
+  "rateTitle": "Líbí se ti Tagly?",
+  "rateBody": "Ohodnoť nás na {{store}}, aby nás našlo víc lidí. Děkujeme.",
+  "contactTitle": "Chceš nám něco říct?",
+  "contactBody": "Zpětná vazba, nápad nebo něco nefunguje. Přistane to přímo u nás.",
+  "contactLabel": "Kontakt",
+  "copyright": "© {{year}} Flaer, Inc. Všechna práva vyhrazena."
+}

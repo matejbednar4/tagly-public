@@ -1,0 +1,6 @@
+{
+  "//": "Used in: app/+not-found.tsx (notFound namespace).",
+  "notFoundHeading": "Sorry, we couldn't find that page",
+  "goBack": "Go Back",
+  "goHome": "Go Home"
+}

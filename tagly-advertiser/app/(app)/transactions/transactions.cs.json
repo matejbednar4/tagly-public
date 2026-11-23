@@ -1,0 +1,16 @@
+{
+  "//": "Used in: app/(app)/transactions/index.tsx (transactions namespace). The full money history screen.",
+  "title": "Transakce",
+  "filterAll": "Všechny typy",
+  "filterSelected": "Vybráno: {{count}}",
+  "filterTitle": "Filtrovat podle typu",
+  "filterDone": "Hotovo",
+  "typeDeposit": "Dobití",
+  "typeSpend": "Platby za sdílení",
+  "typeRefund": "Vrácení peněz",
+  "typePromo": "Promo kredity",
+  "typeAdjustment": "Úpravy zůstatku",
+  "typeReferral": "Bonusy za doporučení",
+  "empty": "Zatím žádné transakce",
+  "emptyHint": "Dobití, platby za sdílení a vrácení peněz se zobrazí tady."
+}

@@ -1,0 +1,20 @@
+{
+  "//": "Used in: components/billing/AddCreditsSheet (addCreditsSheet namespace). The credit purchase — a pure transaction in every state. Buying credits and the monthly top-up are separate features, so nothing recurring is named here; the method identity comes from the shared billing namespace.",
+  "amountQuestion": "Kolik chceš nakoupit?",
+  "customLabel": "Vlastní částka",
+  "minNote": "Minimálně {{min}}",
+  "maxNote": "Částka je příliš vysoká",
+  "cta": "Koupit kredity za {{amount}}",
+  "ctaInvalid": "Přidat kredity",
+  "footnote": "Zabezpečeno přes Stripe",
+  "alertTitle": "Platba neproběhla",
+  "alertBody": "Zkus to prosím znovu.",
+  "failedBody": "Platba neprošla. Zkus to prosím znovu.",
+  "verifyingTitle": "Potvrzujeme platbu",
+  "verifyingBody": "Obvykle to trvá pár sekund.",
+  "successTitle": "{{amount}} přidáno",
+  "successBody": "Kredity jsou připravené na propagaci.",
+  "unverifiedTitle": "Platbu se zatím nepodařilo ověřit",
+  "unverifiedBody": "Pokud proběhla, kredity se brzy objeví a dáme ti vědět.",
+  "unverifiedCta": "Rozumím"
+}

@@ -1,0 +1,13 @@
+{
+  "//": "Used in: app/(app)/shares/create/confirm/index.tsx (confirmShare namespace). Step 2 of share-create: confirm the picked story genuinely promotes the business + explicit consent to monetize. Two short icon-led sections (positive + danger). Keep it tight and friendly, not scary. <terms> in agreeLabel is the tappable terms-of-monetization link.",
+  "topTitle": "Confirm sharing",
+  "thisBusiness": "this business",
+  "heading": "Does your story promote {{business}}?",
+  "section1": "{{business}} pays you for authentic promotion. Your story must clearly tag them.",
+  "section1Subsidized": "Tagly pays you for authentic promotion. Your story must clearly tag {{business}}.",
+  "section2": "A fake story or media that isn't yours earns no reward and lowers your rating.",
+  "section2Bold": "Repeated misuse leads to an account ban.",
+  "agreeLabel": "I agree to the <terms>Terms of Monetization</terms> and confirm this story promotes {{business}}.",
+  "monetize": "Earn for the selected story",
+  "successToast": "Story submitted for review"
+}

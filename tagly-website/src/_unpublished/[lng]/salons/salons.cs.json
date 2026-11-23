@@ -1,0 +1,136 @@
+{
+  "//": "Used in: src/app/[lng]/salons/page.tsx — hero, problem cards (no links), how-it-works flow, examples (2 photos), why-salons, use cases, FAQ, internal links, CTA. faq.costInline/influencerInline render with <Trans>.",
+  "meta": {
+    "title": "Tagly pro salony a barber shopy | Ať vás na Instagramu propagují vlastní klienti",
+    "description": "Marketing salonu, který za vás dělají vlastní klienti. Kadeřnictví, barber shopy, nail salony, wellness centra i tetovací studia na Tagly propagují klienti, kteří dají výsledek na Instagram do story a dostanou zaplaceno za lokální dosah."
+  },
+  "hero": {
+    "title": "Klienti od vás odcházejí spokojení. Teď můžou zároveň propagovat váš salon.",
+    "intro": "Čerstvý střih, nová sada nehtů, změna barvy. Klienti se s výsledkem fotí ještě u vás a většina těch fotek nedojde dál než do galerie nebo do skupinového chatu. Tagly jim dá důvod dát jednu z nich na Instagram do story, ve kterém je vidět váš salon, a zaplatí jim za lidi z vašeho okolí, kteří ho viděli."
+  },
+  "broken": {
+    "title": "Marketing salonu leží celý na majiteli",
+    "intro": "Skoro každý majitel salonu ví, že by měl být vidět na sociálních sítích. Jenže celý den stojí u křesla a starost o profil je první věc, na kterou nezbyde čas.",
+    "items": [
+      {
+        "title": "Jste kadeřník i marketér v jedné osobě",
+        "description": "Mezi klienty, objednávkami materiálu a vedením týmu nezbývá čas fotit každý výsledek, vymýšlet popisky a hlídat profil. Je to druhá práce a v nabitém týdnu vypadne jako první."
+      },
+      {
+        "title": "Placená reklama vaši práci neukáže",
+        "description": "Reklama umí přivést prokliky, jenže obecná reklama neukáže, co ve vašem salonu doopravdy umíte. Kdo si vybírá salon, chce vidět skutečné výsledky na skutečných lidech, a to ve formátu, kterému už věří. A přesně to vaši klienti přes Tagly ukazují svým kamarádům."
+      },
+      {
+        "title": "Doporučení od známých roste pomalu",
+        "description": "Salony rostou z doporučení víc než skoro jakýkoli jiný obor. Háček je v tom, že doporučení padne v soukromém hovoru. Klient může být z účesu nadšený a nikdy ho nenapadne dát to někam, kde to jeho okolí uvidí. Přesně tohle Tagly řeší."
+      }
+    ]
+  },
+  "how": {
+    "title": "Jak Tagly funguje v salonu",
+    "intro": "Sdílení obstarají klienti. Vy děláte dál svou práci a platíte za dosah, který story doopravdy mělo.",
+    "steps": [
+      {
+        "title": "Klient přijde na objednaný termín",
+        "description": "Objednal se tam, kde se u vás objednává vždycky, nebo vás našel v aplikaci Tagly. Přijde a nechá si udělat vlasy, nehty nebo cokoli, na co je objednaný. Na návštěvě se nemění nic a vy nemusíte nic rozdávat."
+      },
+      {
+        "title": "Výsledek dá na Instagram do story",
+        "description": "Čerstvý fade, nová sada nehtů, změna barvy. Ve story musí být váš salon vidět, takže vás označí nebo přidá polohovou nálepku, a pak si tohle story v aplikaci Tagly vybere. Počítá se jen story a v době odeslání musí být pořád aktivní. Žádný scénář, žádné pokyny, co má napsat."
+      },
+      {
+        "title": "Zhruba o den později zaplatíte za dosah",
+        "description": "Zhruba 24 hodin po zveřejnění nám Instagram nahlásí, kolik lidí story vidělo. Z toho dosahu, z toho, jaká jeho část byla blízko vašeho salonu, a z několika dalších faktorů spočítáme odměnu. Klientovi ji zaplatíme z vašeho rozpočtu a teprve v tu chvíli vás story něco stojí. Ve chvíli, kdy jde story ven, se neúčtuje nic."
+      }
+    ],
+    "fullGuide": "Přečíst celý návod krok za krokem"
+  },
+  "examples": {
+    "title": "Jaká story budou vaši klienti sdílet",
+    "intro": "Výsledek ze salonu si o sdílení sám říká. Klienti si ho fotí tak jako tak. Tagly je důvod, proč jedna z těch fotek skončí ve story, kde je vidět i vaše jméno.",
+    "alts": [
+      "Bílo-růžové mandlové nehty od klientky z Happy Nails, sdíleno na Instagramu",
+      "Pastelové mandlové nehty se žlutými detaily od klientky z Jane's Salon, sdíleno na Instagramu"
+    ]
+  },
+  "why": {
+    "title": "Proč Tagly sedí salonům obzvlášť dobře",
+    "intro": "Na konci každé návštěvy salonu je vidět výsledek a člověk, který si ho odnáší, se jím chce pochlubit. Lepší kombinaci pro Tagly těžko hledat.",
+    "items": [
+      {
+        "title": "Z každé návštěvy je co ukázat",
+        "description": "Na rozdíl od většiny podniků je váš produkt vidět hned. Čerstvý střih, nová barva, sada nehtů. Každý klient odchází s něčím, co stojí za fotku, takže z každé návštěvy může být story. Krása a wellness navíc leží na škále typů podniku v Tagly úplně nahoře, takže stejný dosah má u salonu vyšší hodnotu než u běžného podniku, pro klienta i pro váš rozpočet."
+      },
+      {
+        "title": "Klienti se chtějí pochlubit sami od sebe",
+        "description": "Z povedeného střihu nebo nových nehtů mají lidé radost a chtějí, aby to jejich okolí vidělo. Tagly je jen impuls, který fotku pošle do story místo do skupinového chatu. Motivaci měli i bez nás, nikoho není potřeba přemlouvat."
+      },
+      {
+        "title": "V oboru krásy rozhoduje důvěra",
+        "description": "Salon si nikdo nevybírá podle reklamy. Vybere si ho, protože mu ho někdo doporučil nebo protože viděl výsledek u někoho, koho zná. Každé story od klienta je osobní doporučení na osobním účtu a má váhu, jakou placené umístění mít nemůže."
+      },
+      {
+        "title": "Rytmus návštěv v salonu sedí tomu, jak se počítá cena",
+        "description": "Klienti se vracejí jednou za pár týdnů, ne každý den, a právě za takový rytmus platí Tagly nejlíp. Odměna se krátí tomu, kdo během jednoho týdne sdílí podniků několik, a kdo vás sdílí jednou za návštěvu, se do tohohle pásma nedostane. Dražší a méně častá návštěva má na jedno story vyšší hodnotu než pořád dokola totéž."
+      }
+    ]
+  },
+  "useCases": {
+    "title": "Jaké salony Tagly používají",
+    "items": [
+      {
+        "title": "Barber shopy",
+        "description": "Fade, lineup, úprava vousů. Klient barber shopu si při odchodu selfie v zrcadle udělá tak jako tak. Tagly je důvod, proč skončí ve story s vaším jménem, a ne jen v galerii. V rušné čtvrti udělá stálý pramínek lokálních story víc než jedna velká jednorázová akce."
+      },
+      {
+        "title": "Kadeřnictví a koloristé",
+        "description": "Změny barvy, balayage, prodlužování. To jsou výsledky, u kterých se lidé zastaví, a klient je ze změny nadšený sám od sebe. Tagly mu dá důvod ukázat ji veřejně a každé story ukáže budoucímu klientovi přesně to, co umíte."
+      },
+      {
+        "title": "Nail salony, wellness centra a tetovací studia",
+        "description": "Nail art, gelové sady, odpoledne ve wellness, čerstvé tetování. Detailní práce, kterou si lidé pečlivě vyfotí a ještě týž den ukážou. Všechno jsou to typy podniku, které si vyberete při zakládání stránky v Tagly, a leží ve stejném horním pásmu škály."
+      }
+    ]
+  },
+  "faq": {
+    "heading": "Časté dotazy k marketingu salonů",
+    "items": [
+      {
+        "question": "Kolik Tagly stojí salon?",
+        "answer": "Platit jde dvěma způsoby a ani jeden není smlouva ani předplatné. První jsou průběžné platby: připojíte kartu a jste hned vidět. Nic se nestrhne dřív, než je nějaké story doopravdy zaplacené, a i pak jen ta část, kterou nepokryjí kredity, plus 0,30 $ za každou platbu. Žádná záloha, žádné minimum. Druhá možnost jsou kredity předem: 1 kredit = 1 $, nejmenší nákup je 50 $ a kredity nikdy nevyprší. S kredity vyjde story o kousek levněji, protože se neplatí poplatek za platbu, a s aspoň 15 $ dostupných kreditů zůstáváte v aplikaci vidět. Tak či tak platíte za každé zaplacené story zvlášť a kolik může jedno story stát, má svůj strop, takže vám žádné story neodčerpá celý rozpočet. Částky vidíte v aplikaci i v korunách podle aktuálního kurzu."
+      },
+      {
+        "question": "Musím sám tvořit nějaký obsah?",
+        "answer": "Ne. Obsah dělají vaši klienti: účes, nehty nebo cokoli dalšího, co jste jim udělali, dají do vlastních instagramových story. Nic neplánujete, nefotíte, nepíšete popisky a nespravujete žádný kalendář na sociální sítě. Zároveň jim ale nemůžete nic zadat, story před zveřejněním schválit ani jim říct, co o vás mají napsat."
+      },
+      {
+        "question": "Bude to fungovat i salonu, který právě otevřel?",
+        "answer": "Ano. Na tom, jak dlouho máte otevřeno, ve fungování Tagly nezáleží. Potřebujete stránku podniku, rozpočet a klienty s profesionálním účtem na Instagramu, což je nastavení Business nebo Creator, které Instagram nabízí zdarma. První klienti bývají nejnadšenější a jejich kamarádi jsou přesně ti lidé, co bydlí kousek od vašeho křesla."
+      },
+      {
+        "question": "Jak se klienti dozvědí, že je můj salon na Tagly?",
+        "answer": "Najdou vás přímo v aplikaci Tagly: na mapě, ve vyhledávání a v seznamech, které aplikace ukazuje lidem v okolí. Není co tisknout ani co dávat ke křeslu. Stálým klientům to můžete říct u pokladny. Aplikaci si nainstalují a najdou vás stejně jako kdokoli jiný."
+      },
+      {
+        "question": "Jak se to liší od najmutí beauty influencera?",
+        "answer": "Influencer si řekne o paušál bez ohledu na výsledek a jeho sledující jsou obvykle rozesetí po celé republice. Přes Tagly vás sdílejí vaši vlastní klienti svým vlastním sledujícím a platíte za každé story zvlášť, podle dosahu, který mělo, a podle toho, jaká jeho část byla blízko vašeho salonu. Počty sledujících si nekupujete a kolik může jedno story stát, má svůj strop."
+      }
+    ],
+    "costInline": "Platit jde dvěma způsoby a ani jeden není smlouva ani předplatné. První jsou průběžné platby: připojíte kartu a jste hned vidět. Nic se nestrhne dřív, než je nějaké story doopravdy zaplacené, a i pak jen ta část, kterou nepokryjí kredity, plus 0,30 $ za každou platbu. Žádná záloha, žádné minimum. Druhá možnost jsou kredity předem: 1 kredit = 1 $, nejmenší nákup je 50 $ a kredity nikdy nevyprší. S kredity vyjde story o kousek levněji, protože se neplatí poplatek za platbu, a s aspoň 15 $ dostupných kreditů zůstáváte v aplikaci vidět. Tak či tak platíte za každé zaplacené story zvlášť a kolik může jedno story stát, má svůj strop, takže vám žádné story neodčerpá celý rozpočet. Částky vidíte v aplikaci i v korunách podle aktuálního kurzu. Podívejte se, <link>jak se počítá cena</link>.",
+    "influencerInline": "Influencer si řekne o paušál bez ohledu na výsledek a jeho sledující jsou obvykle rozesetí po celé republice. Přes Tagly vás sdílejí vaši vlastní klienti svým vlastním sledujícím a platíte za každé story zvlášť, podle dosahu, který mělo, a podle toho, jaká jeho část byla blízko vašeho salonu. Počty sledujících si nekupujete a kolik může jedno story stát, má svůj strop. Přečtěte si <link>celé srovnání</link>."
+  },
+  "internalLinks": {
+    "compareHeading": "Srovnání s alternativami",
+    "instagramAds": "Instagramové reklamy",
+    "influencerMarketing": "Influencer marketing",
+    "marketingAgencies": "Marketingové agentury",
+    "learnMoreHeading": "Další informace",
+    "howItWorks": "Jak to funguje",
+    "pricing": "Ceník",
+    "faq": "Časté dotazy"
+  },
+  "cta": {
+    "heading": "Chcete, aby váš salon propagovali vlastní klienti?",
+    "description": "Přidejte se k Tagly a nechte marketing na výsledcích, které si vaši klienti fotí tak jako tak."
+  }
+}

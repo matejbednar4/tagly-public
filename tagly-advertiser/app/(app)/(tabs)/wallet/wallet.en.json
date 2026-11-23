@@ -1,0 +1,7 @@
+{
+  "//": "Used in: app/(app)/(tabs)/wallet/index.tsx (wallet namespace). The money hub tab.",
+  "title": "Wallet",
+  "transactionsTitle": "Transactions",
+  "noTransactions": "No transactions yet",
+  "noTransactionsHint": "Deposits, share payments and other transactions will show up here."
+}

@@ -1,0 +1,7 @@
+{
+  "//": "Used in: tagly-shared/client/services/permissions/requestPhotoLibraryPermission.ts (photoPermission namespace). Denied-permission alert with the Open Settings recovery path.",
+  "title": "Permission needed",
+  "body": "Allow photo access in Settings to upload pictures.",
+  "openSettings": "Open Settings",
+  "cancel": "Cancel"
+}

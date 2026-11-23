@@ -1,0 +1,14 @@
+{
+  "//": "Used in: app/(app)/transactions/index.tsx (transactions namespace).",
+  "title": "Transakce",
+  "empty": "Zatím žádné transakce",
+  "emptyHint": "Tvé odměny a výběry se objeví tady.",
+  "filterAll": "Všechny typy",
+  "filterSelected": "{{count}} vybráno",
+  "filterTitle": "Filtrovat podle typu",
+  "filterDone": "Hotovo",
+  "typeShare": "Odměny za sdílení",
+  "typeReferral": "Odměny za doporučení",
+  "typeAdjustment": "Úpravy",
+  "typeWithdrawal": "Výběry"
+}

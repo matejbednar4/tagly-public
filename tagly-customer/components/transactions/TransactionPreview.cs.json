@@ -1,0 +1,23 @@
+{
+  "//": "Used in: components/transactions/TransactionPreview (transactionPreview namespace).",
+  "earnedFrom": "Vyděláno v {{business}}",
+  "earnedShare": "Odměna za sdílení",
+  "referralBonus": "Odměna za doporučení",
+  "adjustment": "Úprava zůstatku",
+  "withdrawal": "Výběr",
+  "stateProcessing": "Na cestě",
+  "stateDelayed": "Vyžaduje pozornost",
+  "statePaidOut": "V bance",
+  "stateFailed": "Selhalo",
+  "stateReversed": "Vráceno",
+  "explainShare": "Podnik ti zaplatil za sdílení na Instagramu.",
+  "explainReferral": "Tvůj podíl z výnosu Tagly od někoho, koho jsi doporučil/a.",
+  "explainAdjustment": "Ruční úprava tvého zůstatku od týmu Tagly.",
+  "explainProcessing": "Peníze opustily tvůj zůstatek v Tagly a jsou na cestě do tvé banky. Převod obvykle dorazí do několika pracovních dnů.",
+  "explainDelayed": "Tvoje banka převod nepřijala, peníze zatím bezpečně čekají na tvém Stripe účtu. Oprav si níže bankovní údaje a my je automaticky pošleme znovu.",
+  "explainPaidOut": "Peníze dorazily na tvůj bankovní účet.",
+  "explainFailed": "Tento výběr se nepodařilo zahájit, z tvého účtu nic neodešlo. Celá částka je dál v tvém zůstatku v Tagly a můžeš ji vybrat znovu.",
+  "explainReversed": "Převod se k nám vrátil, celou částku jsme ti proto vrátili do zůstatku v Tagly. Kdykoli ji můžeš vybrat znovu.",
+  "fixBankDetails": "Opravit bankovní údaje",
+  "viewShare": "Zobrazit sdílení"
+}

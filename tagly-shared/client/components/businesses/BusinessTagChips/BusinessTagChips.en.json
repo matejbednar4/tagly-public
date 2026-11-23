@@ -1,0 +1,5 @@
+{
+  "//": "Used in: components/businesses/BusinessTagChips (businessTagChips namespace). Copy-to-clipboard feedback for a business tag chip.",
+  "copied": "Tag copied",
+  "copyHint": "Copies the tag to your clipboard"
+}

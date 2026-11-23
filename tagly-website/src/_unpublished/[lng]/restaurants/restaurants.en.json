@@ -1,0 +1,147 @@
+{
+  "//": "Used in: src/app/[lng]/restaurants/page.tsx — hero, problem cards, how-it-works flow, examples, why-restaurants, use cases, FAQ, internal links, CTA. The two FAQ answers with inline links are rendered with <Trans> (faqLinks.* are the link labels).",
+  "meta": {
+    "title": "Tagly for Restaurants | Get Promoted by Real Diners on Instagram",
+    "description": "Restaurant marketing that works locally. Tagly helps restaurants get promoted on Instagram by real diners, not influencers. Your customers post stories about their meals and reach the local people most likely to visit."
+  },
+  "hero": {
+    "title": "Get your restaurant promoted by real diners on Instagram",
+    "intro": "Your customers already take photos of their food. Tagly gives them a reason to post one as an Instagram story with your restaurant's name visible on it. You get real word of mouth from local diners without creating any content, running any ads, or hiring any influencers."
+  },
+  "broken": {
+    "title": "Restaurant marketing is broken",
+    "intro": "Most restaurants waste money on social media marketing that does not work for local businesses. The options are expensive, time-consuming, or irrelevant to the people who could actually walk through your door.",
+    "items": [
+      {
+        "title": "Instagram ads reach the wrong people",
+        "description": "You pay for impressions, but most of those impressions go to people who will never visit your restaurant. They live too far away, they are not your target audience, or they just scroll past. For a local restaurant, paying per impression is like buying billboards in another city.",
+        "link": "Compare Tagly to Instagram ads"
+      },
+      {
+        "title": "Food influencers are expensive and unpredictable",
+        "description": "An influencer charges a flat fee agreed in advance, whatever it produces, and their audience is usually spread across the country rather than around your restaurant. You get a spike of likes but not a single new booking.",
+        "link": "Compare Tagly to influencer marketing"
+      },
+      {
+        "title": "Marketing agencies cost too much for what you get",
+        "description": "Between running a kitchen, managing staff, and keeping customers happy, most restaurant owners have zero time for social media strategy. Hiring an agency means paying monthly retainers for generic content that rarely reflects what makes your restaurant special.",
+        "link": "Compare Tagly to marketing agencies"
+      }
+    ]
+  },
+  "how": {
+    "title": "How Tagly works for restaurants",
+    "intro": "Tagly turns your existing customers into your marketing team. Here is how it works, step by step.",
+    "steps": [
+      {
+        "title": "A diner finds you and comes in",
+        "description": "Someone sees your restaurant on the map in the Tagly app, along with an estimate of what a story about their visit could earn them. They come in, order, and pay full price. Exactly like any other customer."
+      },
+      {
+        "title": "They post an Instagram story",
+        "description": "After the meal they post a story. The dish, the room, the table, with your restaurant tagged or the location sticker added, so your name is visible on it. No scripts, no brand guidelines, just something they would have shared anyway."
+      },
+      {
+        "title": "Tagly prices the story and pays the diner",
+        "description": "About a day later Instagram reports how many people saw the story. Tagly prices it from that reach and from how close that audience sits to your address, then pays the diner from your budget. You set a budget and nothing else."
+      }
+    ],
+    "fullGuide": "See the full step-by-step guide"
+  },
+  "examples": {
+    "title": "The kind of stories your diners will share",
+    "intro": "People already photograph their food. Tagly just gives them a reason to post it. Here are examples of the kind of authentic content your customers could create.",
+    "alts": [
+      "Shared plates of duck, vegetables, and salad at Asian Fusion restaurant",
+      "Two wood-fired pizzas with prosciutto and egg at Italian Corner",
+      "Burger with fries and a chicken salad bowl at Burger Point",
+      "Steak with green beans and roasted potatoes on a yellow tablecloth at Joe's Steak House",
+      "Tonkatsu pork cutlet with dipping sauces at Katsu by the Bay",
+      "Steak and fries with a side salad at Aurelia restaurant"
+    ]
+  },
+  "whyRestaurants": {
+    "title": "Why Tagly works especially well for restaurants",
+    "intro": "People go to a restaurant on purpose, often after planning it, and a photo comes out of it almost every time. That is why restaurants are one of the most natural fits for Tagly. Here are four reasons.",
+    "items": [
+      {
+        "title": "People photograph their food without being asked",
+        "description": "Your diners already take these photos. With Tagly they are not doing anything unnatural, they just get rewarded for posting one they took anyway. That is why the stories look authentic. They are."
+      },
+      {
+        "title": "Local reach is what actually fills tables",
+        "description": "A restaurant does not need a million impressions. It needs the people who live and work near you to know you exist. Anyone can share you, but the further their audience sits from your address, the closer the price of that story falls to zero. Reach on the other side of the country costs you almost nothing."
+      },
+      {
+        "title": "Every story is a personal recommendation",
+        "description": "When someone posts a photo of their meal, their followers read it as a personal recommendation, not an ad. People trust their friends far more than any sponsored post. A single authentic story from a regular diner can do more for your restaurant than a dozen paid ads."
+      },
+      {
+        "title": "You never have to touch social media",
+        "description": "No content calendars, no photo shoots, no caption writing, no ad targeting. You set a budget, and your customers decide what to post and when. You focus on running your restaurant while your diners handle the marketing."
+      }
+    ]
+  },
+  "useCases": {
+    "title": "How different restaurants use Tagly",
+    "items": [
+      {
+        "title": "New restaurants building awareness",
+        "description": "Just opened and nobody knows you exist yet? Tagly puts your restaurant on the map in the app, so people nearby can find you, come in to try you out, and post a story about it to their followers. You get local word of mouth from the first week, without an opening campaign."
+      },
+      {
+        "title": "Established spots launching something new",
+        "description": "Launching a new menu, seasonal specials, or a renovated room? Your regulars are already on Instagram. Once your restaurant is on Tagly, every diner who posts a story about their visit shows the new dishes and the new room to their local followers. You cannot brief them, and that is the point. It reads as a recommendation, not an announcement."
+      },
+      {
+        "title": "Restaurants in competitive areas",
+        "description": "In a neighbourhood with dozens of restaurants, standing out is hard. Tagly gives you a steady stream of authentic Instagram stories from real diners. Over time, your restaurant becomes the one people keep seeing their friends visit, and that social proof is more powerful than any ad."
+      }
+    ]
+  },
+  "faq": {
+    "heading": "Restaurant marketing FAQ",
+    "items": [
+      {
+        "question": "How much does Tagly cost for restaurants?",
+        "answer": "There are two ways to fund it, and neither has a subscription or a contract. Pay as you go: link a card and you are live straight away. Nothing is charged until a story has actually been paid out, so there is no deposit and no minimum, just $0.30 per charge. Or buy credits up front: 1 credit is $1, the smallest purchase is $50, and credits never expire. On the credits route, with at least $15 of available credit you stay visible in the app. What a single story can cost is also capped, so no story can ever drain your whole budget."
+      },
+      {
+        "question": "Do I need to create any content myself?",
+        "answer": "No. Your customers create the content by posting stories about their meals on Instagram. You never need to plan content, take photos, write captions, or manage a social media calendar. Tagly handles the rest."
+      },
+      {
+        "question": "How is this different from hiring a food influencer?",
+        "answer": "An influencer charges a flat fee agreed in advance, whatever it produces, and their audience is usually spread across the country. With Tagly there is no fee to agree. Each story is priced from the reach it actually got and from how close that audience sits to your restaurant, not from follower counts."
+      },
+      {
+        "question": "What kind of restaurants does Tagly work for?",
+        "answer": "Tagly works for any restaurant where customers might take photos. Fine dining, neighbourhood bistros, pizzerias, sushi bars, brunch spots. If people eat there and enjoy it, Tagly can turn that into word-of-mouth marketing."
+      },
+      {
+        "question": "How do customers find out my restaurant is on Tagly?",
+        "answer": "They find you on the map in the Tagly app. Anyone nearby with the app sees your restaurant, along with an estimate of what a story about their visit could earn them. There is nothing to print, hand out, or install at the restaurant."
+      },
+      {
+        "question": "Can I control what people post about my restaurant?",
+        "answer": "No, and that is deliberate. Tagly gives customers no scripts and no guidelines, which is exactly why the stories read as real. The one thing that is required is that your restaurant is identifiable: the diner tags your restaurant or adds the location sticker, so your name is visible on the story."
+      }
+    ],
+    "costInline": "There are two ways to fund it, and neither has a subscription or a contract. Pay as you go: link a card and you are live straight away. Nothing is charged until a story has actually been paid out, so there is no deposit and no minimum, just $0.30 per charge. Or buy credits up front: 1 credit is $1, the smallest purchase is $50, and credits never expire. On the credits route, with at least $15 of available credit you stay visible in the app. What a single story can cost is also capped, so no story can ever drain your whole budget. See <link>how pricing works</link>.",
+    "influencerInline": "An influencer charges a flat fee agreed in advance, whatever it produces, and their audience is usually spread across the country. With Tagly there is no fee to agree. Each story is priced from the reach it actually got and from how close that audience sits to your restaurant, not from follower counts. Read the <link>full comparison</link>."
+  },
+  "internalLinks": {
+    "compareHeading": "How Tagly compares",
+    "instagramAds": "Instagram ads",
+    "influencerMarketing": "Influencer marketing",
+    "marketingAgencies": "Marketing agencies",
+    "learnMoreHeading": "Learn more",
+    "howItWorks": "How it works",
+    "pricing": "Pricing",
+    "faq": "FAQ"
+  },
+  "cta": {
+    "heading": "Ready to let your diners promote your restaurant?",
+    "description": "Join Tagly and start getting authentic Instagram promotion from the people who already love your food."
+  }
+}

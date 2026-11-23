@@ -1,0 +1,14 @@
+{
+  "//": "Used in: app/(app)/(tabs)/discover/index.tsx (discover namespace). The Discover tab — recommended/top-earning/nearest shelves + search.",
+  "title": "Objevuj",
+  "searchPlaceholder": "Hledat podniky",
+  "recommendedTitle": "Doporučeno pro tebe",
+  "topEarningTitle": "Tady vyděláš nejvíc",
+  "nearestTitle": "Nejbližší podniky",
+  "resultsTitle": "Výsledky",
+  "browseAll": "Procházet všechny podniky",
+  "noBusinesses": "Žádné podniky k dispozici",
+  "noBusinessesHint": "Ve tvém okolí zatím na Tagly nejsou žádné podniky. Zkus to brzy znovu.",
+  "empty": "Žádné podniky nenalezeny",
+  "emptyHint": "Zkus jiný název."
+}

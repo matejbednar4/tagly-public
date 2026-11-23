@@ -1,0 +1,7 @@
+{
+  "//": "Used in: components/withdraw/WithdrawalsInfoSheet/index.tsx (withdrawalsInfo namespace).",
+  "title": "How withdrawals work",
+  "step1": "When you withdraw, the money leaves your Tagly balance and lands in your Stripe account.",
+  "step2": "Once it's in your Stripe account, Stripe sends it to the bank you connected during setup.",
+  "step3": "After it lands in your bank, we mark the withdrawal as finished. This usually takes 1 to 2 business days."
+}

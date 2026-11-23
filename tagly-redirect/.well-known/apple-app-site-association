@@ -1,0 +1,22 @@
+{
+  "applinks": {
+    "details": [
+      { "appID": "S9BP8HQZ93.com.flaer.customer",          "paths": [ "/customer/*" ] },
+      { "appID": "S9BP8HQZ93.com.flaer.customer.staging",   "paths": [ "/customer/*" ] },
+      { "appID": "S9BP8HQZ93.com.flaer.customer.dev",       "paths": [ "/customer/*" ] },
+      { "appID": "S9BP8HQZ93.com.flaer.advertiser",         "paths": [ "/advertiser/*" ] },
+      { "appID": "S9BP8HQZ93.com.flaer.advertiser.staging", "paths": [ "/advertiser/*" ] },
+      { "appID": "S9BP8HQZ93.com.flaer.advertiser.dev",     "paths": [ "/advertiser/*" ] }
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "S9BP8HQZ93.com.flaer.customer",
+      "S9BP8HQZ93.com.flaer.customer.staging",
+      "S9BP8HQZ93.com.flaer.customer.dev",
+      "S9BP8HQZ93.com.flaer.advertiser",
+      "S9BP8HQZ93.com.flaer.advertiser.staging",
+      "S9BP8HQZ93.com.flaer.advertiser.dev"
+    ]
+  }
+}

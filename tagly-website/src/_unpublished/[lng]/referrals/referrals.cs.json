@@ -1,0 +1,119 @@
+{
+  "//": "Used in: src/app/[lng]/referrals/page.tsx — hero, steps, rate cards (PieChartSvg rateLabel passed as prop), 6-month boost timeline, good-to-know, FAQ, learn-more links, CTA. Terminologie sjednocená s aplikacemi: pozvánka / pozvat / odkaz a kód na pozvání (v aplikacích „Pozvi a vydělej“), story se „zaplatí“ (nikdy „proplatí“ ani „vyplatí“).",
+  "meta": {
+    "title": "Pozvánky | Pozvěte podnik nebo zákazníka na Tagly a vydělávejte",
+    "description": "Pozvěte podnik a získáte 16 % z ceny každého jeho story. Pozvěte zákazníka a získáte 8 %. Prvních 6 měsíců plná sazba, potom poloviční, ale napořád.",
+    "ogTitle": "Pozvánky | Pozvěte podnik nebo zákazníka na Tagly a vydělávejte",
+    "ogDescription": "Za lidi, které na Tagly přivedete, dostáváte podíl z toho, co Tagly vydělá na jejich story. 16 % za pozvaný podnik, 8 % za pozvaného zákazníka."
+  },
+  "hero": {
+    "title": "Jak fungují pozvánky na Tagly",
+    "intro": "Pozvat někoho může kdokoli s účtem na Tagly, podnik i zákazník. Když zákazník přes Tagly zveřejní na Instagramu story o nějakém podniku a to story je zaplacené, část jeho ceny si bere Tagly. A z tohoto podílu jde část vám, pokud jste toho zákazníka nebo ten podnik na Tagly přivedli."
+  },
+  "steps": {
+    "title": "Tři kroky k prvnímu výdělku",
+    "intro": "Pošlete svůj odkaz nebo kód na pozvání, dotyčný se zaregistruje a vy získáváte podíl z každého jeho zaplaceného story.",
+    "items": [
+      {
+        "title": "Pošlete svůj odkaz nebo kód",
+        "description": "Ke každému účtu na Tagly patří vlastní odkaz a kód na pozvání. Najdete je v aplikaci Tagly i v aplikaci Tagly Partner. Pošlete kterýkoli z nich podnikům, které znáte, nebo kamarádům, které by Tagly bavilo."
+      },
+      {
+        "title": "Zaregistrují se a začnou Tagly používat",
+        "description": "Kdo se zaregistruje přes váš odkaz nebo kód, zůstane s vaším účtem propojený natrvalo. Od té chvíle získáváte podíl z každého story, které se ho týká."
+      },
+      {
+        "title": "Vyděláte, jakmile je story zaplacené",
+        "description": "Zhruba den po zveřejnění Instagram nahlásí, kolik lidí story vidělo, a story se zaplatí. V tu chvíli se váš podíl připíše na váš zůstatek. Podíl získáváte vždy za konkrétní zaplacené story, ne za registrace."
+      }
+    ]
+  },
+  "rates": {
+    "title": "Vaše sazby za pozvání",
+    "intro": "Kolik dostanete, záleží na tom, koho jste pozvali. Za podnik je sazba vyšší. V čem podíl dostanete, záleží na vašem vlastním účtu, ne na účtu pozvaného: pokud zvete z aplikace Tagly, dostanete peníze, které si můžete vybrat. Pokud z aplikace Tagly Partner, přijdou vám kredity na propagaci vlastního podniku.",
+    "rateLabel": "z ceny story",
+    "business": {
+      "title": "Pozvěte podnik",
+      "description": "Vyděláváte pokaždé, když je zaplacené story o tomto podniku. Počítá se z ceny, kterou za ně podnik zaplatil",
+      "legendBoosted": "16 % z ceny story (prvních 6 měsíců)",
+      "legendStandard": "8 % z ceny story (napořád)"
+    },
+    "customer": {
+      "title": "Pozvěte zákazníka",
+      "description": "Vyděláváte pokaždé, když tento zákazník dostane zaplaceno za story o jakémkoli podniku",
+      "legendBoosted": "8 % z ceny story (prvních 6 měsíců)",
+      "legendStandard": "4 % z ceny story (napořád)"
+    },
+    "stack": {
+      "title": "Pozvánky se sčítají",
+      "text": "Když zákazníka i podnik z jednoho story přivedl každého někdo jiný, Tagly zaplatí oběma v plné výši. Kolik lidí pozvete, nijak neomezujeme."
+    }
+  },
+  "boost": {
+    "title": "Zvýhodnění na prvních 6 měsíců",
+    "intro": "Prvních 6 měsíců od registrace přes váš odkaz nebo kód máte zvýhodněnou sazbu. Potom klesne na polovinu. Standardní sazbu pak dostáváte dál, dokud je dotyčný na Tagly aktivní.",
+    "firstLabel": "Prvních 6 měsíců",
+    "firstSub": "Zvýhodněná sazba",
+    "afterLabel": "Po 6 měsících",
+    "afterSub": "Standardní sazba, napořád",
+    "firstRates": "Podnik: 16 % · Zákazník: 8 %",
+    "afterRates": "Podnik: 8 % · Zákazník: 4 %"
+  },
+  "good": {
+    "title": "Co je dobré vědět",
+    "items": [
+      {
+        "title": "Platí to Tagly",
+        "description": "Podíl za pozvání jde z části, kterou si z daného story bere Tagly. Pozvanému člověku ani podniku se nestrhává nic. Odměna zákazníka i zůstatek podniku jsou úplně stejné, ať za nimi pozvánka stojí, nebo ne."
+      },
+      {
+        "title": "Propojení proběhne samo",
+        "description": "Kdo se zaregistruje přes váš odkaz nebo kód na pozvání, propojí se s vaším účtem automaticky. Ani jedna strana už nemusí dělat nic dalšího."
+      },
+      {
+        "title": "Sazby se mohou změnit",
+        "description": "Procenta uvedená na této stránce odpovídají aktuálním sazbám. Tagly si vyhrazuje právo je kdykoli upravit. Případná změna se vždy týká jen budoucí aktivity."
+      }
+    ]
+  },
+  "faq": {
+    "heading": "Otázky k pozvánkám",
+    "items": [
+      {
+        "question": "Kdo může zvát?",
+        "answer": "Kdokoli, kdo má účet na Tagly, podnik i zákazník. Ke každému účtu patří vlastní odkaz a kód na pozvání, obojí najdete přímo v aplikaci."
+      },
+      {
+        "question": "Kdy dostanu zaplaceno?",
+        "answer": "Ve chvíli, kdy je story zaplacené, tedy zhruba den po zveřejnění, jakmile Instagram nahlásí, kolik lidí ho vidělo. Podíl získáváte vždy za konkrétní zaplacené story, ne za registrace."
+      },
+      {
+        "question": "Jaký je rozdíl mezi zvýhodněnou a standardní sazbou?",
+        "answer": "Prvních 6 měsíců od registrace přes váš odkaz nebo kód máte vyšší, zvýhodněnou sazbu z každého story, které se pozvaného týká. Potom klesne na polovinu a na té úrovni už zůstane. Obě sazby jsou procentem z ceny story."
+      },
+      {
+        "question": "Je nějak omezené, kolik lidí můžu pozvat?",
+        "answer": "Ne. Podniků i zákazníků můžete pozvat, kolik chcete. Každá pozvánka vydělává samostatně, takže s každou aktivní pozvánkou vám celkový výdělek roste."
+      },
+      {
+        "question": "Můžu pozvat podniky i zákazníky?",
+        "answer": "Ano, obojí. Za pozvaný podnik je sazba dvojnásobná oproti pozvanému zákazníkovi."
+      },
+      {
+        "question": "Dostanu peníze, nebo kredity?",
+        "answer": "Řídí se to vaším vlastním účtem, ne tím, koho jste pozvali. Podíl přijde na zůstatek účtu, ze kterého pozvánka vzešla: v aplikaci Tagly jako peníze, které si můžete vybrat, v aplikaci Tagly Partner jako kredity na propagaci vlastního podniku. Zákazník, který pozve podnik, tedy dostane peníze."
+      }
+    ]
+  },
+  "learnMore": {
+    "title": "Zjistěte o Tagly víc",
+    "howItWorks": "Jak Tagly funguje",
+    "pricing": "Ceník",
+    "faq": "Časté dotazy"
+  },
+  "cta": {
+    "heading": "Připraveni někoho pozvat?",
+    "description": "Svůj odkaz i kód na pozvání najdete v aplikaci Tagly a v aplikaci Tagly Partner. Vydělávejte na každém podniku a zákazníkovi, které na Tagly přivedete.",
+    "readFaq": "Přečíst časté dotazy"
+  }
+}

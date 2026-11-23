@@ -1,0 +1,142 @@
+{
+  "//": "Used in: src/app/[lng]/cafes/page.tsx — hero, problem cards, how-it-works flow, examples, why-cafes, use cases, FAQ, internal links, CTA. faq.costInline/influencerInline render with <Trans>.",
+  "meta": {
+    "title": "Tagly for Cafes | Turn Latte Art Into Local Marketing",
+    "description": "Cafe marketing that actually works locally. Your customers share stories of their coffee and your room on Instagram, and you pay only for reach among the people who could actually stop by. No ads, no influencers, no effort."
+  },
+  "hero": {
+    "title": "Your customers already photograph their coffee. Now they can promote your cafe too.",
+    "intro": "Latte art, pastry displays, cosy interiors. Your customers already take photos of these every visit. Most never make it past the camera roll. Tagly gives them a reason to post one as an Instagram story with your cafe's name visible on it, so a photo that would have gone nowhere reaches the people who live and work around you."
+  },
+  "broken": {
+    "title": "Cafe marketing has a different problem",
+    "intro": "Cafes run on thin margins and small orders. Most marketing channels are built for businesses that can afford to spend a lot to win one customer. That maths does not work when a typical order is a single coffee.",
+    "items": [
+      {
+        "title": "Paid ads charge you whether or not anyone is nearby",
+        "description": "Instagram and Google bill per impression or per click, no matter how far away the person is. At cafe prices those clicks add up long before they add up to a customer. You need a channel where what you pay is tied to reach that could actually walk in.",
+        "link": "Compare Tagly to Instagram ads"
+      },
+      {
+        "title": "Influencers bring followers, not foot traffic",
+        "description": "A food blogger with 50,000 followers might get you likes, but most of those followers do not live near your cafe. You need the people who could stop in tomorrow morning, not an audience spread across the country.",
+        "link": "Compare Tagly to influencer marketing"
+      },
+      {
+        "title": "Regulars are your real growth engine",
+        "description": "Cafes grow on word of mouth and repeat visits. Your best marketing asset is the person who comes in every morning and mentions you to their coworkers. The problem has always been that there was no good way to encourage and reward that. That is what Tagly does."
+      }
+    ]
+  },
+  "how": {
+    "title": "How Tagly works for cafes",
+    "intro": "Tagly fits into how cafes already work. Your customers come in, order their usual, and take a picture. Tagly adds a reason to actually post it.",
+    "steps": [
+      {
+        "title": "A customer grabs their usual coffee",
+        "description": "They found your cafe on the map in the Tagly app, with an estimate of what a story about the visit could earn them. They order like normal and pay full price. Nothing about the visit changes."
+      },
+      {
+        "title": "They post an Instagram story",
+        "description": "A latte art close-up, their pastry, the view from their favourite window seat. Your cafe tagged, or the location sticker added, so your name is visible on it. They post it because they know Tagly will reward them for it."
+      },
+      {
+        "title": "Their local followers see your cafe",
+        "description": "About a day later Instagram reports how many people saw the story, and Tagly prices it from that reach and from how close that audience sits to your cafe. The customer gets paid from your budget. Anyone can share you, but you only pay for the people who could actually walk in."
+      }
+    ],
+    "fullGuide": "See the full step-by-step guide"
+  },
+  "examples": {
+    "title": "The kind of stories your customers will share",
+    "intro": "Your customers already photograph their coffee and their pastries, they just never post them. Tagly gives them a reason to share one on Instagram with your cafe's name on it.",
+    "alts": [
+      "Two lattes with leaf art on a dark wooden table at Green House Cafe",
+      "Brunch spread with scrambled eggs, toast, and fresh fruit by the pool at Good Morning Cafe",
+      "French toast with fresh berries, figs, and whipped cream at Main Street Cafe",
+      "Latte art, a purple taro latte, and a red velvet pastry at Coffee Corner",
+      "Iced coffees and a slice of quiche on an outdoor patio table at Daily Grind Cafe",
+      "Waffles topped with ice cream and chocolate drizzle beside a cappuccino at Brunch House"
+    ]
+  },
+  "why": {
+    "title": "Why Tagly is a natural fit for cafes",
+    "intro": "Every cafe visit produces a photo-worthy moment. Most stay in the camera roll. Tagly changes that.",
+    "items": [
+      {
+        "title": "Cafe culture is already visual",
+        "description": "Latte art, aesthetic interiors, pastry displays, pour-overs. Cafes produce naturally photogenic moments every day. Your customers already take these photos, but most end up in their camera roll and never get posted. Tagly gives them a reason to actually put one on Instagram."
+      },
+      {
+        "title": "The spend stays in proportion to a cafe",
+        "description": "There is no flat fee to agree and no cost per click to cover. You pay per story, worked out from the reach it actually got, and only once that story has been paid out. Your customers come in several times a week, so the stories keep arriving steadily, without any single one costing you what a campaign would."
+      },
+      {
+        "title": "Regulars become your marketing team",
+        "description": "Your morning regulars come in several times a week, and each visit is a chance for a story. Tagly counts one story per customer per day for your cafe, so what you get is a steady trickle rather than a flood. Over months their friends keep seeing your cafe in their feed, and that is exactly how new regulars are made."
+      },
+      {
+        "title": "Neighbourhood reach is what matters",
+        "description": "Cafes draw from a short walk, not from a whole city. You do not need a viral story, you need the people around you to know you exist. Anyone can share you, and the closer their audience lives to your address, the more that story is worth, so your budget goes to the people who could actually walk in."
+      }
+    ]
+  },
+  "useCases": {
+    "title": "How different cafes use Tagly",
+    "items": [
+      {
+        "title": "Specialty coffee shops",
+        "description": "You put serious craft into every cup, and your customers like to show it off. A latte art close-up, a pour-over video, a single-origin flat white. Each story puts your shop in front of people who could become regulars, and one customer can share you once a day."
+      },
+      {
+        "title": "Brunch and bakery cafes",
+        "description": "Brunch spots and bakery cafes live on the weekend crowd. A steady stream of customer stories showing your avocado toast, croissants, or pancake stacks keeps your cafe in mind when people are deciding where to go on Saturday. You do not schedule any of it. You set a budget and your customers do the rest."
+      },
+      {
+        "title": "Neighbourhood coffee spots",
+        "description": "You are the place people stop at on their way to work. Tagly keeps you visible in the neighbourhood without spending hours on social media. Your morning regulars post, their nearby friends see it, and your customer base grows one story at a time."
+      }
+    ]
+  },
+  "faq": {
+    "heading": "Cafe marketing FAQ",
+    "items": [
+      {
+        "question": "How much does Tagly cost for cafes?",
+        "answer": "There is no subscription and no contract. You can link a card and pay as you go, where nothing is charged until a story has actually been paid out, so there is no deposit and no minimum, just $0.30 per charge. Or you can buy credits up front: 1 credit is $1, the smallest purchase is $50, and credits never expire. On the credits route, keeping at least $15 of available credit is what keeps you visible in the app. Tagly also caps what a single story can cost, so no one story can run away with your budget. Everything is billed in dollars, and the app shows the amounts in koruna at the current rate."
+      },
+      {
+        "question": "Do I need to create any content myself?",
+        "answer": "No. Your customers create it by posting stories about their coffee, their food, or your room. You never need to plan content, take photos, write captions, or manage a social media calendar."
+      },
+      {
+        "question": "Does Tagly work for cafes with small average orders?",
+        "answer": "Yes. What a story costs never depends on what the customer spent. It comes from how many people saw the story and how close that audience sits to you. There is no flat fee to agree and no cost per click to cover, so what you pay stays tied to the reach you actually got."
+      },
+      {
+        "question": "How do customers find out my cafe is on Tagly?",
+        "answer": "They find you on the map in the Tagly app, along with an estimate of what a story about their visit could earn them. There is nothing to print, hand out, or put on the tables."
+      },
+      {
+        "question": "How is this different from hiring a food influencer?",
+        "answer": "An influencer charges a flat fee agreed up front, whatever it produces, and their audience is usually spread across the country. Tagly has no fee to agree. Each story is priced from the reach it actually got and from how close that audience sits to your cafe, not from follower counts."
+      }
+    ],
+    "costInline": "There is no subscription and no contract. You can link a card and pay as you go, where nothing is charged until a story has actually been paid out, so there is no deposit and no minimum, just $0.30 per charge. Or you can buy credits up front: 1 credit is $1, the smallest purchase is $50, and credits never expire. On the credits route, keeping at least $15 of available credit is what keeps you visible in the app. Tagly also caps what a single story can cost, so no one story can run away with your budget. Everything is billed in dollars, and the app shows the amounts in koruna at the current rate. See <link>how pricing works</link>.",
+    "influencerInline": "An influencer charges a flat fee agreed up front, whatever it produces, and their audience is usually spread across the country. Tagly has no fee to agree. Each story is priced from the reach it actually got and from how close that audience sits to your cafe, not from follower counts. Read the <link>full comparison</link>."
+  },
+  "internalLinks": {
+    "compareHeading": "How Tagly compares",
+    "instagramAds": "Instagram ads",
+    "influencerMarketing": "Influencer marketing",
+    "marketingAgencies": "Marketing agencies",
+    "learnMoreHeading": "Learn more",
+    "howItWorks": "How it works",
+    "pricing": "Pricing",
+    "faq": "FAQ"
+  },
+  "cta": {
+    "heading": "Ready to let your customers promote your cafe?",
+    "description": "Join Tagly and turn the coffee photos your customers already take into real local marketing."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "//": "Used in: app/(app)/referrals/index.tsx (referrals namespace).",
+  "title": "Pozvi a vydělej",
+  "statEarnings": "Výdělky z pozvání",
+  "statBusinesses": "Pozvaných podniků",
+  "statUsers": "Pozvaných přátel",
+  "howTitle": "Jak to funguje",
+  "inviteBusiness": "Pozvi podnik a získej",
+  "businessBase": "z jejich útrat",
+  "inviteFriend": "Pozvi přítele a získej",
+  "friendBase": "z jejich výdělků",
+  "boostNote": "Plnou sazbu získáváš prvních {{months}} měsíců od jejich registrace. Poté se sníží na polovinu, ale platí napořád.",
+  "ratesChangeNote": "Sazby za pozvání se mohou v budoucnu změnit.",
+  "inviteTitle": "Tvůj kód a odkaz",
+  "yourCode": "Tvůj kód",
+  "yourLink": "Tvůj odkaz",
+  "shareLink": "Sdílet odkaz",
+  "referralSettings": "Nastavení pozvánek",
+  "codeCopied": "Kód zkopírován",
+  "linkCopied": "Odkaz zkopírován",
+  "shareMessage": "Připoj se na Tagly a vydělávej peníze návštěvami podniků. {{link}}"
+}

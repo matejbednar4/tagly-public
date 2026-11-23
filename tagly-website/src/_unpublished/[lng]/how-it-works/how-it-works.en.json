@@ -1,0 +1,69 @@
+{
+  "//": "Used in: src/app/[lng]/how-it-works/page.tsx — hero, 5 step sections, why-it-works highlight, industry links, CTA.",
+  "meta": {
+    "title": "How Tagly Works for Local Businesses",
+    "description": "See how Tagly works for restaurants, cafes, gyms and other local businesses: your customers share you in an Instagram Story, and you pay once the story has been seen."
+  },
+  "hero": {
+    "title": "How Tagly works for your business",
+    "intro": "Running a business is hard enough without spending hours on marketing. Here is the whole thing, from sign-up to the moment you pay. Five steps, and after setup only one of them still needs you."
+  },
+  "steps": {
+    "s1": {
+      "title": "Sign up and create your business page",
+      "alt": "Bloom Cafe's business page in the Tagly Partner app, showing a photo of brunch dishes, an About description, email and Instagram contacts beside an empty Add phone slot, and an approved website link",
+      "desc": "There are no passwords. You sign in to the Tagly Partner app with a one-time code sent to your email, or with Apple or Google. Then you create your business page: your name, your business type, your address, and one landscape photo as the banner. That is everything we require. More photos, a description, opening hours, your Instagram handle, links, phone and email are all optional and can wait. The page is live as soon as you save it, and your address puts you on the Tagly map so people nearby can find you."
+    },
+    "s2": {
+      "title": "Choose how you fund rewards",
+      "alt": "Home screen of the Tagly Partner app showing a Visible badge, $300 in available credits, a pay-as-you-go card slot and a Manage wallet button",
+      "desc": "Rewards come out of your Tagly balance, and there are two ways to fund it. Pay as you go: link a card, put nothing in upfront, and you are visible immediately. Your card is charged only after a story has been paid, and only for what your credits do not cover, plus $0.30 per charge. Or prepay with credits: 1 credit is $1, the smallest purchase is $50, credits never expire, and there is no per-charge fee. On credits alone you are visible from $15 available upwards. Neither route is a subscription or a contract. In the app every amount is also shown in Czech koruna at the current exchange rate."
+    },
+    "s3": {
+      "title": "Customers find you and share a story",
+      "alt": "The Instagram Story composer with a photo of coffee on a cafe table and a Bloom Cafe location sticker placed on it, ready to post",
+      "desc": "People browsing the Tagly map see your business and an estimate of what they could earn by sharing it. They come in and pay full price, because Tagly has no discounts and no coupons. Then they post an Instagram Story from their visit and pick it in the app. The story has to show who you are: they tag or mention you, or add the location sticker, so your name is visible on it. It has to be a Story, not a feed post and not a Reel. Anyone can share you, and you pay for the people who could actually walk in: the closer someone's audience is to you, the more their story is worth."
+    },
+    "s4": {
+      "title": "Tagly works out the price, and you pay about a day later",
+      "alt": "Share details in the Tagly Partner app showing a Paid status and a reward of $4.6 paid on 29 July 2026",
+      "desc": "Nothing is charged when the story goes live. About 24 hours later Instagram reports how many people actually saw it, and that is when the reward is paid and the money leaves your balance. The price comes from two real numbers: how many people genuinely saw the story, and how close those people are to you. Tagly also caps what a single story can cost, so one story can never run away with your budget. You never set a rate and you never bid on anything. The only number you choose is your budget.",
+      "cta": "See how we calculate rewards"
+    },
+    "s5": {
+      "title": "Rate every story you get",
+      "alt": "Share details in the Tagly Partner app showing a four and a half star rating and a performance card with 193 reach and 23 interactions",
+      "desc": "In the Tagly Partner app you see every story shared about your business. You rate it once, and that rating stays with the customer, so people who share well earn more over time. If something about a story is wrong, you report it instead of rating it and our team looks into it. Nothing is charged while we do, and reporting it on the first day, before the story is paid, means you pay nothing for it."
+    }
+  },
+  "why": {
+    "title": "Why Instagram Stories from real customers work",
+    "intro": "Traditional ads interrupt people. A story from someone you follow is something you actually watch. That difference matters for local businesses.",
+    "cards": [
+      {
+        "title": "People trust their friends, not ads",
+        "description": "A recommendation from someone you know beats any ad. When a customer shares your business in their story, their followers see a genuine recommendation from a person they trust, not a brand buying attention. And you only pay for the part of that audience that is close enough to visit, so a small local following is worth more to you than a big scattered one."
+      },
+      {
+        "title": "Your customers create and share the content for you",
+        "description": "You never shoot an ad, write a caption, or brief anyone. Your customers take the photo they were going to take anyway, their meal, their coffee, a gym selfie, and share it with their followers. There is nothing to design and nothing to schedule. The only thing left for you is rating the story afterwards."
+      }
+    ]
+  },
+  "industry": {
+    "title": "See how it works for your industry",
+    "intro": "Tagly has different benefits depending on the type of business you run. See how it applies to yours.",
+    "links": {
+      "restaurants": "Restaurants",
+      "cafes": "Cafes",
+      "gyms": "Gyms",
+      "salons": "Salons",
+      "other": "Other local businesses"
+    }
+  },
+  "cta": {
+    "heading": "Want to learn more?",
+    "description": "Get in touch and we'll walk you through how Tagly can work for your business.",
+    "readFaq": "Read the FAQ"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "//": "Used in: tagly-shared/client/components/overlays/AcceptLatestTosModal (acceptTos namespace). Blocking app-open modal shown when the Terms of Service have been updated.",
+  "title": "We've updated our Terms of Service",
+  "body": "We've made some changes to our Terms of Service. Please review and accept them to keep using Tagly.",
+  "agreeLine": "I have read and agree to the <terms>Terms of Service</terms>.",
+  "agree": "Agree and continue"
+}

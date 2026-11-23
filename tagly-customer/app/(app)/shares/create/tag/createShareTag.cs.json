@@ -1,0 +1,12 @@
+{
+  "//": "Used in: app/(app)/shares/create/tag/index.tsx (createShareTag namespace). Zobrazí se, když je vytvořené sdílení zamítnuté, protože story jasně neoznačilo podnik (chyba 4100). Přátelské nasměrování, ne kárání.",
+  "topTitle": "Označ podnik",
+  "thisBusiness": "tento podnik",
+  "heading": "Tvoje story musí zmínit {{business}}",
+  "body": "Ve tvém story jsme nenašli označení podniku. Ujisti se, že v něm je napsáno jedno z těchhle označení:",
+  "noTags": "Ujisti se, že tvoje story jasně ukazuje název podniku nebo jeho Instagram, a sdílej nové story.",
+  "tipTitle": "Podnik už je označen?",
+  "tipBody": "Zkus označení trochu zvětšit a sdílej story znovu. Většinou to úplně stačí.",
+  "tryAnother": "Vybrat nebo sdílet jiné story",
+  "contactSupport": "Kontaktovat podporu"
+}

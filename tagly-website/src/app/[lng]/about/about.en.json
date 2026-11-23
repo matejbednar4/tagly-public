@@ -1,0 +1,28 @@
+{
+  "//": "Used in: src/app/[lng]/about/page.tsx — hero (title + two paragraphs) and the team grid (names NOT translated, roles are; roles align by index with the team array in page.tsx). Deliberately short: the copy mirrors the apps' AboutSheet (tagly-shared/client/components/feedback/AboutSheet), converted to vykání in CS. The old long-form story/mission/beliefs copy (and the removed links/CTA sections) is parked in src/_unpublished/removed-copy/.",
+  "meta": {
+    "title": "About Tagly",
+    "description": "Tagly is an app where local businesses pay real customers for sharing them on Instagram. We're a small team in Prague building marketing that actually works."
+  },
+  "hero": {
+    "title": "About Tagly",
+    "p1": "Tagly started with a simple idea: the best marketing for a business is real people sharing it. So we built an app where businesses pay regular people for their reach, and people earn from their posts.",
+    "p2": "We're a small team based in Prague. We work on the app every day, and we read everything you send us."
+  },
+  "team": {
+    "title": "Our team",
+    "roles": [
+      "Co-founder, Product",
+      "Co-founder, Sales",
+      "Late Co-founder, Distribution",
+      "Marketing & Distribution"
+    ],
+    "linkedinAria": "{{name}} on LinkedIn"
+  },
+  "company": {
+    "title": "Company information",
+    "name": "Flaer, Inc.",
+    "incorporated": "incorporated in Delaware, USA",
+    "address": "Registered address: 251 Little Falls Drive, Wilmington, DE 19808"
+  }
+}

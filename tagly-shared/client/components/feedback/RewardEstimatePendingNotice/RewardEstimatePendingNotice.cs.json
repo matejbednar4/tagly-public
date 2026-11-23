@@ -1,0 +1,5 @@
+{
+  "//": "Used in: tagly-shared/client/components/feedback/RewardEstimatePendingNotice (rewardEstimatePending namespace). Shown on the map + Discover while the IG audience snapshot is still being taken.",
+  "title": "Počítáme tvoje odměny",
+  "subtitle": "Odhadujeme, kolik si vyděláš za sdílení různých míst. Bude to brzy připravené."
+}

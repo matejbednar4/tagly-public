@@ -1,0 +1,119 @@
+{
+  "//": "Used in: src/app/[lng]/for-customers/faq/page.tsx — hero (Trans support link), 4 FaqSection groups, CTA. *Inline keys render with <Trans>; plain `answer` strings feed FAQ JSON-LD.",
+  "meta": {
+    "title": "Časté dotazy pro zákazníky",
+    "description": "Časté dotazy k používání Tagly. Jak si vydělat na story o lokálních podnicích, jak se počítají odměny a jak si peníze vybrat."
+  },
+  "hero": {
+    "title": "Časté dotazy",
+    "intro": "Všechno podstatné o vydělávání s Tagly. Pokud tu vaši otázku nenajdete, <support>ozvěte se nám</support> a poradíme."
+  },
+  "groups": {
+    "gettingStarted": "Než začnete",
+    "posting": "Story a odesílání",
+    "rewards": "Odměny a výběr peněz",
+    "account": "Účet a soukromí"
+  },
+  "gettingStarted": {
+    "items": [
+      {
+        "question": "Proč potřebuji profesionální instagramový účet?",
+        "answer": "Statistiky story, jako je dosah a počet zhlédnutí, dává Instagram k dispozici jen u profesionálních účtů, tedy u firemního účtu nebo účtu tvůrce. Právě z těch čísel Tagly story změří a spočítá odměnu. Přepnutí je zdarma, trvá asi půl minuty a o nic nepřijdete. Navíc uvidíte víc o tom, jak si váš vlastní obsah vede."
+      },
+      {
+        "question": "Můžu Tagly používat se soukromým účtem?",
+        "answer": "Tagly potřebuje profesionální instagramový účet a ten jde zapnout jen u veřejného profilu. Platí to i po zveřejnění: nechte profil veřejný, dokud si Tagly nestáhne čísla ke story, a odměnu dostanete jako obvykle."
+      },
+      {
+        "question": "Co je Tagly?",
+        "answer": "Tagly je aplikace, která vám platí za story o lokálních podnicích. Zajdete do podniku, dáte o něm story, to pak odešlete v aplikaci a získáte odměnu podle toho, kolik lidí ho vidělo a jak blízko mají tihle lidé k danému podniku. Není to influencer marketing a žádné minimum sledujících tu není. Propagaci platí podniky, takže vás aplikace nestojí nic."
+      },
+      {
+        "question": "Potřebuji hodně sledujících?",
+        "answer": "Ne, žádné minimum sledujících neexistuje. Rozhoduje, kolik lidí vaše story doopravdy vidělo a jak blízko mají tihle lidé k podniku, ne počet sledujících. Ještě než něco zveřejníte, ukáže vám mapa v aplikaci odhad odměny u každého podniku ve vašem okolí, takže zhruba víte, na čem jste."
+      },
+      {
+        "question": "Je Tagly zdarma?",
+        "answer": "Ano, úplně. Za používání Tagly nikdy nic neplatíte. Odměny financují podniky, vy jenom sdílíte a vyděláváte."
+      },
+      {
+        "question": "Jak se zaregistruji?",
+        "answer": "Stáhněte si aplikaci Tagly a založte si účet jednorázovým kódem, který vám přijde e-mailem, nebo přes Apple či Google. Žádná hesla tu nejsou. Chceme po vás jen jméno a e-mail. Propojení Instagramu je samostatný krok a můžete ho udělat později. Právě jím se vydělávání odemyká."
+      }
+    ],
+    "q3Inline": "Tagly je aplikace, která vám platí za story o lokálních podnicích. Zajdete do podniku, dáte o něm story, to pak odešlete v aplikaci a získáte odměnu podle toho, kolik lidí ho vidělo a jak blízko mají tihle lidé k danému podniku. Není to influencer marketing a žádné minimum sledujících tu není. Propagaci platí podniky, takže vás aplikace nestojí nic. <hiw>Podívejte se, jak to funguje</hiw>.",
+    "q6Inline": "Stáhněte si <app>aplikaci Tagly</app> a založte si účet jednorázovým kódem, který vám přijde e-mailem, nebo přes Apple či Google. Žádná hesla tu nejsou. Chceme po vás jen jméno a e-mail. Propojení Instagramu je samostatný krok a můžete ho udělat později. Právě jím se vydělávání odemyká."
+  },
+  "posting": {
+    "items": [
+      {
+        "question": "Jaký obsah můžu sdílet?",
+        "answer": "Story na Instagramu, ne příspěvky na profilu a ne reely. Dejte tam to, co byste dali normálně: fotku jídla, selfie z posilovny, hrnek kávy. Jediná podmínka je, aby byl ve story vidět název podniku, takže ho označte, přidejte polohovou nálepku, nebo název prostě napište."
+      },
+      {
+        "question": "Poznají lidi, že za story dostávám zaplaceno?",
+        "answer": "Tagly nikde zmiňovat nemusíte a vaše story vypadá stejně jako cokoli jiného, co dáváte. Vaši sledující o Tagly nikde nezavadí. Co ale udělat musíte, je dodržet pravidla o označování reklamy, která platí tam, kde žijete. Jde o placenou propagaci, takže pokud ji podle místních pravidel máte označit, označte ji."
+      },
+      {
+        "question": "Zveřejní Tagly něco na mém účtu?",
+        "answer": "Ne. Tagly si přečte story, které odešlete, a jeho statistiky. Nedokáže nic zveřejnit, poslat zprávu ani cokoli na vašem účtu změnit a vaše heslo k Instagramu nikdy nevidí."
+      },
+      {
+        "question": "Můžu dát story o jakémkoli podniku?",
+        "answer": "Vyděláte si u podniků, které vidíte na mapě v aplikaci. Každý podnik na mapě má na odměny připravený rozpočet, takže co je na mapě, u toho si vyděláte. Než něco zveřejníte, mrkněte se na mapu."
+      },
+      {
+        "question": "Musím si v podniku něco koupit?",
+        "answer": "Nic se nekontroluje: žádné přihlášení na místě, žádná účtenka, žádný doklad o nákupu. Tagly je myšlené na místa, kam opravdu chodíte, takže dejte story ze skutečné návštěvy a je to."
+      },
+      {
+        "question": "Jak často můžu dát story o stejném podniku?",
+        "answer": "U jednoho podniku jednou denně. O jiném podniku můžete dát story i tentýž den. Každé story se proplácí jednou, takže až si budete chtít vydělat znovu, dejte nové."
+      },
+      {
+        "question": "Co když podnik zapomenu označit?",
+        "answer": "Tagly hledá název podniku ve chvíli, kdy story odesíláte, a hned vám dá vědět, jestli ho nevidí. Stačí zveřejnit nové story s viditelným názvem a odeslat to."
+      }
+    ],
+    "q1Inline": "Story na Instagramu, ne příspěvky na profilu a ne reely. Dejte tam to, co byste dali normálně: fotku jídla, selfie z posilovny, hrnek kávy. Jediná podmínka je, aby byl ve story vidět název podniku, takže ho označte, přidejte polohovou nálepku, nebo název prostě napište. <hiw>Projděte si celý postup krok za krokem</hiw>."
+  },
+  "rewards": {
+    "items": [
+      {
+        "question": "Kolik si můžu vydělat za jedno story?",
+        "answer": "Pevná sazba neexistuje. Rozhoduje, kolik lidí vaše story doopravdy vidělo a jak blízko mají tihle lidé k podniku, takže s opravdu místním publikem se dostanete daleko. Ještě než něco zveřejníte, ukáže vám mapa v aplikaci odhad u každého podniku ve vašem okolí. To číslo je odhad, konečnou odměnu spočítáme ze skutečných čísel, jakmile story skončí."
+      },
+      {
+        "question": "Jak dlouho trvá, než dostanu zaplaceno?",
+        "answer": "Zhruba 24 hodin. Tak dlouho trvá Instagramu, než nahlásí, kolik lidí vaše story vidělo. Potom Tagly spočítá odměnu a připíše ji na váš zůstatek."
+      },
+      {
+        "question": "Jak si vyberu peníze?",
+        "answer": "V aplikaci Tagly klepněte na „Vybrat peníze“. Převod zajišťuje Stripe, takže si jednou propojíte účet Stripe, což je otázka minuty. Minimum na výběr je 1 $, částky se ukazují i v korunách podle aktuálního kurzu, za výběr neplatíte nic a peníze bývají na účtu do jednoho až dvou pracovních dnů."
+      },
+      {
+        "question": "Jak dlouho mám nechat story viset?",
+        "answer": "Nechte ho viset celých 24 hodin a profil mějte veřejný. Díky tomu si Tagly stáhne čísla z Instagramu a vy získáte odměnu."
+      }
+    ]
+  },
+  "account": {
+    "items": [
+      {
+        "question": "K jakým datům z mého Instagramu se Tagly dostane?",
+        "answer": "Ke story, která odešlete, a k jejich statistikám, dál k počtu vašich sledujících a k hrubému přehledu, kde vaše publikum žije a jaké je jeho věkové a genderové složení. Odměna se počítá z dosahu story a z toho, jak blízko má vaše publikum k podniku. K vašim zprávám, k heslu ani k ničemu soukromému se Tagly nedostane."
+      },
+      {
+        "question": "Můžu instagramový účet odpojit?",
+        "answer": "Ano, kdykoli v nastavení účtu. Nejdřív ale nechte doběhnout poslední story: odpojením se uzavřou všechna story, která ještě čekají na odměnu, takže počkejte, až budou zaplacená. Propojit se můžete zase kdykoli a hned nato dál odesílat. Můžete taky požádat o smazání všech dat z Instagramu, která o vás Tagly uložilo."
+      }
+    ],
+    "q2Inline": "Ano, kdykoli v nastavení účtu. Nejdřív ale nechte doběhnout poslední story: odpojením se uzavřou všechna story, která ještě čekají na odměnu, takže počkejte, až budou zaplacená. Propojit se můžete zase kdykoli a hned nato dál odesílat. Můžete taky požádat o <dataDeletion>smazání všech dat z Instagramu</dataDeletion>, která o vás Tagly uložilo."
+  },
+  "cta": {
+    "heading": "Chcete začít vydělávat?",
+    "description": "Stáhněte si Tagly, najděte podnik ve svém okolí a získejte první odměnu ještě dnes.",
+    "download": "Stáhnout Tagly",
+    "seeHowItWorks": "Jak to funguje"
+  }
+}

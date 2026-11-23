@@ -1,0 +1,7 @@
+{
+  "//": "Used in: components/businesses/NoBusinessCard (noBusinessCard namespace). The create-your-business-page prompt card.",
+  "notVisible": "Nejsi vidět",
+  "title": "Vytvoř si stránku podniku",
+  "body": "Přidej svůj podnik, aby tě zákazníci našli a mohli začít sdílet.",
+  "cta": "Vytvořit stránku podniku"
+}

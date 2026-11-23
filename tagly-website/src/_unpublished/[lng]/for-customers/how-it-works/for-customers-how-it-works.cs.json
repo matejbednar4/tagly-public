@@ -1,0 +1,49 @@
+{
+  "//": "Used in: src/app/[lng]/for-customers/how-it-works/page.tsx — hero, 4 steps (s1 ScrollLink, s2/s4 app link via <Trans>; s3 has no image, shows a 24h badge), examples, CTA.",
+  "meta": {
+    "title": "Jak to funguje pro zákazníky",
+    "description": "Vydělávejte na story o svých oblíbených lokálních podnicích. Dáte story na Instagram, odešlete ho v aplikaci Tagly a peníze dostanete přes Stripe. Tady je celý postup."
+  },
+  "hero": {
+    "title": "Jak si vydělat s Tagly",
+    "intro": "Zajdete do lokálního podniku, dáte o něm story na Instagram a dostanete zaplaceno. Žádné minimum sledujících, žádné přihlášky, žádné domlouvání se značkami. Stačí profesionální instagramový účet, přepnutí na něj je zdarma, a podnik na Tagly někde ve vašem okolí."
+  },
+  "steps": {
+    "s1": {
+      "title": "Dejte o podniku story na Instagram",
+      "alt": "Editor instagramového story s fotkou kávy na stole v kavárně a přidanou polohovou nálepkou Bloom Cafe, připravený ke zveřejnění",
+      "desc": "Zajděte do lokálního podniku, který na Tagly je, dejte si něco dobrého a hoďte to do svého instagramového story. Musí to být story, ne příspěvek na profilu ani reel. Hlídejte si, aby byl ve story vidět název podniku: označte ho, přidejte polohovou nálepku, nebo název prostě napište. Přesně to Tagly hledá. Zbytek je na vás, zveřejněte, co vám přijde dobré. Níž na stránce najdete <examples>příklady obsahu, který můžete sdílet</examples>."
+    },
+    "s2": {
+      "title": "Odešlete story v aplikaci Tagly",
+      "alt": "Aplikace Tagly s mapou Prahy a podniky v okolí, například Bloom Cafe, Grind Gym nebo Flow Yoga, u každého s odhadovanou odměnou, u Bloom Cafe cca 104 Kč za dosah 236, a s tlačítkem Získat odměnu zde",
+      "desc": "Otevřete <app>aplikaci Tagly</app> a založte si účet přes e-mail, Apple nebo Google. Žádná hesla tu nejsou. Pak propojte Instagram, najděte podnik na mapě a klepněte na „Získat odměnu zde“. Vyberete story, které jste právě zveřejnili, a hotovo, celé to zabere asi půl minuty. Story jen musí být v době odeslání ještě živé. Každé story se proplácí jednou a u stejného podniku si můžete vydělat jednou denně. Tagly za vás nikdy nic nezveřejní, nevidí vaše zprávy a na vašem instagramovém účtu nemůže nic měnit."
+    },
+    "s3": {
+      "title": "Počkejte zhruba 24 hodin",
+      "desc": "Instagram potřebuje asi den, než nahlásí, kolik lidí vaše story vidělo. Jakmile to udělá, Tagly spočítá odměnu a to číslo už je konečné. Během čekání nemusíte dělat vůbec nic. Nechte story viset celý den a profil mějte veřejný, a odměnu získáte."
+    },
+    "s4": {
+      "title": "Nechte si zaplatit a peníze si vyberte, kdy chcete",
+      "alt": "Detail sdílení v aplikaci Tagly se stavem Zaplaceno, hodnocením čtyři a půl hvězdy, získanou odměnou 114 Kč a statistikami: dosah 241 a 23 interakcí",
+      "desc": "Odměna přistane na vašem zůstatku v Tagly. Než si ji vyberete, propojíte si účet Stripe, což je otázka minuty, a Stripe se postará o převod i o vaše bankovní údaje. Minimum na výběr je 1 $, částky se ukazují i v korunách podle aktuálního kurzu, za výběr neplatíte nic a peníze bývají na účtu do jednoho až dvou pracovních dnů. Otevřete <app>aplikaci Tagly</app>, klepněte na výběr peněz a je to."
+    }
+  },
+  "examples": {
+    "title": "Příklady obsahu, za který dostanete zaplaceno",
+    "alts": [
+      "Dvě latté s lístkem v mléčné pěně na tmavém dřevěném stole v Green House Cafe",
+      "Francouzský toast s čerstvými bobulemi, fíky a šlehačkou v Main Street Cafe",
+      "Wafle se zmrzlinou a čokoládovou polevou vedle cappuccina v Brunch House",
+      "Steak s fazolovými lusky a pečenými bramborami na žlutém ubrusu v Joe's Steak House",
+      "Dřepový stojan a činky Eleiko ve Strength Fit, vyfocené pro story na Instagramu",
+      "Dvě pizzy z pece na dřevo s prosciuttem a vejcem v Italian Corner"
+    ]
+  },
+  "cta": {
+    "heading": "Chcete začít vydělávat?",
+    "description": "Stáhněte si Tagly, najděte podnik ve svém okolí a získejte první odměnu ještě dnes.",
+    "download": "Stáhnout Tagly",
+    "readFaq": "Přečíst časté dotazy"
+  }
+}

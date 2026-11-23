@@ -1,0 +1,15 @@
+{
+  "//": "Navbar + footer chrome + metadata. Consumed by: src/app/layout.tsx (generateMetadata), src/components/TopMenu.tsx, src/components/NavDrawer.tsx, and the footer in src/app/page.tsx. Tykání; CTA v imperativu (Stáhni si Tagly).",
+  "metaTitle": "Přidej se na Tagly",
+  "metaDescription": "Dostávej zaplaceno za sdílení oblíbených podniků na Instagram Stories. Odměny platí podniky, ty nikdy nic neplatíš.",
+  "getTagly": "Stáhni si Tagly",
+  "forBusiness": "Pro podniky",
+  "forBusinessSubheading": "Vlastníš restauraci, kavárnu nebo jiný podnik? S Tagly tě propagují sami zákazníci, protože lidé věří kamarádům, ne reklamě.",
+  "getTaglyForBusiness": "Stáhni si Tagly Partner",
+  "talkToSales": "Domluv si s námi schůzku",
+  "menuLabel": "Menu",
+  "footerCopyright": "© {{year}} Flaer, Inc. Všechna práva vyhrazena.",
+  "languageSwitcherLabel": "Jazyk",
+  "languageEnglish": "English",
+  "languageCzech": "Čeština"
+}

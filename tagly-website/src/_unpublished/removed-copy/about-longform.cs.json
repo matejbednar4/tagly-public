@@ -1,0 +1,61 @@
+{
+  "//": "Used in: src/app/[lng]/about/page.tsx — hero, story, mission, team (names NOT translated, roles are), beliefs, links (Trans), CTA.",
+  "meta": {
+    "title": "O Tagly",
+    "description": "Tagly je marketingová služba, kterou pohánějí skuteční zákazníci. Sídlíme v Praze. Přečtěte si náš příběh, naše poslání a poznejte tým, který pomáhá lokálním podnikům růst díky autentické propagaci."
+  },
+  "hero": {
+    "title": "První marketingová služba, kterou pohánějí výhradně skuteční zákazníci",
+    "subtitle": "Tagly vzniklo z jednoho prostého přesvědčení: nejsilnější marketing nedělají reklamy, ale lidé."
+  },
+  "story": {
+    "title": "Náš příběh",
+    "p1": "Nápad na Tagly přišel v polovině roku 2024. Všimli jsme si dvou věcí. Většina lidí, kteří přidávají na Instagram, neměla jak si tím vydělat. A pouštět si jako lokální podnik reklamy bylo zbytečně složité. Zákazníci svoje oblíbená místa občas ukazovali už tehdy, jen neměli důvod to dělat pravidelně. Říkali jsme si, že se to musí dát propojit.",
+    "p2": "Zpočátku nám to přišlo neproveditelné. Nevěděli jsme, kde začít. Na začátku roku 2025 jsme se do toho ale pustili naplno a trvalo skoro rok, než jsme měli verzi, se kterou jsme byli doopravdy spokojení. Tagly běží od ledna 2026 a sídlí v Praze."
+  },
+  "mission": {
+    "title": "Naše poslání",
+    "p1": "Tagly stavíme proto, aby lokální podniky rostly díky marketingu, který opravdu funguje, a aby si běžní lidé mohli častěji dopřát místa, která mají rádi, aniž by je to vyšlo draho.",
+    "p2": "U klasické reklamy musíte vyrábět obsah, nastavovat kampaně a pořád něco optimalizovat. A po vší té práci se stejně nemusí vyplatit. Influencer si nechá zaplatit i desetkrát víc, než jedno story doopravdy stojí, a vy přitom nemáte jak zjistit, jestli jsou jeho sledující vůbec z vašeho města. Ani jedno není stavěné pro restauraci na rohu, sousedské fitko nebo malou kavárnu.",
+    "p3": "Tagly je jiné. Když k vám přijde skutečný zákazník, odejde spokojený a dá to na Instagram, tohle je marketing, který za zaplacení stojí. Dostane se k lidem, kteří opravdu bydlí kousek od vás a nejspíš k vám přijdou taky."
+  },
+  "team": {
+    "title": "Náš tým",
+    "intro": "Tagly je malý tým se sídlem v Praze. Jde nám o jedinou věc: aby lokální marketing fungoval líp podnikům i jejich zákazníkům.",
+    "roles": [
+      "Spoluzakladatel, produkt",
+      "Spoluzakladatel, obchod",
+      "Spoluzakladatel, marketing",
+      "Design, branding"
+    ],
+    "linkedinAria": "{{name}} na LinkedInu"
+  },
+  "beliefs": {
+    "title": "Čemu věříme",
+    "items": [
+      {
+        "title": "Skuteční zákazníci, ne influenceři",
+        "description": "Story od někoho, kdo k vám doopravdy chodí a zná vaši čtvrť, má větší cenu než placený příspěvek od cizího člověka s velkým počtem sledujících."
+      },
+      {
+        "title": "Lokální dosah, ne čísla pro efekt",
+        "description": "Sto zhlédnutí od lidí z okolí má větší cenu než deset tisíc od lidí z druhého konce republiky. Tagly je postavené tak, aby upřednostňovalo dosah, na kterém záleží."
+      },
+      {
+        "title": "Férová cena, ne paušál",
+        "description": "Každé story má jiný dosah a jiný dopad. Tagly spočítá, jakou má doopravdy hodnotu, takže podnik zaplatí férovou cenu a zákazník dostane férovou odměnu."
+      },
+      {
+        "title": "Jednoduše, ne složitě",
+        "description": "Žádné kampaně ke správě, žádné kreativy ke schvalování, žádné cílení k nastavování. Podnik se zaregistruje, připojí kartu nebo si dobije kredity a o zbytek se postarají jeho zákazníci."
+      }
+    ]
+  },
+  "links": {
+    "text": "Chcete vědět víc? <hiw>Podívejte se, jak Tagly funguje</hiw>, <pricing>projděte si ceník</pricing> nebo se nám <contact>ozvěte</contact>."
+  },
+  "cta": {
+    "heading": "Připraveni růst se svými zákazníky?",
+    "description": "Přidejte se k Tagly a udělejte ze svých zákazníků ty nejlepší marketéry, jaké můžete mít. Žádné reklamy, žádní influenceři, jen skutečné doporučení od lidí z okolí."
+  }
+}

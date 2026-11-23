@@ -1,0 +1,33 @@
+{
+  "//": "Used in: app/(app)/settings/index.tsx + the settings/* sub-screen top bars (settingsAdvertiser namespace). The advertiser settings hub, reached from the drawer.",
+  "title": "Settings",
+
+  "accountSection": "Account & security",
+  "email": "Email",
+  "security": "Security",
+  "referrals": "Referrals",
+  "referralsSub": "Your code and who invited you",
+
+  "businessSection": "Business",
+  "businessPages": "Business pages",
+  "businessPagesSubtitle": "Edit or remove your pages",
+
+  "preferencesSection": "Preferences",
+  "language": "Language",
+
+  "notificationsSection": "Notifications",
+  "pushNotifications": "Push",
+  "emailNotifications": "Email",
+
+  "legalSection": "Legal",
+  "privacyPolicy": "Privacy Policy",
+  "termsOfService": "Terms of Service",
+
+  "dangerSection": "Danger zone",
+  "deleteAccount": "Delete account",
+
+  "//titles": "Sub-screen top-bar titles.",
+  "pushTitle": "Push notifications",
+  "emailTitle": "Email notifications",
+  "deleteTitle": "Delete account"
+}

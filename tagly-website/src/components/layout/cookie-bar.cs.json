@@ -1,0 +1,7 @@
+{
+  "//": "Used in: src/components/layout/CookieBar.tsx — analytics cookie consent banner, shown to every visitor who has not yet accepted or rejected.",
+  "title": "Používáme cookies",
+  "description": "Analytické cookies nám ukazují, jak návštěvníci náš web používají. Podrobnosti najdete v <link>Zásadách ochrany osobních údajů</link>.",
+  "accept": "Přijmout",
+  "reject": "Odmítnout"
+}

@@ -1,0 +1,6 @@
+-- Run these once before running migrations:
+
+CREATE EXTENSION IF NOT EXISTS postgis WITH SCHEMA public;
+CREATE EXTENSION IF NOT EXISTS citext WITH SCHEMA public;
+CREATE SCHEMA IF NOT EXISTS "app"; 
+CREATE SCHEMA IF NOT EXISTS "jobs";

@@ -1,0 +1,7 @@
+{
+  "//": "Used in: tagly-shared/client/components/pickers/LocalePicker/index.tsx (localePicker namespace) — shared by tagly-customer + tagly-advertiser sign-in.",
+  "heading": "Kde budeš Tagly používat?",
+  "subtext": "Podle toho ti nastavíme správnou měnu a možnosti.",
+  "us": "Spojené státy",
+  "cz": "Česko"
+}

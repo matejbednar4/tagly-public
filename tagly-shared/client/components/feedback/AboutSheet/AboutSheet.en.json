@@ -1,0 +1,15 @@
+{
+  "//": "Used in: components/feedback/AboutSheet (about namespace).",
+  "title": "About Tagly",
+  "story": "Tagly started with a simple idea: the best marketing for a business is real people sharing it. So we built an app where businesses pay regular people for their reach, and people earn from their posts.",
+  "storyHighlight": "the best marketing for a business is real people sharing it",
+  "storyTeam": "We're a small team working on the app every day, and we read everything you send us.",
+  "storyTeamHighlight": "we read everything you send us",
+  "followLabel": "Follow along",
+  "rateTitle": "Enjoying Tagly?",
+  "rateBody": "Rate us on {{store}} so more people can find us. Thank you.",
+  "contactTitle": "Want to tell us something?",
+  "contactBody": "Feedback, an idea, or something not working. It lands right in our inbox.",
+  "contactLabel": "Contact",
+  "copyright": "© {{year}} Flaer, Inc. All rights reserved."
+}

@@ -1,0 +1,5 @@
+{
+  "//": "Used in: contexts/instagram/AndroidInstagramAuthContext.tsx (androidInstagramAuth namespace).",
+  "webviewCancel": "Cancel",
+  "webviewTitle": "Connect Instagram"
+}

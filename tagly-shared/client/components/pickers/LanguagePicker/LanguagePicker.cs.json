@@ -1,0 +1,5 @@
+{
+  "//": "Used in: tagly-shared/client/components/pickers/LanguagePicker/index.tsx (languagePicker namespace) — the display-language sheet on the onboarding carousel, shared by tagly-customer + tagly-advertiser. The option labels are endonyms rendered by the component and are deliberately NOT translated.",
+  "heading": "Vyber si jazyk",
+  "subtext": "Změnit ho můžeš kdykoli později v nastavení."
+}

@@ -1,0 +1,42 @@
+{
+  "//": "Used in: src/app/[lng]/contact/page.tsx and src/components/contact/ContactRequestForm.tsx (client). The page merged the old /support page (2026-08-09; /support 301s here — old copy parked in src/_unpublished/removed-copy/) and is now hero + one dynamic form: form.category picks the layout (reason select is support-only, message copy follows the category) and the delivery inbox (src/lib/contact-inboxes.ts). form.reason.options are display labels aligned to the stable English values submitted to /api/support. Company info lives on /about.",
+  "meta": {
+    "title": "Contact",
+    "description": "Get in touch with Tagly. App support, feedback, and anything else. Fill out the form and we'll get back to you as soon as possible.",
+    "ogTitle": "Contact Tagly"
+  },
+  "hero": {
+    "title": "Contact us",
+    "subtitle": "Have a question, need help with the app, or want to tell us something? Write to us and we'll get back to you."
+  },
+  "form": {
+    "category": {
+      "label": "What are you reaching out about?",
+      "options": {
+        "support": "Support",
+        "feedback": "Feedback",
+        "other": "Something else"
+      }
+    },
+    "directEmail": "Or email us directly at <mail>{{email}}</mail>.",
+    "success": {
+      "title": "Message received",
+      "description": "Thanks for reaching out. We'll get back to you as soon as possible."
+    },
+    "name": { "label": "Your name", "placeholder": "John Smith" },
+    "email": { "label": "Email", "placeholder": "you@example.com" },
+    "reason": {
+      "label": "Reason",
+      "placeholder": "Select a reason",
+      "options": ["In-app problem", "Account issue", "Payment or billing", "Feature request", "Other"]
+    },
+    "message": {
+      "support": { "label": "Describe your issue", "placeholder": "Tell us what happened and how we can help" },
+      "feedback": { "label": "Your feedback", "placeholder": "Tell us what you like or what we should improve" },
+      "other": { "label": "Your message", "placeholder": "Tell us what you need" }
+    },
+    "submit": "Send message",
+    "submitting": "Sending...",
+    "error": "Something went wrong. Please try again or email us directly at <mail>{{email}}</mail>."
+  }
+}

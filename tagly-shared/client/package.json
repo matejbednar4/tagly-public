@@ -1,0 +1,80 @@
+{
+  "name": "@tagly/client",
+  "description": "Tagly shared React-Native client package: design system (colors, fonts, icons, components) + cross-app utils",
+  "version": "2.0.2",
+  "author": "Flaer, Inc.",
+  "private": true,
+  "type": "module",
+
+  "main": "./index.ts",
+  "react-native": "./index.ts",
+
+  "exports": {
+    ".": {
+      "react-native": "./index.ts",
+      "default": "./index.ts"
+    },
+    "./components/media/CustomMedia": {
+      "react-native": "./components/media/CustomMedia.native.tsx",
+      "default": "./components/media/CustomMedia.web.tsx"
+    },
+    "./components/media/FullscreenMediaGallery": {
+      "react-native": "./components/media/FullscreenMediaGallery.native.tsx",
+      "default": "./components/media/FullscreenMediaGallery.web.tsx"
+    }
+  },
+
+  "files": ["index.ts"],
+
+  "peerDependencies": {
+    "expo": "*",
+    "expo-clipboard": "*",
+    "expo-constants": "*",
+    "expo-file-system": "*",
+    "expo-image-manipulator": "*",
+    "expo-image-picker": "*",
+    "expo-linear-gradient": "*",
+    "expo-localization": "*",
+    "expo-location": "*",
+    "expo-mail-composer": "*",
+    "expo-secure-store": "*",
+    "expo-sharing": "*",
+    "expo-store-review": "*",
+    "expo-web-browser": "*",
+    "react": "*",
+    "react-native": "*",
+    "expo-router": "*",
+    "react-native-gesture-handler": "*",
+    "react-native-image-crop-picker": "*",
+    "react-native-keyboard-controller": "*",
+    "@react-navigation/native": "*",
+    "react-native-maps": "*",
+    "react-native-permissions": "*",
+    "react-native-qrcode-styled": "*",
+    "react-native-reanimated": "*",
+    "react-native-safe-area-context": "*",
+    "react-native-screens": "*",
+    "react-native-svg": "*",
+    "react-native-toast-message": "*",
+    "react-native-video": "*",
+    "react-native-view-shot": "*",
+    "react-native-webview": "*",
+    "@react-native-async-storage/async-storage": "*",
+    "@tanstack/react-query": "*",
+    "dayjs": "*",
+    "i18next": "*",
+    "lucide-react-native": "*",
+    "nanoid": "*",
+    "pdf-lib": "*",
+    "react-i18next": "*"
+  },
+
+  "devDependencies": {
+    "@types/react": "^19.1.10",
+    "typescript": "^5.7.3"
+  },
+
+  "scripts": {
+    "clean": "rm -rf dist"
+  }
+}

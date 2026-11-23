@@ -1,0 +1,16 @@
+{
+  "//": "Used in: app/(app)/transactions/index.tsx (transactions namespace). The full money history screen.",
+  "title": "Transactions",
+  "filterAll": "All types",
+  "filterSelected": "{{count}} selected",
+  "filterTitle": "Filter by type",
+  "filterDone": "Done",
+  "typeDeposit": "Deposits",
+  "typeSpend": "Share payments",
+  "typeRefund": "Refunds",
+  "typePromo": "Promo credits",
+  "typeAdjustment": "Adjustments",
+  "typeReferral": "Referral bonuses",
+  "empty": "No transactions yet",
+  "emptyHint": "Deposits, share payments and refunds will show up here."
+}

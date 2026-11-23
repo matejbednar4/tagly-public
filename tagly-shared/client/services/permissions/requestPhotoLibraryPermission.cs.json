@@ -1,0 +1,7 @@
+{
+  "//": "Used in: tagly-shared/client/services/permissions/requestPhotoLibraryPermission.ts (photoPermission namespace). Informal register (tykání); plain punctuation, no em dashes.",
+  "title": "Potřebujeme oprávnění",
+  "body": "Pro nahrávání obrázků povol v Nastavení přístup k fotkám.",
+  "openSettings": "Otevřít nastavení",
+  "cancel": "Zrušit"
+}

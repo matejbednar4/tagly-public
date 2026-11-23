@@ -1,0 +1,15 @@
+{
+  "//": "Navbar + footer chrome + metadata. Consumed by: src/app/layout.tsx (generateMetadata), src/components/TopMenu.tsx, src/components/NavDrawer.tsx, and the footer in src/app/page.tsx.",
+  "metaTitle": "Join Tagly",
+  "metaDescription": "Earn money for sharing the places you love on Instagram Stories. Businesses fund the rewards, you never pay a thing.",
+  "getTagly": "Get Tagly",
+  "forBusiness": "For business",
+  "forBusinessSubheading": "Own a restaurant, café or another business? With Tagly your own customers promote you, because people trust friends, not ads.",
+  "getTaglyForBusiness": "Get Tagly Partner",
+  "talkToSales": "Meet with us",
+  "menuLabel": "Menu",
+  "footerCopyright": "© {{year}} Flaer, Inc. All rights reserved.",
+  "languageSwitcherLabel": "Language",
+  "languageEnglish": "English",
+  "languageCzech": "Czech"
+}

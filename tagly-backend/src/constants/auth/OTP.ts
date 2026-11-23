@@ -1,0 +1,7 @@
+export const OTP = {
+  HASH_ROUNDS: 12,
+  MAX_ATTEMPTS: 5,
+  EXPIRATION_MS: 15 * 60 * 1000, // 15 minutes
+  MAX_RESENDS_PER_SESSION: 5,
+  MIN_RESEND_INTERVAL_MS: 1 * 60 * 1000, // 1 minutes
+};

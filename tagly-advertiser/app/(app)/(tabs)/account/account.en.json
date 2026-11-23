@@ -1,0 +1,16 @@
+{
+  "//": "Used in: app/(app)/(tabs)/account/index.tsx (account namespace). The identity/results dashboard tab (Invite & earn lives in the drawer).",
+  "title": "Account",
+  "memberSince": "On Tagly since {{date}}",
+  "provideFeedback": "Provide feedback",
+  "businessesTitle": "Your businesses",
+  "addBusiness": "Add a business",
+  "statsTitle": "Statistics",
+  "stats": {
+    "shares": "Total shares",
+    "reach": "Total reach",
+    "spend": "Total spend",
+    "avgPrice": "Avg. price per share",
+    "creditsPurchased": "Credits purchased"
+  }
+}

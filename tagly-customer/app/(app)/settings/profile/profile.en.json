@@ -1,0 +1,38 @@
+{
+  "//": "Used in: app/(app)/settings/profile/index.tsx + components/settings/{Gender,Interests}Field (settingsProfile namespace).",
+  "title": "Profile",
+
+  "detailsSection": "Your details",
+
+  "nameHeading": "Full name",
+  "namePlaceholder": "Your name",
+  "nameRequired": "Enter your name",
+  "nameFlaggedTitle": "Name not accepted",
+  "nameFlaggedBody": "Your name seems to contain explicit or offensive language. Please use a different name.",
+  "nameSaveFailedTitle": "Couldn't save your name",
+  "nameSaveFailedBody": "Please try again.",
+
+  "emailHeading": "Email",
+  "changeEmail": "Change",
+
+  "aboutSection": "About you",
+
+  "edit": "Edit",
+  "save": "Save",
+  "cancel": "Cancel",
+
+  "genderHeading": "Gender",
+  "male": "Male",
+  "female": "Female",
+  "unspecified": "Prefer not to say",
+
+  "interestsHeading": "Follower interests",
+  "interestsConfirmLabel": "interests",
+  "interestsEmpty": "None selected",
+  "interestsCooldown": "You can change these again on {{date}}.",
+  "interestsPlaceholder": "Add up to 3 interests",
+  "interestsPickerHeading": "What are your followers into?",
+  "interestsSearch": "Search interests",
+  "interestsAll": "All",
+  "interestsDone": "Done"
+}

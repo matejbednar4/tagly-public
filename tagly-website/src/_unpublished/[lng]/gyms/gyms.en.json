@@ -1,0 +1,140 @@
+{
+  "//": "Used in: src/app/[lng]/gyms/page.tsx — hero, problem cards, how-it-works flow, examples (4 photos), why-gyms, use cases, FAQ, internal links, CTA. faq.costInline/influencerInline render with <Trans>.",
+  "meta": {
+    "title": "Tagly for Gyms | Get Promoted by Real Members on Instagram",
+    "description": "Gym marketing that stays local. Tagly helps gyms and fitness studios get promoted on Instagram by their own members, who share their workouts as Stories and get paid for the local reach. No ads, no influencers, no content to create."
+  },
+  "hero": {
+    "title": "Your members are already proud of their workouts. Let them promote your gym too.",
+    "intro": "Gym selfies, progress photos, post-workout shots. Your members take these all the time, and plenty of them end up in an Instagram Story with no sign of where they were taken. Tagly gives them a reason to make your gym visible in that story, and pays them for the people near you who saw it."
+  },
+  "broken": {
+    "title": "Gym marketing has a retention problem",
+    "intro": "Traditional marketing brings people through the door. It does nothing to keep them coming back, and nothing to turn the members you already have into people who talk about you.",
+    "items": [
+      {
+        "title": "New member acquisition is expensive",
+        "description": "Sign-up promotions, search ads, free trial offers. You pay for all of them up front, before you know whether that member stays past the first month. The spend happens whether or not it works.",
+        "link": "Compare Tagly to Instagram ads"
+      },
+      {
+        "title": "Fitness influencers do not bring local members",
+        "description": "Paying a fitness influencer might look good on your feed, but their audience is spread across the whole country. A gym needs members who live fifteen minutes away, not followers in another region. Tagly prices the opposite way round: the further a story's audience is from your door, the closer its value falls to zero.",
+        "link": "Compare Tagly to influencer marketing"
+      },
+      {
+        "title": "Your best members never tell anyone",
+        "description": "The people who show up five days a week and love your gym are your strongest marketing asset. Most of them never think to recommend you publicly. They take gym selfies, they share progress shots, and they never make it clear where they train. That is the part Tagly fixes."
+      }
+    ]
+  },
+  "how": {
+    "title": "How Tagly works for gyms",
+    "intro": "Your members share your gym in their Instagram Stories after a workout. You pay for the reach that story actually got, about a day later.",
+    "steps": [
+      {
+        "title": "A member finishes their workout",
+        "description": "They found your gym in the Tagly app, on the map or in search, or they are an existing member who already has it installed. They train exactly as usual. Nothing changes about their session, and there is nothing for you to print or hand out."
+      },
+      {
+        "title": "They share it as an Instagram Story",
+        "description": "A mirror selfie, the weight they just hit, a group class, a before-and-after. They put it in their Story and make your gym visible in it, by tagging you or adding the location sticker, then pick that story in the Tagly app. Stories only, and it has to still be live when they submit it."
+      },
+      {
+        "title": "About a day later, you pay for what it reached",
+        "description": "Roughly 24 hours after the story went up, Instagram reports how many people saw it. Tagly works the reward out from that reach, from how much of it was near your gym, and from a handful of other factors. The member is paid from your budget, and that is the moment the story costs you anything."
+      }
+    ],
+    "fullGuide": "See the full step-by-step guide"
+  },
+  "examples": {
+    "title": "The kind of stories your members will share",
+    "intro": "Your members already take photos at the gym. Most of them stay in the camera roll. Tagly gives them a reason to put one in their Story with your gym visible in it.",
+    "alts": [
+      "Member doing a deadlift at Mania Gym shared on Instagram",
+      "Squat rack and Eleiko weights at Strength Fit shared on Instagram",
+      "Gym floor and equipment at Heavyweight shared on Instagram",
+      "Yoga mats and blankets laid out at Relax Yoga Studio shared on Instagram"
+    ]
+  },
+  "why": {
+    "title": "Why Tagly works especially well for gyms",
+    "intro": "Gyms have something most businesses do not: members who come back several times a week, on a membership that lasts months. That is exactly what Tagly feeds on at a gym.",
+    "items": [
+      {
+        "title": "The content already exists",
+        "description": "Workout stories, progress photos and gym selfies are things your members make anyway. You never have to convince anyone to take the photo. You only give them a reason to make your name visible when they share it. Sport and fitness also sits slightly above the baseline on Tagly's business-type scale, so the same reach is worth a little more at a gym than at an average business, to the member and to your budget alike."
+      },
+      {
+        "title": "Volume comes from your member base, not from one member",
+        "description": "A dedicated member trains three to six times a week, so there is always a fresh reason to share you. One person can only be rewarded for sharing your gym once every 24 hours, and the more often somebody shares in a short window, the less each of those stories is worth. The steady stream comes from the size of your membership. You pay for each story once it is paid, and what a single story can cost is capped."
+      },
+      {
+        "title": "Gym membership is a local decision",
+        "description": "Nobody travels 45 minutes to a gym. People pick one near their home or their office, which means most of their followers live in the same part of town. Tagly prices on exactly that: reach close to your address is worth the most, and reach hundreds of kilometres away is worth almost nothing."
+      },
+      {
+        "title": "A member's story is an argument an ad cannot make",
+        "description": "Seeing someone you actually know train somewhere is a different kind of recommendation. It shows a real person going there, in their own words, on their own account. Tagly makes that happen regularly instead of by chance."
+      }
+    ]
+  },
+  "useCases": {
+    "title": "How different gyms use Tagly",
+    "items": [
+      {
+        "title": "CrossFit boxes and boutique studios",
+        "description": "CrossFit and boutique fitness have community energy built in. Members are proud of their workouts and already share them. Tagly channels that into stories that name your box, seen mostly by people who train, or want to, in the same neighbourhood."
+      },
+      {
+        "title": "Traditional gyms fighting churn",
+        "description": "Retention is the hardest part of running a traditional gym. Tagly will not fix it on its own, but it puts your gym in front of the people most likely to walk in: the friends of members who already like the place. And a member who just shared you has publicly attached themselves to it."
+      },
+      {
+        "title": "New locations building a member base",
+        "description": "Opening a new location? Your first members are the ones with something to say about it. Tagly gives them a reason to say it publicly, to friends and coworkers who live in the area you are trying to reach. Nothing about Tagly depends on how long you have been open."
+      }
+    ]
+  },
+  "faq": {
+    "heading": "Gym marketing FAQ",
+    "items": [
+      {
+        "question": "How much does Tagly cost for gyms?",
+        "answer": "There are two ways to fund it, and neither one is a contract or a subscription. Pay as you go: link a card and you are live straight away. Nothing is charged until a story has actually been paid out, and then only for the part your credits do not cover, plus $0.30 per charge. No deposit, no minimum. Or buy credits up front: 1 credit is $1, the minimum purchase is $50, and credits never expire. Credits work out slightly cheaper because there is no per-charge fee, and with at least $15 in available credits you stay visible in the app. Either way you pay per story once it is paid, and what a single story can cost is capped, so no story can ever drain your whole budget."
+      },
+      {
+        "question": "Do I need to create any content myself?",
+        "answer": "No. Your members create it by sharing workout photos, gym selfies and progress shots in their own Instagram Stories. You never plan content, take photos, write captions or manage a social media calendar. You also cannot brief them, approve a story before it goes up, or tell them what to say."
+      },
+      {
+        "question": "Will this work for a gym that just opened?",
+        "answer": "Yes. Nothing in how Tagly works depends on how long you have been open. You need a business page and budget, and members with a professional Instagram account, which is the Business or Creator setting Instagram offers for free. Early members tend to be the most enthusiastic, and their friends are exactly the people who live near your new location."
+      },
+      {
+        "question": "How do members find out my gym is on Tagly?",
+        "answer": "They find you inside the Tagly app: on the map, in search, and in the lists the app shows people nearby. There is nothing to print and nothing to hand out. If you want your regulars to know, just tell them. They install the app and find you the same way anyone else does."
+      },
+      {
+        "question": "How is this different from paying a fitness influencer?",
+        "answer": "An influencer charges a flat fee whatever happens, and their audience is usually spread across the country. With Tagly your own members share you with their own followers, and you pay per story, based on the reach it actually got and how much of that reach was near your gym. Follower counts are not what you are buying, and what a single story can cost is capped."
+      }
+    ],
+    "costInline": "There are two ways to fund it, and neither one is a contract or a subscription. Pay as you go: link a card and you are live straight away. Nothing is charged until a story has actually been paid out, and then only for the part your credits do not cover, plus $0.30 per charge. No deposit, no minimum. Or buy credits up front: 1 credit is $1, the minimum purchase is $50, and credits never expire. Credits work out slightly cheaper because there is no per-charge fee, and with at least $15 in available credits you stay visible in the app. Either way you pay per story once it is paid, and what a single story can cost is capped, so no story can ever drain your whole budget. See <link>how pricing works</link>.",
+    "influencerInline": "An influencer charges a flat fee whatever happens, and their audience is usually spread across the country. With Tagly your own members share you with their own followers, and you pay per story, based on the reach it actually got and how much of that reach was near your gym. Follower counts are not what you are buying, and what a single story can cost is capped. Read the <link>full comparison</link>."
+  },
+  "internalLinks": {
+    "compareHeading": "How Tagly compares",
+    "instagramAds": "Instagram ads",
+    "influencerMarketing": "Influencer marketing",
+    "marketingAgencies": "Marketing agencies",
+    "learnMoreHeading": "Learn more",
+    "howItWorks": "How it works",
+    "pricing": "Pricing",
+    "faq": "FAQ"
+  },
+  "cta": {
+    "heading": "Ready to let your members promote your gym?",
+    "description": "Join Tagly and turn your members' workout stories into local marketing you never had to make."
+  }
+}

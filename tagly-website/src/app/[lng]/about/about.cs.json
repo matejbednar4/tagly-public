@@ -1,0 +1,28 @@
+{
+  "//": "Used in: src/app/[lng]/about/page.tsx — hero (title + two paragraphs) and the team grid (names NOT translated, roles are; roles align by index with the team array in page.tsx). Deliberately short: the copy mirrors the apps' AboutSheet (tagly-shared/client/components/feedback/AboutSheet), converted to vykání in CS. The old long-form story/mission/beliefs copy (and the removed links/CTA sections) is parked in src/_unpublished/removed-copy/.",
+  "meta": {
+    "title": "O Tagly",
+    "description": "Tagly je aplikace, ve které lokální podniky platí skutečným zákazníkům za to, že je sdílí na Instagramu. Jsme malý tým z Prahy a stavíme marketing, který opravdu funguje."
+  },
+  "hero": {
+    "title": "O Tagly",
+    "p1": "Tagly vzniklo z jednoduché myšlenky: nejlepší reklamou pro podnik jsou skuteční lidé, kteří ho sdílí. Postavili jsme proto aplikaci, ve které podniky platí běžným lidem za jejich dosah a lidé si tak vydělají za své příspěvky.",
+    "p2": "Jsme malý tým z Prahy. Na aplikaci pracujeme každý den a čteme všechno, co nám pošlete."
+  },
+  "team": {
+    "title": "Náš tým",
+    "roles": [
+      "Co-founder,\nProdukt",
+      "Co-founder,\nProdej",
+      "Late Co-founder,\nDistribuce",
+      "Marketing & Distribuce"
+    ],
+    "linkedinAria": "{{name}} na LinkedInu"
+  },
+  "company": {
+    "title": "Informace o společnosti",
+    "name": "Flaer, Inc.",
+    "incorporated": "registrovaná v Delaware, USA",
+    "address": "Sídlo: 251 Little Falls Drive, Wilmington, DE 19808"
+  }
+}

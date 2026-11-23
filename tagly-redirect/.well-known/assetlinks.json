@@ -1,0 +1,76 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.flaer.customer",
+      "sha256_cert_fingerprints": [
+        "47:07:B9:34:68:34:F6:7C:14:8B:A2:B0:80:FB:0D:D3:05:D9:EB:1F:D9:0D:E7:D8:01:FD:37:2A:6E:A6:CA:F0",
+        "48:BB:89:A2:E1:C9:4C:68:D8:D0:31:FC:61:D1:9E:05:49:08:DE:E9:BF:17:80:99:CF:00:14:7C:AD:C3:0C:2D"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.flaer.customer.staging",
+      "sha256_cert_fingerprints": [
+        "87:96:24:F6:F1:03:03:6E:46:84:87:96:79:77:D8:2C:D6:F5:BF:7C:6F:C7:46:D6:A8:FF:99:AF:9E:48:56:90"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.flaer.customer.dev",
+      "sha256_cert_fingerprints": [
+        "FA:C6:17:45:DC:09:03:78:6F:B9:ED:E6:2A:96:2B:39:9F:73:48:F0:BB:6F:89:9B:83:32:66:75:91:03:3B:9C"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.flaer.advertiser",
+      "sha256_cert_fingerprints": [
+        "B6:23:DA:9B:F2:E7:F8:62:04:CB:CC:9C:4F:C8:1D:3A:95:6C:1D:98:4F:E2:7A:15:77:5A:29:7B:FA:40:46:16",
+        "2F:CF:F3:E3:E5:47:2C:BB:70:CF:14:54:7C:CD:09:3A:32:9F:1D:45:77:AE:FB:D6:D2:A1:26:3A:0F:61:D1:39"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.flaer.advertiser.staging",
+      "sha256_cert_fingerprints": [
+        "4F:F5:8F:20:17:98:CB:6B:FF:9C:2D:F4:DF:04:8D:38:F5:32:56:12:0F:98:14:35:D0:A3:3B:66:93:26:06:BE"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.flaer.advertiser.dev",
+      "sha256_cert_fingerprints": [
+        "FA:C6:17:45:DC:09:03:78:6F:B9:ED:E6:2A:96:2B:39:9F:73:48:F0:BB:6F:89:9B:83:32:66:75:91:03:3B:9C"
+      ]
+    }
+  }
+]

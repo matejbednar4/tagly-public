@@ -1,0 +1,23 @@
+{
+  "//": "Used in: components/billing/VisibilitySheet (visibilitySheet namespace). Explains how business visibility works (page + budget), owns the <cause>Body prose (cause keys from useVisibilityCause; {{min}} = formatted MIN_VISIBILITY_BUDGET_CENTS), and lists the ways back. Method titles come from the shared billing namespace; {{surcharge}} = formatted PAYG.SURCHARGE_CENTS.",
+  "title": "Jak funguje viditelnost",
+  "intro": "Aby byl tvůj podnik na mapě Tagly vidět, potřebuješ dvě věci: stránku podniku a rozpočet na odměny za sdílení. Když jedno z toho chybí, zákazníci tě nevidí.",
+  "reasonHeading": "Proč teď nejsi vidět",
+  "waysTitle": "Jak být vidět",
+  "noPageBody": "Zatím nemáš stránku podniku. Zákazníci na Tagly najdou a sdílí jen podniky, které stránku mají. Vytvoř si ji a můžeš začít.",
+  "activateBody": "Na mapě Tagly se tvůj podnik objeví jen když můžeš odměnit své zákazníky za sdílení. Dobij si kredity nebo připoj kartu a začneš být vidět.",
+  "lapsedBody": "Tvůj rozpočet došel. Na mapě Tagly se tvůj podnik objeví jen když můžeš odměnit své zákazníky za sdílení. Dobij si kredity nebo připoj kartu a budeš zase vidět.",
+  "lapsedCardIssueBody": "Tvoje karta přestala fungovat, takže jsou průběžné platby pozastavené. Aktualizuj kartu nebo si dobij kredity a tvůj podnik bude zase vidět.",
+  "lapsedLowCreditsBody": "Aby byl tvůj podnik na Tagly vidět, potřebuješ aspoň {{min}} v kreditech. Dobij si kredity nebo připoj kartu a budeš zase vidět.",
+  "lapsedNegativeBody": "Tvůj zůstatek klesl pod nulu, protože jsme za sdílení zaplatili odměnu, kterou nepokryl. Dobij si kredity, vyrovnej rozdíl a budeš zase vidět.",
+  "page": {
+    "title": "Stránka podniku",
+    "body": "Vytvoř si stránku podniku, aby tě zákazníci našli a mohli tě sdílet."
+  },
+  "credits": {
+    "body": "Dobij si kredity předem. Strhávají se, jen když tě někdo sdílí."
+  },
+  "payg": {
+    "body": "Připoj kartu a plať za každé sdílení automaticky, plus {{surcharge}} za každou platbu."
+  }
+}

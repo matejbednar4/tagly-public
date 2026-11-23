@@ -1,0 +1,92 @@
+{
+  "//": "Used in: src/app/[lng]/instagram-ads-vs-tagly/page.tsx — hero (Trans links), comparison table (8 rows), why-better cards, where-ads-work cards (5), bottom line (Trans), other comparisons (Trans), CTA. Shared headings come from the `comparison` namespace.",
+  "meta": {
+    "title": "Instagramové reklamy vs Tagly | Co je lepší pro lokální podniky?",
+    "description": "Srovnání reklam na Instagramu a Tagly pro lokální podniky. Reklamy jsou stavěné na velké značky. Tagly platí přímo vašim zákazníkům za to, že vás ukážou ve svých story na Instagramu. Přečtěte si, co dává větší smysl restauracím, kavárnám a fitness centrům."
+  },
+  "hero": {
+    "title": "Instagramové reklamy vs Tagly",
+    "subtitle": "Poctivé srovnání pro lokální podniky",
+    "intro": "Reklama na Instagramu umí být silný nástroj. Když ale provozujete <restaurants>restauraci</restaurants>, <cafes>kavárnu</cafes>, <gyms>fitko</gyms> nebo jiný <local>lokální podnik</local>, většina toho, díky čemu reklamy fungují, se vás vlastně netýká. Tagly jde na to jinak. Staví na marketingu z doporučení: mluví o vás lidé, kteří k vám už chodí. Porovnali jsme obojí bod po bodu."
+  },
+  "table": {
+    "competitor": "Reklamy na Instagramu",
+    "rows": [
+      { "label": "Hodí se pro", "competitor": "Velké značky, e-shopy, celostátní dosah", "tagly": "Lokální podniky s kamennou provozovnou" },
+      { "label": "Platíte za", "competitor": "Zobrazení nebo prokliky", "tagly": "Ověřená story na Instagramu, na kterých je váš podnik vidět" },
+      { "label": "Publikum", "competitor": "Vybírá algoritmus. Okruh kolem adresy nastavit můžete, ale i tak jsou uvnitř samí cizí lidé", "tagly": "Kamarádi a sledující toho, kdo vás sdílel. Za lidi ve vašem okolí platíte nejvíc, za vzdálené skoro nic" },
+      { "label": "Obsah", "competitor": "Reklamu vyrobíte vy", "tagly": "Story si zákazník natočí sám a napíše k němu, co chce" },
+      { "label": "Důvěryhodnost", "competitor": "Každý pozná, že je to reklama", "tagly": "Působí to jako opravdové doporučení" },
+      { "label": "Kolik to zabere času", "competitor": "Pořád něco: kreativa, cílení, optimalizace", "tagly": "Jednou nastavíte. Pak už jen dobíjíte, když dochází kredit, a hodnotíte story, která přijdou" },
+      { "label": "Potřebné znalosti", "competitor": "Dost velké, nebo si najměte agenturu", "tagly": "Žádné" },
+      { "label": "Minimální rozpočet", "competitor": "Denní minimum je nízké, ale na výsledky musíte utrácet dlouhodobě", "tagly": "U průběžných plateb žádný. Kredity od 50 $ (částky se zobrazují v korunách podle aktuálního kurzu)" }
+    ]
+  },
+  "whyBetter": {
+    "intro": "Jakmile stojíte na tom, že k vám lidé fyzicky přijdou, mění se pravidla hry. Důležitější než dosah je, koho zpráva zastihne, a doporučení od kamaráda váží víc než sebelíp vyrobená reklama. Přesně na tom stojí marketing z doporučení a Tagly se stará o to, aby se to dělo pravidelně.",
+    "items": [
+      {
+        "title": "Marketing za vás dělají vaši zákazníci",
+        "description": "U reklam na Instagramu vyrábíte obsah, píšete texty, nastavujete cílení a ladíte kampaň. Přitom vaši zákazníci si u vás fotí sami od sebe. Většina těch fotek jen nikdy nikam nejde. Tagly jim dá důvod jednu z nich dát na Instagram jako story, na kterém je vidět váš podnik. Obsah je autentický prostě proto, že ho tvoří skutečný člověk, který u vás skutečně byl."
+      },
+      {
+        "title": "Platíte za lidi, kteří k vám opravdu mohou přijít",
+        "description": "Žádné cílení podle polohy se nenastavuje a žádný filtr neurčuje, kdo vás smí sdílet. Sdílet vás může kdokoli. Lokální je Tagly díky ceně. Z dat Instagramu zjistíme, kde publikum daného story doopravdy je, a podle toho story oceníme: divák z vašeho města má nejvyšší hodnotu, divák o stovky kilometrů dál skoro žádnou. Sdílet vás tedy může kdokoli, ale platíte jen za lidi, kteří k vám opravdu mohou přijít."
+      },
+      {
+        "title": "Lidé věří doporučení, ne reklamě",
+        "description": "Reklamu každý pozná na první pohled. Je označená, vypadá jinak a spousta lidí ji rovnou přejede. Story od někoho, koho si sami sledujete, je něco jiného. Čte se jako opravdové doporučení, protože jím je. A pro lokální podnik je právě tahle důvěra to hlavní."
+      },
+      {
+        "title": "Není skoro co spravovat",
+        "description": "Reklamy na Instagramu se musí neustále obsluhovat: sledovat výkon, upravovat cílení, obměňovat kreativu, hlídat rozpočty. Tagly nemá kampaně, nemá cílení, nic se pro něj nevyrábí a nic vám nechodí ke schválení. Dvě věci po vás ale chce. Za prvé, ať má podnik z čeho platit: buď připojenou kartu, nebo aspoň 15 $ v dostupných kreditech. Právě díky tomu se váš podnik zákazníkům v aplikaci zobrazuje. Za druhé, každému story, které vám přijde, dejte pár hvězdiček. Je to otázka vteřiny."
+      },
+      {
+        "title": "Platíte až za story, které opravdu vyšlo",
+        "description": "Reklama na Instagramu se účtuje za zobrazení nebo prokliky a spousta z nich míří k lidem, kteří k vám nikdy nezajdou. Tagly vám naúčtuje až ve chvíli, kdy někdo přidal na Instagram story, na kterém je váš podnik vidět, a kdy Instagram zhruba po dni nahlásí, kolik lidí ho vidělo. Platíte tedy za něco, co už proběhlo, a cenu určuje hlavně to, kolik z těch diváků bylo od vás kousek."
+      },
+      {
+        "title": "Nemusíte marketingu rozumět",
+        "description": "Dělat reklamy na Instagramu dobře je řemeslo: publika, aukce, formáty, A/B testy, struktura kampaní. Spousta lokálních podniků proto skončí u agentury, nebo si propaguje příspěvky a doufá. Tagly po vás žádné marketingové znalosti nechce. Při zakládání vyplníte název, typ podniku a adresu a nahrajete jednu úvodní fotku. A to je celé."
+      }
+    ]
+  },
+  "worksWell": {
+    "title": "Reklamy na Instagramu fungují dobře, jen ne lokálním podnikům",
+    "intro": "Reklama na Instagramu není špatný produkt. Pro některé typy podniků je to jeden z nejlepších marketingových kanálů, které dnes existují.",
+    "items": [
+      {
+        "title": "Velké značky s celostátním dosahem",
+        "description": "Pokud prodáváte zboží, které se dá poslat kamkoli, nebo službu, která není vázaná na jedno místo, oslovíte přes reklamu miliony lidí a můžete rychle přidávat na obrátkách. Čím širší publikum, tím lépe reklama funguje."
+      },
+      {
+        "title": "E-shopy a prodej online",
+        "description": "Označení produktů, nákup přímo z příspěvku, retargeting. To všechno umí přivést objednávky rovnou. Když si u vás člověk může koupit, aniž by vstal z gauče, je reklama přirozená volba."
+      },
+      {
+        "title": "Retargeting a cesta k nákupu",
+        "description": "Pokud máte web s návštěvností, reklama umí znovu oslovit lidi, kteří na něm už byli, a dovést je krok po kroku k nákupu. Podnikům, kde se zákazník rozhoduje déle, to sedí."
+      },
+      {
+        "title": "Růst postavený na datech",
+        "description": "Čím víc do reklamy dáte, tím víc dat nasbíráte a tím líp si algoritmus vaše publikum najde. Ta smyčka je hodně silná, jenže udržet ji v chodu stojí rozpočet i odbornost."
+      },
+      {
+        "title": "Přesné cílení podle polohy",
+        "description": "Reklama umí být lokální a bylo by nefér to zamlčet. Meta vám dovolí nakreslit kolem vaší adresy okruh a ukazovat reklamu jen lidem uvnitř. Když potřebujete hlavně být v okolí vidět a máte k tomu dobrou kreativu, je to rychlá a levná cesta. Co okruh neumí, je udělat z reklamy doporučení od někoho, koho divák zná."
+      }
+    ]
+  },
+  "bottomLine": {
+    "p1": "Pro podniky, které prodávají online, míří na celou republiku nebo mají čas a peníze vést kampaně pořádně, je reklama na Instagramu skvělý nástroj. Pokud jste mezi nimi, může vám fungovat opravdu dobře.",
+    "p2": "Když ale provozujete lokální podnik a jde vám hlavně o to, aby k vám chodilo víc lidí, Tagly je stavěné přesně na tohle. Je jednodušší, působí opravdověji a cenu každého story odvíjí od toho, jak blízko vás je jeho publikum. Vaši zákazníci k vám chodí a fotí si tak jako tak. Tagly jim jen dá důvod se o to podělit častěji.",
+    "p3": "Klidně můžete používat obojí, jedno druhé nevylučuje. Většině lokálních podniků ale samotné Tagly stačí na to, aby měly marketing vyřešený a mohly se věnovat provozu. Než se do toho pustíte, podívejte se na <pricing>ceník</pricing> nebo si přečtěte <faq>časté dotazy</faq>."
+  },
+  "other": {
+    "intro": "Přečtěte si i srovnání Tagly s <influencer>influencer marketingem</influencer> a s <agencies>marketingovými agenturami</agencies>."
+  },
+  "cta": {
+    "heading": "Chcete Tagly vyzkoušet?",
+    "description": "Založte si stránku podniku, připojte kartu nebo si dobijte kredity a nechte zákazníky, ať vás začnou sdílet na Instagramu."
+  }
+}

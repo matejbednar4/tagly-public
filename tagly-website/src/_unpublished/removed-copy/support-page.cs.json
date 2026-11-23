@@ -1,0 +1,57 @@
+{
+  "//": "Used in: src/app/[lng]/support/page.tsx and src/components/support/SupportForm.tsx (client). form.reason.options are display labels aligned to the stable English values submitted to /api/support.",
+  "meta": {
+    "title": "Podpora",
+    "description": "Potřebujete s Tagly poradit? Odešlete žádost o podporu nebo si najděte odpověď v našich častých dotazech a návodech.",
+    "ogTitle": "Podpora | Tagly"
+  },
+  "hero": {
+    "title": "Podpora",
+    "subtitle": "Něco nefunguje? Pomůžeme vám."
+  },
+  "resources": {
+    "title": "Než se na nás obrátíte",
+    "intro": "Na většinu častých otázek už odpověď máme. Zkuste se nejdřív podívat sem, možná ji najdete hned.",
+    "items": [
+      {
+        "title": "Časté dotazy pro podniky",
+        "description": "Kolik to stojí, jak Tagly funguje, jak začít a co dál."
+      },
+      {
+        "title": "Časté dotazy pro zákazníky",
+        "description": "Jak se získávají odměny, jak propojit Instagram, jak si vybrat peníze a co dál."
+      },
+      {
+        "title": "Jak Tagly funguje pro podniky",
+        "description": "Krok za krokem, jak podniky přes Tagly získávají propagaci od svých skutečných zákazníků."
+      },
+      {
+        "title": "Jak Tagly funguje pro zákazníky",
+        "description": "Jak si vydělat na tom, že na Instagramu ukážete místa, kam rádi chodíte."
+      }
+    ]
+  },
+  "form": {
+    "title": "Odeslat žádost",
+    "intro": "Vyplňte formulář níže a my se vám co nejdřív ozveme. Nebo nám napište přímo na <email>support@taglyapp.com</email>.",
+    "success": {
+      "title": "Žádost přijata",
+      "description": "Děkujeme, že jste se ozvali. Odpovíme vám co nejdřív."
+    },
+    "name": { "label": "Vaše jméno", "placeholder": "Jan Novák" },
+    "email": { "label": "E-mail", "placeholder": "jan@email.cz" },
+    "isBusinessOwner": "Jsem majitel podniku",
+    "reason": {
+      "label": "Důvod",
+      "placeholder": "Vyberte důvod",
+      "options": ["Problém v aplikaci", "Problém s účtem", "Platby a fakturace", "Návrh na vylepšení", "Něco jiného"]
+    },
+    "message": { "label": "Popište svůj problém", "placeholder": "Napište nám, co se stalo a s čím potřebujete pomoct" },
+    "submit": "Odeslat žádost",
+    "submitting": "Odesíláme...",
+    "error": "Něco se pokazilo. Zkuste to prosím znovu, nebo nám napište přímo na <email>support@taglyapp.com</email>."
+  },
+  "links": {
+    "text": "Hledáte něco jiného? <contact>Kontaktujte nás</contact>, <sales>ozvěte se našemu obchodu</sales> nebo si <about>přečtěte o Tagly</about>."
+  }
+}

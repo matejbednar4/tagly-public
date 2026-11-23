@@ -1,0 +1,23 @@
+{
+  "//": "Used in: components/billing/VisibilitySheet (visibilitySheet namespace). Explains how business visibility works (page + budget), owns the <cause>Body prose (cause keys from useVisibilityCause; {{min}} = formatted MIN_VISIBILITY_BUDGET_CENTS), and lists the ways back. Method titles come from the shared billing namespace; {{surcharge}} = formatted PAYG.SURCHARGE_CENTS.",
+  "title": "How visibility works",
+  "intro": "To show up on the Tagly map you need two things: a business page, and budget to reward customers for sharing. If either is missing, customers can't see you.",
+  "reasonHeading": "Why you're not visible",
+  "waysTitle": "How to get visible",
+  "noPageBody": "You don't have a business page yet. Customers can only find and share businesses that have a page on Tagly. Create yours to get started.",
+  "activateBody": "Your business shows up on the Tagly map only when you can reward customers for sharing. Add credits or link a card and you'll start showing up on Tagly.",
+  "lapsedBody": "Your budget ran out. Your business shows up on the Tagly map only when you can reward customers for sharing. Add credits or link a card and you'll show up on Tagly again.",
+  "lapsedCardIssueBody": "Your card stopped working, so pay as you go is paused. Update your card or add credits and your business will show up on Tagly again.",
+  "lapsedLowCreditsBody": "You need at least {{min}} in credits to show up on Tagly. Add credits or link a card and your business will be visible again.",
+  "lapsedNegativeBody": "Your balance went below zero because a share reward was paid out that it didn't cover. Add credits to cover the difference and your business will show up on Tagly again.",
+  "page": {
+    "title": "Business page",
+    "body": "Create your business page so customers can find you and start sharing."
+  },
+  "credits": {
+    "body": "Top up ahead of time. Credits are spent only when someone shares you."
+  },
+  "payg": {
+    "body": "Link a card and pay per share automatically, plus {{surcharge}} per charge."
+  }
+}

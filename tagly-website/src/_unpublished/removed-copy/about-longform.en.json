@@ -1,0 +1,61 @@
+{
+  "//": "Used in: src/app/[lng]/about/page.tsx — hero, story, mission, team (names NOT translated, roles are), beliefs, links (Trans), CTA.",
+  "meta": {
+    "title": "About Tagly",
+    "description": "Tagly is a marketing service powered by real customers, based in Prague. Learn about our story, mission, and the team helping local businesses grow through authentic promotion."
+  },
+  "hero": {
+    "title": "The first marketing service powered entirely by real customers",
+    "subtitle": "Tagly was founded on one simple belief: the most powerful marketing doesn't come from ads, it comes from people."
+  },
+  "story": {
+    "title": "Our story",
+    "p1": "The idea for Tagly came in mid-2024. We noticed two things: most people posting on Instagram had no way to make money from it, and running ads as a local business felt unnecessarily complex. Customers were already promoting their favorite places occasionally, but had no reason to do it consistently. We thought there had to be a way to connect the two.",
+    "p2": "At first, it felt impossibly complex. We didn't know where to start. But at the beginning of 2025 we committed to building it. It took nearly a year of work to get to a version we were actually happy with. Tagly has been live since January 2026, operating out of Prague."
+  },
+  "mission": {
+    "title": "Our mission",
+    "p1": "We're building Tagly to help local businesses grow with marketing that actually works, while letting regular people enjoy more of the places they love without breaking their budget.",
+    "p2": "Traditional advertising requires you to create content, set up campaigns, and constantly optimize. After all that work, your ads may never convert. Influencer marketing can cost ten times what a story is actually worth, and you have no way of knowing whether their followers are even in your city. Neither approach is built for a local restaurant, a neighborhood gym, or a corner cafe.",
+    "p3": "Tagly is different. When a real customer visits your business, enjoys the experience, and shares it on Instagram, that's marketing worth paying for. It reaches the people who actually live nearby and are most likely to become your next customers."
+  },
+  "team": {
+    "title": "Our team",
+    "intro": "Tagly is a small team based in Prague. We're focused on one thing: making local marketing work better for both businesses and their customers.",
+    "roles": [
+      "Co-founder, Product",
+      "Co-founder, Sales",
+      "Co-founder, Marketing",
+      "Design, Branding"
+    ],
+    "linkedinAria": "{{name}} on LinkedIn"
+  },
+  "beliefs": {
+    "title": "What we believe",
+    "items": [
+      {
+        "title": "Real customers over influencers",
+        "description": "A story from someone who actually visits your business and knows your neighborhood is worth more than a sponsored post from a stranger with a large following."
+      },
+      {
+        "title": "Local reach over vanity metrics",
+        "description": "A hundred local impressions are more valuable than ten thousand from people on the other side of the country. Tagly is built to prioritize reach that matters."
+      },
+      {
+        "title": "Fair value over fixed fees",
+        "description": "Every story has a different reach and impact. Tagly works out what each one is actually worth, so businesses pay a fair price and customers are rewarded fairly."
+      },
+      {
+        "title": "Simplicity over complexity",
+        "description": "No campaigns to manage, no creatives to approve, no targeting to configure. Businesses sign up, link a card or add credits, and their customers do the rest."
+      }
+    ]
+  },
+  "links": {
+    "text": "Want to know more? <hiw>See how Tagly works</hiw>, <pricing>check our pricing</pricing>, or <contact>get in touch</contact>."
+  },
+  "cta": {
+    "heading": "Ready to grow with your customers?",
+    "description": "Join Tagly and let your real customers become your best marketers. No ads, no influencers, just authentic local promotion."
+  }
+}

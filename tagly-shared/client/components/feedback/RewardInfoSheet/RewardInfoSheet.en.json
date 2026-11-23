@@ -1,0 +1,27 @@
+{
+  "//": "Used in: tagly-shared/client components/feedback/RewardInfoSheet — the 'what affects the reward/price' explainer sheet. Root keys = customer voice (share detail + business detail); the `advertiser` subtree = the SAME six factors in advertiser (price) voice, used by the advertiser share detail. Qualitative factors only, no numbers/algorithm. The factor list must stay identical between the two voices.",
+  "title": "What affects your rewards",
+  "reachTitle": "Reach",
+  "reachDesc": "The more people see your story, the bigger your reward.",
+  "locationTitle": "Location",
+  "locationDesc": "Choose businesses in areas where you have followers to earn more.",
+  "audienceTitle": "Audience",
+  "audienceDesc": "A genuine audience is worth more than followers gained by following back.",
+  "qualityTitle": "Quality",
+  "qualityDesc": "Authentic, engaging stories are better for the business, so they earn more.",
+  "frequencyTitle": "Frequency",
+  "frequencyDesc": "Posting too often makes people enjoy your stories less, so spacing them out pays off.",
+  "reshareTitle": "Reshares",
+  "reshareDesc": "If someone reshares your story, we only pay for the reach you brought to the business.",
+  "footer": "We work it out automatically, so it's always fair.",
+  "advertiser": {
+    "title": "What decides the price",
+    "reachDesc": "You pay for people who actually saw the share, not for follower counts.",
+    "locationDesc": "Only reach near your business counts. People far away cost you nothing.",
+    "audienceDesc": "A genuine audience is worth more than followers gained by following back.",
+    "qualityDesc": "Better shares are worth more, and your star ratings help decide who that is.",
+    "frequencyDesc": "Customers who post too often get less attention, so their shares cost less.",
+    "reshareDesc": "If a share gets reshared, you only pay for the reach the customer brought themselves.",
+    "footer": "We work it out automatically, so it's always fair."
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "//": "Used in: src/app/[lng]/careers/page.tsx.",
+  "meta": {
+    "title": "Careers",
+    "description": "Tagly is a small, early-stage startup in Prague. We have no open roles right now, but we are always glad to hear from people who want to make an impact from day one.",
+    "ogTitle": "Careers at Tagly"
+  },
+  "hero": {
+    "title": "Careers at Tagly",
+    "subtitle": "Tagly is an early-stage startup with a small team. No layers, no bureaucracy. Everyone works directly with everyone else. Join now and have a real impact on how the company grows."
+  },
+  "openPositions": "Open positions",
+  "noOpenPositions": "Currently we don't have any open positions.",
+  "links": {
+    "text": "Want to learn more about us? <about>Meet the team</about> or <contact>get in touch</contact>."
+  }
+}

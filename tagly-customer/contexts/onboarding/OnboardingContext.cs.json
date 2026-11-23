@@ -1,0 +1,17 @@
+{
+  "//": "Used in: contexts/onboarding/OnboardingContext.tsx (onboardingContext namespace).",
+  "googleSignInError": "Přihlášení přes Google se nezdařilo",
+  "appleSignInError": "Přihlášení přes Apple se nezdařilo",
+  "noInstagramAccountTitle": "Účet nenalezen",
+  "noInstagramAccountBody": "Nenašli jsme žádný účet Tagly propojený s tímto Instagramem. Zaregistrujte se a začněte.",
+  "noProviderEmailTitle": "Je potřeba e-mail",
+  "noProviderEmailBody": "{{provider}} nám nesdílel ověřený e-mail, takže nemůžeme vytvořit váš účet. Zkuste jiný způsob přihlášení.",
+  "noAccountTitle": "Začneme znovu",
+  "noAccountBody": "Pro tento e-mail jsme nenašli žádné rozpracované přihlášení. Vrať se a zadej e-mail znovu.",
+  "nameFlaggedTitle": "Jméno neprošlo",
+  "nameFlaggedBody": "Tvoje jméno zřejmě obsahuje vulgární nebo urážlivý výraz. Použij prosím jiné jméno.",
+  "registrationExpiredTitle": "Začneme znovu",
+  "registrationExpiredBody": "Platnost tvé registrace vypršela. Přihlas se prosím znovu e-mailem a pokračuj v registraci.",
+  "genericErrorTitle": "Něco se pokazilo",
+  "genericErrorBody": "Přihlášení se nepodařilo dokončit. Zkus to prosím znovu."
+}

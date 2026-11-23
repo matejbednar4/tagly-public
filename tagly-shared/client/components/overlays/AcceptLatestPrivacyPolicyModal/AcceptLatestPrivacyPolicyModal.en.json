@@ -1,0 +1,7 @@
+{
+  "//": "Used in: tagly-shared/client/components/overlays/AcceptLatestPrivacyPolicyModal (acceptPrivacy namespace). Blocking app-open modal shown when the Privacy Policy has been updated.",
+  "title": "We've updated our Privacy Policy",
+  "body": "We've made some changes to how we handle your data. Please review and accept our Privacy Policy to keep using Tagly.",
+  "agreeLine": "I have read and agree to the <policy>Privacy Policy</policy>.",
+  "agree": "Agree and continue"
+}

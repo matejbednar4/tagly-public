@@ -1,0 +1,22 @@
+{
+  "//": "Feature-level namespace shared across components/shares + the share screens (shares namespace): the canonical advertiser share vocabulary — the status labels (rendered via useAdvertiserShareStatusDisplay), the report reasons, and the small spend/assessment tags — so the preview card, detail screen, and assessment sheet always say the same thing. Copy voice: the unit is a 'share'/'sdílení' (never 'post'/'verified post'), and the settlement moment is 'the reward was paid' ('odměna zaplacena'/'zaplaceno') — never accounting settle-speak ('zúčtováno') and never the customer's payout language ('vyplaceno').",
+  "status": {
+    "PROCESSING": "Processing",
+    "REPORT_REVIEW": "Reported",
+    "PAID": "Paid",
+    "REJECTED": "Report valid",
+    "UNPAYABLE": "Failed"
+  },
+  "estPrice": "est. {{amount}}",
+  "deletedBusiness": "Deleted page",
+  "unrated": "Not rated",
+  "reported": "Reported",
+  "reason": {
+    "NOT_PROMOTION": "Doesn't promote my business",
+    "MISLEADING_LOCATION": "Wrong or misleading location",
+    "INAPPROPRIATE": "Inappropriate content",
+    "DUPLICATE": "Duplicate share",
+    "VIOLATES_GUIDELINES": "Breaks the guidelines",
+    "CUSTOMER_NOT_SPENT_MONEY": "The customer never visited or spent"
+  }
+}

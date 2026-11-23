@@ -1,0 +1,7 @@
+{
+  "//": "Used in: app/(app)/(tabs)/wallet/index.tsx (wallet namespace). The money hub tab.",
+  "title": "Peněženka",
+  "transactionsTitle": "Transakce",
+  "noTransactions": "Zatím žádné transakce",
+  "noTransactionsHint": "Dobití, platby za sdílení a ostatní transakce se zobrazí tady."
+}

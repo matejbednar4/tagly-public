@@ -1,0 +1,8 @@
+{
+  "//": "Used in: app/(app)/visited/index.tsx (visited namespace).",
+  "title": "Shared places",
+  "empty": "No shared places yet",
+  "emptyHint": "Share a business on Instagram to start building your history.",
+  "visits": "Shared {{count}}×",
+  "earned": "earned"
+}

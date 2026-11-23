@@ -1,0 +1,31 @@
+{
+  "//": "Used in: app/(onboarding)/instagram/index.tsx (instagram namespace).",
+  "heading": "Connect Instagram",
+  "body": "Tagly pays you for posts from the places you visit. To reward you for them, connect your Instagram account.",
+  "why": "Why do I need a professional account?",
+  "connect": "Connect Instagram",
+  "skip": "Skip for now",
+
+  "skipAlertTitle": "Skip Instagram?",
+  "skipAlertBody": "You can connect Instagram later in Settings, but you won't be able to earn until you do.",
+  "skipAlertCancel": "Cancel",
+  "skipAlertConfirm": "Skip for now",
+
+  "failedNote": "Page didn't load or get stuck? Instagram sometimes fails, but incognito mode should fix it.",
+  "incognito": "Open in incognito mode",
+
+  "takenTitle": "Instagram already connected",
+  "takenBody": "This Instagram is already connected to another Tagly account. Do you want to log in to that account instead?",
+  "takenLogin": "Log in",
+  "takenCancel": "Cancel",
+
+  "whyHeading": "Why do I need a professional account?",
+  "whyBody": "Instagram only lets you connect professional accounts, not regular ones.",
+  "whyBenefits": "What are the perks of a professional account?",
+  "whyInsightsTitle": "More insights",
+  "whyInsightsBody": "Instagram shows you more stats on how your posts are doing.",
+  "whyFreeTitle": "It's free",
+  "whyFreeBody": "Switching to a professional account is free, and you can switch back to personal anytime.",
+  "whyPrivacyTitle": "We only read, never post",
+  "whyPrivacyBody": "Tagly only reads your insights to work out your reward. We never post, edit your account, message anyone, or see your password or DMs."
+}

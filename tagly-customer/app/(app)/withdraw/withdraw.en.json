@@ -1,0 +1,23 @@
+{
+  "//": "Used in: app/(app)/withdraw/index.tsx (withdraw namespace).",
+  "title": "Withdraw",
+  "gateTitle": "Withdraw with Stripe",
+  "gateBody": "We pay out securely through Stripe. Connecting takes under a minute, and your money lands in a bank in {{country}}.",
+  "gateConfirm": "Connect Stripe",
+  "gateSwitch": "My bank isn't in {{country}}",
+  "switchTitle": "Switch region?",
+  "switchBody": "Send your withdrawals to a bank in {{country}}?",
+  "switchConfirm": "Switch",
+  "cancel": "Cancel",
+  "connectTitle": "Confirm your region",
+  "connectBody": "Your withdrawals will go to a bank in {{country}}. You can't change this later.",
+  "continueTitle": "Finish connecting Stripe",
+  "continueBody": "Your Stripe account needs a few last details. It only takes about a minute, then you can withdraw anytime.",
+  "continueCta": "Continue on Stripe",
+  "contactSupport": "Contact support",
+  "regionUpdatedToast": "Region updated",
+  "country": {
+    "US": "the United States",
+    "CZ": "Czechia"
+  }
+}

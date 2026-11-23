@@ -1,0 +1,9 @@
+{
+  "//": "Used in: components/previews/BusinessPreview/index.tsx (businessPreview namespace).",
+  "earnHereButton": "Získat odměnu zde",
+  "previewEstReward": "cca {{amount}}",
+  "previewEstRewardCapped": "až {{amount}}",
+  "previewReach": "za dosah {{reach}}",
+  "subsidizedByPlatform": "Dotováno Tagly",
+  "endingSoon": "Brzy může být pryč"
+}

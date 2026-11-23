@@ -1,0 +1,23 @@
+{
+  "//": "Used in: app/(app)/businesses/[uid]/settings/index.tsx (businessSettings namespace). The per-business settings hub (edit sections + delete).",
+  "title": "Page settings",
+  "editSection": "Edit your page",
+  "basicsRow": "Name, type and address",
+  "basicsRowSubtitle": "The basics of your page",
+  "mediaRow": "Banner and photos",
+  "mediaRowSubtitle": "The pictures customers see",
+  "detailsRow": "Details and hours",
+  "detailsRowSubtitle": "Description, links, contact, opening hours",
+  "dangerSection": "Danger zone",
+  "deleteRow": "Delete this page",
+  "deleteRowSubtitle": "Removes the page from Tagly",
+  "deleteConfirmTitle": "Delete this page?",
+  "deleteConfirmBody": "{{name}} will disappear from Tagly right away. Shares that are already in progress will still be completed and paid.",
+  "deleteConfirmPrompt": "Type the business name to confirm",
+  "copyName": "Copy name",
+  "nameCopied": "Name copied",
+  "deleteCancel": "Cancel",
+  "deleteConfirmCta": "Delete",
+  "deleteAlertBody": "This can't be undone.",
+  "deletedToast": "Page deleted"
+}

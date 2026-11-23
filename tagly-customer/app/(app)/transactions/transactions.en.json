@@ -1,0 +1,14 @@
+{
+  "//": "Used in: app/(app)/transactions/index.tsx (transactions namespace).",
+  "title": "Transactions",
+  "empty": "No transactions yet",
+  "emptyHint": "Your earnings and withdrawals will show up here.",
+  "filterAll": "All types",
+  "filterSelected": "{{count}} selected",
+  "filterTitle": "Filter by type",
+  "filterDone": "Done",
+  "typeShare": "Share rewards",
+  "typeReferral": "Referral bonuses",
+  "typeAdjustment": "Adjustments",
+  "typeWithdrawal": "Withdrawals"
+}

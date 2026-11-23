@@ -1,0 +1,23 @@
+{
+  "//": "Used in: app/(app)/withdraw/index.tsx (withdraw namespace).",
+  "title": "Výběr peněz",
+  "gateTitle": "Výběry přes Stripe",
+  "gateBody": "Peníze si můžeš bezpečně vybrat přes Stripe. Připojení Stripu zabere jen pár minut a peníze dorazí na tvůj bankovní účet v {{country}}.",
+  "gateConfirm": "Připojit Stripe",
+  "gateSwitch": "Moje banka není v {{country}}",
+  "switchTitle": "Změnit region?",
+  "switchBody": "Posílat výběry na banku v {{country}}?",
+  "switchConfirm": "Přepnout",
+  "cancel": "Zrušit",
+  "connectTitle": "Potvrdit region?",
+  "connectBody": "Výběry budou chodit na banku v {{country}}. Později to nezměníš.",
+  "continueTitle": "Dokonči připojení Stripe",
+  "continueBody": "Tvému účtu Stripe chybí posledních pár údajů. Zabere to jen asi minutu a pak můžeš kdykoli vybírat.",
+  "continueCta": "Pokračovat na Stripe",
+  "contactSupport": "Kontaktovat podporu",
+  "regionUpdatedToast": "Region byl změněn",
+  "country": {
+    "US": "USA",
+    "CZ": "Česku"
+  }
+}

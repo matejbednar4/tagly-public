@@ -1,0 +1,20 @@
+{
+  "//": "Used in: components/withdraw/WithdrawForm/index.tsx (withdrawForm namespace).",
+  "amountLabel": "Amount to withdraw",
+  "availableAmount": "{{amount}} available",
+  "withdrawAll": "Withdraw all",
+  "errorTooMuch": "That's more than your balance",
+  "errorMin": "Minimum is {{min}}",
+  "errorInsufficientTitle": "Balance changed",
+  "errorInsufficientBody": "Your available balance is lower than that amount, so nothing was withdrawn. We refreshed it, please check and try again.",
+  "errorPayoutsOffTitle": "Payouts are not active",
+  "errorPayoutsOffBody": "Your payout account can't receive money right now. Check its status and try again.",
+  "errorTransferFailedTitle": "Withdrawal failed",
+  "errorTransferFailedBody": "The withdrawal didn't go through and your balance is untouched. Please try again.",
+  "errorGenericTitle": "Something went wrong",
+  "errorGenericBody": "We couldn't start the withdrawal. Please try again.",
+  "withdraw": "Withdraw",
+  "withdrawAmount": "Withdraw {{amount}}",
+  "infoCta": "How withdrawals work",
+  "infoSubtitle": "The steps and timing"
+}

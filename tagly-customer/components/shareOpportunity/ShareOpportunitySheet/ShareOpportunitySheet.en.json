@@ -1,0 +1,16 @@
+{
+  "//": "Used in: components/shareOpportunity/ShareOpportunitySheet/index.tsx",
+  "inBusinessTitle": "Are you at {{business}}?",
+  "inBusinessSubtitle": "Share a story about them and earn.",
+  "inBusinessCta": "Share it",
+  "storyTitle": "Did you want to share {{business}}?",
+  "storySubtitle": "This story looks like it's about them.",
+  "rewardSentence": "Earn around <amount>{{reward}}</amount> for {{reach}} reach.",
+  "rewardSentenceNoReach": "Earn around <amount>{{reward}}</amount> for this story.",
+  "rewardSentenceCapped": "Earn up to <amount>{{reward}}</amount> for {{reach}} reach.",
+  "rewardSentenceNoReachCapped": "Earn up to <amount>{{reward}}</amount> for this story.",
+  "storyCta": "Create share from {{business}}",
+  "agreeLabel": "I agree to the <terms>Terms of Monetization</terms> and confirm this story promotes {{business}}.",
+  "notNow": "Not now",
+  "successToast": "Share created and under review"
+}

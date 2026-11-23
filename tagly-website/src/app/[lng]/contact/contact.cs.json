@@ -1,0 +1,42 @@
+{
+  "//": "Used in: src/app/[lng]/contact/page.tsx and src/components/contact/ContactRequestForm.tsx (client). The page merged the old /support page (2026-08-09; /support 301s here — old copy parked in src/_unpublished/removed-copy/) and is now hero + one dynamic form: form.category picks the layout (reason select is support-only, message copy follows the category) and the delivery inbox (src/lib/contact-inboxes.ts). form.reason.options are display labels aligned to the stable English values submitted to /api/support. Company info lives on /about.",
+  "meta": {
+    "title": "Kontakt",
+    "description": "Napište Tagly. Podpora k aplikaci, zpětná vazba i cokoli dalšího. Vyplňte formulář a my se vám co nejdřív ozveme.",
+    "ogTitle": "Kontaktujte Tagly"
+  },
+  "hero": {
+    "title": "Kontaktujte nás",
+    "subtitle": "Máte dotaz, potřebujete pomoct s aplikací, nebo nám chcete něco vzkázat? Napište nám a my se vám ozveme."
+  },
+  "form": {
+    "category": {
+      "label": "S čím se na nás obracíte?",
+      "options": {
+        "support": "Podpora",
+        "feedback": "Zpětná vazba",
+        "other": "Něco jiného"
+      }
+    },
+    "directEmail": "Nebo nám napište přímo na <mail>{{email}}</mail>.",
+    "success": {
+      "title": "Zpráva přijata",
+      "description": "Děkujeme, že jste se ozvali. Odpovíme vám co nejdřív."
+    },
+    "name": { "label": "Vaše jméno", "placeholder": "Jan Novák" },
+    "email": { "label": "E-mail", "placeholder": "jan@email.cz" },
+    "reason": {
+      "label": "Důvod",
+      "placeholder": "Vyberte důvod",
+      "options": ["Problém v aplikaci", "Problém s účtem", "Platby a fakturace", "Návrh na vylepšení", "Něco jiného"]
+    },
+    "message": {
+      "support": { "label": "Popište svůj problém", "placeholder": "Napište nám, co se stalo a s čím potřebujete pomoct" },
+      "feedback": { "label": "Vaše zpětná vazba", "placeholder": "Napište nám, co se vám líbí nebo co bychom měli zlepšit" },
+      "other": { "label": "Vaše zpráva", "placeholder": "Napište nám, co potřebujete" }
+    },
+    "submit": "Odeslat zprávu",
+    "submitting": "Odesíláme...",
+    "error": "Něco se pokazilo. Zkuste to prosím znovu, nebo nám napište přímo na <mail>{{email}}</mail>."
+  }
+}

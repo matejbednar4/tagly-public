@@ -1,0 +1,34 @@
+{
+  "//": "Used in: components/onboarding/Welcome (onboarding namespace) — the advertiser explainer carousel, shown both at first run (app/(onboarding)/index.tsx) and as the authed 'How it works' guide (app/(app)/how-it-works). Slide order: three mechanical steps, then the payoff, then the ask. Keys must stay identical to Welcome.cs.json and to the slides array in index.tsx.",
+  "skip": "Skip",
+  "continue": "Continue",
+  "getStarted": "Get started",
+  "done": "Done",
+  "slides": {
+    "visit": {
+      "kicker": "Step 1",
+      "heading": "Customers find you on Tagly,\nvisit and pay full price",
+      "body": "No discounts, no coupons."
+    },
+    "share": {
+      "kicker": "Step 2",
+      "heading": "They share you on their Instagram",
+      "body": "A story from their visit, with you tagged."
+    },
+    "reward": {
+      "kicker": "Step 3",
+      "heading": "You give back part of what they spent",
+      "body": "See how we set the price"
+    },
+    "why": {
+      "kicker": "Why Tagly works",
+      "heading": "People trust their friends,\nnot ads",
+      "body": "Nobody skips a friend's story."
+    },
+    "cta": {
+      "kicker": "What's next",
+      "heading": "Add credits and start",
+      "body": "No commitment. You pick the amount."
+    }
+  }
+}

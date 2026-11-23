@@ -1,0 +1,34 @@
+{
+  "//": "Used in: components/onboarding/Welcome (onboarding namespace) — the advertiser explainer carousel, shown both at first run (app/(onboarding)/index.tsx) and as the authed 'How it works' guide (app/(app)/how-it-works). Slide order: three mechanical steps, then the payoff, then the ask. Keys must stay identical to Welcome.en.json and to the slides array in index.tsx.",
+  "skip": "Přeskočit",
+  "continue": "Pokračovat",
+  "getStarted": "Začít",
+  "done": "Hotovo",
+  "slides": {
+    "visit": {
+      "kicker": "Krok 1",
+      "heading": "Zákazník tě najde na Tagly,\npřijde a zaplatí plnou cenu",
+      "body": "Žádné slevy, žádné kupony."
+    },
+    "share": {
+      "kicker": "Krok 2",
+      "heading": "Sdílí tě na svém Instagramu",
+      "body": "Přidá story ze své návštěvy a označí tě."
+    },
+    "reward": {
+      "kicker": "Krok 3",
+      "heading": "Část útraty mu vrátíš zpět",
+      "body": "Podívej se, jak počítáme ceny"
+    },
+    "why": {
+      "kicker": "Proč Tagly funguje",
+      "heading": "Lidé věří kamarádům,\nne reklamě",
+      "body": "Nikdo nepřeskočí story svého kamaráda."
+    },
+    "cta": {
+      "kicker": "Co dál",
+      "heading": "Dobij si kredit a začni",
+      "body": "Žádné závazky, vyber si částku sám."
+    }
+  }
+}

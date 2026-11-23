@@ -1,0 +1,16 @@
+{
+  "//": "Used in: app/(app)/businesses/index.tsx (browseBusinesses namespace). The paginated browse-all-businesses directory with sort + vertical filters.",
+  "title": "All businesses",
+  "marketNote": "Only showing businesses in {{market}}.",
+  "marketUS": "the United States",
+  "marketCZ": "Czechia",
+  "sortBy": "Sort by",
+  "sortName": "Name",
+  "sortDistance": "Closest",
+  "categories": "Categories",
+  "chooseCategories": "Choose categories",
+  "selectedCount": "{{count}} selected",
+  "filterDone": "Done",
+  "empty": "No businesses found",
+  "emptyHint": "Try removing a filter."
+}

@@ -1,0 +1,8 @@
+{
+  "//": "Used in: tagly-shared/client/components/previews/InstagramStoryPreview (instagramStoryPreview namespace). Kompaktní čas přidání story + text placeholderu pro nedostupná média.",
+  "justNow": "teď",
+  "minutesAgo": "{{count}} min",
+  "hoursAgo": "{{count}} h",
+  "daysAgo": "{{count}} d",
+  "mediaWithheld": "Nejde zobrazit. Nejspíš obsahuje chráněnou hudbu. Nahraj story bez hudby, aby šlo sdílet."
+}

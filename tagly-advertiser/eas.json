@@ -1,0 +1,52 @@
+{
+  "cli": {
+    "version": ">= 13.0.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "staging": {
+      "node": "22.13.0",
+      "distribution": "store",
+      "autoIncrement": true,
+      "channel": "staging",
+      "environment": "preview",
+      "env": {
+        "APP_ENV": "staging"
+      }
+    },
+    "staging-android": {
+      "extends": "staging",
+      "distribution": "internal"
+    },
+    "production": {
+      "node": "22.13.0",
+      "distribution": "store",
+      "autoIncrement": true,
+      "channel": "production",
+      "environment": "production",
+      "env": {
+        "APP_ENV": "production"
+      }
+    }
+  },
+  "submit": {
+    "staging": {
+      "ios": {
+        "ascAppId": "6752950224",
+        "bundleIdentifier": "com.flaer.advertiser.staging"
+      },
+      "android": {
+        "track": "internal"
+      }
+    },
+    "production": {
+      "ios": {
+        "ascAppId": "6752899377",
+        "bundleIdentifier": "com.flaer.advertiser"
+      },
+      "android": {
+        "track": "internal"
+      }
+    }
+  }
+}

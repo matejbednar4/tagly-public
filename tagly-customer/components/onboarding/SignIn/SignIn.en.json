@@ -1,0 +1,18 @@
+{
+  "//": "Used in: tagly-customer/components/onboarding/SignIn/index.tsx (signIn namespace)",
+  "heading": "Sign in or create an account",
+  "emailPlaceholder": "Email address",
+  "invalidEmail": "Enter a valid email address",
+  "continue": "Continue",
+  "orSeparator": "or",
+  "continueWithApple": "Continue with Apple",
+  "continueWithGoogle": "Continue with Google",
+  "terms": "By continuing, you agree to our <tos>Terms of Service</tos> and <pp>Privacy Policy</pp>.",
+  "infoA11y": "Replay the intro",
+  "forgotEmail": "Forgot which email you used?",
+  "instagramSheetHeading": "Forgotten email",
+  "instagramSheetBody": "If you already have a Tagly account, you can log back in with your connected Instagram. No need to remember your email.",
+  "loginWithInstagram": "Continue with Instagram",
+  "instagramFailedNote": "Page didn't load or get stuck? Instagram sometimes fails, but incognito mode should fix it.",
+  "loginWithInstagramIncognito": "Open in incognito mode"
+}

@@ -1,0 +1,5 @@
+{
+  "//": "Used in: tagly-shared/client/components/feedback/RewardEstimatePendingNotice (rewardEstimatePending namespace). Shown on the map + Discover while the IG audience snapshot is still being taken.",
+  "title": "Calculating your rewards",
+  "subtitle": "We're estimating how much you'll earn for sharing different places. It will be ready soon."
+}

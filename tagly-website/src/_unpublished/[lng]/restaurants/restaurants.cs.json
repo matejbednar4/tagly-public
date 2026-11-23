@@ -1,0 +1,147 @@
+{
+  "//": "Used in: src/app/[lng]/restaurants/page.tsx — hero, problem cards, how-it-works flow, examples, why-restaurants, use cases, FAQ, internal links, CTA. The two FAQ answers with inline links are rendered with <Trans> (faqLinks.* are the link labels).",
+  "meta": {
+    "title": "Tagly pro restaurace | Marketing od skutečných hostů na Instagramu",
+    "description": "Marketing restaurací, který funguje v okolí. Vaši hosté přidávají story ze své návštěvy a vy platíte jen za dosah mezi lidmi, kteří k vám opravdu můžou přijít. Bez reklam a bez influencerů."
+  },
+  "hero": {
+    "title": "Ať vaši restauraci na Instagramu doporučují hosté, kteří u vás opravdu jedli",
+    "intro": "Jídlo si hosté fotí tak jako tak. Tagly jim dá důvod jednu z těch fotek dát na Instagram jako story, na kterém je vidět jméno vaší restaurace. Vznikne z toho doporučení od lidí z okolí, a vy k tomu nemusíte natočit jediné video, zaplatit jedinou reklamu ani oslovit jediného influencera."
+  },
+  "broken": {
+    "title": "Většina marketingu pro restaurace vyjde naprázdno",
+    "intro": "Restaurace utrácejí za sociální sítě peníze, které lokálnímu podniku nic nepřinesou. Buď je to drahé, nebo to sežere spoustu času, nebo se to vůbec nedostane k lidem, kteří k vám můžou opravdu přijít.",
+    "items": [
+      {
+        "title": "Instagramové reklamy míří vedle",
+        "description": "Platíte za imprese, jenže většina z nich skončí u lidí, kteří k vám nikdy nedorazí. Bydlí na druhém konci republiky, nechodí na takové jídlo, jaké vaříte, nebo jen sjedou palcem dál. Pro restauraci v Praze je platit za imprese asi jako pronajmout si billboard v Brně.",
+        "link": "Porovnejte Tagly s instagramovými reklamami"
+      },
+      {
+        "title": "Food influenceři jsou drazí a nevyzpytatelní",
+        "description": "Influencer si řekne o pevnou částku dopředu, ať už to nakonec přinese cokoli, a jeho sledující bývají rozesetí po celé republice, ne kolem vaší restaurace. Přibude vám lajků, ale rezervací ani jedna.",
+        "link": "Porovnejte Tagly s influencer marketingem"
+      },
+      {
+        "title": "Agentura vás vyjde dráž, než kolik přinese",
+        "description": "Většina majitelů restaurací řeší kuchyň, směny a spokojené hosty. Na strategii sociálních sítí čas nezbývá. Agentura ho ušetří, jenže platíte měsíční paušál za obecný obsah, ze kterého jen málokdy poznáte, čím je právě vaše restaurace výjimečná.",
+        "link": "Porovnejte Tagly s marketingovými agenturami"
+      }
+    ]
+  },
+  "how": {
+    "title": "Jak Tagly funguje v restauraci",
+    "intro": "Marketing za vás dělají hosté, kteří k vám už chodí. Krok za krokem to vypadá takhle.",
+    "steps": [
+      {
+        "title": "Host si vás najde a přijde",
+        "description": "Vaši restauraci uvidí na mapě v aplikaci Tagly, i s odhadem, kolik si může za story ze své návštěvy vydělat. Přijde, objedná si a zaplatí plnou cenu. Úplně stejně jako kdokoli jiný."
+      },
+      {
+        "title": "Přidá story na Instagram",
+        "description": "Po jídle přidá story. Talíř, prostor, stůl. Označí u toho vaši restauraci nebo přidá polohovou nálepku, aby byl váš název na story vidět. Žádný scénář, žádná pravidla značky, prostě to, co by sdílel tak jako tak."
+      },
+      {
+        "title": "Tagly story ocení a zaplatí hostovi odměnu",
+        "description": "Zhruba za den Instagram nahlásí, kolik lidí story vidělo. Tagly ho ocení podle toho dosahu a podle toho, jak blízko vaší adrese to publikum bydlí, a odměnu hostovi zaplatí z vašeho rozpočtu. Nastavíte rozpočet a nic jiného řešit nemusíte."
+      }
+    ],
+    "fullGuide": "Podívejte se na celý návod krok za krokem"
+  },
+  "examples": {
+    "title": "Jaká story budou vaši hosté sdílet",
+    "intro": "Jídlo si lidé fotí tak jako tak, jen jim chybí důvod fotku zveřejnit. Tady je pár ukázek toho, co u vás může vzniknout samo.",
+    "alts": [
+      "Talíře na sdílení s kachnou, zeleninou a salátem v restauraci Asian Fusion",
+      "Dvě pizzy z pece na dřevo s prosciuttem a vejcem v Italian Corner",
+      "Burger s hranolky a miska s kuřecím salátem v Burger Point",
+      "Steak s fazolovými lusky a pečenými bramborami na žlutém ubrusu v Joe's Steak House",
+      "Vepřový řízek tonkatsu s omáčkami na namáčení v Katsu by the Bay",
+      "Steak s hranolky a salátem v restauraci Aurelia"
+    ]
+  },
+  "whyRestaurants": {
+    "title": "Proč Tagly restauracím sedí obzvlášť dobře",
+    "intro": "Do restaurace se jde cíleně, často se to plánuje dopředu a skoro vždycky z toho vznikne fotka. Právě proto jsou restaurace pro Tagly nejpřirozenější obor ze všech. Důvody jsou čtyři.",
+    "items": [
+      {
+        "title": "Jídlo si lidé fotí sami od sebe",
+        "description": "Vaši hosté tyhle fotky pořizují už teď. Tagly po nich nechce nic navíc, jen je odmění za to, že jednu z nich zveřejní. Proto story nepůsobí jako reklama. Ono to reklama není."
+      },
+      {
+        "title": "Stoly zaplní lidé z okolí, ne imprese",
+        "description": "Restaurace nepotřebuje milion impresí. Potřebuje, aby o ní věděli lidé, kteří bydlí a pracují pár ulic od ní. Sdílet vás může kdokoli, ale čím dál od vaší adresy jeho sledující bydlí, tím blíž nule je cena takového story. Za dosah na druhém konci republiky nezaplatíte skoro nic."
+      },
+      {
+        "title": "Každé story je osobní doporučení",
+        "description": "Když někdo zveřejní fotku svého jídla, jeho sledující to berou jako tip od kamaráda, ne jako reklamu. A kamarádovi věří člověk mnohem víc než jakékoli placené kampani. Jedno poctivé story od stálého hosta udělá pro restauraci víc než tucet placených reklam."
+      },
+      {
+        "title": "Sociálních sítí se nemusíte ani dotknout",
+        "description": "Žádný obsahový kalendář, žádné focení, žádné vymýšlení popisků, žádné cílení reklam. Nastavíte rozpočet a co a kdy zveřejní, si hosté rozhodnou sami. Vy vedete restauraci, marketing obstarají oni."
+      }
+    ]
+  },
+  "useCases": {
+    "title": "Jak Tagly používají různé restaurace",
+    "items": [
+      {
+        "title": "Nové podniky, o kterých ještě nikdo neví",
+        "description": "Otevřeli jste a v okolí o vás zatím nikdo neslyšel? Tagly dostane vaši restauraci na mapu v aplikaci, takže vás lidé z okolí najdou, přijdou vás vyzkoušet a přidají o tom story svým sledujícím. Doporučení z okolí máte od prvního týdne, a to i bez otevírací kampaně."
+      },
+      {
+        "title": "Zavedené restaurace, které představují novinku",
+        "description": "Nové menu, sezonní nabídka, zrekonstruovaný sál? Vaši stálí hosté jsou na Instagramu už teď. Jakmile je restaurace na Tagly, každý host, který přidá story ze své návštěvy, ukáže nová jídla i nový prostor svým sledujícím z okolí. Nemůžete jim nic zadat, a přesně v tom je ta síla. Vypadá to jako tip od známého, ne jako oznámení."
+      },
+      {
+        "title": "Restaurace v ulici plné konkurence",
+        "description": "Ve čtvrti, kde je na jedné ulici deset dalších podniků, je těžké vyčnívat. Tagly vám dá stálý přísun poctivých instagramových story od skutečných hostů. Po pár měsících jste ta restaurace, kam lidé pořád vidí chodit své známé, a takový sociální důkaz zabere víc než jakákoli reklama."
+      }
+    ]
+  },
+  "faq": {
+    "heading": "Časté dotazy k marketingu restaurací",
+    "items": [
+      {
+        "question": "Kolik Tagly stojí restauraci?",
+        "answer": "Zaplatit se to dá dvěma způsoby a ani jeden není předplatné ani smlouva. Průběžné platby: připojíte kartu a jste hned vidět. Nic se nestrhne dřív, než je story skutečně zaplacené, takže žádná záloha a žádné minimum, jen 0,30 $ za každou platbu. Nebo si kredity předplatíte: 1 kredit = 1 $, nejmenší nákup je 50 $ a kredity nikdy nevyprší. U kreditů potřebujete aspoň 15 $ dostupných kreditů, abyste zůstali v aplikaci vidět. Kolik může jedno story stát, má navíc svůj strop, takže vám žádné story neodčerpá celý rozpočet. Účtujeme v dolarech, v aplikaci se částky přepočítávají do korun aktuálním kurzem."
+      },
+      {
+        "question": "Musím kvůli tomu něco tvořit?",
+        "answer": "Ne. Obsah tvoří vaši hosté tím, že přidávají na Instagram story ze svého jídla. Nemusíte plánovat obsah, fotit, vymýšlet popisky ani hlídat kalendář sociálních sítí. Zbytek zařídí Tagly."
+      },
+      {
+        "question": "V čem se to liší od najmutí food influencera?",
+        "answer": "Influencer si řekne o pevnou částku dopředu, ať už to nakonec přinese cokoli, a jeho sledující bývají rozesetí po celé republice. U Tagly se dopředu nedomlouvá nic. Každé story se ocení podle dosahu, který opravdu mělo, a podle toho, jak blízko vaší restauraci to publikum bydlí. Ne podle počtu sledujících."
+      },
+      {
+        "question": "Pro jaké restaurace se Tagly hodí?",
+        "answer": "Pro každou, kde si hosté můžou vyfotit, co jedí. Fine dining, bistro na rohu, pizzerie, sushi bary, brunche. Když u vás lidé jedí a chutná jim, Tagly z toho udělá doporučení, které se šíří dál."
+      },
+      {
+        "question": "Jak se zákazníci dozvědí, že je moje restaurace na Tagly?",
+        "answer": "Najdou vás na mapě v aplikaci Tagly. Každý, kdo má aplikaci a je poblíž, uvidí vaši restauraci i s odhadem, kolik si může za story ze své návštěvy vydělat. Nemusíte nic tisknout, rozdávat ani nikam v restauraci vyvěšovat."
+      },
+      {
+        "question": "Můžu ovlivnit, co o mé restauraci lidé zveřejní?",
+        "answer": "Ne, a je to záměr. Tagly hostům nedává scénáře ani pokyny, a právě proto story působí opravdově. Jediná podmínka je, aby šlo poznat, že jsou u vás: host označí vaši restauraci nebo přidá polohovou nálepku, aby byl váš název na story vidět."
+      }
+    ],
+    "costInline": "Zaplatit se to dá dvěma způsoby a ani jeden není předplatné ani smlouva. Průběžné platby: připojíte kartu a jste hned vidět. Nic se nestrhne dřív, než je story skutečně zaplacené, takže žádná záloha a žádné minimum, jen 0,30 $ za každou platbu. Nebo si kredity předplatíte: 1 kredit = 1 $, nejmenší nákup je 50 $ a kredity nikdy nevyprší. U kreditů potřebujete aspoň 15 $ dostupných kreditů, abyste zůstali v aplikaci vidět. Kolik může jedno story stát, má navíc svůj strop, takže vám žádné story neodčerpá celý rozpočet. Účtujeme v dolarech, v aplikaci se částky přepočítávají do korun aktuálním kurzem. Podívejte se, <link>jak funguje cena</link>.",
+    "influencerInline": "Influencer si řekne o pevnou částku dopředu, ať už to nakonec přinese cokoli, a jeho sledující bývají rozesetí po celé republice. U Tagly se dopředu nedomlouvá nic. Každé story se ocení podle dosahu, který opravdu mělo, a podle toho, jak blízko vaší restauraci to publikum bydlí. Ne podle počtu sledujících. Přečtěte si <link>celé porovnání</link>."
+  },
+  "internalLinks": {
+    "compareHeading": "Jak si Tagly stojí proti ostatním",
+    "instagramAds": "Instagramové reklamy",
+    "influencerMarketing": "Influencer marketing",
+    "marketingAgencies": "Marketingové agentury",
+    "learnMoreHeading": "Zjistit více",
+    "howItWorks": "Jak to funguje",
+    "pricing": "Ceník",
+    "faq": "Časté dotazy"
+  },
+  "cta": {
+    "heading": "Chcete, aby vaši restauraci doporučovali vaši hosté?",
+    "description": "Přidejte se k Tagly a nechte propagaci na lidech, kterým vaše jídlo chutná už teď."
+  }
+}

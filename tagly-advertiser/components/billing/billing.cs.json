@@ -1,0 +1,72 @@
+{
+  "//": "THE canonical funding vocabulary for the whole billing feature (billing namespace), at the feature root rather than inside a component folder — every card, row and sheet renders these exact words. THE RULE: if a string names a method, a state, an amount or an action, it belongs here; if it narrates a flow (consent, verifying, success, failure, confirm), it belongs to that sheet's own namespace. Point counts are fixed by MethodBenefits' ROWS (credits + payg: 2, monthlyBudget: 3) — change both together. {{surcharge}} = formatted PAYG.SURCHARGE_CENTS.",
+  "howYouPay": "Jak platíš",
+  "credits": {
+    "title": "Předplacené kredity",
+    "tagline": "Kup si kredity, které budou použity na financování sdílení",
+    "benefitsTitle": "Výhody předplacených kreditů",
+    "cta": "Přidat kredity",
+    "point1": "Strhávají se, jen když tě někdo sdílí",
+    "point1Sub": "Jedna odměna za každé sdílení tvého podniku",
+    "point2": "Kredity nevyprší",
+    "point2Sub": "Nevyužité kredity ti zůstanou, dokud je neutratíš",
+    "available": "Dostupné kredity",
+    "locked": "Rezervované kredity",
+    "rate": "1 kredit = $1"
+  },
+  "payg": {
+    "title": "Průběžné platby",
+    "tagline": "Když tě někdo sdílí, strhneme částku za sdílení z tvé karty",
+    "benefitsTitle": "Výhody průběžných plateb",
+    "cta": "Nastavit průběžné platby",
+    "point1": "Žádná platba předem",
+    "point1Sub": "Peníze se strhnou, jen když tě někdo sdílí",
+    "point2": "Nemusíš nic hlídat",
+    "point2Sub": "Žádné dobíjení ani sledování zůstatku",
+    "afterCredits": "Použije se, až ti dojdou kredity",
+    "surcharge": "{{surcharge}} za každou platbu",
+    "chargedToCard": "Sdílení se strhávají z tvé karty. Kredity se vždy použijí první."
+  },
+  "monthlyBudget": {
+    "title": "Měsíční dobíjení",
+    "tagline": "Každý měsíc začni s plným rozpočtem",
+    "benefitsTitle": "Výhody měsíčního dobíjení",
+    "cta": "Nastavit měsíční dobíjení",
+    "point1": "Rozpočet se dobíjí automaticky",
+    "point1Sub": "Nemusíš hlídat zůstatek ani dobíjet peníze ručně",
+    "point2": "Platíš jen rozdíl",
+    "point2Sub": "První den v měsíci strhneme jen to, co ti chybí do nastavené částky",
+    "point3": "Předvídatelné výdaje",
+    "point3Sub": "Přesně víš, kolik každý měsíc maximálně utratíš",
+    "perMonth": "{{amount}} / měsíc",
+    "chargeLine": "Při aktuálním zůstatku {{date}} strhneme {{amount}}",
+    "chargeLineZero": "Při aktuálním zůstatku {{date}} nic nestrhneme"
+  },
+  "card": {
+    "title": "Platební karta",
+    "onFile": "{{brand}} •••• {{last4}}",
+    "expires": "Platnost do {{month}}/{{year}}",
+    "none": "Žádná",
+    "declined": "Zamítnuta",
+    "jobsHeading": "Tato karta se používá na:"
+  },
+  "action": {
+    "payBalance": "Vyrovnat zůstatek",
+    "turnOff": "Vypnout",
+    "changeAmount": "Změnit částku",
+    "updateCard": "Aktualizovat kartu",
+    "replaceCard": "Vyměnit kartu",
+    "removeCard": "Odebrat kartu",
+    "addCard": "Přidat kartu",
+    "manage": "Spravovat",
+    "card": "Karta"
+  },
+  "state": {
+    "on": "Zapnuto",
+    "off": "Vypnuto",
+    "active": "Aktivní",
+    "paused": "Pozastaveno",
+    "retrying": "Opakujeme",
+    "cardIssue": "Problém s kartou"
+  }
+}

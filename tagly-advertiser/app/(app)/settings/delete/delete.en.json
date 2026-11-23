@@ -1,0 +1,26 @@
+{
+  "//": "Used in: app/(app)/settings/delete/index.tsx (settingsDelete namespace).",
+
+  "warningHeading": "This can't be undone",
+  "warningBalanceNote": "Your remaining {{balance}} in credits will be forfeited.",
+  "warningPoint1": "Your account and profile are permanently deleted.",
+  "warningPoint2": "Your business pages are removed and stop being shown.",
+  "warningPoint3": "Any unspent credit balance is forfeited.",
+  "sendCodeButton": "Delete my account",
+
+  "verifyHeading": "Confirm it's you",
+  "verifyBody": "Enter the code we sent to {{email}}.",
+  "resend": "Resend code",
+  "resendIn": "Resend in {{seconds}}s",
+  "deleteButton": "Delete account",
+  "back": "Keep my account",
+
+  "deletedTitle": "Account deleted",
+  "deletedBody": "Your account has been deleted. We're sorry to see you go.",
+  "deletedWithBalanceBody": "Your account has been deleted. Any unspent credits have been forfeited.",
+
+  "owesMoneyTitle": "Outstanding balance",
+  "owesMoneyBody": "You have an unpaid balance on your account. Please contact support to settle it before deleting your account.",
+  "noPendingTitle": "Let's try again",
+  "noPendingBody": "Your confirmation code expired. Send a new one to continue."
+}

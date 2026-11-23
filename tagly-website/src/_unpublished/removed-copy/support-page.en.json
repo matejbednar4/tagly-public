@@ -1,0 +1,57 @@
+{
+  "//": "Used in: src/app/[lng]/support/page.tsx and src/components/support/SupportForm.tsx (client). form.reason.options are display labels aligned to the stable English values submitted to /api/support.",
+  "meta": {
+    "title": "Support",
+    "description": "Need help with Tagly? Submit a support request or find answers in our FAQ and how-it-works guides.",
+    "ogTitle": "Support | Tagly"
+  },
+  "hero": {
+    "title": "Support",
+    "subtitle": "Have an issue? We're here to help."
+  },
+  "resources": {
+    "title": "Before you reach out",
+    "intro": "Many common questions are already answered. Check these resources first. You might find what you need right away.",
+    "items": [
+      {
+        "title": "FAQ for businesses",
+        "description": "Answers about pricing, how Tagly works, getting started, and more."
+      },
+      {
+        "title": "FAQ for customers",
+        "description": "Questions about earning rewards, connecting Instagram, withdrawing your money, and more."
+      },
+      {
+        "title": "How Tagly works for businesses",
+        "description": "A step-by-step guide to how businesses use Tagly to get promoted by real customers."
+      },
+      {
+        "title": "How Tagly works for customers",
+        "description": "Learn how you can earn rewards by sharing the places you love on Instagram."
+      }
+    ]
+  },
+  "form": {
+    "title": "Submit a request",
+    "intro": "Fill out the form below and we'll get back to you as soon as possible. You can also email us directly at <email>support@taglyapp.com</email>.",
+    "success": {
+      "title": "Request received",
+      "description": "Thanks for reaching out. We'll get back to you as soon as possible."
+    },
+    "name": { "label": "Your name", "placeholder": "John Smith" },
+    "email": { "label": "Email", "placeholder": "you@example.com" },
+    "isBusinessOwner": "I am a business owner",
+    "reason": {
+      "label": "Reason",
+      "placeholder": "Select a reason",
+      "options": ["In-app problem", "Account issue", "Payment or billing", "Feature request", "Other"]
+    },
+    "message": { "label": "Describe your issue", "placeholder": "Tell us what happened and how we can help" },
+    "submit": "Submit request",
+    "submitting": "Sending...",
+    "error": "Something went wrong. Please try again or email us directly at <email>support@taglyapp.com</email>."
+  },
+  "links": {
+    "text": "Looking for something else? <contact>Contact us</contact>, <sales>get in touch</sales>, or <about>learn about Tagly</about>."
+  }
+}

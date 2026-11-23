@@ -1,0 +1,18 @@
+{
+  "//": "Used in: tagly-customer/components/onboarding/SignIn/index.tsx (signIn namespace)",
+  "heading": "Přihlas se nebo si vytvoř účet",
+  "emailPlaceholder": "E-mailová adresa",
+  "invalidEmail": "Zadej platnou e-mailovou adresu",
+  "continue": "Pokračovat",
+  "orSeparator": "nebo",
+  "continueWithApple": "Pokračovat přes Apple",
+  "continueWithGoogle": "Pokračovat přes Google",
+  "terms": "Pokračováním souhlasíš s našimi <tos>Obchodními podmínkami</tos> a <pp>Zásadami ochrany osobních údajů</pp>.",
+  "infoA11y": "Přehrát úvod znovu",
+  "forgotEmail": "Zapomněl/a jsi e-mail od svého účtu?",
+  "instagramSheetHeading": "Zapomenutý e-mail",
+  "instagramSheetBody": "Pokud už Tagly účet máš, můžeš se přihlásit přes propojený Instagram. E-mail si pamatovat nemusíš.",
+  "loginWithInstagram": "Pokračovat přes Instagram",
+  "instagramFailedNote": "Stránka se nenačetla nebo se zasekla? Instagram občas selže, ale anonymní okno by to mělo vyřešit.",
+  "loginWithInstagramIncognito": "Otevřít v anonymním okně"
+}

@@ -1,0 +1,16 @@
+{
+  "//": "Used in: components/settings/NotificationSettings/index.tsx + settings/notifications/{push,email}.tsx (settingsNotifications namespace).",
+  "alwaysOn": "Vždy zapnuto",
+  "save": "Uložit",
+  "errorTitle": "Nepodařilo se uložit",
+  "errorBody": "Zkus to prosím znovu.",
+  "empty": "Není tu co nastavovat.",
+
+  "promoSection": "Novinky",
+  "promoLabel": "Novinky a připomínky",
+  "promoSubtitle": "Tipy, připomínky a nabídky e-mailem i push notifikacemi.",
+
+  "permTitle": "Push notifikace jsou vypnuté",
+  "permBody": "Zapni notifikace v nastavení zařízení, ať o nic nepřijdeš.",
+  "permButton": "Otevřít nastavení"
+}

@@ -1,0 +1,92 @@
+{
+  "//": "Used in: src/app/[lng]/instagram-ads-vs-tagly/page.tsx — hero (Trans links), comparison table (8 rows), why-better cards, where-ads-work cards (5), bottom line (Trans), other comparisons (Trans), CTA. Shared headings come from the `comparison` namespace.",
+  "meta": {
+    "title": "Instagram Ads vs Tagly | Which Is Better for Local Businesses?",
+    "description": "Comparing Instagram ads and Tagly for local business marketing. Instagram ads suit big brands, but Tagly pays your customers to share you in their Instagram stories. See which works better for restaurants, cafes, and gyms."
+  },
+  "hero": {
+    "title": "Instagram Ads vs Tagly",
+    "subtitle": "An honest comparison for local businesses",
+    "intro": "Instagram ads are a powerful tool for the right business. But if you run a <restaurants>restaurant</restaurants>, <cafes>cafe</cafes>, <gyms>gym</gyms>, or any other <local>local business</local>, most of what makes ads effective does not apply to you. Tagly takes a different approach: word-of-mouth marketing from the people who already come in. Here is how the two compare."
+  },
+  "table": {
+    "competitor": "Instagram Ads",
+    "rows": [
+      { "label": "Best for", "competitor": "Big brands, e-commerce, national reach", "tagly": "Local businesses with a physical location" },
+      { "label": "You pay for", "competitor": "Impressions or clicks", "tagly": "Verified Instagram stories that visibly show your business" },
+      { "label": "Audience", "competitor": "Algorithm-selected. You can draw a radius, but everyone inside it is a stranger", "tagly": "The friends and followers of whoever shares you. You pay most for the ones near you and close to nothing for the ones far away" },
+      { "label": "Content", "competitor": "You create the ad", "tagly": "Your customers post their own story, in their own words" },
+      { "label": "Trust level", "competitor": "People know it is an ad", "tagly": "Looks like a genuine recommendation" },
+      { "label": "Time required", "competitor": "Ongoing: creative, targeting, optimization", "tagly": "Set up once. After that, top up when you run low and rate the stories you get" },
+      { "label": "Expertise needed", "competitor": "Significant, or hire an agency", "tagly": "None" },
+      { "label": "Minimum budget", "competitor": "Small daily minimums, but real results need sustained spend", "tagly": "None on pay as you go. Credits start at $50 (in the app, amounts are also shown in Czech koruna at the current exchange rate)" }
+    ]
+  },
+  "whyBetter": {
+    "intro": "If your customers need to physically walk through your door, the rules change. Relevance matters more than reach, and a genuine recommendation from a friend matters more than a polished ad. That is what word-of-mouth marketing does, and Tagly makes it happen consistently.",
+    "items": [
+      {
+        "title": "Your customers do the marketing for you",
+        "description": "With Instagram ads, you create the content, write the copy, choose the targeting, and optimize the campaign. Your customers already take photos at your business. Most of them just never share them. Tagly gives them a reason to post one as an Instagram story, with your business visible on it. The content is authentic because it comes from a real person having a real experience."
+      },
+      {
+        "title": "You pay for reach that can actually reach you",
+        "description": "There is no location targeting to set up, and no filter deciding who is allowed to share you. Anyone can. What makes Tagly local is the price. Tagly works out where a story's audience actually is, from Instagram's own audience data, and prices the story accordingly: viewers in your city are worth the most, and viewers hundreds of kilometres away are worth almost nothing. Anyone can share you. You only pay for the people who could actually walk in."
+      },
+      {
+        "title": "People trust recommendations, not ads",
+        "description": "Everyone knows when they are looking at an ad. It is labeled, it looks different, and plenty of people scroll straight past. A story from someone you actually follow is different. It reads as a genuine recommendation because it is one. For a local business, that trust is everything."
+      },
+      {
+        "title": "There is almost nothing to run",
+        "description": "Instagram ads require ongoing work: monitoring performance, adjusting targeting, refreshing creatives, managing budgets. Tagly has no campaigns, no targeting, and no creative to build, and nothing needs your approval before it goes out. Two things do need you. Keep the account funded, either with a linked card or with at least $15 in available credits, which is what keeps your business showing in the app. And give each story you receive a quick star rating, which takes a few seconds."
+      },
+      {
+        "title": "You only pay for a story that actually happened",
+        "description": "Instagram ads charge you for impressions or clicks, plenty of which reach people who will never visit. Tagly charges you only after someone has posted an Instagram story that visibly shows your business, and only once Instagram has reported how many people saw it, about a day later. You are paying for something that already ran, at a price set largely by how many of those viewers were near you."
+      },
+      {
+        "title": "No expertise required",
+        "description": "Running Instagram ads well takes skill: audiences, bidding, creative formats, A/B testing, campaign structure. Many local businesses end up hiring an agency or boosting posts and hoping. Tagly needs no marketing knowledge. Setting up is a name, a business type, your address, and one cover photo. That is the whole thing."
+      }
+    ]
+  },
+  "worksWell": {
+    "title": "Instagram Ads work well, just not for local businesses",
+    "intro": "Instagram ads are not a bad product. For certain types of businesses, they are one of the best marketing channels available.",
+    "items": [
+      {
+        "title": "Big brands with national reach",
+        "description": "If you sell a product that can be shipped anywhere or a service that is not tied to a location, Instagram ads let you reach millions of people and scale quickly. The broader your audience, the better ads work."
+      },
+      {
+        "title": "E-commerce and online stores",
+        "description": "Instagram ads with product tags, shoppable posts, and retargeting can drive direct sales. If someone can buy your product without leaving their couch, ads are a natural fit."
+      },
+      {
+        "title": "Retargeting and conversion funnels",
+        "description": "If you have a website with traffic, Instagram ads let you retarget visitors and guide them through a purchase funnel. This works well for businesses with longer sales cycles."
+      },
+      {
+        "title": "Scaling with data",
+        "description": "The more you spend on Instagram ads, the more data you collect, and the better the algorithm gets at finding your audience. This feedback loop is powerful, but it requires budget and expertise to maintain."
+      },
+      {
+        "title": "Precise location targeting",
+        "description": "Ads can be local, and it is only fair to say so. Meta lets you draw a radius around your address and show your ad only to people inside it. If what you need is raw local visibility and you already have good creative, that is a fast and cheap way to get it. What a radius cannot do is make the ad feel like a recommendation from someone the viewer knows."
+      }
+    ]
+  },
+  "bottomLine": {
+    "p1": "Instagram ads are a great tool for businesses that sell online, have national reach, or can invest the time and money to run campaigns properly. If that is you, ads can work really well.",
+    "p2": "But if you run a local business and your goal is to get more people through the door, Tagly is built for exactly that. It is simpler, it is more authentic, and it prices every story by how close its audience is to you. Your customers already visit and take photos. Tagly gives them a reason to share one more often.",
+    "p3": "You can also use both. Tagly and Instagram ads are not mutually exclusive. But for most local businesses, Tagly on its own is enough to check marketing off the list and get back to running your business. Check out <pricing>pricing</pricing> or read the <faq>FAQ</faq> if you want to learn more before getting started."
+  },
+  "other": {
+    "intro": "See how Tagly compares to <influencer>influencer marketing</influencer> and <agencies>marketing agencies</agencies>."
+  },
+  "cta": {
+    "heading": "Ready to try Tagly?",
+    "description": "Create your business page, link a card or add credits, and let your customers start sharing you on Instagram."
+  }
+}

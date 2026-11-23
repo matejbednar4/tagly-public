@@ -1,0 +1,12 @@
+{
+  "//": "Used in: app/(app)/shares/index.tsx (advertiserShares namespace).",
+  "title": "Sdílení",
+  "sortBy": "Řadit podle",
+  "sortNewest": "Nejnovější",
+  "sortOldest": "Nejstarší",
+  "sortHighest": "Nejvyšší cena",
+  "sortLowest": "Nejnižší cena",
+  "done": "Hotovo",
+  "empty": "Zatím žádná sdílení",
+  "emptyHint": "Až o tvém podniku někdo zveřejní story, jeho sdílení najdeš tady."
+}

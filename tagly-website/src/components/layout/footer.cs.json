@@ -1,0 +1,57 @@
+{
+  "//": "Used in: src/components/layout/Footer.tsx — section titles, link labels, copyright line, and social aria labels.",
+  "sections": {
+    "forBusiness": "Pro podniky",
+    "industries": "Odvětví",
+    "compare": "Srovnání",
+    "apps": "Aplikace",
+    "company": "Společnost",
+    "forCustomers": "Pro zákazníky",
+    "legal": "Právní informace"
+  },
+  "forBusiness": {
+    "howItWorks": "Jak to funguje",
+    "pricing": "Ceník",
+    "referrals": "Pozvěte a vydělávejte",
+    "faq": "Časté dotazy",
+    "getInTouch": "Zanechat kontakt"
+  },
+  "industries": {
+    "restaurants": "Restaurace",
+    "cafes": "Kavárny",
+    "gyms": "Fitness centra",
+    "salons": "Salony",
+    "other": "Další odvětví"
+  },
+  "compare": {
+    "instagramAds": "Instagramové reklamy vs Tagly",
+    "influencerMarketing": "Influencer marketing vs Tagly",
+    "marketingAgencies": "Marketingové agentury vs Tagly"
+  },
+  "apps": {
+    "business": "Tagly Partner",
+    "customer": "Tagly"
+  },
+  "company": {
+    "about": "O nás",
+    "careers": "Kariéra",
+    "contact": "Kontakt"
+  },
+  "forCustomers": {
+    "howItWorks": "Jak to funguje",
+    "faq": "Časté dotazy"
+  },
+  "legal": {
+    "privacy": "Zásady ochrany osobních údajů",
+    "terms": "Obchodní podmínky",
+    "monetization": "Podmínky monetizace",
+    "instagramDataDeletion": "Smazání dat z Instagramu"
+  },
+  "aria": {
+    "instagram": "Tagly na Instagramu",
+    "linkedin": "Tagly na LinkedInu",
+    "tiktok": "Tagly na TikToku",
+    "taglyHome": "Úvodní stránka Tagly"
+  },
+  "copyright": "© {{year}} Flaer, Inc. Všechna práva vyhrazena."
+}

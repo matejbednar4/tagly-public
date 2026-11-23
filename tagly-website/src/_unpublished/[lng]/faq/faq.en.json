@@ -1,0 +1,172 @@
+{
+  "//": "Used in: src/app/[lng]/faq/page.tsx — hero, 5 FaqSection groups, standalone links, CTA. *Inline keys are rendered with <Trans> for inline PressableText links; the plain `answer` strings feed the single page-level FAQ JSON-LD. RULE: an *Inline string must be its `answer` twin with link tags added and nothing else changed, so the structured data mirrors the visible copy exactly. Edit both or neither.",
+  "meta": {
+    "title": "Tagly FAQ for Business Owners",
+    "description": "Frequently asked questions about Tagly for business owners. What it costs, how a share is priced, when you are charged, and how to get started."
+  },
+  "hero": {
+    "title": "Frequently asked questions",
+    "intro": "Everything business owners ask about Tagly, from how it works to what it costs. If you don't find your answer here, <contact>get in touch</contact> and we'll help."
+  },
+  "groups": {
+    "general": "General",
+    "gettingStarted": "Getting started",
+    "pricing": "Pricing and credits",
+    "howItWorks": "How it works",
+    "results": "Results and tracking"
+  },
+  "general": {
+    "items": [
+      {
+        "question": "What is Tagly?",
+        "answer": "Tagly is a platform that gets local businesses promoted by their real customers on Instagram. A customer posts an Instagram Story about your business, picks that story in the Tagly app, and is paid a small reward for it. You get authentic local promotion without creating content, running campaigns, or approving anything. See how it works."
+      },
+      {
+        "question": "Who is Tagly for?",
+        "answer": "Tagly is built for local businesses that live on word of mouth: restaurants, cafes, gyms, salons, and other local businesses. If your customers come to a physical place and might share it on Instagram, Tagly can work for you."
+      },
+      {
+        "question": "How is Tagly different from influencer marketing?",
+        "answer": "Influencer marketing pays people with large followings. Tagly pays your everyday customers, whose followers are mostly friends, family, and neighbors. The price follows relevance rather than size: the closer a story's audience is to your door, the more that story is worth, and an audience hundreds of kilometers away is worth almost nothing. Anyone can share you. You only pay for the people who could actually walk in. See a detailed comparison."
+      },
+      {
+        "question": "Do I need to create any content?",
+        "answer": "No. Your customers shoot and post their own stories: their meal, a gym selfie, a coffee. You never write a caption, record a video, set a brief, or run a social account. There is no script and nothing for you to approve."
+      },
+      {
+        "question": "Does Tagly work for any type of business?",
+        "answer": "Tagly works best for businesses with a physical place that customers visit. Restaurants, cafes, gyms, salons, and other local businesses are great fits. If your business is purely online or has no location customers come to, Tagly is probably not the right tool."
+      },
+      {
+        "question": "Who can share my business? Do they need a lot of followers?",
+        "answer": "Any Tagly customer who posts an Instagram Story about your business. There is no follower minimum, and a big following is not the point: reach that sits close to you is worth far more than reach scattered across the country, and the price reflects that. Anyone can share you. You only pay for the people who could actually walk in. Customers do need a professional Instagram account, which is free to switch to, because Instagram requires it for the numbers we read."
+      }
+    ],
+    "q1Inline": "Tagly is a platform that gets local businesses promoted by their real customers on Instagram. A customer posts an Instagram Story about your business, picks that story in the Tagly app, and is paid a small reward for it. You get authentic local promotion without creating content, running campaigns, or approving anything. <hiw>See how it works</hiw>.",
+    "q2Inline": "Tagly is built for local businesses that live on word of mouth: <restaurants>restaurants</restaurants>, <cafes>cafes</cafes>, <gyms>gyms</gyms>, <salons>salons</salons>, and <local>other local businesses</local>. If your customers come to a physical place and might share it on Instagram, Tagly can work for you.",
+    "q3Inline": "Influencer marketing pays people with large followings. Tagly pays your everyday customers, whose followers are mostly friends, family, and neighbors. The price follows relevance rather than size: the closer a story's audience is to your door, the more that story is worth, and an audience hundreds of kilometers away is worth almost nothing. Anyone can share you. You only pay for the people who could actually walk in. <compare>See a detailed comparison</compare>.",
+    "q5Inline": "Tagly works best for businesses with a physical place that customers visit. <restaurants>Restaurants</restaurants>, <cafes>cafes</cafes>, <gyms>gyms</gyms>, <salons>salons</salons>, and <local>other local businesses</local> are great fits. If your business is purely online or has no location customers come to, Tagly is probably not the right tool."
+  },
+  "gettingStarted": {
+    "items": [
+      {
+        "question": "How do I sign up?",
+        "answer": "Download the Tagly Partner app and sign in with your email, Apple, or Google. There are no passwords, we send you a one-time code. Then add your business name, type, address, and a cover photo. Your page goes live right away, and it starts showing to customers as soon as it is funded."
+      },
+      {
+        "question": "How much does it cost to get started?",
+        "answer": "There is no subscription, no monthly fee, and no setup fee. You fund rewards in one of two ways. Link a card and pay as you go, with nothing up front: you are only charged after a story has actually been paid for, plus $0.30 per charge. Or buy credits in advance, where 1 credit is $1 and the smallest purchase is $50. Your business shows in the Tagly app as soon as you have a linked card or at least $15 in available credits. We bill in dollars, and the app also shows every amount in Czech koruna at the current rate. See full pricing details."
+      },
+      {
+        "question": "Do I need an Instagram account for my business?",
+        "answer": "No. Customers post from their own accounts and Tagly never posts on your behalf. Adding your Instagram handle in the app is optional, but it helps: your name has to be readable on the story for it to count, and a handle gives customers one more easy way to show it."
+      },
+      {
+        "question": "Is there a contract or commitment?",
+        "answer": "No contracts, no lock-in, no notice period. Buy credits when you want, link or unlink a card when you want, and stop whenever you want. Credits never expire, so whatever you have funded stays ready for the next story."
+      },
+      {
+        "question": "Is Tagly an app, or is there a website version?",
+        "answer": "It is an app. Tagly Partner runs on iPhone and Android, and everything lives in it: funding, your business page, every share, and your statistics. There is no web dashboard, so nothing about Tagly requires you to be at a computer."
+      },
+      {
+        "question": "How do my existing customers find out about Tagly?",
+        "answer": "Most of them find you inside the app: your business shows on the Tagly map and in the discover feed as soon as it is funded. To reach your regulars directly, share your invite link or code from the Tagly Partner app. Anyone who joins through it stays linked to you, and you earn a share of what they go on to earn. Telling people at the counter that you are on Tagly works well too. Learn more about invites."
+      }
+    ],
+    "q1Inline": "Download the <app>Tagly Partner app</app> and sign in with your email, Apple, or Google. There are no passwords, we send you a one-time code. Then add your business name, type, address, and a cover photo. Your page goes live right away, and it starts showing to customers as soon as it is funded.",
+    "q2Inline": "There is no subscription, no monthly fee, and no setup fee. You fund rewards in one of two ways. Link a card and pay as you go, with nothing up front: you are only charged after a story has actually been paid for, plus $0.30 per charge. Or buy credits in advance, where 1 credit is $1 and the smallest purchase is $50. Your business shows in the Tagly app as soon as you have a linked card or at least $15 in available credits. We bill in dollars, and the app also shows every amount in Czech koruna at the current rate. <pricing>See full pricing details</pricing>.",
+    "q6Inline": "Most of them find you inside the app: your business shows on the Tagly map and in the discover feed as soon as it is funded. To reach your regulars directly, share your invite link or code from the <app>Tagly Partner app</app>. Anyone who joins through it stays linked to you, and you earn a share of what they go on to earn. Telling people at the counter that you are on Tagly works well too. <referrals>Learn more about invites</referrals>."
+  },
+  "pricing": {
+    "items": [
+      {
+        "question": "How much does each share cost?",
+        "answer": "Every share is priced individually, by Tagly, from the story's real numbers. It starts from how many people actually saw the story, and then follows how close that audience is to your business. A story seen by a few hundred genuinely local people usually costs a few dollars up to the low tens. Figures like that are illustrative, not a quote: the price always follows the actual story. See full pricing breakdown."
+      },
+      {
+        "question": "What is the most I can pay for one share?",
+        "answer": "Tagly caps what a single story can cost, so one story can never run away with your budget. You decide how much you fund, and we make sure no single story swallows it. In practice almost every story costs a small fraction of that cap."
+      },
+      {
+        "question": "What is pay as you go?",
+        "answer": "Pay as you go is the no-deposit way to fund Tagly. You link a card and your business is live immediately with zero credits. Nothing is charged until a story has actually been paid for, and then only for the part your credits do not cover, plus $0.30 per charge. Credits are always used first, and unlinking the card is how you stop."
+      },
+      {
+        "question": "Can I set a budget per share, or cap my spend?",
+        "answer": "No. You control your budget, not the price. There is no rate to set, no bid, no per-share cap you choose, and no targeting or scheduling. What you decide is how much you fund. Tagly caps what a single share can cost, and in practice almost every story costs a small fraction of that cap."
+      },
+      {
+        "question": "Do credits expire?",
+        "answer": "No. Credits stay in your account until they pay for a share. There is no expiry date and no dormancy fee."
+      },
+      {
+        "question": "Are credits refundable?",
+        "answer": "Credits are non-refundable by default. If you have a specific situation, contact our support team and we will review your case."
+      },
+      {
+        "question": "When is my business shown in the Tagly app?",
+        "answer": "Whenever it is funded. Your business is shown to customers as soon as it has a linked card or at least $15 in available credits, and it keeps showing for as long as that holds. A linked card is enough on its own."
+      }
+    ],
+    "q1Inline": "Every share is priced individually, by Tagly, from the story's real numbers. It starts from how many people actually saw the story, and then follows how close that audience is to your business. A story seen by a few hundred genuinely local people usually costs a few dollars up to the low tens. Figures like that are illustrative, not a quote: the price always follows the actual story. <pricing>See full pricing breakdown</pricing>.",
+    "q6Inline": "Credits are non-refundable by default. If you have a specific situation, <support>contact our support team</support> and we will review your case."
+  },
+  "howItWorks": {
+    "items": [
+      {
+        "question": "How does Tagly check that a share is real?",
+        "answer": "Your business has to be visible on the story itself. The customer tags or mentions you, adds the location sticker, or simply types your name, and we check the story for that. The customer then picks that same story in the Tagly app while it is still live. You only ever pay for a story that clearly shows your business, and there is nothing for you to do."
+      },
+      {
+        "question": "What do customers actually share?",
+        "answer": "Whatever feels natural to them: a plate of food, a gym selfie, a coffee, the room they are sitting in. There are no scripts and no templates, and you set no brief. The only requirement is that the story is about your business and that your name is readable in it. Authentic content performs best, which is exactly what Tagly encourages."
+      },
+      {
+        "question": "Can I control what gets shared?",
+        "answer": "Not before it goes up. The story is already published on the customer's own Instagram by the time you see it, and there is nothing for you to approve. Afterwards you can rate every share from half a star to five stars, and if something is wrong you can report it and our team looks into it."
+      },
+      {
+        "question": "How long does the story need to stay up?",
+        "answer": "Its full 24 hours. Tagly works with Instagram Stories only, not feed posts and not Reels, and the story's numbers are read from Instagram right before it expires. You pay for a story that stayed up the whole 24 hours and was measured."
+      },
+      {
+        "question": "When am I charged?",
+        "answer": "About a day after the story goes up. Instagram needs roughly 24 hours to report how many people actually saw it, and only then is the final price known and the reward paid. That is the moment the story is charged to your account."
+      },
+      {
+        "question": "What happens if someone shares spam or low-quality content?",
+        "answer": "Report it from the Tagly Partner app in a couple of taps. Payment is paused while our team looks at it, and if we agree with you before the reward has gone out, you are not charged. In practice it is rare: people share the places they genuinely like, from their own Instagram account."
+      }
+    ]
+  },
+  "results": {
+    "items": [
+      {
+        "question": "How do I track results?",
+        "answer": "The Tagly Partner app shows you what every share did. For each one you get the Instagram numbers, reach, views, replies, profile visits, new follows and reshares, plus exactly what it cost you. On top of that you get lifetime totals for your account: total reach, total shares, total spend, average price per share, and credits purchased. There is also a full transaction history, so you can always see where the money went."
+      },
+      {
+        "question": "How quickly will I see results?",
+        "answer": "It depends on where you are and how many Tagly users are nearby. Some businesses get their first share within days of funding their account. Sharing your invite link with your regulars is the fastest way to speed that up. Once a story is up, its numbers are measured over the following 24 hours, so you see the result the next day."
+      },
+      {
+        "question": "How do I know Tagly is actually working?",
+        "answer": "That is a fair question, and it applies to every form of local marketing. Whether you run a billboard, Instagram ads, or hand out flyers, nobody can tell you exactly how many people walked in because of it. What Tagly can tell you is exactly what you bought. You see every story, how many people it reached, and what it cost, plus your lifetime totals for reach, shares, and spend. And you only ever pay for a story that was actually posted and counted."
+      },
+      {
+        "question": "Can I use Tagly alongside other marketing?",
+        "answer": "Yes, but many businesses find that Tagly is all they need. Once your account is funded, Tagly runs on its own. There are no campaigns to manage, no content to create, and nothing to optimize. Your customers handle the marketing for you. For busy business owners who do not have time to think about marketing, Tagly lets you check it off your list and focus on running your business. That said, Tagly works well alongside other channels too. See how it compares to Instagram ads, influencer marketing, and marketing agencies."
+      }
+    ],
+    "q4Inline": "Yes, but many businesses find that Tagly is all they need. Once your account is funded, Tagly runs on its own. There are no campaigns to manage, no content to create, and nothing to optimize. Your customers handle the marketing for you. For busy business owners who do not have time to think about marketing, Tagly lets you check it off your list and focus on running your business. That said, Tagly works well alongside other channels too. See how it compares to <iads>Instagram ads</iads>, <influencer>influencer marketing</influencer>, and <agencies>marketing agencies</agencies>."
+  },
+  "links": {
+    "seePricing": "See full pricing details",
+    "learnMoreHowItWorks": "Learn more about how Tagly works"
+  },
+  "cta": {
+    "heading": "Still have questions?",
+    "description": "Get in touch and we'll walk you through everything. No commitment, no pressure."
+  }
+}

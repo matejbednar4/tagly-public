@@ -1,0 +1,10 @@
+{
+  "//": "Used in: components/storyViews/StoryViewsModal (storyViews namespace). App-open nudge asking no-Instagram users for their typical story views.",
+  "title": "How many people typically see your Instagram stories?",
+  "subtitle": "A rough number is fine. We use it to estimate what you could earn at places near you.",
+  "inputHeading": "Typical story views",
+  "inputPlaceholder": "e.g. 250",
+  "submitButton": "Save",
+  "skipButton": "Skip for now",
+  "cancelButton": "Cancel"
+}

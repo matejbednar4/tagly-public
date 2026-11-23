@@ -1,0 +1,9 @@
+{
+  "//": "Used in: components/instagram/InstagramConnectionPrompt.tsx (instagramConnectionPrompt namespace). The connect/fix/reconnect action buttons (incl. incognito retry). The status line copy lives with its renderer (e.g. customerDrawer).",
+  "actionConnect": "Connect Instagram",
+  "actionFix": "Fix Instagram connection",
+  "actionReconnect": "Reconnect Instagram",
+
+  "retryNote": "Didn't work? Instagram sometimes fails, but incognito mode should fix it.",
+  "actionIncognito": "Try in incognito mode"
+}

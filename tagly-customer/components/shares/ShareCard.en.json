@@ -1,0 +1,12 @@
+{
+  "//": "Used in: components/shares/SharePreviewCard.tsx (shareCard namespace). Share preview status + labels.",
+  "statusPaid": "Paid",
+  "statusPending": "Pending",
+  "statusUnderReview": "Under review",
+  "statusReported": "Reported",
+  "statusRejected": "Rejected",
+  "statusUnpayable": "Failed",
+  "estReward": "est. {{amount}} for {{reach}} reach",
+  "estRewardNoReach": "est. {{amount}}",
+  "deletedBusiness": "Deleted page"
+}

@@ -1,0 +1,2054 @@
+generator client {
+  provider            = "prisma-client"
+  output              = "../src/generated/prisma"
+  importFileExtension = "js"
+  moduleFormat        = "esm"
+}
+
+datasource db {
+  provider = "postgresql"
+  schemas  = ["app", "jobs"]
+}
+
+enum MediaType {
+  IMAGE
+  VIDEO
+
+  @@schema("app")
+}
+
+enum OtpPurpose {
+  REGISTRATION
+  LOGIN
+  EMAIL_CHANGE_CURRENT
+  EMAIL_CHANGE_NEW
+  PASSWORD_RESET
+  ACCOUNT_DELETION
+
+  @@schema("app")
+}
+
+model OtpSession {
+  id      Int        @id @default(autoincrement())
+  purpose OtpPurpose
+
+  targetEmail  String    @map("target_email") @db.Citext
+  otpHash      String    @map("otp_hash")
+  otpExpiresAt DateTime  @map("otp_expires_at") @db.Timestamptz(3)
+  attempts     Int       @default(0)
+  resendCount  Int       @default(0) @map("resend_count")
+  lastSentAt   DateTime? @map("last_sent_at") @db.Timestamptz(3)
+
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  pendingCustomerId   Int? @unique @map("pending_customer_id")
+  pendingAdvertiserId Int? @unique @map("pending_advertiser_id")
+  customerId          Int? @map("customer_id")
+  advertiserId        Int? @map("advertiser_id")
+  adminId             Int? @map("admin_id")
+
+  pendingCustomer   PendingCustomer?          @relation(fields: [pendingCustomerId], references: [id], onDelete: Cascade)
+  pendingAdvertiser PendingAdvertiserAccount? @relation(fields: [pendingAdvertiserId], references: [id], onDelete: Cascade)
+  customer          Customer?                 @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  advertiser        Advertiser?               @relation(fields: [advertiserId], references: [id], onDelete: Cascade)
+  admin             Admin?                    @relation(fields: [adminId], references: [id], onDelete: Cascade)
+
+  @@unique([purpose, customerId], name: "otpPurposeCustomerId")
+  @@unique([purpose, advertiserId], name: "otpPurposeAdvertiserId")
+  @@unique([purpose, adminId], name: "otpPurposeAdminId")
+  @@index([targetEmail, purpose])
+  @@index([otpExpiresAt])
+  @@index([customerId, purpose])
+  @@index([advertiserId, purpose])
+  @@map("otp_sessions")
+  @@schema("app")
+}
+
+enum AdminRole {
+  SUPER
+  SUPPORT
+  OPS
+
+  @@schema("app")
+}
+
+model Admin {
+  id  Int    @id @default(autoincrement())
+  uid String @unique
+
+  email        String @unique @db.Citext
+  username     String @unique
+  passwordHash String @map("password_hash")
+
+  isActive Boolean   @default(true) @map("is_active")
+  role     AdminRole
+
+  otpSessions       OtpSession[]
+  blastLogs         AdminBlastLog[]
+  reviewedLinks     Link[]
+  setReferralEvents ReferralEvent[]
+  jwtVersion        Int             @default(0) @map("jwt_version")
+
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  @@index([email])
+  @@map("admins")
+  @@schema("app")
+}
+
+enum PendingMediaPurpose {
+  LOCAL_BANNER
+  LOCAL_PHOTO
+
+  @@schema("app")
+}
+
+model PendingMedia {
+  id               Int    @id @default(autoincrement())
+  uid              String @unique
+  expectedMime     String @map("expected_mime")
+  expectedMaxBytes Int    @map("expected_max_bytes")
+  bucket           String
+  key              String @unique
+  width            Int?
+  height           Int?
+  durationMs       Int?   @map("duration_ms")
+
+  purpose PendingMediaPurpose
+
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  bannerOfPendingLocal PendingLocalSubaccount? @relation("PendingLocalSubaccountBanner")
+  photoOfPendingLocal  PendingLocalSubaccount? @relation("PendingLocalSubaccountPhotos", fields: [pendingLocalId], references: [id], onDelete: SetNull)
+  pendingLocalId       Int?                    @map("pending_local_id")
+
+  @@index([key])
+  @@index([createdAt])
+  @@map("pending_media")
+  @@schema("app")
+}
+
+model Media {
+  id  Int    @id @default(autoincrement())
+  uid String @unique
+
+  key         String    @unique
+  type        MediaType
+  mime        String
+  sizeBytes   Int?      @map("size_bytes")
+  width       Int
+  height      Int
+  aspectRatio Float     @map("aspect_ratio")
+  durationMs  Int?      @map("duration_ms")
+
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  bannerOfLocal     LocalSubaccount? @relation("LocalSubaccountBanner")
+  photoOfLocal      LocalSubaccount? @relation("LocalSubaccountPhotos", fields: [localSubaccountId], references: [id], onDelete: SetNull)
+  localSubaccountId Int?             @map("local_subaccount_id")
+
+  usedAsShareMedia     Share? @relation("ShareMainMedia")
+  usedAsShareThumbnail Share? @relation("ShareThumbMedia")
+
+  @@index([key])
+  @@index([type])
+  @@map("media")
+  @@schema("app")
+}
+
+enum AccountType {
+  CUSTOMER
+  ADVERTISER
+  PENDING_CUSTOMER
+  PENDING_ADVERTISER
+
+  @@schema("app")
+}
+
+enum AccountReferralStatus {
+  ACTIVE
+  INACTIVE
+  DELETED
+
+  @@schema("app")
+}
+
+model AccountReferral {
+  id   Int    @id @default(autoincrement())
+  code String @unique @db.Citext
+
+  codeUpdatedAt DateTime? @map("code_updated_at") @db.Timestamptz(3)
+  createdAt     DateTime  @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt     DateTime  @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  referrerEvents ReferralEvent[] @relation("ReferrerCode")
+  referredEvent  ReferralEvent?  @relation("ReferredCode")
+
+  customer   Customer?   @relation(name: "CustomerCode")
+  advertiser Advertiser? @relation(name: "AdvertiserCode")
+
+  status AccountReferralStatus @default(ACTIVE)
+
+  @@map("account_referrals")
+  @@schema("app")
+}
+
+model ReferralEvent {
+  id             Int             @id @default(autoincrement())
+  referrerCodeId Int             @map("referrer_code_id")
+  referrerCode   AccountReferral @relation("ReferrerCode", fields: [referrerCodeId], references: [id], onDelete: Restrict)
+
+  referredCodeId Int             @unique @map("referred_code_id")
+  referredCode   AccountReferral @relation("ReferredCode", fields: [referredCodeId], references: [id], onDelete: Restrict)
+
+  /// Audit trail for admin-set referrals: an influencer brings a business, sales
+  /// onboards it, and nobody tells the business to enter the code — an admin
+  /// links them after the fact via POST /v2/admin/advertisers/:uid/referrer.
+  /// Null = the account entered the code itself in-app.
+  setByAdminId Int?    @map("set_by_admin_id")
+  setByAdmin   Admin?  @relation(fields: [setByAdminId], references: [id], onDelete: SetNull)
+  adminReason  String? @map("admin_reason")
+
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+
+  @@map("referral_events")
+  @@schema("app")
+}
+
+model PendingCustomer {
+  id    Int    @id @default(autoincrement())
+  email String @unique @db.Citext
+
+  // ISO alpha-2 country code (`'US'`, `'CZ'`). Set at signup time from the
+  // landing-page suggest-locale signal or hardcoded to `'US'` by old routes.
+  locale   String @db.VarChar(2)
+  // ISO 639-1 language code (`'en'`, `'cs'`). Used for transactional emails
+  // sent during onboarding.
+  language String @db.VarChar(5)
+
+  fullName                  String?  @map("full_name") // null until profile step (v2 flow)
+  promoNotificationsEnabled Boolean? @map("promo_notifications_enabled") // null until profile step (v2 flow)
+  registrationToken         String   @unique @map("registration_token")
+
+  createdAt    DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  referrerCode String?  @map("referrer_code")
+
+  agreedToTermsOfServiceAt DateTime? @map("agreed_to_terms_of_service_at") @db.Timestamptz(3) // null until profile step (v2 flow)
+  agreedToPrivacyPolicyAt  DateTime? @map("agreed_to_privacy_policy_at") @db.Timestamptz(3) // null until profile step (v2 flow)
+
+  emailVerified Boolean @default(false) @map("email_verified") // set to true after OTP verification (v2 flow)
+
+  instagram             CustomerInstagramAccount?
+  gender                Gender? // null until profile step (v2 flow)
+  interests             Interest[]
+  otpSession            OtpSession?
+  pushTokens            PushToken[]
+  promoNotificationLogs PromoNotificationLog[]
+  oauthIdentities       OAuthIdentity[]
+
+  @@map("pending_customers")
+  @@schema("app")
+}
+
+enum CustomerStatus {
+  ACTIVE
+  BANNED
+
+  @@schema("app")
+}
+
+model Customer {
+  id    Int    @id @default(autoincrement())
+  uid   String @unique
+  email String @unique @db.Citext
+
+  // ACTIVE customers can use the app normally. BANNED customers can still log
+  // in but cannot create shares or withdraw money (gated in the respective
+  // controllers). A ban also records the customer's IG in BannedInstagram so
+  // the same Instagram cannot be re-used on Tagly.
+  status CustomerStatus @default(ACTIVE)
+
+  // ISO alpha-2 country code (`'US'`, `'CZ'`). Copied from PendingCustomer
+  // at promote time. Not user-modifiable in v1 — admin tooling fixes
+  // mistakes. Drives future segmentation + per-locale rules.
+  locale   String @db.VarChar(2)
+  // ISO 639-1 language code (`'en'`, `'cs'`). User-modifiable via
+  // PATCH /customers/language.
+  language String @db.VarChar(5)
+
+  agreedToTermsOfServiceAt DateTime @map("agreed_to_terms_of_service_at") @db.Timestamptz(3)
+  agreedToPrivacyPolicyAt  DateTime @map("agreed_to_privacy_policy_at") @db.Timestamptz(3)
+
+  jwtVersion Int @default(0) @map("jwt_version")
+
+  fullName        String                    @map("full_name")
+  instagram       CustomerInstagramAccount?
+  sensitiveData   CustomerSensitiveData     @relation(name: "CustomerToSensitive", fields: [sensitiveDataId], references: [id], onDelete: Cascade)
+  sensitiveDataId Int                       @unique @map("sensitive_data_id")
+
+  shares                    Share[]
+  gender                    Gender
+  interests                 Interest[]
+  pushTokens                PushToken[]
+  notificationOptOuts       NotificationEventOptOut[]
+  // Self-reported "typical story views" for customers with no usable Instagram
+  // data — the reach fallback the v2 estimate pricer reads (E062: server-owned
+  // so estimates are a pure function of server state and therefore cacheable;
+  // the old per-request query param was removed from the v2 wire). Written ONLY
+  // by updateEstimatedStoryViews, which bumps the customer reward-est gen.
+  // Null = never provided (or cleared). Ignored once a snapshot exists (real
+  // data always wins in the pricer).
+  estimatedStoryViews       Int?                                  @map("estimated_story_views")
+
+  promoNotificationsEnabled Boolean                @default(true) @map("promo_notifications_enabled")
+  promoNotificationLogs     PromoNotificationLog[]
+
+  genderUpdatedAt    DateTime? @map("gender_updated_at") @db.Timestamptz(3)
+  interestsUpdatedAt DateTime? @map("interests_updated_at") @db.Timestamptz(3)
+
+  createdAt         DateTime        @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt         DateTime        @updatedAt @map("updated_at") @db.Timestamptz(3)
+  accountReferral   AccountReferral @relation("CustomerCode", fields: [accountReferralId], references: [id], onDelete: Restrict)
+  accountReferralId Int             @unique @map("referral_code_id")
+
+  ledgerEvents      TransactionLedgerEvent[] @relation("LedgerCustomer")
+  stripeWithdrawals StripeWithdrawal[]
+  otpSessions       OtpSession[]
+  oauthIdentities   OAuthIdentity[]
+
+  @@index([email])
+  @@index([createdAt])
+  @@index([uid])
+  @@index([sensitiveDataId])
+  @@map("customers")
+  @@schema("app")
+}
+
+// Persistent block-list of Instagram accounts that have been banned. Checked
+// wherever an Instagram account is assigned/reassigned to a Tagly account
+// (registration + connect/reconnect) so a banned customer cannot re-use the
+// same Instagram (e.g. by deleting their account and re-registering). Rows
+// outlive the customer record on purpose, hence no FK to Customer.
+model BannedInstagram {
+  id              Int      @id @default(autoincrement())
+  instagramUid    String   @unique @map("instagram_uid")
+  reason          String?
+  bannedByAdminId Int?     @map("banned_by_admin_id")
+  customerUid     String?  @map("customer_uid") // audit pointer; not a FK
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+
+  @@map("banned_instagrams")
+  @@schema("app")
+}
+
+// Append-only registry of every Instagram post id ever attached to a share —
+// THE single dedup source for "was this story already monetized?" (E074).
+// Deliberately customer-UNLINKED: GDPR/Meta erasure nulls `Share.igPostId` on
+// paid rows, and this table lets the once-only rule survive that de-link
+// without keeping a customer-linkable post id anywhere. Written in the same
+// transaction as share creation (PK conflict → 1013 already-shared — the
+// insert IS the dedup check); backfilled from `shares.ig_post_id` in its
+// migration. Rows are NEVER deleted: a story is monetizable once, ever, even
+// if its share was voided or rejected (Matej, 2026-08-02 — the old
+// "disconnect frees the story for re-share" docblock was wrong; no code may
+// re-derive dedup from `Share.igPostId`, which stays as an operational column
+// for the insights worker + admin display).
+model MonetizedInstagramPost {
+  igPostId  String   @id @map("ig_post_id")
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+
+  @@map("monetized_instagram_posts")
+  @@schema("app")
+}
+
+enum Gender {
+  MALE
+  FEMALE
+  UNSPECIFIED
+
+  @@schema("app")
+}
+
+model CustomerSensitiveData {
+  id Int @id @default(autoincrement())
+
+  // Per-currency balance accumulators. Each currency gets its own pair of
+  // columns so accounts can natively hold multiple currencies as the platform
+  // expands. Adding a currency = additive migration, no FX conversion of
+  // existing balances.
+  balanceUsdCents       BigInt @default(0) @map("balance_usd_cents")
+  lockedBalanceUsdCents BigInt @default(0) @map("locked_balance_usd_cents")
+  multiplierBps         Int    @default(10000) @map("multiplier_bps") // in basis points (10000 = 1.0x)
+
+  stripeConnectId  String?   @map("stripe_connect_id")
+  payoutsEnabledAt DateTime? @map("payouts_enabled_at") @db.Timestamptz(3)
+
+  customer Customer? @relation(name: "CustomerToSensitive")
+
+  @@map("customer_sensitive_data")
+  @@schema("app")
+}
+
+model PushToken {
+  id         Int       @id @default(autoincrement())
+  token      String    @unique
+  platform   String?
+  deviceId   String?   @map("device_id")
+  timezone   String?
+  disabledAt DateTime? @map("disabled_at") @db.Timestamptz(3)
+  lastSeenAt DateTime? @map("last_seen_at") @db.Timestamptz(3)
+
+  customerId          Int? @map("customer_id")
+  advertiserId        Int? @map("advertiser_id")
+  pendingCustomerId   Int? @map("pending_customer_id")
+  pendingAdvertiserId Int? @map("pending_advertiser_id")
+
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  customer          Customer?                 @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  advertiser        Advertiser?               @relation(fields: [advertiserId], references: [id], onDelete: Cascade)
+  pendingCustomer   PendingCustomer?          @relation(fields: [pendingCustomerId], references: [id], onDelete: Cascade)
+  pendingAdvertiser PendingAdvertiserAccount? @relation(fields: [pendingAdvertiserId], references: [id], onDelete: Cascade)
+
+  @@index([customerId])
+  @@index([advertiserId])
+  @@index([pendingCustomerId])
+  @@index([pendingAdvertiserId])
+  @@index([disabledAt])
+  @@map("push_tokens")
+  @@schema("app")
+}
+
+model CustomerInstagramAccount {
+  id                Int  @id @default(autoincrement())
+  customerId        Int? @unique
+  pendingCustomerId Int? @unique
+
+  // The Instagram platform user id — the canonical (and only) home. Every
+  // CustomerInstagramAccount row exists because IG was linked, so this is
+  // required. Looked up directly for IG login, webhooks, and Graph API calls.
+  instagramUid String @unique @map("instagram_uid")
+
+  username      String
+  name          String?
+  pfpUrl        String? @map("pfp_url")
+  followerCount Int     @map("follower_count")
+  accountType   String  @map("account_type")
+
+  instagramToken InstagramToken?
+
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  snapshots InstagramSnapshot[]
+
+  pendingCustomer PendingCustomer?         @relation(fields: [pendingCustomerId], references: [id], onDelete: SetNull)
+  customer        Customer?                @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  snapshotQueues  InstagramSnapshotQueue[]
+
+  @@index([username])
+  @@map("customer_instagram_accounts")
+  @@schema("app")
+}
+
+enum OAuthProvider {
+  GOOGLE
+  APPLE
+
+  @@schema("app")
+}
+
+// Which account namespace an OAuth identity belongs to. The customer and
+// advertiser apps are separate sign-in namespaces — the same person can hold
+// both a customer and an advertiser account (same email, even the same Google/
+// Apple identity) — so identity uniqueness is scoped per-kind, not globally.
+enum OAuthAccountKind {
+  CUSTOMER
+  ADVERTISER
+
+  @@schema("app")
+}
+
+// A federated sign-in identity (Google / Apple) linked to a customer OR
+// advertiser account. One table for both, mirroring OtpSession's multi-FK
+// shape: an identity attaches to a pending account during onboarding and
+// migrates to the real account on promotion (like push tokens). An account can
+// hold several identities (e.g. Google + Apple + email).
+//
+// `subject` is the provider's stable `sub` — the canonical login key (Apple
+// only returns the email on the FIRST authorization, so repeat logins match on
+// the identity, not email). `kind` scopes uniqueness: the same Google/Apple
+// identity can map to at most one customer AND one advertiser, independently.
+model OAuthIdentity {
+  id       Int              @id @default(autoincrement())
+  provider OAuthProvider
+  subject  String // provider 'sub' — stable across logins
+  kind     OAuthAccountKind
+  email    String?          @db.Citext // email at link time (Apple relay possible)
+
+  customerId          Int? @map("customer_id")
+  pendingCustomerId   Int? @map("pending_customer_id")
+  advertiserId        Int? @map("advertiser_id")
+  pendingAdvertiserId Int? @map("pending_advertiser_id")
+
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+
+  customer          Customer?                 @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  pendingCustomer   PendingCustomer?          @relation(fields: [pendingCustomerId], references: [id], onDelete: Cascade)
+  advertiser        Advertiser?               @relation(fields: [advertiserId], references: [id], onDelete: Cascade)
+  pendingAdvertiser PendingAdvertiserAccount? @relation(fields: [pendingAdvertiserId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, subject, kind])
+  @@index([customerId])
+  @@index([pendingCustomerId])
+  @@index([advertiserId])
+  @@index([pendingAdvertiserId])
+  @@map("oauth_identities")
+  @@schema("app")
+}
+
+model InstagramToken {
+  id          Int @id @default(autoincrement())
+  instagramId Int @unique @map("instagram_id")
+
+  accessTokenEnc String @map("access_token_enc")
+
+  expiresAt DateTime @map("expires_at") @db.Timestamptz(3)
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  instagram CustomerInstagramAccount @relation(fields: [instagramId], references: [id], onDelete: Cascade)
+
+  @@index([instagramId])
+  @@index([expiresAt])
+  @@map("instagram_tokens")
+  @@schema("app")
+}
+
+enum AudienceLocationSource {
+  FOLLOWER_AUDIENCE
+  REACHED_AUDIENCE
+
+  @@schema("app")
+}
+
+model InstagramAudienceLocation {
+  id       Int                                   @id @default(autoincrement())
+  address  String
+  location Unsupported("geography(Point,4326)")?
+  value    Int
+  source   AudienceLocationSource
+
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  snapshot   InstagramSnapshot @relation(fields: [snapshotId], references: [id], onDelete: Cascade)
+  snapshotId Int               @map("snapshot_id")
+
+  @@unique([snapshotId, source, address])
+  @@index([snapshotId, source])
+  @@index([snapshotId])
+  @@index([location], type: Gist)
+  @@index([address])
+  @@map("instagram_audience_location")
+  @@schema("app")
+}
+
+model InstagramAudienceGenderAge {
+  id     Int    @id @default(autoincrement())
+  gender String
+  age    String
+  value  Int
+
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  snapshot   InstagramSnapshot @relation(fields: [snapshotId], references: [id], onDelete: Cascade)
+  snapshotId Int               @map("snapshot_id")
+
+  @@unique([snapshotId, gender, age])
+  @@index([snapshotId])
+  @@index([gender, age])
+  @@map("instagram_audience_gender_age")
+  @@schema("app")
+}
+
+model Address {
+  id          Int                                   @id @default(autoincrement())
+  country     String
+  countryCode String                                @map("country_code") @db.VarChar(2) // ISO alpha-2 from the geocoder — single source of truth (drives future currency derivation)
+  region      String?
+  city        String
+  zip         String
+  street      String
+  location    Unsupported("geography(Point,4326)")?
+
+  // IANA timezone (e.g. "America/New_York"), derived from `location` at write
+  // time via `getTimezoneForCoordinates`. Drives local-time features such as a
+  // business's "open now" computation from its opening-hours periods.
+  timezone String
+
+  cityLocation Unsupported("geography(Point,4326)")? @map("city_location") // centroid of (city, region, country) – for calculating distance multipliers
+
+  localSubaccount        LocalSubaccount?        @relation(name: "LocalSubaccountToAddress")
+  pendingLocalSubaccount PendingLocalSubaccount? @relation(name: "PendingLocalSubaccountToAddress")
+
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  @@index([location], type: Gist)
+  @@index([cityLocation], type: Gist)
+  @@index([city])
+  @@index([zip])
+  @@map("addresses")
+  @@schema("app")
+}
+
+model PendingAdvertiserAccount {
+  id                        Int      @id @default(autoincrement())
+  email                     String   @unique @db.Citext
+  promoNotificationsEnabled Boolean? @map("promo_notifications_enabled") // null until OTP step (v2 flow)
+
+  // ISO alpha-2 country code + ISO 639-1 language code. Set at signup time
+  // from the landing-page suggest-locale signal or hardcoded to `'US'`/`'en'`
+  // by the v1 route.
+  locale   String @db.VarChar(2)
+  language String @db.VarChar(5)
+
+  createdAt    DateTime          @default(now()) @map("created_at") @db.Timestamptz(3)
+  referrerCode String?           @map("referrer_code")
+  entity       AdvertiserEntity?
+
+  agreedToTermsOfServiceAt DateTime? @map("agreed_to_terms_of_service_at") @db.Timestamptz(3) // null until OTP step (v2 flow)
+  agreedToPrivacyPolicyAt  DateTime? @map("agreed_to_privacy_policy_at") @db.Timestamptz(3) // null until OTP step (v2 flow)
+
+  registrationToken String          @unique @map("registration_token") // pending-account token: resume onboarding + cancel/delete the pending account
+  emailVerified     Boolean         @default(false) @map("email_verified") // set to true after OTP verification / OAuth (v2 flow)
+  otpSession        OtpSession?
+  oauthIdentities   OAuthIdentity[]
+  pushTokens        PushToken[]
+
+  promoNotificationLogs PromoNotificationLog[]
+
+  @@index([createdAt])
+  @@index([email])
+  @@map("pending_advertiser_accounts")
+  @@schema("app")
+}
+
+model Advertiser {
+  id              Int    @id @default(autoincrement())
+  uid             String @unique
+  email           String @unique @db.Citext
+  sensitiveDataId Int    @unique @map("sensitive_data_id")
+
+  // ISO alpha-2 country code (`'US'`, `'CZ'`). Copied from
+  // PendingAdvertiserAccount at promote time. Not user-modifiable in v1.
+  locale   String @db.VarChar(2)
+  // ISO 639-1 language code (`'en'`, `'cs'`). User-modifiable via
+  // PATCH /advertisers/language.
+  language String @db.VarChar(5)
+
+  agreedToTermsOfServiceAt DateTime @map("agreed_to_terms_of_service_at") @db.Timestamptz(3)
+  agreedToPrivacyPolicyAt  DateTime @map("agreed_to_privacy_policy_at") @db.Timestamptz(3)
+
+  jwtVersion Int @default(0) @map("jwt_version")
+
+  entity AdvertiserEntity?
+
+  sensitiveData AdvertiserSensitiveData @relation(name: "AdvertiserToSensitive", fields: [sensitiveDataId], references: [id], onDelete: Cascade)
+
+  ledgerEvents TransactionLedgerEvent[] @relation("LedgerAdvertiser")
+
+  pushTokens                PushToken[]
+  locals                    LocalSubaccount[]
+  notificationOptOuts       NotificationEventOptOut[]
+  promoNotificationsEnabled Boolean                                 @default(true) @map("promo_notifications_enabled")
+
+  // Last visibility state observed by the maintenance visibility reconciler
+  // (account-level `isAdvertiserVisible` roll-up). NULL = never evaluated —
+  // the reconciler seeds it silently and only notifies on a real transition.
+  // Written ONLY by the reconciler's CAS update; never derive visibility from
+  // this column (it lags by up to one worker tick) — use businessAccessibility.
+  lastKnownVisible Boolean? @map("last_known_visible")
+
+  pendingLocals PendingLocalSubaccount[]
+
+  promoNotificationLogs PromoNotificationLog[]
+
+  shares                Share[]
+  createdAt             DateTime               @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt             DateTime               @updatedAt @map("updated_at") @db.Timestamptz(3)
+  accountReferralId     Int                    @unique @map("referral_code_id")
+  accountReferral       AccountReferral        @relation("AdvertiserCode", fields: [accountReferralId], references: [id], onDelete: Restrict)
+  stripeCreditPurchases StripeCreditPurchase[]
+  otpSessions           OtpSession[]
+  paygPeriods           PaygPeriod[]
+  monthlyBudgetPeriods  MonthlyBudgetPeriod[]
+  oauthIdentities       OAuthIdentity[]
+
+  @@map("advertisers")
+  @@schema("app")
+}
+
+enum AdvertiserEntity {
+  INDIVIDUAL
+  ORGANIZATION
+
+  @@schema("app")
+}
+
+model AdvertiserSensitiveData {
+  id Int @id @default(autoincrement())
+
+  // Per-currency budget accumulators. See note on CustomerSensitiveData for
+  // the design rationale (additive multi-currency).
+  availableBudgetUsdCents      BigInt  @default(0) @map("available_budget_usd_cents")
+  lockedBudgetUsdCents         BigInt  @default(0) @map("locked_budget_usd_cents")
+  // NOTE: there is deliberately NO lifetime-purchases accumulator here. Lifetime
+  // credit purchases are derived on read from the ledger (kind = CREDIT_PURCHASE
+  // only — see `utils/money/ledger/advertiserCreditPurchases.ts`), the same
+  // way total withdrawals are. The ledger is the single money source of truth;
+  // a denormalized counter was a second source that could only drift from it.
+  stripeCustomerId             String? @unique @map("stripe_customer_id")
+  defaultPaymentMethodId       String? @map("default_payment_method_id")
+
+  // The account's saved off-session card — linked under a Stripe off-session
+  // SetupIntent (MIT mandate), so it CAN be charged without the advertiser
+  // present. The SOURCE OF TRUTH for "a card is on file", shared by the two
+  // features that charge it: pay-as-you-go settlement and the monthly-budget
+  // top-up. Whether each feature is ON is tracked separately by its period
+  // model (PaygPeriod / MonthlyBudgetPeriod) — a card on file does not by
+  // itself enable either. Distinct from `defaultPaymentMethodId` (which a
+  // one-off credit purchase also sets, on-session, with no MIT mandate — so it
+  // can't be charged off-session). Written only by `linkSavedCard` (via the
+  // reconcile endpoints + the SetupIntent webhook); cleared on unlink, which
+  // closes BOTH feature periods in the same transaction.
+  // Card brand/last4 are NOT stored — fetched live from Stripe on demand when
+  // the advertiser asks to see the card.
+  // (Renamed from paygPaymentMethodId when monthly budget landed; the DB rename
+  // was an in-place RENAME COLUMN, no data movement.)
+  savedPaymentMethodId    String?   @map("saved_payment_method_id")
+  // NOTE: the PAYG monthly spend cap column was dropped — PAYG has no cap. The v1
+  // wire still returns `monthlySpendCapCents: null` (a constant) for old clients;
+  // the v1 set-cap endpoint is a no-op. Nothing persists a cap anymore.
+  // When the advertiser explicitly authorized Tagly to charge their card
+  // off-session (the Stripe MIT mandate consent, covering both PAYG and
+  // monthly-budget charges). Captured at setup-intent time, before the sheet
+  // opens. Durable and card-independent — kept on card removal since it records
+  // the authorisation act, not the card state.
+  // (Renamed from paygChargeAuthorizedAt when monthly budget landed.)
+  offSessionChargeAuthorizedAt DateTime? @map("off_session_charge_authorized_at") @db.Timestamptz(3)
+
+  advertiser Advertiser? @relation(name: "AdvertiserToSensitive")
+
+  @@index([stripeCustomerId])
+  @@map("advertiser_sensitive_data")
+  @@schema("app")
+}
+
+enum PendingEntityStatus {
+  DRAFT
+  PROCESSING
+  FAILED
+  READY
+
+  @@schema("app")
+}
+
+model PendingLocalSubaccount {
+  id Int @id @default(autoincrement())
+
+  name         String
+  instagramTag String?  @map("instagram_tag")
+  tags         String[] // denormalized tags for easier searching
+
+  bannerId Int?           @unique @map("banner_id")
+  banner   PendingMedia?  @relation("PendingLocalSubaccountBanner", fields: [bannerId], references: [id], onDelete: Restrict)
+  photos   PendingMedia[] @relation("PendingLocalSubaccountPhotos")
+
+  advertiserId Int?        @map("advertiser_id")
+  advertiser   Advertiser? @relation(fields: [advertiserId], references: [id], onDelete: Cascade)
+
+  typeId Int            @map("type_id")
+  type   AdvertiserType @relation(fields: [typeId], references: [id], onDelete: Restrict)
+
+  addressId Int     @unique @map("address_id")
+  address   Address @relation(name: "PendingLocalSubaccountToAddress", fields: [addressId], references: [id], onDelete: Restrict)
+
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  status PendingEntityStatus
+
+  @@index([typeId])
+  @@index([advertiserId])
+  @@index([createdAt])
+  @@index([createdAt, status])
+  @@map("pending_local_subaccounts")
+  @@schema("app")
+}
+
+enum SubaccountStatus {
+  ACTIVE
+  DELETED
+  BANNED
+
+  @@schema("app")
+}
+
+model LocalSubaccount {
+  id           Int      @id @default(autoincrement())
+  uid          String   @unique
+  name         String
+  instagramTag String?  @map("instagram_tag")
+  tags         String[] // denormalized tags for easier searching
+
+  // Optional detail-page content. All nullable — surfaced on the customer
+  // business detail view; absent fields simply hide their affordance.
+  description   String? // short "about the business" blurb
+  // Web links go through the shared, admin-reviewed `Link` model (only APPROVED
+  // links are returned to customers) — see Link. reservation drives a "Reserve"
+  // CTA; menu is the food/drink menu.
+  websiteLinkId Int?    @map("website_link_id")
+  websiteLink   Link?   @relation("LocalWebsiteLink", fields: [websiteLinkId], references: [id], onDelete: SetNull)
+
+  reservationLinkId Int?  @map("reservation_link_id")
+  reservationLink   Link? @relation("LocalReservationLink", fields: [reservationLinkId], references: [id], onDelete: SetNull)
+
+  menuLinkId   Int?    @map("menu_link_id")
+  menuLink     Link?   @relation("LocalMenuLink", fields: [menuLinkId], references: [id], onDelete: SetNull)
+  phoneNumber  String? @map("phone_number") // E.164, for tap-to-call
+  contactEmail String? @map("contact_email") // public contact email
+
+  bannerId Int     @unique @map("banner_id")
+  banner   Media   @relation("LocalSubaccountBanner", fields: [bannerId], references: [id], onDelete: Restrict)
+  photos   Media[] @relation("LocalSubaccountPhotos")
+
+  status SubaccountStatus @default(ACTIVE)
+
+  // Null when the local is Tagly-subsidized. A local must never have both an
+  // advertiser AND an open SubsidizationPeriod — it is either owned by an
+  // advertiser (paid) or subsidized by the platform (no advertiser), never both.
+  advertiserId Int?        @map("advertiser_id")
+  advertiser   Advertiser? @relation(fields: [advertiserId], references: [id], onDelete: SetNull)
+
+  typeId Int            @map("type_id")
+  type   AdvertiserType @relation(fields: [typeId], references: [id], onDelete: Restrict)
+
+  addressId Int     @unique @map("address_id")
+  address   Address @relation(name: "LocalSubaccountToAddress", fields: [addressId], references: [id], onDelete: Restrict)
+
+  shares               Share[]
+  subsidizationPeriods SubsidizationPeriod[]
+  openingHours         OpeningHoursPeriod[]
+  qrStickers           QrSticker[]
+
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  @@index([typeId])
+  @@index([advertiserId])
+  @@index([uid])
+  @@map("local_subaccounts")
+  @@schema("app")
+}
+
+// A printed physical QR sticker placed in a partner business to onboard
+// customers. `stickerId` is the OPAQUE id printed on the sticker, matched
+// EXACTLY as printed — no padding/case/numeric normalization ("000001" in
+// the current batch, possibly random strings like "yf5h8ayui21r" in future
+// batches; shape bounded by `QrStickerIdSchema` in @tagly/models
+// core/qrStickers). The same literal string is used in the DB, URLs,
+// attribution params, and UI. A row exists iff the sticker hangs in a business:
+// assigning creates it, unassigning (sticker physically removed) hard-deletes
+// it. One business holds many stickers; a sticker belongs to exactly one.
+// Reassignment is delete+recreate, so `createdAt` IS the assignment moment
+// (surfaced on the wire as `assignedAt`) — no separate column to drift.
+model QrSticker {
+  id        Int    @id @default(autoincrement())
+  stickerId String @unique @map("sticker_id")
+
+  localId Int             @map("local_id")
+  local   LocalSubaccount @relation(fields: [localId], references: [id], onDelete: Cascade)
+
+  note String? // free-text placement note ("table 4", "by the door")
+
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  @@index([localId])
+  @@map("qr_stickers")
+  @@schema("app")
+}
+
+// One opening-hours interval for a business, interpreted in the business's
+// local timezone (`LocalSubaccount.address.timezone`). The hours are a set of
+// these rows:
+//   - splits   → multiple rows for the same `dayOfWeek` (e.g. 11:00–14:00 and
+//                17:00–22:00)
+//   - overnight → `closeMinute <= openMinute` means the interval closes the
+//                 next day (e.g. a bar open 17:00 → 02:00 is open=1020, close=120)
+//   - 24 hours  → open=0, close=1440
+//   - closed    → simply no row for that weekday
+// "Open now" is computed by the client from these rows + the business timezone
+// (kept off the cached response so it never goes stale).
+model OpeningHoursPeriod {
+  id      Int             @id @default(autoincrement())
+  localId Int             @map("local_id")
+  local   LocalSubaccount @relation(fields: [localId], references: [id], onDelete: Cascade)
+
+  dayOfWeek   Int @map("day_of_week") // 0 = Sunday … 6 = Saturday (matches JS Date.getDay)
+  openMinute  Int @map("open_minute") // minutes from local midnight, 0–1439
+  closeMinute Int @map("close_minute") // minutes from local midnight, 1–1440; <= openMinute ⇒ closes next day
+
+  @@index([localId])
+  @@map("opening_hours_periods")
+  @@schema("app")
+}
+
+enum LinkStatus {
+  PENDING // newly submitted, awaiting admin review
+  APPROVED // safe + appropriate; the only status returned to customers
+  REJECTED // Safe Browsing flagged it, or an admin rejected it
+
+  @@schema("app")
+}
+
+// A business-supplied web link (website / menu / reservation). Shared and
+// de-duplicated by `url` so each distinct link is reviewed once. New links
+// default to PENDING; Google Safe Browsing auto-flags malicious URLs to REJECTED
+// at write time; an admin then APPROVES the rest. Only APPROVED links are ever
+// returned to customers (the hydrator gates on status), and a REJECTED row acts
+// as a central kill-switch across every business that uses that URL.
+model Link {
+  id     Int        @id @default(autoincrement())
+  url    String     @unique
+  status LinkStatus @default(PENDING)
+
+  reviewedAt        DateTime? @map("reviewed_at") @db.Timestamptz(3)
+  reviewedByAdminId Int?      @map("reviewed_by_admin_id")
+  reviewedByAdmin   Admin?    @relation(fields: [reviewedByAdminId], references: [id], onDelete: SetNull)
+
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  websiteLocals     LocalSubaccount[] @relation("LocalWebsiteLink")
+  reservationLocals LocalSubaccount[] @relation("LocalReservationLink")
+  menuLocals        LocalSubaccount[] @relation("LocalMenuLink")
+
+  @@index([status])
+  @@map("links")
+  @@schema("app")
+}
+
+model SubsidizationPeriod {
+  id        Int             @id @default(autoincrement())
+  localId   Int             @map("local_id")
+  local     LocalSubaccount @relation(fields: [localId], references: [id], onDelete: Cascade)
+  startedAt DateTime        @default(now()) @map("started_at") @db.Timestamptz(3)
+  endedAt   DateTime?       @map("ended_at") @db.Timestamptz(3)
+
+  @@index([localId])
+  @@map("subsidization_periods")
+  @@schema("app")
+}
+
+// Audit episode of when an advertiser had pay-as-you-go active. Mirrors
+// SubsidizationPeriod. Invariant (enforced in app logic): at most one open
+// period (ended_at IS NULL) per advertiser. Opened when PAYG is enabled with a
+// card on file; closed on disable, card removal, or a failed charge (the last
+// is how "pause" is represented). Settings (cap, mandate) live on the
+// advertiser, not here, so they survive on/off toggles.
+model PaygPeriod {
+  id           Int                  @id @default(autoincrement())
+  advertiserId Int                  @map("advertiser_id")
+  advertiser   Advertiser           @relation(fields: [advertiserId], references: [id], onDelete: Cascade)
+  startedAt    DateTime             @default(now()) @map("started_at") @db.Timestamptz(3)
+  endedAt      DateTime?            @map("ended_at") @db.Timestamptz(3)
+  endedReason  PaygPeriodEndReason? @map("ended_reason")
+
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  @@index([advertiserId])
+  @@map("payg_periods")
+  @@schema("app")
+}
+
+enum PaygPeriodEndReason {
+  CARD_REMOVED // card detached (triggers convert-to-locked-credits)
+  CHARGE_FAILED // a settlement charge declined — this is the "pause"
+  DISABLED // the advertiser turned PAYG off while keeping the saved card
+
+  @@schema("app")
+}
+
+// Audit episode of when an advertiser had the monthly-budget top-up active AT
+// A GIVEN TARGET. Mirrors PaygPeriod: at most one open period (ended_at IS
+// NULL) per advertiser (partial unique index
+// `monthly_budget_periods_one_open_per_advertiser`). A period is IMMUTABLE
+// once opened: changing the target closes it (TARGET_CHANGED) and opens a new
+// one, so the period list IS the target history. Opened when the monthly
+// budget is enabled (or re-targeted) with a saved card on file — and the new
+// period tops up to its target immediately; closed on disable, re-target, card
+// removal, or a charge declined past MAX_ATTEMPTS (the "pause").
+// Unlike PAYG, the run bookkeeping lives HERE (not on a share): the stripe
+// worker polls next_run_at and tops the advertiser's credits up to
+// target_cents on the 1st of each month (CHARGE_HOUR_UTC). Because a period is
+// immutable and each open tops up at once, a period runs AT MOST ONCE PER
+// CALENDAR MONTH — which is what lets the charge idempotency key be
+// `monthly-budget:{YYYY-MM}:{periodId}:attempt:{n}` with no run counter.
+model MonthlyBudgetPeriod {
+  id           Int        @id @default(autoincrement())
+  advertiserId Int        @map("advertiser_id")
+  advertiser   Advertiser @relation(fields: [advertiserId], references: [id], onDelete: Cascade)
+
+  // The level the advertiser's available credits are restored to. Write-once:
+  // a different target is a new period.
+  targetCents BigInt @map("target_cents")
+
+  // When the next top-up is due — the single scheduling truth and the stripe
+  // worker's poll key (open periods only). `now` on open (the period tops up
+  // immediately), the 1st of next month at CHARGE_HOUR_UTC after every terminal
+  // outcome (charged or skipped), `now + backoff` after a decline, `now + a
+  // short recheck` after an ambiguous Stripe answer. Kept on close (audit).
+  nextRunAt DateTime? @map("next_run_at") @db.Timestamptz(3)
+
+  // Declines spent on the current month's charge; reset to 0 on a terminal
+  // outcome. Feeds the retry backoff and the idempotency key's attempt number.
+  chargeAttempts Int @default(0) @map("charge_attempts")
+
+  // The charge identity of the attempt currently in flight — the Stripe
+  // idempotency key AND the StripeCreditPurchase.externalRef. Set when an
+  // attempt mints one, REUSED while that attempt is unresolved, cleared on
+  // every terminal outcome (charged / skipped / declined).
+  //
+  // It is remembered rather than recomputed because the key embeds the run's
+  // UTC month: an ambiguous Stripe answer (1342) reschedules a recheck, and if
+  // that recheck lands in the next month a recomputed key would differ from the
+  // one the maybe-collected charge was placed under — the pre-check would miss
+  // it and charge a second time. Recomputing can also not be repaired by a
+  // month-blind lookup: `chargeAttempts` resets each month, so
+  // (periodId, attempt) alone matches LAST month's charge too.
+  currentAttemptRef String? @map("current_attempt_ref")
+
+  // Last decline detail, for the CARD_FAILED copy in the app + admin.
+  lastFailureCode    String? @map("last_failure_code")
+  lastFailureMessage String? @map("last_failure_message")
+
+  // When the advertiser was last emailed the "upcoming charge" notice (sent
+  // ~3 days before nextRunAt). A notice is due when this is null or predates
+  // the current run's notice window. A column rather than a queue dedupe key
+  // because finished NotificationQueue rows are pruned after 24h, shorter than
+  // the notice window.
+  upcomingNoticeSentAt DateTime? @map("upcoming_notice_sent_at") @db.Timestamptz(3)
+
+  startedAt   DateTime                      @default(now()) @map("started_at") @db.Timestamptz(3)
+  endedAt     DateTime?                     @map("ended_at") @db.Timestamptz(3)
+  endedReason MonthlyBudgetPeriodEndReason? @map("ended_reason")
+
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  @@index([advertiserId])
+  @@index([nextRunAt])
+  @@map("monthly_budget_periods")
+  @@schema("app")
+}
+
+enum MonthlyBudgetPeriodEndReason {
+  DISABLED // the advertiser turned it off
+  TARGET_CHANGED // superseded by a new period at a different target
+  CARD_REMOVED // saved card detached
+  CHARGE_FAILED // declined past MAX_ATTEMPTS — this is the "pause"
+
+  @@schema("app")
+}
+
+// Display labels live in @tagly/models catalogs keyed by `slug`. The DB only
+// stores structural data (id, slug, ordering, multipliers, relations). The
+// English `name` exposed by API responses for back-compat is composed from
+// the catalog at response time — there is no `name` column.
+// Reward multipliers deliberately NOT stored here: the pricers read them from
+// the @tagly/models catalogs (calculateTypeBps), so a DB copy was write-only
+// drift surface — dropped at algo v11. The DB keeps only structural data.
+model Vertical {
+  id   Int    @id @default(autoincrement())
+  slug String @unique
+
+  sortOrder Int      @default(0) @map("sort_order")
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  types     AdvertiserType[]
+  interests Interest[]
+
+  @@index([slug])
+  @@index([sortOrder])
+  @@map("verticals")
+  @@schema("app")
+}
+
+// Display labels live in @tagly/models catalogs keyed by `slug` — see Vertical.
+// Reward multipliers deliberately NOT stored here — see the Vertical note.
+model AdvertiserType {
+  id   Int    @id @default(autoincrement())
+  slug String @unique
+
+  sortOrder Int      @default(0) @map("sort_order")
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  verticals     Vertical[]
+  pendingLocals PendingLocalSubaccount[]
+  locals        LocalSubaccount[]
+
+  @@index([slug])
+  @@index([sortOrder])
+  @@map("advertiser_types")
+  @@schema("app")
+}
+
+// Display labels live in @tagly/models catalogs keyed by `slug` — see Vertical.
+model Interest {
+  id   Int    @id @default(autoincrement())
+  slug String @unique
+
+  sortOrder Int      @default(0) @map("sort_order")
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  verticals        Vertical[]
+  customers        Customer[]
+  pendingCustomers PendingCustomer[]
+
+  @@index([slug])
+  @@index([sortOrder])
+  @@map("interests")
+  @@schema("app")
+}
+
+enum ShareStatus {
+  // Payout lifecycle only (collapsed in v2.0.0). A share is born PROCESSING and
+  // only a successful payout or a permanent payout failure moves it. Rejection is
+  // NOT a status — it lives on approvalStatus (intake) + the ShareReport row.
+  PROCESSING // in flight / nothing terminal has happened (born here)
+  PAID // payment complete (terminal)
+  UNPAYABLE // permanent payout failure - customer/advertiser deleted, insights expired, etc. (terminal)
+
+  @@schema("app")
+}
+
+// How a share is funded. CREDITS = advertiser pre-purchased balance,
+// PAYG = advertiser card charged at settlement, SUBSIDIZED = platform-funded.
+enum ShareFundingMode {
+  CREDITS
+  PAYG
+  SUBSIDIZED
+
+  @@schema("app")
+}
+
+// Admin moderation gate for a share, orthogonal to the payout `status` — the
+// intake decision, set once. PENDING = awaiting admin review (invisible to the
+// advertiser, budget not locked, not notified); APPROVED = cleared for the normal
+// lifecycle (lock placed, advertiser notified, payable); REJECTED = bad share,
+// never paid. Rejection lives ONLY here (status stays PROCESSING). A post-approval
+// report that is upheld is recorded on the ShareReport row (status VALID), not here.
+enum ShareApprovalStatus {
+  PENDING
+  APPROVED
+  REJECTED
+
+  @@schema("app")
+}
+
+model Share {
+  id  Int    @id @default(autoincrement())
+  uid String @unique
+
+  customerId   Int? @map("customer_id")
+  advertiserId Int? @map("advertiser_id")
+  localId      Int? @map("local_id")
+
+  agreedToTermsOfMonetizationAt DateTime @map("agreed_to_monetization_terms_at") @db.Timestamptz(3)
+
+  mediaId      Int         @unique @map("media_id")
+  thumbnailId  Int?        @unique @map("thumbnail_id")
+  igPostId     String?     @unique @map("ig_post_id")
+  igPostType   IgPostType? @map("ig_post_type")
+  postedToIgAt DateTime?   @map("posted_to_ig_at") @db.Timestamptz(3)
+
+  estimatedPriceCents   BigInt      @map("estimated_price_cents")
+  estimatedRewardCents  BigInt      @map("estimated_reward_cents")
+  // Reach the estimate was built on (real averageReach from past shares or the
+  // story-views fallback). Surfaced to the customer as "your story needs ~N
+  // views to earn this much". Nullable for back-compat with existing rows.
+  estimatedAverageReach Int?        @map("estimated_average_reach")
+  finalPrice            FinalPrice? // the algo-calculations for final price - multiplers etc. -> not source of truth. use ledger as source of truth
+
+  // Quality rating as half-stars: 1–10 = ½★–5★ (divide by 2), null = unrated.
+  // Replaced the old `Rating` enum column (EXCEPTIONAL/GOOD/BAD/UNRATED/REPORTED);
+  // the migration mapped existing rows to stars. The legacy enum survives only on
+  // the v1 wire (old builds): controllers map enum→stars on input and stars→enum
+  // on output via ratingEnum↔Stars (@tagly/models). "Reported" is NOT a rating —
+  // it lives on the ShareReport row + the derived status.
+  rating  Int?
+  report  ShareReport?
+  // INVARIANT: `ratedAt` is the canonical "advertiser/admin has acted on this share"
+  // marker. It is stamped the moment the share is first acted on — whether RATED or
+  // REPORTED — and from then on is PRESERVED, never reset and never cleared; share
+  // creation leaves it null. Every write that touches it keeps the original via
+  // `share.ratedAt ?? now`: rateShareByUid, reportShareByUid, adminRateShare (rate or
+  // report), and adminReviewShareReport's dismiss-with-rating (which preserves the
+  // report-filing timestamp rather than re-stamping). The uphold branch doesn't write
+  // it at all (the report it reviews was already filed → already stamped). Keeping the
+  // original value also anchors the rating-change window to the first action.
+  // Therefore `ratedAt IS NULL` ⟺ the share is UNRATED *and* UNREPORTED, and that is
+  // the single condition the "unrated / rate-me" queues filter on (a report counts
+  // as having acted). Equivalently: a report row always implies `ratedAt` is set.
+  ratedAt DateTime?    @map("rated_at") @db.Timestamptz(3)
+
+  forceCreated Boolean?    @map("force_created")
+  status       ShareStatus @default(PROCESSING)
+  paidAt       DateTime?   @map("paid_at") @db.Timestamptz(3)
+
+  // Admin moderation gate (see ShareApprovalStatus). New shares are PENDING and
+  // stay fully hidden from the advertiser (no lock, no notification, excluded
+  // from every advertiser query/stat) until an admin approves. Existing rows
+  // were backfilled to APPROVED. The lock is placed and `a.shares.created` sent
+  // only at approval; rejection lives ONLY here (`status` stays PROCESSING).
+  approvalStatus    ShareApprovalStatus @default(PENDING) @map("approval_status")
+  reviewedAt        DateTime?           @map("reviewed_at") @db.Timestamptz(3)
+  reviewedByAdminId Int?                @map("reviewed_by_admin_id")
+  rejectionReason   String?             @map("rejection_reason")
+
+  // Immutable funding classification, stamped once at creation (no default —
+  // every creation path must classify explicitly). `=== SUBSIDIZED` is the
+  // canonical subsidized-at-creation signal used at settlement. The *actual*
+  // funding outcome at settlement is derivable from the ledger and is
+  // deliberately NOT denormalized here.
+  fundingModeAtCreation ShareFundingMode @map("funding_mode_at_creation")
+
+  // Settlement retry bookkeeping. `paygChargeAttempts` is null until the first
+  // card charge attempt (meaningless for credits/subsidized shares).
+  // `paygNextRetryAt` is — despite the name — the GENERIC settle-retry gate the
+  // payment worker checks for EVERY share: set by PAYG charge declines/deferred
+  // retries AND by transient (non-domain) settle errors on any funding mode.
+  paygChargeAttempts    Int?      @map("payg_charge_attempts")
+  paygNextRetryAt       DateTime? @map("payg_next_retry_at") @db.Timestamptz(3)
+  stripePaymentIntentId String?   @map("stripe_payment_intent_id")
+
+  // Why the share was voided to UNPAYABLE — the USER-FACING classification, a
+  // `ShareVoidReason` slug from @tagly/models (IG_DISCONNECTED / IG_DATA_DELETED /
+  // ACCOUNT_DELETED / INSIGHTS_UNAVAILABLE / SETTLEMENT_FAILED). Written ONLY by
+  // `markShareUnpayableAndUnlock` (the single UNPAYABLE writer), surfaced on the
+  // v2 customer + advertiser share details where clients render localized copy.
+  // Plain String like FinalPrice.capReason (the Zod enum is the contract; a DB
+  // enum would add a migration per new slug). Null on pre-column voids →
+  // clients fall back to generic copy. The technical detail stays in
+  // `lastProcessingError` below (admin-only).
+  voidReason String? @map("void_reason")
+
+  // Why this share was last marked UNPAYABLE (or last failed to settle) — recorded
+  // at every site that sets that status: the igInsights / igSnapshot / sharePayment
+  // workers, the maintenance expiry sweep, and customer/advertiser account deletion,
+  // plus the PAYG deferred-retry path. Lets admins see WHY without grepping logs.
+  // Reflects the most recent reason; persisted even after an eventual success.
+  // Currently-broken shares are `status = UNPAYABLE` (terminal) or have
+  // `paygNextRetryAt` set (settle retry pending — PAYG or transient error).
+  lastProcessingError   String?   @map("last_processing_error")
+  lastProcessingErrorAt DateTime? @map("last_processing_error_at") @db.Timestamptz(3)
+
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  thumbnail Media? @relation("ShareThumbMedia", fields: [thumbnailId], references: [id], onDelete: Restrict)
+  media     Media  @relation("ShareMainMedia", fields: [mediaId], references: [id], onDelete: Restrict)
+
+  advertiser Advertiser?      @relation(fields: [advertiserId], references: [id], onDelete: SetNull)
+  customer   Customer?        @relation(fields: [customerId], references: [id], onDelete: SetNull)
+  local      LocalSubaccount? @relation(fields: [localId], references: [id], onDelete: SetNull)
+
+  insights               ShareInsights?
+  instagramInsightsQueue InstagramInsightsQueue?
+  instagramSnapshot      InstagramSnapshot?
+  instagramSnapshotQueue InstagramSnapshotQueue?
+
+  ledgerEvents TransactionLedgerEvent[] @relation("LedgerShare")
+
+  @@index([advertiserId, status])
+  @@index([localId, status])
+  @@index([status, createdAt])
+  @@index([mediaId])
+  @@index([advertiserId, createdAt])
+  @@index([customerId, createdAt])
+  @@index([localId])
+  @@index([igPostId])
+  @@index([uid])
+  // Admin pending-approval queue + the payment worker's approval gate.
+  @@index([approvalStatus, createdAt])
+  // Advertiser-facing reads now filter advertiserId + approvalStatus = APPROVED.
+  @@index([advertiserId, approvalStatus])
+  @@map("shares")
+  @@schema("app")
+}
+
+model InstagramSnapshot {
+  id      Int    @id @default(autoincrement())
+  shareId Int?   @unique @map("share_id")
+  share   Share? @relation(fields: [shareId], references: [id], onDelete: Cascade)
+
+  instagramId Int                      @map("instagram_id")
+  instagram   CustomerInstagramAccount @relation(fields: [instagramId], references: [id], onDelete: Cascade)
+
+  followerCount  Int  @map("follower_count")
+  // Accounts the customer follows, at capture time. Nullable: older snapshots
+  // never captured it, and IG may omit `follows_count` for some accounts.
+  // Not a display stat (the account row has no copy) — kept only as frozen
+  // per-snapshot audience data for potential quality signals.
+  followingCount Int? @map("following_count")
+
+  // The audience-location source CHOSEN for this snapshot at capture time
+  // (guards in constants/instagram/AUDIENCE_CAPTURE.ts). NULL = the
+  // snapshot captured no audience locations at all (e.g. <100 followers — IG
+  // suppresses the breakdowns). Follower rows are always stored when available
+  // (the frozen v1 pricer reads them); reached rows are stored in addition only
+  // when REACHED_AUDIENCE wins. Consumers read the rows matching THIS source.
+  audienceLocationsSource     AudienceLocationSource? @map("audience_locations_source")
+  // True breakdown sum of the chosen source (pre-cap, straight from IG).
+  audienceLocationsTotalValue Int                     @default(0) @map("audience_locations_total_value")
+  audienceGenderAgeTotalValue Int                     @default(0) @map("audience_gender_age_total_value")
+
+  audienceLocations  InstagramAudienceLocation[]
+  audienceGenderAges InstagramAudienceGenderAge[]
+
+  snapshotTakenAt DateTime @map("snapshot_taken_at") @db.Timestamptz(3)
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt       DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  @@index([shareId])
+  @@index([instagramId])
+  @@index([instagramId, snapshotTakenAt])
+  @@index([createdAt])
+  @@map("instagram_snapshots")
+  @@schema("app")
+}
+
+model FinalPrice {
+  shareId Int   @id @map("share_id")
+  share   Share @relation(fields: [shareId], references: [id], onDelete: Cascade)
+
+  // Meta
+  /// The RELEASE that priced this row — the backend package.json version at the
+  /// time the pricing pipeline last changed (e.g. "2.0.2"), NOT a counter. Rows
+  /// written before algo v12 hold the old integer scheme as text ("1".."12").
+  /// Bumping the pricing algo REQUIRES bumping tagly-backend/package.json, so a
+  /// stored value always checks out to code you can read.
+  algoVersion String @map("algo_version") @db.VarChar(32)
+  currency    String @db.VarChar(3)
+
+  // money in cents, all in `currency`
+  qualifiedReach Int    @map("qualified_reach") // quality (exit rate etc) * reach
+  ecpmCents      BigInt @map("ecpm_cents") // eCPM used (cents per 1k qr)
+  baseValueCents BigInt @map("base_value_cents") // (QR/1000 * eCPM)
+
+  // Action bonuses (AFTER caps & viral dampen), added to base BEFORE multipliers
+  actionBonusesCents BigInt @map("action_bonuses_cents")
+
+  // Multipliers (unitless results only)
+  geoMultiplierBps               Int  @map("geo_multiplier_bps")
+  demoMultiplierBps              Int  @map("demo_multiplier_bps")
+  interestMultiplierBps          Int  @map("interest_multiplier_bps")
+  ratingMultiplierBps            Int  @map("rating_multiplier_bps")
+  frequencyMultiplierBps         Int  @map("frequency_multiplier_bps")
+  audienceRelevanceMultiplierBps Int  @map("audience_relevance_multiplier_bps") // account size / virality
+  // Follower:following ratio penalty (decrease-only). Nullable: not tracked on
+  // pre-existing rows, and only the v2 pricer computes it — v1-settled rows are
+  // NULL. 10_000 = neutral (no penalty).
+  accountQualityMultiplierBps    Int? @map("account_quality_multiplier_bps")
+  // Business-type multiplier (`rewardMultiplierBps`: the type's catalog
+  // override, else its primary vertical's value — e.g. the cafe discount). Nullable: rows settled before the multiplier was
+  // wired into the pricer (algo v11) priced it as 1.0x and store NULL.
+  typeMultiplierBps              Int? @map("type_multiplier_bps")
+
+  // Cap + take audit fields. Nullable because they weren't tracked on
+  // pre-existing FinalPrice rows. New rows always populate all three, so
+  // audit queries can filter with `WHERE subtotal_before_cap_cents IS NOT NULL`.
+  //
+  // Reconstruction of finalPriceCents:
+  //   wasSubsidized    = SubsidizationPeriod overlap on share.createdAt
+  //   subtotalAfterCap = applySharePriceCap(subtotalBeforeCap, wasSubsidized)  ← also stored
+  //   finalPrice       = subtotalAfterCap
+  //                      × (wasSubsidized ? (1 - TAGLY_PLATFORM_TAKE_BPS) : 1)
+  //                      × countryMultiplierBps / 10_000
+  //
+  // `wasSubsidizedAtCreation` and `priceCapCents` are deliberately not stored
+  // — both are derivable. `wasSubsidized` comes from the SubsidizationPeriod
+  // overlap (canonical per CLAUDE.md §Subsidized Share Invariant); the cap
+  // value comes from MAX_SHARE_PRICE_CENTS / SUBSIDIZED.MAX_PRICE_RATIO
+  // constants locked to the `algoVersion` recorded on the row.
+  //
+  // `subtotalBeforeCap` is irreducible (the cap is one-way). `subtotalAfterCap`
+  // is also stored so the pipeline reads linearly — cap → multiplier — and
+  // "did the cap kick?" is a one-line comparison.
+  subtotalBeforeCapCents BigInt? @map("subtotal_before_cap_cents") // post-multipliers, pre-cap
+  subtotalAfterCapCents  BigInt? @map("subtotal_after_cap_cents") // output of applySharePriceCap
+  countryMultiplierBps   Int?    @map("country_multiplier_bps") // PR 4: post-take country scaling (US=10000, CZ=5750)
+
+  finalPriceCents BigInt @map("final_price_cents") // in currency
+
+  // Settlement outcome vs the algo price. `finalPriceCents` is what the algo
+  // computed the share was worth; the gross actually collected at settlement can
+  // be less when the budget couldn't cover it. Both are nullable — populated
+  // only by the settle-time update (older rows and not-yet-settled rows are
+  // NULL). `settledGrossCents` = the gross actually collected (customer paid 60%
+  // of it). `capReason` explains why it was short, null = paid in full:
+  //   - "LOW_BUDGET"        partial lock (SHARE_LOCK meta `cappedAtAvailableBudget`)
+  //   - "OVER_LOCK"         full lock, but algo final exceeded lock + available
+  //   - "PLATFORM_BALANCE"  subsidized, platform Stripe balance was short
+  settledGrossCents BigInt? @map("settled_gross_cents")
+  capReason         String? @map("cap_reason")
+
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  @@map("final_price")
+  @@schema("app")
+}
+
+// Unified per-share Instagram insights (1:1 with Share). Replaces the former
+// ig_story/post/reel_insights tables. Which metrics are populated depends on the
+// share's media type — read `share.igPostType` (STORY | POST | REEL) as the
+// discriminator. It's the authoritative source: the igInsights worker switches
+// on it to choose which IG endpoint to fetch and refuses any other value, so a
+// share that has an insights row always has a valid igPostType. All metric
+// columns are nullable (IG returns them best-effort); fields not applicable to a
+// given type stay NULL (e.g. tapsForward only on STORY, igReelsAvgWatchTime on REEL).
+model ShareInsights {
+  shareId Int   @id @map("share_id")
+  share   Share @relation(fields: [shareId], references: [id], onDelete: Cascade)
+
+  // shared across types
+  reach             Int?
+  views             Int?
+  shares            Int?
+  totalInteractions Int? @map("total_interactions")
+  follows           Int? // STORY, POST
+  profileVisits     Int? @map("profile_visits") // STORY, POST
+  comments          Int? // POST, REEL
+  likes             Int? // POST, REEL
+  saved             Int? // POST, REEL
+
+  // STORY-only
+  replies     Int?
+  tapsForward Int? @map("taps_forward") // from "navigation"
+  tapsBack    Int? @map("taps_back") // from "navigation"
+  exits       Int? // from "navigation"
+
+  // REEL-only
+  igReelsAvgWatchTime Int? @map("ig_reels_avg_watch_time")
+
+  fetchedAt DateTime @default(now()) @map("fetched_at") @db.Timestamptz(3)
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  @@map("share_insights")
+  @@schema("app")
+}
+
+enum IgPostType {
+  STORY
+  POST
+  REEL
+
+  @@schema("app")
+}
+
+model ShareReport {
+  id            Int        @id @default(autoincrement())
+  shareId       Int        @unique
+  reportType    ReportType @map("report_type")
+  reportMessage String?    @map("report_message")
+
+  status        ReportStatus @default(PENDING)
+  reviewMessage String?      @map("review_message")
+  reviewedById  Int?         @map("reviewed_by_id")
+  reviewedAt    DateTime?    @map("reviewed_at") @db.Timestamptz(3)
+
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  share Share @relation(fields: [shareId], references: [id], onDelete: Cascade)
+
+  @@map("share_reports")
+  @@schema("app")
+}
+
+enum ReportType {
+  NOT_PROMOTION
+  MISLEADING_LOCATION
+  INAPPROPRIATE
+  DUPLICATE
+  VIOLATES_GUIDELINES
+  CUSTOMER_NOT_SPENT_MONEY
+
+  @@schema("app")
+}
+
+enum ReportStatus {
+  PENDING // not yet resolved
+  VALID // valid report - decrease rating
+  DISMISSED // invalid report - keep rating
+
+  @@schema("app")
+}
+
+enum TransactionKind {
+  CREDIT_PURCHASE // money added to advertiser budget (initial purchase)
+  CREDIT_PURCHASE_REFUND // money returned from advertiser budget back to Stripe/card
+  CREDIT_PURCHASE_REFUND_LOCK // reserve refund amount from available budget when admin initiates refund
+  CREDIT_PURCHASE_REFUND_UNLOCK // release reserved refund amount back to available if Stripe refund fails
+  WITHDRAWAL_LOCK // reserve withdrawal amount from customer balance
+  WITHDRAWAL_UNLOCK // release reserved withdrawal amount back to customer balance when withdrawal fails
+  WITHDRAWAL
+  WITHDRAWAL_REVERSAL
+  SHARE_LOCK // reserve share price from advertiser budget
+  SHARE_UNLOCK // release reserved share price back to advertiser budget when it was cheaper than estimated
+  SHARE_PAYMENT
+  PAYG_CHARGE // pay-as-you-go: advertiser card charged to fund a share at settlement (card -> advertiser budget, share-scoped)
+  STRIPE_PROCESSING_FEE // @deprecated No longer booked — the fee is implicit in the live Stripe balance. Kept only so existing historical rows stay readable.
+  REFERRAL_PAYOUT
+  PROMOTIONAL_CREDIT // admin-assigned promotional credit from platform revenue
+  ADJUSTMENT
+
+  @@schema("app")
+}
+
+//
+// IMPORTANT
+// NEVER CREATE A LEDGER EVENT DIRECTLY - ALWAYS USE THE createLedgerEvent UTIL
+//
+model TransactionLedgerEvent {
+  id       Int             @id @default(autoincrement())
+  kind     TransactionKind
+  currency String          @db.VarChar(3)
+
+  advertiserId               Int?        @map("advertiser_id")
+  advertiser                 Advertiser? @relation("LedgerAdvertiser", fields: [advertiserId], references: [id], onDelete: SetNull)
+  deltaAdvertiserCents       BigInt      @default(0) @map("delta_advertiser_cents") // + increases advertiser.availableBudgetCents
+  deltaAdvertiserLockedCents BigInt      @default(0) @map("delta_advertiser_locked_cents") // + increases advertiser.lockedBudgetCents
+
+  customerId               Int?      @map("customer_id")
+  customer                 Customer? @relation("LedgerCustomer", fields: [customerId], references: [id], onDelete: SetNull)
+  deltaCustomerCents       BigInt    @default(0) @map("delta_customer_cents") // + increases customer.balanceCents
+  deltaCustomerLockedCents BigInt    @default(0) @map("delta_customer_locked_cents") // + increases customer.lockedBalanceCents
+
+  shareId              Int?    @map("share_id") // which share this ledger event is associated with (if any) 
+  share                Share?  @relation("LedgerShare", fields: [shareId], references: [id], onDelete: SetNull)
+  grossSharePriceCents BigInt? // what the advertiser paid for the share - before Tagly cut and referrals
+
+  deltaPlatformCents       BigInt @default(0) @map("delta_platform_cents") // + increases Tagly platform balance
+  deltaPlatformLockedCents BigInt @default(0) @map("delta_platform_locked_cents") // + increases Tagly locked balance (reserved for in-flight subsidized shares)
+
+  // Idempotency & traceability
+  externalRef String?  @map("external_ref") // stripe session ID, stripe transaction ID, etc.
+  meta        Json? // e.g. PlatformTakeBPS: 3000 etc.
+  createdAt   DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+
+  stripeCreditPurchaseId Int?                  @map("stripe_credit_purchase_id")
+  stripeCreditPurchase   StripeCreditPurchase? @relation(fields: [stripeCreditPurchaseId], references: [id], onDelete: SetNull)
+  stripeWithdrawalId     Int?                  @map("stripe_withdrawal_id")
+  stripeWithdrawal       StripeWithdrawal?     @relation(fields: [stripeWithdrawalId], references: [id], onDelete: SetNull)
+
+  @@unique([externalRef, kind])
+  @@index([customerId, createdAt])
+  @@index([advertiserId, createdAt])
+  @@index([kind, createdAt])
+  @@index([advertiserId])
+  @@index([customerId])
+  @@map("transaction_ledger_events")
+  @@schema("app")
+}
+
+// Singleton table (always exactly one row, id = 1).
+// Tracks how many cents are currently locked for in-flight subsidized shares.
+// Each currency gets its own column (additive when CZK lands).
+// At share creation: net available = live Stripe balance - lockedUsdCents.
+// Never modified directly — always via ledger event wrappers.
+model PlatformBalance {
+  id             Int    @id @default(autoincrement())
+  lockedUsdCents BigInt @default(0) @map("locked_usd_cents")
+
+  @@map("platform_balance")
+  @@schema("app")
+}
+
+enum WithdrawalStatus {
+  PENDING
+  COMPLETED
+  FAILED
+  CANCELED
+  REVERSED
+
+  @@schema("app")
+}
+
+// Payout lifecycle, tracked separately from the ledger `status` (see withdrawals.md).
+// The payout (connect account -> bank) can fail/cancel and be retried without the
+// ledger-side status changing; `stripePayoutId` always refers to the LATEST attempt.
+enum WithdrawalPayoutStatus {
+  NONE // no payout created yet
+  IN_FLIGHT // payouts.create succeeded; Stripe pending/in_transit
+  PAID // payout.paid - money reached the bank
+  FAILED // payout.failed - funds returned to the Connect balance
+  CANCELED // payout.canceled - money-wise identical to FAILED
+
+  @@schema("app")
+}
+
+enum WithdrawalPurpose {
+  CUSTOMER_WITHDRAWAL
+  ACCOUNT_DELETION_SWEEP
+
+  @@schema("app")
+}
+
+model StripeWithdrawal {
+  id         Int    @id @default(autoincrement())
+  uid        String @unique
+  customerId Int?   @map("customer_id")
+
+  currency    String @db.VarChar(3)
+  amountCents BigInt @map("amount_cents")
+
+  stripeTransferId String? @unique
+  stripePayoutId   String? @map("stripe_payout_id") // latest payout attempt
+  instant          Boolean @default(false) // legacy (instant payouts dropped); not on the v2 wire
+
+  // status = the LEDGER summary only (PENDING: money left the balance, unresolved;
+  // FAILED: transfer failed, nothing left; COMPLETED: payout PAID; REVERSED: fully
+  // clawed back). Payout-leg state lives in payoutStatus. Only the transition
+  // helpers in utils/money/withdrawals/withdrawalTransitions.ts may
+  // write status / payoutStatus / failure* / settledAt / payoutAttempts /
+  // nextPayoutRetryAt / stripePayoutId.
+  status         WithdrawalStatus @default(PENDING)
+  failureCode    String?          @map("failure_code")
+  failureMessage String?          @map("failure_message")
+
+  // Reconciliation is self-sufficient: the connected account + purpose live on the
+  // row (the customer row may be deleted - sweeps), and settledAt marks the
+  // WITHDRAWAL settle ledger event having committed (gates payout creation).
+  stripeAccountId   String?                @map("stripe_account_id")
+  purpose           WithdrawalPurpose      @default(CUSTOMER_WITHDRAWAL)
+  settledAt         DateTime?              @map("settled_at") @db.Timestamptz(3)
+  payoutStatus      WithdrawalPayoutStatus @default(NONE) @map("payout_status")
+  payoutAttempts    Int                    @default(0) @map("payout_attempts")
+  nextPayoutRetryAt DateTime?              @map("next_payout_retry_at") @db.Timestamptz(3)
+  reversedCents     BigInt                 @default(0) @map("reversed_cents")
+
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+
+  ledgerEvents TransactionLedgerEvent[]
+  customer     Customer?                @relation(fields: [customerId], references: [id], onDelete: SetNull)
+
+  @@index([customerId, createdAt])
+  @@index([stripePayoutId])
+  @@index([stripeTransferId])
+  @@index([status, payoutStatus])
+  @@map("stripe_withdrawals")
+  @@schema("app")
+}
+
+enum CreditPurchaseStatus {
+  PENDING
+  COMPLETED
+  REFUNDED
+  PARTIALLY_REFUNDED
+  FAILED
+  CANCELED
+
+  @@schema("app")
+}
+
+// Discriminates the two things a StripeCreditPurchase row can represent:
+// a prepaid credit top-up vs a PAYG off-session settlement charge. PAYG
+// charges are non-refundable (the money flowed straight through to a payout),
+// so refund paths gate on this.
+enum CreditPurchaseKind {
+  CREDIT_PURCHASE
+  PAYG_CHARGE
+
+  @@schema("app")
+}
+
+model StripeCreditPurchase {
+  id           Int    @id @default(autoincrement())
+  uid          String @unique
+  advertiserId Int?   @map("advertiser_id")
+  // CREDIT_PURCHASE (prepaid top-up) or PAYG_CHARGE (off-session settlement
+  // charge). PAYG charges are non-refundable; refund paths reject them.
+
+  kind CreditPurchaseKind
+
+  currency           String  @db.VarChar(3)
+  // Gross amount charged to the card.
+  // For regular credit purchases this equals the amount the advertiser chose to add.
+  // For PAYG off-session charges this equals the share shortfall plus paygSurchargeCents.
+  amountCents        BigInt  @map("amount_cents")
+  // PAYG only: fixed per-charge surcharge passed to the advertiser to offset Stripe's
+  // per-transaction fee. Null for regular credit purchases.
+  paygSurchargeCents BigInt? @map("payg_surcharge_cents")
+
+  stripeCheckoutSessionId String? @unique @map("stripe_checkout_session_id")
+  stripePaymentIntentId   String? @unique @map("stripe_payment_intent_id")
+  stripeChargeId          String? @map("stripe_charge_id")
+
+  // PAYG only: durable per-(share, attempt) identity for an off-session
+  // settlement charge — the SAME string as the Stripe idempotency key
+  // (`payg-share:{shareId}:attempt:{n}:v1`), so the row ↔ Stripe request is
+  // 1:1. `chargeAdvertiserCardOffSession` finds-or-creates the row by this ref
+  // and reuses its uid + amount, making the retried request byte-identical
+  // (Stripe replays instead of raising idempotency_error), and
+  // `settlePaygShare`'s recovery pre-pass books any prior collected charge
+  // found via this ref before deciding whether to charge again. Null for
+  // checkout-session credit purchases.
+  externalRef String? @unique @map("external_ref")
+
+  status         CreditPurchaseStatus @default(PENDING)
+  failureCode    String?              @map("failure_code")
+  failureMessage String?              @map("failure_message")
+
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+
+  reconcileAttempts      Int       @default(0) @map("reconcile_attempts")
+  lastReconcileAttemptAt DateTime? @map("last_reconcile_attempt_at") @db.Timestamptz(3)
+  nextReconcileAt        DateTime? @default(now()) @map("next_reconcile_at") @db.Timestamptz(3)
+
+  ledgerEvents TransactionLedgerEvent[]
+  advertiser   Advertiser?              @relation(fields: [advertiserId], references: [id], onDelete: SetNull)
+
+  @@index([advertiserId, createdAt])
+  @@index([stripePaymentIntentId])
+  @@index([stripeChargeId])
+  @@index([stripeCheckoutSessionId])
+  @@index([status, nextReconcileAt])
+  @@map("stripe_credit_purchases")
+  @@schema("app")
+}
+
+// to not process the same stripe event multiple times
+model StripeEvent {
+  id        Int      @id @default(autoincrement())
+  eventId   String   @unique
+  type      String
+  createdAt DateTime @default(now()) @db.Timestamptz(3)
+
+  @@map("stripe_events")
+  @@schema("app")
+}
+
+// categories - e.g. balance / reminders / security
+model NotificationCategory {
+  // Display names + descriptions live only in the shared catalog
+  // (@tagly/models notificationCategoriesCatalog) — DB stores slug only.
+  id     Int                 @id @default(autoincrement())
+  slug   String              @unique
+  events NotificationEvent[]
+
+  sortOrder Int? @map("sort_order")
+
+  createdAt DateTime @default(now()) @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @db.Timestamptz(3)
+
+  @@map("notification_categories")
+  @@schema("app")
+}
+
+enum NotificationEventStatus {
+  ACTIVE
+  INACTIVE
+
+  @@schema("app")
+}
+
+// Transactional notifications only — categories, events, preferences, and the send queue.
+// Promo/marketing notifications (pc.promo.*, c.promo.*) are NOT stored here.
+// Promo eligibility is gated by promoNotificationsEnabled on each recipient model — not by preference rows.
+// Promo events exist only in the in-memory promoCatalog.
+
+// a single event e.g. shares.created or balance.creditPurchaseSuccessful
+model NotificationEvent {
+  // Display labels + descriptions live only in the shared catalog
+  // (@tagly/models notificationEventsCatalog) — DB stores slug + structural
+  // fields only.
+  id                Int                   @id @default(autoincrement())
+  target            AccountType
+  mandatoryChannels NotificationChannel[] @map("mandatory_channels")
+
+  slug String @unique
+
+  categoryId        Int                   @map("category_id")
+  category          NotificationCategory  @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+  availableChannels NotificationChannel[] @map("available_channels")
+
+  status    NotificationEventStatus @default(ACTIVE)
+  createdAt DateTime                @default(now()) @db.Timestamptz(3)
+  updatedAt DateTime                @updatedAt @db.Timestamptz(3)
+
+  sortOrder Int? @map("sort_order")
+
+  optOuts     NotificationEventOptOut[]
+
+  @@index([slug])
+  @@index([target])
+  @@map("notification_events")
+  @@schema("app")
+}
+
+// where to send the notifications
+enum NotificationChannel {
+  IN_APP
+  PUSH
+  EMAIL
+
+  @@schema("app")
+}
+
+// One opt-out row per (account, event): the channels that account turned OFF for
+// that event. A missing row (or empty `disabledChannels`) means every available
+// channel is ON — new catalog events are on-by-default for everyone, with no
+// backfill mechanism (this replaces the versioned opt-in seeding that
+// `NOTIFICATION_CATALOG_UPDATED_AT` used to gate). Merged customer+advertiser
+// table (PushToken pattern): exactly ONE owner FK is set — enforced by a DB
+// CHECK constraint (hand-added in the migration; Prisma can't express it) — and
+// the event's `target` keeps each account type scoped to its own events at
+// query time.
+model NotificationEventOptOut {
+  id               Int                   @id @default(autoincrement())
+  customerId       Int?                  @map("customer_id")
+  advertiserId     Int?                  @map("advertiser_id")
+  eventId          Int                   @map("event_id")
+  disabledChannels NotificationChannel[] @map("disabled_channels")
+
+  customer   Customer?         @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  advertiser Advertiser?       @relation(fields: [advertiserId], references: [id], onDelete: Cascade)
+  event      NotificationEvent @relation(fields: [eventId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  @@unique([customerId, eventId])
+  @@unique([advertiserId, eventId])
+  @@index([eventId])
+  @@map("notification_event_opt_outs")
+  @@schema("app")
+}
+
+// Lightweight audit log written after each successful notification send.
+
+enum JobStatus {
+  SCHEDULED
+  PROCESSING
+  DONE
+  FAILED
+
+  @@schema("jobs")
+}
+
+model InstagramInsightsQueue {
+  id      Int @id @default(autoincrement())
+  shareId Int @unique @map("share_id")
+
+  scheduledAt        DateTime  @map("scheduled_at") @db.Timestamptz(3)
+  validUntil         DateTime? @map("valid_until") @db.Timestamptz(3) // story job is only valid 24 hours after the story went live
+  status             JobStatus @default(SCHEDULED)
+  startedAt          DateTime? @map("started_at") @db.Timestamptz(3)
+  processingDeadline DateTime? @map("processing_deadline") @db.Timestamptz(3)
+  finishedAt         DateTime? @map("finished_at") @db.Timestamptz(3)
+
+  attempts  Int     @default(0)
+  lastError String? @map("last_error")
+
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  share Share @relation(fields: [shareId], references: [id], onDelete: Cascade)
+
+  @@index([status, finishedAt])
+  @@index([status, updatedAt])
+  @@index([status, scheduledAt])
+  @@index([status, processingDeadline])
+  @@map("instagram_insights_queue")
+  @@schema("jobs")
+}
+
+model InstagramSnapshotQueue {
+  id          Int  @id @default(autoincrement())
+  instagramId Int  @map("instagram_id")
+  shareId     Int? @unique @map("share_id")
+
+  scheduledAt        DateTime  @map("scheduled_at") @db.Timestamptz(3)
+  status             JobStatus @default(SCHEDULED)
+  startedAt          DateTime? @map("started_at") @db.Timestamptz(3)
+  processingDeadline DateTime? @map("processing_deadline") @db.Timestamptz(3)
+  finishedAt         DateTime? @map("finished_at") @db.Timestamptz(3)
+
+  attempts  Int     @default(0)
+  lastError String? @map("last_error")
+
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  share     Share?                   @relation(fields: [shareId], references: [id], onDelete: Cascade)
+  instagram CustomerInstagramAccount @relation(fields: [instagramId], references: [id], onDelete: Cascade)
+
+  @@index([status, finishedAt])
+  @@index([status, updatedAt])
+  @@index([status, scheduledAt])
+  @@index([status, scheduledAt, id])
+  @@index([instagramId, status])
+  @@index([status, processingDeadline])
+  @@map("instagram_snapshot_queue")
+  @@schema("jobs")
+}
+
+model NotificationQueue {
+  id             Int         @id @default(autoincrement())
+  target         AccountType
+  recipientId    Int         @map("recipient_id")
+  overwriteEmail String?     @map("overwrite_email")
+
+  // Catalog slug — works for both transactional and promo events.
+  // No FK to NotificationEvent: promo events are catalog-only and have no DB rows.
+  eventSlug String              @map("event_slug")
+  channel   NotificationChannel
+  payload   Json? // e.g. { "shareId": 123, "balanceChange": 5000 }
+  dedupeKey String?             @map("dedupe_key")
+
+  scheduledAt        DateTime  @default(now()) @map("scheduled_at") @db.Timestamptz(3)
+  status             JobStatus @default(SCHEDULED)
+  startedAt          DateTime? @map("started_at") @db.Timestamptz(3)
+  processingDeadline DateTime? @map("processing_deadline") @db.Timestamptz(3)
+  finishedAt         DateTime? @map("finished_at") @db.Timestamptz(3)
+
+  attempts  Int     @default(0)
+  lastError String? @map("last_error")
+
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  @@unique([target, recipientId, eventSlug, channel, dedupeKey])
+  @@index([status, scheduledAt])
+  @@index([status, finishedAt])
+  @@index([status, updatedAt])
+  @@index([status, processingDeadline])
+  @@index([recipientId, eventSlug, channel])
+  @@map("notification_queue")
+  @@schema("jobs")
+}
+
+// Permanent record of every successfully sent promo notification.
+// Written by the notification worker after a successful send.
+// Read by the maintenance scheduling helpers to skip already-notified recipients,
+// preventing re-queuing on every maintenance run while a recipient is inside a cadence window.
+model PromoNotificationLog {
+  id        Int                 @id @default(autoincrement())
+  eventSlug String              @map("event_slug")
+  channel   NotificationChannel
+  sentAt    DateTime            @default(now()) @map("sent_at") @db.Timestamptz(3)
+
+  customerId          Int? @map("customer_id")
+  pendingCustomerId   Int? @map("pending_customer_id")
+  advertiserId        Int? @map("advertiser_id")
+  pendingAdvertiserId Int? @map("pending_advertiser_id")
+
+  customer          Customer?                 @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  pendingCustomer   PendingCustomer?          @relation(fields: [pendingCustomerId], references: [id], onDelete: Cascade)
+  advertiser        Advertiser?               @relation(fields: [advertiserId], references: [id], onDelete: Cascade)
+  pendingAdvertiser PendingAdvertiserAccount? @relation(fields: [pendingAdvertiserId], references: [id], onDelete: Cascade)
+
+  // One row per slug + channel per recipient — prevents resending the same channel on retry
+  @@unique([customerId, eventSlug, channel])
+  @@unique([pendingCustomerId, eventSlug, channel])
+  @@unique([advertiserId, eventSlug, channel])
+  @@unique([pendingAdvertiserId, eventSlug, channel])
+  // Scheduling helpers filter by eventSlug only (any channel logged = step done)
+  @@index([customerId, eventSlug])
+  @@index([pendingCustomerId, eventSlug])
+  @@index([advertiserId, eventSlug])
+  @@index([pendingAdvertiserId, eventSlug])
+  @@map("promo_notification_logs")
+  @@schema("app")
+}
+
+// Which recipients an admin blast reaches. PROMO_OPTED_IN filters to explicit
+// promo consent (the E056 strict-true rule); EVERYONE is reserved for
+// OPERATIONAL service announcements (rebrand, policy, incident) sent on the
+// legitimate-interest basis — never marketing content (see adminCatalog.ts).
+enum BlastAudience {
+  PROMO_OPTED_IN
+  EVERYONE
+
+  @@schema("app")
+}
+
+// Permanent record of every admin-initiated notification blast.
+// Written by the v2 adminSendBlast after queue rows are created.
+// dedupeKey links back to the NotificationQueue rows for that blast.
+// (Retired 2026-08-02 as E050, revived 2026-08-13 with the v2 blast endpoint —
+// `slug` + `audience` are nullable because v1-era rows predate them.)
+model AdminBlastLog {
+  id  Int    @id @default(autoincrement())
+  uid String @unique @map("uid")
+
+  adminId Int   @map("admin_id")
+  admin   Admin @relation(fields: [adminId], references: [id])
+
+  // Admin-chosen kebab-case identifier for tracking: embedded in the push
+  // payload slug (`admin.blast:<slug>` → the apps' `push_opened`
+  // PostHog event) and stamped as the `blast` Resend tag on the email leg.
+  slug     String?        @map("slug")
+  audience BlastAudience? @map("audience")
+
+  // Full per-language content, `{ push?: { en, cs? }, email?: { en, cs? } }` —
+  // the same shape the queue payload carries. The flat columns below hold the
+  // EN variant for quick scanning; this is the complete record.
+  content Json? @map("content")
+
+  // Sending-domain override for the email leg (e.g. "mail.flaer.app"): the
+  // literal Resend-verified domain the admin picked, verified against
+  // `resend.domains.list()` at enqueue time. Null = the default marketing
+  // sender was used (and on v1-era rows, which predate the choice).
+  senderDomain String? @map("sender_domain")
+
+  targets  String[] @map("targets")
+  channels String[] @map("channels")
+
+  pushTitle String? @map("push_title")
+  pushBody  String? @map("push_body")
+
+  emailSubject   String? @map("email_subject")
+  emailBody      String? @map("email_body")
+  emailTitle     String? @map("email_title")
+  emailPreheader String? @map("email_preheader")
+  ctaLabel       String? @map("cta_label")
+  ctaUrl         String? @map("cta_url")
+
+  queuedCount Int    @map("queued_count")
+  dedupeKey   String @unique @map("dedupe_key")
+
+  sentAt    DateTime @default(now()) @map("sent_at") @db.Timestamptz(3)
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+
+  @@map("admin_blast_logs")
+  @@schema("app")
+}

@@ -1,0 +1,102 @@
+{
+  "//": "Used in: src/app/[lng]/page.tsx — hero (chipy se živými počty a explainer video přehrávané ztlumeně v OBOU jazycích; zvuk i titulky jsou české, na /en to je přijaté rozhodnutí), pás spoluprací (kurátorované názvy podniků, hardcodované v page.tsx), jak to funguje (3 kroky z prodejního one-pageru), proč Tagly funguje (řádky s ikonami), ukázky sdílení s cenou, co ovlivňuje cenu (zrcadlí RewardInfoSheet z aplikací — drž v synchronizaci s tagly-shared/client/components/feedback/RewardInfoSheet), a spodní kontaktní sekce s ContactForm. Vykání (rozhodnutí 2026-08-08 — celá stránka mluví s majiteli podniků), značka v 1. os. mn.",
+  "meta": {
+    "title": "Marketing lokálních podniků na Instagramu | Tagly",
+    "description": "Tagly pomáhá restauracím, kavárnám, fitness centrům a lokálním podnikům získat propagaci od skutečných zákazníků, kteří o nich píší na Instagramu. Ne influencerů, ale vašich skutečných zákazníků."
+  },
+  "hero": {
+    "title": "Lidé věří svým kamarádům,\nne reklamám",
+    "subtitle_one": "Tagly už používá {{formatted}} člověk, který může navštívit a sdílet i váš podnik.",
+    "subtitle_few": "Tagly už používají {{formatted}} lidé, každý z nich může navštívit a sdílet i váš podnik.",
+    "subtitle_many": "Tagly už používá {{formatted}} lidí, každý z nich může navštívit a sdílet i váš podnik.",
+    "subtitle_other": "Tagly už používá {{formatted}} lidí, každý z nich může navštívit a sdílet i váš podnik.",
+    "scrollCue": "Sjeďte dolů na Jak to funguje"
+  },
+  "video": {
+    "label": "Krátké video o tom, jak Tagly funguje"
+  },
+  "trustedBy": {
+    "title": "Spolupracují s námi"
+  },
+  "howItWorks": {
+    "title": "Jak to funguje",
+    "steps": [
+      {
+        "kicker": "Krok 1",
+        "title": "Zákazník vás při návštěvě sdílí na Instagramu",
+        "alt": "Editor instagramového story s fotkou kávy na tmavém dřevěném stole v kavárně a nalepenou polohovou samolepkou Bloom Cafe"
+      },
+      {
+        "kicker": "Krok 2",
+        "title": "Odsouhlasí sdílení v naší aplikaci",
+        "alt": "Mapa Prahy v aplikaci Tagly s okolními podniky a odhadovanou odměnou u každého z nich"
+      },
+      {
+        "kicker": "Krok 3",
+        "title": "Dostane odměnu na základě dosahu a relevance",
+        "alt": "Detail sdílení v aplikaci Tagly Partner se stavem Zaplaceno a cenou 97 Kč zaplacenou za story zákazníka"
+      }
+    ]
+  },
+  "whyChoose": {
+    "title": "Proč Tagly funguje tak dobře",
+    "points": [
+      {
+        "title": "Vrátíte malou částku zákazníkovi, který u vás už nechal peníze."
+      },
+      {
+        "title": "Platíte pouze za relevantní zhlédnutí od lidí z Prahy.",
+        "body": "Máme data od Instagramu, díky kterým zajistíme, abyste neplatili za zhlédnutí od účtů, které nemají reálnou šanci navštívit váš podnik."
+      },
+      {
+        "title": "Vše běží automaticky, takže už nikdy nemusíte domlouvat spolupráce."
+      }
+    ]
+  },
+  "examples": {
+    "title": "Podívejte se, jak to funguje u jiných podniků",
+    "intro": "Toto jsou skutečná sdílení od skutečných podniků, které s Tagly spolupracují.",
+    "paidLabel": "Cena",
+    "reachLabel": "Dosah",
+    "spentLabel": "Zákazník utratil",
+    "alts": [
+      "Instagramové story z Karawby: dva ledové nápoje na dřevěném stole v kavárně s odhalenou cihlovou zdí a žlutými sametovými židlemi",
+      "Instagramové story z Loft N8: cheeseburger a košík hranolek na novinovém papíru, vedle džbán s vodou s citronem a mátou",
+      "Instagramové story z S74 wine&café: dvě sklenice bílého vína na stole na terase a v ruce vinný lístek, na rohu pražské ulice"
+    ]
+  },
+  "pricing": {
+    "title": "Co ovlivňuje cenu",
+    "factors": [
+      {
+        "title": "Dosah",
+        "body": "Platíte za lidi, kteří sdílení opravdu viděli, ne za počet sledujících."
+      },
+      {
+        "title": "Místo",
+        "body": "Počítá se jen dosah v okolí vašeho podniku. Za lidi z daleka neplatíte."
+      },
+      {
+        "title": "Publikum",
+        "body": "Skutečné publikum má větší hodnotu než sledující získaní vzájemným sledováním."
+      },
+      {
+        "title": "Kvalita",
+        "body": "Povedená sdílení mají větší hodnotu a vaše hodnocení hvězdami pomáhá určit, čí to jsou."
+      },
+      {
+        "title": "Frekvence",
+        "body": "Kdo sdílí moc často, získá menší pozornost. Taková sdílení vás stojí méně."
+      },
+      {
+        "title": "Přesdílení",
+        "body": "Když sdílení někdo přesdílí, platíte jen za dosah, který přinesl sám zákazník."
+      }
+    ],
+    "footer": "Cenu počítáme automaticky a férově."
+  },
+  "contact": {
+    "title": "Chtěli byste vědět víc?",
+    "description": "Domluvme si 20minutovou schůzku, kde vám ukážeme aplikaci, vysvětlíme, jak vše funguje, a zjistíme, jestli by Tagly bylo s vaším podnikem kompatibilní."
+  }
+}

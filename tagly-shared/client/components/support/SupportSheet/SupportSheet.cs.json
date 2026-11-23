@@ -1,0 +1,9 @@
+{
+  "//": "Used in: tagly-shared/client/components/support/SupportSheet (support namespace). The contact-support bottom sheet, shared by the customer + advertiser apps.",
+  "title": "Kontaktovat podporu",
+  "subtitle": "Napiš nám, co se děje, a odpovíme ti e-mailem.",
+  "placeholder": "Popiš svůj problém...",
+  "send": "Odeslat zprávu",
+  "sentToastTitle": "Zpráva odeslána",
+  "sentToastBody": "Brzy ti odpovíme na e-mail."
+}

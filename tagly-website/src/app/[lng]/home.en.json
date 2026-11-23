@@ -1,0 +1,100 @@
+{
+  "//": "Used in: src/app/[lng]/page.tsx — hero (with live social-proof chips and the explainer video, autoplayed muted on BOTH locales; its audio/subtitles are Czech, accepted on /en), trusted-by strip (curated venue wordmarks, names hardcoded in page.tsx), how-it-works (3 steps from the sales one-pager), why Tagly works (icon rows), priced share examples, what decides the price (mirrors the apps' RewardInfoSheet advertiser voice — keep in sync with tagly-shared/client/components/feedback/RewardInfoSheet), and the bottom contact section embedding ContactForm.",
+  "meta": {
+    "title": "Local Business Marketing on Instagram | Tagly",
+    "description": "Tagly helps restaurants, cafes, gyms, and local businesses get promoted by real customers posting on Instagram. Not influencers, your actual customers."
+  },
+  "hero": {
+    "title": "People trust their friends,\nnot ads",
+    "subtitle_one": "Tagly is already used by {{formatted}} person, who can visit and share your place too.",
+    "subtitle_other": "Tagly is already used by {{formatted}} people, and every one of them can visit and share your place too.",
+    "scrollCue": "Scroll down to how it works"
+  },
+  "video": {
+    "label": "A short video explaining how Tagly works (in Czech)"
+  },
+  "trustedBy": {
+    "title": "Businesses we work with"
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "steps": [
+      {
+        "kicker": "Step 1",
+        "title": "A customer shares your business on Instagram during their visit",
+        "alt": "The Instagram Story composer with a photo of coffee on a dark wooden cafe table and a Bloom Cafe location sticker placed on it"
+      },
+      {
+        "kicker": "Step 2",
+        "title": "They approve the share in our app",
+        "alt": "The Tagly app's map of Prague with nearby businesses pinned, each showing an estimated reward, and an Earn here button on the selected cafe"
+      },
+      {
+        "kicker": "Step 3",
+        "title": "They get a reward based on reach and relevance",
+        "alt": "Share details in the Tagly Partner app showing a Paid status and the $4.6 paid for a customer's story"
+      }
+    ]
+  },
+  "whyChoose": {
+    "title": "Why Tagly works so well",
+    "points": [
+      {
+        "title": "You give a small amount back to a customer who already spent money with you."
+      },
+      {
+        "title": "You only pay for relevant views from people in Prague.",
+        "body": "We have data from Instagram that lets us make sure you don't pay for views from accounts that have no real chance of visiting your business."
+      },
+      {
+        "title": "Everything runs automatically, you never have to arrange collaborations again."
+      }
+    ]
+  },
+  "examples": {
+    "title": "See how it works for other businesses",
+    "intro": "These are real shares from real businesses working with Tagly.",
+    "paidLabel": "Price",
+    "reachLabel": "Reach",
+    "spentLabel": "Customer spent",
+    "alts": [
+      "Instagram story from Karawba: two iced drinks on a wooden table in a cafe with an exposed brick wall and yellow velvet chairs",
+      "Instagram story from Loft N8: a cheeseburger and a basket of fries served on newspaper paper, next to a jug of lemon and mint water",
+      "Instagram story from S74 wine&café: two glasses of white wine on an outdoor table with the wine list held up, on a Prague street corner"
+    ]
+  },
+  "pricing": {
+    "title": "What decides the price",
+    "factors": [
+      {
+        "title": "Reach",
+        "body": "You pay for people who actually saw the share, not for follower counts."
+      },
+      {
+        "title": "Location",
+        "body": "Only reach near your business counts. People far away cost you nothing."
+      },
+      {
+        "title": "Audience",
+        "body": "A genuine audience is worth more than followers gained by following back."
+      },
+      {
+        "title": "Quality",
+        "body": "Better shares are worth more, and your star ratings help decide who that is."
+      },
+      {
+        "title": "Frequency",
+        "body": "Customers who post too often get less attention, so their shares cost less."
+      },
+      {
+        "title": "Reshares",
+        "body": "If a share gets reshared, you only pay for the reach the customer brought themselves."
+      }
+    ],
+    "footer": "We work it out automatically, so it's always fair."
+  },
+  "contact": {
+    "title": "Want to know more?",
+    "description": "Let's set up a 20-minute call where we'll show you the app, explain how everything works, and see whether Tagly would be compatible with your business."
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "//": "Used in: contexts/instagram/InstagramConnectionContext.tsx (instagramConnection namespace). Reconnect-flow alerts + the shared connection-status line (useInstagramStatusLabel).",
+  "connectFailedTitle": "Couldn't connect Instagram",
+  "alreadyLinked": "This Instagram account is already linked to another Tagly account.",
+  "accountMismatch": "Your Tagly account is already linked to a different Instagram account. Reconnect the same one.",
+  "connectFailedBody": "Something went wrong while connecting your Instagram. Please try again.",
+  "statusNotConnected": "Instagram not connected",
+  "statusMissingPermission": "Insights permission needed",
+  "statusDisconnected": "Instagram disconnected",
+  "statusExpired": "Instagram session expired"
+}

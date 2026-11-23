@@ -1,0 +1,41 @@
+{
+  "//": "Used in: src/components/contact/ContactForm.tsx (client) — the lead form embedded in the landing page's #contact section. Form strings only; the old /contact-sales page that used to host it was removed 2026-08-08 (301 -> /#contact).",
+  "form": {
+    "success": {
+      "title": "Message sent",
+      "description": "Thanks for reaching out. We'll get back to you within one business day."
+    },
+    "name": {
+      "label": "Your name",
+      "placeholder": "John Smith"
+    },
+    "businessName": {
+      "label": "Business name",
+      "placeholder": "e.g. Corner Cafe"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "you@example.com"
+    },
+    "phone": {
+      "label": "Phone",
+      "placeholder": "+420 777 123 456"
+    },
+    "preferredContact": {
+      "label": "Preferred contact method",
+      "options": {
+        "email": "Email",
+        "phone": "Phone",
+        "either": "Either"
+      }
+    },
+    "message": {
+      "label": "Message or questions",
+      "placeholder": "Tell us about your business or ask us anything"
+    },
+    "optional": "optional",
+    "submit": "Send message",
+    "submitting": "Sending...",
+    "error": "Something went wrong. Please try again or email us directly at <email>hello@taglyapp.com</email>."
+  }
+}

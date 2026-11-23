@@ -1,0 +1,20 @@
+{
+  "//": "Used in: app/(app)/settings/stripe/index.tsx (settingsStripe namespace).",
+  "title": "Stripe",
+
+  "notConnectedTitle": "Výběry nejsou nastavené",
+  "notConnectedBody": "Připoj účet Stripe a vybírej si své výdělky přímo na bankovní účet.",
+  "setUpCta": "Nastavit výběry",
+
+  "accountRow": "Účet Stripe",
+  "accountConnected": "Připojeno",
+  "payoutsRow": "Výběry",
+  "payoutsEnabled": "Aktivní",
+  "payoutsPending": "Čeká na ověření",
+
+  "pendingBody": "Tvůj účet Stripe potřebuje ještě pár údajů, než budeš moct vybírat peníze.",
+  "finishSetupCta": "Dokončit nastavení",
+
+  "manageBody": "Prohlédni si historii výběrů a uprav si bankovní údaje ve Stripe.",
+  "manageCta": "Spravovat ve Stripe"
+}

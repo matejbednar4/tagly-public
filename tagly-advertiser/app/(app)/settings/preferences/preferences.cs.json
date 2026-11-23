@@ -1,0 +1,8 @@
+{
+  "//": "Used in: app/(app)/settings/preferences/index.tsx (settingsPreferences namespace).",
+  "title": "Předvolby",
+
+  "languageSection": "Jazyk",
+  "languageEn": "English",
+  "languageCs": "Čeština"
+}

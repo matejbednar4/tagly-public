@@ -1,0 +1,155 @@
+{
+  "//": "Used in: src/app/[lng]/local-businesses/page.tsx — hero, fit cards, industries grid (8), how-it-works flow, why cards, not-sure (Trans), FAQ, internal links, CTA.",
+  "meta": {
+    "title": "Tagly for Local Businesses | Instagram Promotion From Real Customers",
+    "description": "Tagly helps local businesses get promoted on Instagram by their own customers. Cinemas, theatres, bowling alleys, escape rooms, bars, bakeries, courts, coworking spaces and every other business type you can pick when you create a page."
+  },
+  "hero": {
+    "title": "Tagly works for any local business where customers take photos",
+    "intro": "Restaurants, cafes, gyms and salons have their own pages here. Tagly works just as well for cinemas, theatres, bowling alleys, escape rooms, bars, bakeries, tennis courts and coworking spaces. If your customers have a reason to take a photo while they are with you, that photo can become an Instagram Story that names you, and you pay only for the people near you who see it."
+  },
+  "fit": {
+    "title": "What makes a business a good fit for Tagly",
+    "intro": "Tagly is not limited to food and fitness. It works for any business that checks these boxes.",
+    "items": [
+      {
+        "title": "You have an address people come to",
+        "description": "Tagly is built for businesses with a real location and a real catchment area. To be clear about what is not checked: there is no check-in, no receipt, no proof of purchase and no proximity gate. Anyone can share you. What makes it local is the price. The further a story's audience is from your door, the closer its value falls to zero, so you only pay for the people who could actually walk in."
+      },
+      {
+        "title": "There is something worth photographing",
+        "description": "It does not have to be food or a gym mirror. A film night with friends, a bowling score screen, a match on court, an escape room victory photo. If a customer has any reason to pull out their phone, that is enough for a story."
+      },
+      {
+        "title": "Your customers are local too",
+        "description": "The value of a story comes from where the viewer's followers live, not from where anyone was standing. A business that draws its regulars from the surrounding neighbourhoods gets far more out of Tagly than one that lives on tourists passing through once."
+      }
+    ]
+  },
+  "industries": {
+    "title": "Business types that work well with Tagly",
+    "intro": "When you create your page you pick your business type from a fixed list, and it is one of the inputs to what a story is worth. Restaurants, cafes, gyms and salons have pages of their own. These are some of the rest, and there is an \"Other\" option for anything the list does not name.",
+    "items": [
+      {
+        "title": "Cinemas and theatres",
+        "description": "A film or a show is a social event, and people share that they went. The screen before it starts, the tickets, the programme, the group of friends. A venue on Tagly gets a stream of stories every weekend from people showing their followers where they spent the evening."
+      },
+      {
+        "title": "Bowling, arcades, laser tag and mini golf",
+        "description": "Birthday parties, date nights, weekend afternoons. These places are made of photo moments: score screens, group shots, glowing lanes. They are also the kind of story people watch to the end, because it shows someone they know having fun."
+      },
+      {
+        "title": "Escape rooms and experience venues",
+        "description": "The victory photo after finishing a room is practically a tradition. Tagly is what makes sure it ends up in a Story with your name visible on it, rather than only in a group chat."
+      },
+      {
+        "title": "Courts, clubs and climbing walls",
+        "description": "Tennis and padel courts, climbing walls, sports clubs. Regulars share their match, their session and their results, and their followers tend to be people who play the same thing in the same part of town."
+      },
+      {
+        "title": "Zoos, aquariums and amusement parks",
+        "description": "Day-out venues get photographed more than almost anything else. The catch is that a lot of that reach is people who are nowhere near you. Tagly is priced for exactly this case: distant viewers are worth almost nothing, so a big day-out audience does not turn into a big bill."
+      },
+      {
+        "title": "Bars, breweries, wineries and nightclubs",
+        "description": "An evening out is shared while it is happening, which is the natural home of the Story format. Drinks venues also sit slightly above the baseline on Tagly's business-type scale, so the same reach is worth a little more than at an average business, to the customer and to your budget alike."
+      },
+      {
+        "title": "Bakeries, patisseries and ice cream shops",
+        "description": "A cake, a cone, a window full of pastries. Small, frequent, extremely photogenic purchases, and the people buying them almost always live or work within a few streets. That is the shape of customer Tagly pays the most for."
+      },
+      {
+        "title": "Pet services, coworking spaces and vintage stores",
+        "description": "A dog after a groom, a desk on a good morning, a find on the rail. Businesses people are quietly proud of using, with a regular crowd that is local by definition. All three are business types you can pick when you create your page."
+      }
+    ]
+  },
+  "how": {
+    "title": "How it works is the same for every business",
+    "intro": "Whatever your business type, the mechanic does not change.",
+    "steps": [
+      {
+        "title": "A customer visits your business",
+        "description": "They found you in the Tagly app, on the map or in search, or they were coming anyway. They come in and enjoy whatever you offer, exactly like any other customer."
+      },
+      {
+        "title": "They share it in an Instagram Story",
+        "description": "A photo of the experience, the venue, their friends or the result. They put it in their Story and make your business visible in it, by tagging you or adding the location sticker, then pick that story in the Tagly app. Stories only, and it has to still be live when they submit it."
+      },
+      {
+        "title": "About a day later, you pay for what it reached",
+        "description": "Roughly 24 hours after the story went up, Instagram reports how many people saw it. Tagly works the reward out from that reach, from how much of it was near you, and from a handful of other factors. The customer is paid from your budget, and that is the moment the story costs you anything."
+      }
+    ],
+    "fullGuide": "See the full step-by-step guide"
+  },
+  "why": {
+    "title": "Why local businesses choose Tagly over traditional marketing options",
+    "intro": "Traditional advertising was not designed for local businesses with local audiences. Tagly was.",
+    "items": [
+      {
+        "title": "You only pay for local reach",
+        "description": "Instagram ads charge you for every impression, including the ones in another country. Tagly does not filter who is allowed to see a story. It prices by distance instead: reach right next to your door is worth the most, and reach hundreds of kilometres away is worth close to nothing. Your budget ends up where it can actually turn into a visit."
+      },
+      {
+        "title": "A story from someone they know is a different argument",
+        "description": "Every story on Tagly goes out on a real person's own account, to people who chose to follow them. That is not something an ad can imitate, and it is the reason word of mouth works at all. Nobody is briefed, nobody is given a script, and nobody is told what to say about you."
+      },
+      {
+        "title": "There is almost nothing to run",
+        "description": "No content to create, no campaigns to manage, no targeting to optimize. Two things do need you, though. You rate each story that comes in once in the app, which takes a few seconds and unlocks its details. And on the credits route, keeping at least $15 in available credits keeps your business in front of customers."
+      },
+      {
+        "title": "The price adapts instead of being negotiated",
+        "description": "You never set a rate, place a bid, cap a story or pick an audience. Tagly works each story's price out from its reach, how near that reach was to you, how relevant the audience is, your business type, and how the customer has been rated by other businesses. Whatever the inputs, what a single story can cost is capped, so no story can ever drain your whole budget."
+      }
+    ]
+  },
+  "notSure": {
+    "title": "Not sure if Tagly works for your business?",
+    "intro": "If you have a physical location and customers who could take a photo during their visit, Tagly can probably work for you. The best way to find out is to <contact>get in touch</contact>. We will be honest about whether Tagly is a good fit."
+  },
+  "faq": {
+    "heading": "Local business marketing FAQ",
+    "items": [
+      {
+        "question": "How much does Tagly cost?",
+        "answer": "There are two ways to fund it, and neither one is a contract or a subscription. Pay as you go: link a card and you are live straight away. Nothing is charged until a story has actually been paid out, and then only for the part your credits do not cover, plus $0.30 per charge. No deposit, no minimum. Or buy credits up front: 1 credit is $1, the minimum purchase is $50, and credits never expire. Credits work out slightly cheaper because there is no per-charge fee, and with at least $15 in available credits you stay visible in the app. Either way you pay per story once it is paid, and what a single story can cost is capped, so no story can ever drain your whole budget."
+      },
+      {
+        "question": "Do I need to create any content myself?",
+        "answer": "No. Your customers create it by sharing their visit in their own Instagram Stories. You never plan content, take photos, write captions or manage a social media calendar. You also cannot brief them, approve a story before it goes up, or tell them what to say about you."
+      },
+      {
+        "question": "How do customers find out my business is on Tagly?",
+        "answer": "They find you inside the Tagly app: on the map, in search, and in the lists the app shows people nearby. There is nothing to print and nothing to put up at the door. If you want your regulars to know, just tell them. They install the app and find you the same way anyone else does."
+      },
+      {
+        "question": "What if my business type is not listed on this page?",
+        "answer": "This page only covers some examples, and the list you pick from in the app is longer than what is shown here, with an \"Other\" option on the end. If you have a physical location and customers who might take a photo during their visit, Tagly can probably work for you. Get in touch and we will be honest about whether it is a good fit."
+      },
+      {
+        "question": "How is this different from running Instagram ads?",
+        "answer": "Instagram ads charge you per impression, from people who may never come anywhere near you. With Tagly your own customers share you with their own followers, and you pay per story once it has been paid, based on the reach it actually got and how much of that reach was local. There are no clicks and no impressions to buy."
+      }
+    ],
+    "costInline": "There are two ways to fund it, and neither one is a contract or a subscription. Pay as you go: link a card and you are live straight away. Nothing is charged until a story has actually been paid out, and then only for the part your credits do not cover, plus $0.30 per charge. No deposit, no minimum. Or buy credits up front: 1 credit is $1, the minimum purchase is $50, and credits never expire. Credits work out slightly cheaper because there is no per-charge fee, and with at least $15 in available credits you stay visible in the app. Either way you pay per story once it is paid, and what a single story can cost is capped, so no story can ever drain your whole budget. See <link>how pricing works</link>.",
+    "notListedInline": "This page only covers some examples, and the list you pick from in the app is longer than what is shown here, with an \"Other\" option on the end. If you have a physical location and customers who might take a photo during their visit, Tagly can probably work for you. <link>Get in touch</link> and we will be honest about whether it is a good fit.",
+    "adsInline": "Instagram ads charge you per impression, from people who may never come anywhere near you. With Tagly your own customers share you with their own followers, and you pay per story once it has been paid, based on the reach it actually got and how much of that reach was local. There are no clicks and no impressions to buy. Read the <link>full comparison</link>."
+  },
+  "internalLinks": {
+    "industriesHeading": "Tagly for specific industries",
+    "restaurants": "Restaurants",
+    "cafes": "Cafes",
+    "gyms": "Gyms",
+    "salons": "Salons",
+    "compareHeading": "How Tagly compares",
+    "instagramAds": "Instagram ads",
+    "influencerMarketing": "Influencer marketing",
+    "marketingAgencies": "Marketing agencies"
+  },
+  "cta": {
+    "heading": "Ready to get promoted by your own customers?",
+    "description": "Join Tagly and let the stories your customers already share do the marketing. No ads, no influencers, no content to create."
+  }
+}

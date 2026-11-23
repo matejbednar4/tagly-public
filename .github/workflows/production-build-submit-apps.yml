@@ -1,0 +1,179 @@
+name: Production - Build and Submit apps
+
+on:
+  workflow_dispatch:
+    inputs:
+      app:
+        description: Which app? (both = customer + advertiser; all = customer + advertiser + admin)
+        type: choice
+        required: true
+        options: [customer, advertiser, admin, both, all]
+      platform:
+        description: Which platform? (admin is iOS only)
+        type: choice
+        required: true
+        default: both
+        options: [ios, android, both]
+      action:
+        description: Build and submit, or submit only?
+        type: choice
+        required: true
+        default: build_and_submit
+        options: [build_and_submit, submit_only]
+  workflow_call:
+    inputs:
+      app:
+        type: string
+        default: both
+      platform:
+        type: string
+        default: both
+      action:
+        type: string
+        default: build_and_submit
+
+permissions:
+  contents: read
+
+jobs:
+  build_submit:
+    if: ${{ github.ref_name == 'main' }}
+    runs-on: ubuntu-latest
+    environment: production
+    env:
+      # The auto-fingerprint step adds minutes per build and gates nothing here.
+      EAS_SKIP_AUTO_FINGERPRINT: "1"
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: yarn
+
+      - run: yarn install --frozen-lockfile
+
+      # ---- Phase 1: queue every requested build on EAS up front (--no-wait),
+      # so they run concurrently up to the plan's concurrency (the rest queue).
+      # Every build uses --auto-submit: EAS submits it server-side the moment
+      # it finishes (iOS → TestFlight, Android → Play internal track, both via
+      # the "production" submit profile) — the runner never runs `eas submit`.
+
+      - name: Start customer iOS build (production, auto-submit)
+        if: ${{ (inputs.app == 'customer' || inputs.app == 'both' || inputs.app == 'all') && (inputs.platform == 'ios' || inputs.platform == 'both') && inputs.action == 'build_and_submit' }}
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: bash .github/scripts/eas-start-build.sh tagly-customer ios production CUSTOMER_IOS_BUILD_ID auto_submit
+
+      - name: Start customer Android build (production, auto-submit)
+        if: ${{ (inputs.app == 'customer' || inputs.app == 'both' || inputs.app == 'all') && (inputs.platform == 'android' || inputs.platform == 'both') && inputs.action == 'build_and_submit' }}
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: bash .github/scripts/eas-start-build.sh tagly-customer android production CUSTOMER_ANDROID_BUILD_ID auto_submit
+
+      - name: Start advertiser iOS build (production, auto-submit)
+        if: ${{ (inputs.app == 'advertiser' || inputs.app == 'both' || inputs.app == 'all') && (inputs.platform == 'ios' || inputs.platform == 'both') && inputs.action == 'build_and_submit' }}
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: bash .github/scripts/eas-start-build.sh tagly-advertiser ios production ADVERTISER_IOS_BUILD_ID auto_submit
+
+      # Advertiser Android (production) — Play internal track. Requires the Play
+      # app (com.flaer.advertiser) to exist with a first manual AAB upload, and
+      # the Google Play service-account key configured in the advertiser's EAS
+      # project credentials.
+      - name: Start advertiser Android build (production, auto-submit)
+        if: ${{ (inputs.app == 'advertiser' || inputs.app == 'both' || inputs.app == 'all') && (inputs.platform == 'android' || inputs.platform == 'both') && inputs.action == 'build_and_submit' }}
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: bash .github/scripts/eas-start-build.sh tagly-advertiser android production ADVERTISER_ANDROID_BUILD_ID auto_submit
+
+      # Admin iOS (production) — TestFlight only (internal team; iOS only, never
+      # a public store release — never add an Android step). Submits to the
+      # com.flaer.admin ASC app (submit.production.ios.ascAppId in
+      # tagly-admin/eas.json); needs the ASC API key in the admin EAS project
+      # credentials.
+      - name: Start admin iOS build (production, auto-submit)
+        if: ${{ (inputs.app == 'admin' || inputs.app == 'all') && (inputs.platform == 'ios' || inputs.platform == 'both') && inputs.action == 'build_and_submit' }}
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: bash .github/scripts/eas-start-build.sh tagly-admin ios production ADMIN_IOS_BUILD_ID auto_submit
+
+      # ---- Phase 2: wait for every queued build so a failed build fails this
+      # run. Store submissions were queued by --auto-submit and run on EAS
+      # servers; a (rare) submission failure surfaces on expo.dev, not here.
+
+      - name: Wait for customer iOS build (production)
+        if: ${{ (inputs.app == 'customer' || inputs.app == 'both' || inputs.app == 'all') && (inputs.platform == 'ios' || inputs.platform == 'both') && inputs.action == 'build_and_submit' }}
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: bash .github/scripts/eas-wait-build.sh tagly-customer "$CUSTOMER_IOS_BUILD_ID"
+
+      - name: Wait for customer Android build (production)
+        if: ${{ (inputs.app == 'customer' || inputs.app == 'both' || inputs.app == 'all') && (inputs.platform == 'android' || inputs.platform == 'both') && inputs.action == 'build_and_submit' }}
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: bash .github/scripts/eas-wait-build.sh tagly-customer "$CUSTOMER_ANDROID_BUILD_ID"
+
+      - name: Wait for advertiser iOS build (production)
+        if: ${{ (inputs.app == 'advertiser' || inputs.app == 'both' || inputs.app == 'all') && (inputs.platform == 'ios' || inputs.platform == 'both') && inputs.action == 'build_and_submit' }}
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: bash .github/scripts/eas-wait-build.sh tagly-advertiser "$ADVERTISER_IOS_BUILD_ID"
+
+      - name: Wait for advertiser Android build (production)
+        if: ${{ (inputs.app == 'advertiser' || inputs.app == 'both' || inputs.app == 'all') && (inputs.platform == 'android' || inputs.platform == 'both') && inputs.action == 'build_and_submit' }}
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: bash .github/scripts/eas-wait-build.sh tagly-advertiser "$ADVERTISER_ANDROID_BUILD_ID"
+
+      - name: Wait for admin iOS build (production)
+        if: ${{ (inputs.app == 'admin' || inputs.app == 'all') && (inputs.platform == 'ios' || inputs.platform == 'both') && inputs.action == 'build_and_submit' }}
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: bash .github/scripts/eas-wait-build.sh tagly-admin "$ADMIN_IOS_BUILD_ID"
+
+      # ---- submit_only paths: re-submit the latest existing build without
+      # building anything.
+
+      - name: Submit only customer iOS (production)
+        if: ${{ (inputs.app == 'customer' || inputs.app == 'both' || inputs.app == 'all') && (inputs.platform == 'ios' || inputs.platform == 'both') && inputs.action == 'submit_only' }}
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: |
+          cd tagly-customer
+          yarn actions:submit:prod
+
+      - name: Submit only customer Android (production)
+        if: ${{ (inputs.app == 'customer' || inputs.app == 'both' || inputs.app == 'all') && (inputs.platform == 'android' || inputs.platform == 'both') && inputs.action == 'submit_only' }}
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: |
+          cd tagly-customer
+          yarn actions:submit:android:prod
+
+      - name: Submit only advertiser iOS (production)
+        if: ${{ (inputs.app == 'advertiser' || inputs.app == 'both' || inputs.app == 'all') && (inputs.platform == 'ios' || inputs.platform == 'both') && inputs.action == 'submit_only' }}
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: |
+          cd tagly-advertiser
+          yarn actions:submit:prod
+
+      - name: Submit only advertiser Android (production)
+        if: ${{ (inputs.app == 'advertiser' || inputs.app == 'both' || inputs.app == 'all') && (inputs.platform == 'android' || inputs.platform == 'both') && inputs.action == 'submit_only' }}
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: |
+          cd tagly-advertiser
+          yarn actions:submit:android:prod
+
+      - name: Submit only admin iOS (production)
+        if: ${{ (inputs.app == 'admin' || inputs.app == 'all') && (inputs.platform == 'ios' || inputs.platform == 'both') && inputs.action == 'submit_only' }}
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: |
+          cd tagly-admin
+          yarn actions:submit:prod

@@ -1,0 +1,98 @@
+{
+  "//": "Used in: src/app/[lng]/pricing/page.tsx — hero, the two funding routes (pay as you go first, then credits, then the visibility rule) plus the caveats paragraph, what decides the price, two real cost examples, FAQ, compare links, CTA. Every figure here is verified against the platform: $50 minimum credit purchase, $15 available credits to stay visible, $0.30 PAYG surcharge. A per-story price cap exists but is DELIBERATELY not published anywhere on the site (it leaks the pricing model, and the US/CZ pair leaks the country multiplier) — say a cap exists, never the number. Same for the customer/Tagly split and any other pricing lever: reach plus locality is the ceiling of detail. Keep line-for-line with pricing.en.json. CS register: vykání, matching the rest of the SEO pages.",
+  "meta": {
+    "title": "Ceník Tagly pro lokální podniky",
+    "description": "Bez předplatného, bez měsíčních poplatků a bez tarifů. Platíte, až když o vás zákazník přidá story. Kartou průběžně, nebo z kreditů koupených dopředu."
+  },
+  "hero": {
+    "title": "Kolik Tagly stojí",
+    "intro": "Žádné předplatné, žádný měsíční poplatek, žádné tarify. Platíte za jedinou věc: za story, které o vašem podniku přidal skutečný zákazník. A to až ve chvíli, kdy je za něj odměna opravdu zaplacená. Peníze na odměny můžete mít na kartě, v předplacených kreditech, nebo v obojím."
+  },
+  "funding": {
+    "title": "Dva způsoby, jak platit odměny",
+    "intro": "Výsledek je u obou stejný. Liší se jen tím, kdy peníze odejdou z vašeho účtu.",
+    "items": [
+      {
+        "title": "Průběžné platby",
+        "description": "Připojíte kartu a podnik je vidět hned, bez jakékoli platby předem. Žádná záloha, žádné minimum, žádné předplatné. Z karty strhneme peníze teprve ve chvíli, kdy je zákazníkovi zaplacená odměna za jeho story, a jen tu část, kterou nepokryjí vaše kredity. Ke každé platbě se připočítá 0,30 $ za zpracování karty."
+      },
+      {
+        "title": "Předplacené kredity",
+        "description": "Kredity si koupíte dopředu a odměny se pak strhávají z nich. Jeden kredit stojí jeden dolar a nejmenší nákup je 50 $, což platí pro každé dobití, ne jen pro to první. Kredity nikdy nevyprší a neúčtujeme si u nich žádný poplatek za platbu, takže stejné story vyjde o něco levněji než na kartu."
+      }
+    ],
+    "visibility": {
+      "title": "Jak zůstat vidět na mapě",
+      "description": "Zákazníci vás najdou a mohou vás sdílet, když je váš podnik v aplikaci vidět. Aktivní karta k tomu stačí sama. U kreditů se podnik zobrazuje vždy, když máte alespoň 15 $ dostupných kreditů, takže na mapě zůstáváte už s malou rezervou na účtu."
+    }
+  },
+  "factors": {
+    "title": "Co určuje cenu story",
+    "intro": "Hodnotu každého story spočítá Tagly samo. Nenastavujete sazbu, nepřihazujete v aukci ani nevybíráte cílovou skupinu. Cena vychází z toho, kolik lidí story opravdu vidělo a jak blízko vašemu podniku tito lidé jsou.",
+    "items": [
+      {
+        "label": "Nejdůležitější",
+        "title": "Kde je publikum",
+        "description": "V tom je celý smysl Tagly. Čím blíž je publikum story vašemu podniku, tím větší má story hodnotu. Čím dál lidé jsou, tím rychleji cena padá k nule, klidně až na pár centů. Sdílet vás může kdokoli, ale reálně platíte jen za lidi, kteří k vám opravdu mohou přijít."
+      },
+      {
+        "label": "Skutečná data",
+        "title": "Dosah",
+        "description": "Nerozhoduje počet sledujících. Zhruba den po zveřejnění nám Instagram nahlásí, kolik lidí story doopravdy vidělo, a právě z tohoto čísla cena vychází. Story, které vidělo 1 000 lidí ve vašem okolí, má větší hodnotu než to, které vidělo 200."
+      }
+    ]
+  },
+  "examples": {
+    "title": "Kolik story reálně stojí",
+    "intro": "Každé story je jiné, ceník proto neexistuje. Tady jsou dvě skutečná sdílení pražských podniků na Tagly: jaký měla dosah a kolik za ně podnik zaplatil.",
+    "items": [
+      {
+        "title": "Dosah 152 lidí",
+        "description": "Skutečné sdílení z návštěvy jednoho pražského podniku. Podnik za něj zaplatil zhruba 7 $. Většina story vypadá právě takhle: běžný zákazník, pár set lidí z okolí, pár dolarů."
+      },
+      {
+        "title": "Dosah 526 lidí",
+        "description": "Skutečné sdílení se širším místním publikem. Podnik za něj zaplatil zhruba 12,50 $. Vidělo ho víc lidí, mělo tedy větší hodnotu a tomu odpovídala i cena."
+      }
+    ],
+    "footnote": "Cena, kterou vidíte, je celý náklad na story, nic se k ní už nepřipočítává. Dopředu se nedá přesně odhadnout, jak si konkrétní story povede, takže to berte jako ukázku, ne jako nabídku. Tagly navíc hlídá strop toho, kolik může jedno story stát, takže vám jedno sdílení nikdy neutrhne celý rozpočet. Účtujeme v dolarech, v aplikaci ale všechny částky vidíte i v korunách podle aktuálního kurzu."
+  },
+  "faq": {
+    "heading": "Časté dotazy k cenám",
+    "items": [
+      {
+        "question": "Je na začátek potřeba minimální částka?",
+        "answer": "U průběžných plateb ne. Připojíte kartu a jste vidět, aniž byste cokoli zaplatili dopředu. Minimum má jen cesta přes kredity: nejmenší nákup je 50 $ a platí pro každé dobití, ne jen pro to první. Ani u jedné cesty nepodepisujete smlouvu a nemáte žádné měsíční minimum."
+      },
+      {
+        "question": "Můžu si nastavit maximální cenu za jedno story?",
+        "answer": "Nastavit ne, ale strop za vás hlídá Tagly. Jedno story vám nikdy neutrhne celý rozpočet, ať už si na Instagramu vede jakkoli. V praxi stojí skoro každé story jen zlomek tohoto stropu. Vy rozhodujete o tom, kolik peněz na odměny dáte, ne o tom, jakou hodnotu bude mít konkrétní story."
+      },
+      {
+        "question": "Vyprší kredity?",
+        "answer": "Ne. Kredity zůstávají na účtu, dokud je nespotřebuje nějaké story. Nemají datum expirace ani poplatek za nečinnost."
+      },
+      {
+        "question": "Dají se kredity vrátit?",
+        "answer": "Ve výchozím nastavení se kredity nevracejí. Pokud řešíte nějakou zvláštní situaci, ozvěte se naší podpoře a váš případ posoudíme."
+      },
+      {
+        "question": "Jak přestanu utrácet?",
+        "answer": "Odpojte kartu a nic dalšího se vám nestrhne. Kredity, které už na účtu máte, tam zůstanou, dokud je nespotřebuje nějaké story, a podnik se zákazníkům zobrazuje tak dlouho, dokud máte alespoň 15 $ dostupných kreditů. O nic nepřijdete a kdykoli můžete zase začít."
+      }
+    ],
+    "refundInline": "Ve výchozím nastavení se kredity nevracejí. Pokud řešíte nějakou zvláštní situaci, <link>ozvěte se naší podpoře</link> a váš případ posoudíme."
+  },
+  "compare": {
+    "title": "Jak si Tagly stojí proti ostatním",
+    "intro": "Zajímá vás, jak si Tagly vede vedle jiných způsobů propagace?",
+    "instagramAds": "Instagramové reklamy vs Tagly",
+    "influencerMarketing": "Influencer marketing vs Tagly",
+    "marketingAgencies": "Marketingové agentury vs Tagly"
+  },
+  "cta": {
+    "heading": "Chcete začít?",
+    "description": "Založte si podnik v aplikaci Tagly Partner a propagaci nechte na skutečných zákaznících. Připojte kartu a jste vidět, aniž byste cokoli platili dopředu. Žádné předplatné, žádné závazky.",
+    "readFaq": "Přečíst časté dotazy"
+  }
+}

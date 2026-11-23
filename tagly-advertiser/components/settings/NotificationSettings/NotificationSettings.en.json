@@ -1,0 +1,16 @@
+{
+  "//": "Used in: components/settings/NotificationSettings/index.tsx + settings/notifications/{push,email}.tsx (settingsNotifications namespace).",
+  "alwaysOn": "Always on",
+  "save": "Save",
+  "errorTitle": "Could not save",
+  "errorBody": "Please try again.",
+  "empty": "Nothing to configure here.",
+
+  "promoSection": "Promotions",
+  "promoLabel": "Promotions and reminders",
+  "promoSubtitle": "Tips, reminders and offers by email and push.",
+
+  "permTitle": "Push notifications are off",
+  "permBody": "Turn on notifications in your device settings to not miss anything.",
+  "permButton": "Open settings"
+}

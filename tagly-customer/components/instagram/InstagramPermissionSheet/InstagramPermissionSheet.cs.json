@@ -1,0 +1,12 @@
+{
+  "//": "Used in: components/instagram/InstagramPermissionSheet (instagramPermission namespace). Informal register (tykání); plain punctuation, no em dashes.",
+  "title": "Povol přístup k přehledům",
+  "intro": "Tvůj Instagram se připojil, ale bez oprávnění k přehledům ti Tagly nedokáže spočítat odměny.",
+  "pointsHeading": "K čemu to Tagly používá",
+  "readsTitle": "Určuje tvou odměnu",
+  "readsBody": "Tagly čte, kolik lidí tvoje story zasáhlo, a z toho počítá, kolik si vyděláš.",
+  "privacyTitle": "Jen čteme, nikdy nepublikujeme",
+  "privacyBody": "Tagly nikdy nic nepostuje, nikomu nepíše a na tvém účtu nic nemění. Nevidí tvoje heslo ani zprávy.",
+  "reconnect": "Připojit znovu",
+  "notNow": "Teď ne"
+}

@@ -1,0 +1,7 @@
+{
+  "//": "Used in: components/withdraw/WithdrawalsInfoSheet/index.tsx (withdrawalsInfo namespace).",
+  "title": "Jak fungují výběry",
+  "step1": "Když si vybereš peníze, odejdou z tvého zůstatku v Tagly na tvůj Stripe účet.",
+  "step2": "Jakmile jsou na tvém Stripe účtu, Stripe je pošle do banky, kterou jsi připojil/a při nastavení.",
+  "step3": "Až dorazí do tvé banky, označíme výběr jako dokončený. Obvykle to trvá 1 až 2 pracovní dny."
+}

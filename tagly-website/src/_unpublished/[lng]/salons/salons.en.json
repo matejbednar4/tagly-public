@@ -1,0 +1,136 @@
+{
+  "//": "Used in: src/app/[lng]/salons/page.tsx — hero, problem cards (no links), how-it-works flow, examples (2 photos), why-salons, use cases, FAQ, internal links, CTA. faq.costInline/influencerInline render with <Trans>.",
+  "meta": {
+    "title": "Tagly for Salons and Barber Shops | Get Promoted by Real Clients on Instagram",
+    "description": "Salon marketing powered by your own clients. Tagly helps hair salons, barbershops, nail salons, wellness centres and tattoo studios get promoted on Instagram by clients who share the result as a Story and get paid for the local reach."
+  },
+  "hero": {
+    "title": "Your clients leave looking great. Now they can promote your salon too.",
+    "intro": "Fresh haircuts, new nail sets, colour transformations. Your clients photograph the result on their way out, and most of those photos go no further than a camera roll or a group chat. Tagly gives them a reason to put one in their Instagram Story with your salon visible in it, and pays them for the people near you who saw it."
+  },
+  "broken": {
+    "title": "Salon marketing relies too much on the owner",
+    "intro": "Most salon owners know they should be active on social media. The problem is that they are busy doing the actual work, and keeping a feed updated is the first thing to slip.",
+    "items": [
+      {
+        "title": "You are the stylist and the marketer",
+        "description": "Between clients, stock and managing your team, there is no time left to photograph every result, write captions and stay on top of a feed. It is a second job, and it is the first one to get dropped in a busy week."
+      },
+      {
+        "title": "Paid ads don't show your actual work",
+        "description": "Ads can bring clicks, but a generic ad does not show what your salon actually does. People choosing a salon want to see real results on real people, in a format they already trust. With Tagly that is exactly what your clients share with their friends."
+      },
+      {
+        "title": "Word of mouth is slow and hard to scale",
+        "description": "Salons grow through referrals more than almost any other kind of business. The catch is that word of mouth happens in private conversations. A client can love their haircut and never think to say so anywhere their friends can see it. That is the part Tagly fixes."
+      }
+    ]
+  },
+  "how": {
+    "title": "How Tagly works for salons",
+    "intro": "Your clients do the sharing. You keep doing the work, and you pay for the reach a story actually got.",
+    "steps": [
+      {
+        "title": "A client comes in for their appointment",
+        "description": "They booked through your usual channels, or found you in the Tagly app. They come in and get their hair done, their nails done, or whatever they booked. Nothing about the appointment changes, and there is nothing for you to hand out."
+      },
+      {
+        "title": "They share the result in an Instagram Story",
+        "description": "A fresh fade, a new set of nails, a colour transformation. They put the photo in their Story and make your salon visible in it, by tagging you or adding the location sticker, then pick that story in the Tagly app. Stories only, and it has to still be live when they submit it. No script and no brief on what to say."
+      },
+      {
+        "title": "About a day later, you pay for what it reached",
+        "description": "Roughly 24 hours after the story went up, Instagram reports how many people saw it. Tagly works the reward out from that reach, from how much of it was near your salon, and from a handful of other factors. Your client is paid from your budget, and that is the moment the story costs you anything. Nothing is charged when it goes live."
+      }
+    ],
+    "fullGuide": "See the full step-by-step guide"
+  },
+  "examples": {
+    "title": "The kind of stories your clients will share",
+    "intro": "Beauty results are made to be shared. Your clients already take these photos. Tagly gives them a reason to put one in their Story with your name visible on it.",
+    "alts": [
+      "White and pink almond-shaped nail set posted by a client at Happy Nails",
+      "Pastel almond nails with yellow accents posted by a client at Jane's Salon"
+    ]
+  },
+  "why": {
+    "title": "Why Tagly works especially well for salons",
+    "intro": "A salon produces a visible result at the end of every appointment, and the person carrying it out of the door is the one who wants to show it off. That is an unusually good fit.",
+    "items": [
+      {
+        "title": "Every appointment produces something worth sharing",
+        "description": "Unlike most businesses, your product is immediately visible. A fresh cut, a new colour, a set of nails. Every client walks out with something worth photographing, which means every appointment is a possible story. Beauty and wellness also sits at the top of Tagly's business-type scale, so the same reach is worth more at a salon than at an average business, to your client and to your budget alike."
+      },
+      {
+        "title": "Clients want to show off the result",
+        "description": "People are proud of a great haircut or a new set of nails, and they want their friends to see it. Tagly is the nudge that sends it to a Story instead of a group chat. The motivation was already there; nobody has to be talked into it."
+      },
+      {
+        "title": "Trust matters more than anything in beauty",
+        "description": "People do not pick a salon from an ad. They pick one because a friend recommended it, or because they saw someone they know share a result they liked. Every client story is a personal endorsement, on a personal account, and it carries weight a paid placement cannot."
+      },
+      {
+        "title": "A salon's visit cycle fits how Tagly prices",
+        "description": "Clients come back every few weeks, not every day, and that is the pattern Tagly pays best for. Rewards shrink when the same person shares several businesses inside one week, and somebody who shares you once per appointment is never in that band. High-ticket, low-frequency visits are worth more per story than constant repetition."
+      }
+    ]
+  },
+  "useCases": {
+    "title": "What kind of salons use Tagly",
+    "items": [
+      {
+        "title": "Barbershops",
+        "description": "Fades, lineups, beard trims. Barbershop clients already take a mirror selfie on the way out. Tagly is the reason it ends up in a Story with your name on it instead of only in the camera roll. In a busy neighbourhood, a steady trickle of local stories is worth more than one big splash."
+      },
+      {
+        "title": "Hair salons and colourists",
+        "description": "Colour transformations, balayage, extensions. These are the results that hold attention, and your client is already excited about the change. Tagly gives them a reason to share it publicly, and every story shows a future client exactly what you can do."
+      },
+      {
+        "title": "Nail salons, wellness centres and tattoo studios",
+        "description": "Nail art, gel sets, a wellness afternoon, a fresh piece of ink. Close-up work that people photograph carefully and show off the same day. All of these are business types you can pick when you create your Tagly page, and they sit in the same top band of the business-type scale."
+      }
+    ]
+  },
+  "faq": {
+    "heading": "Salon marketing FAQ",
+    "items": [
+      {
+        "question": "How much does Tagly cost for salons?",
+        "answer": "There are two ways to fund it, and neither one is a contract or a subscription. Pay as you go: link a card and you are live straight away. Nothing is charged until a story has actually been paid out, and then only for the part your credits do not cover, plus $0.30 per charge. No deposit, no minimum. Or buy credits up front: 1 credit is $1, the minimum purchase is $50, and credits never expire. Credits work out slightly cheaper because there is no per-charge fee, and with at least $15 in available credits you stay visible in the app. Either way you pay per story once it is paid, and what a single story can cost is capped, so no story can ever drain your whole budget."
+      },
+      {
+        "question": "Do I need to create any content myself?",
+        "answer": "No. Your clients create it by sharing their haircut, their nails or whatever else you did in their own Instagram Stories. You never plan content, take photos, write captions or manage a social media calendar. You also cannot brief them, approve a story before it goes up, or tell them what to say about you."
+      },
+      {
+        "question": "Will this work for a salon that just opened?",
+        "answer": "Yes. Nothing in how Tagly works depends on how long you have been open. You need a business page and budget, and clients with a professional Instagram account, which is the Business or Creator setting Instagram offers for free. Early clients tend to be the most enthusiastic, and their friends are the people who live near your chair."
+      },
+      {
+        "question": "How do clients find out my salon is on Tagly?",
+        "answer": "They find you inside the Tagly app: on the map, in search, and in the lists the app shows people nearby. There is nothing to print and nothing to put on the station. If you want your regulars to know, tell them at the till. They install the app and find you the same way anyone else does."
+      },
+      {
+        "question": "How is this different from hiring a beauty influencer?",
+        "answer": "An influencer charges a flat fee whatever happens, and their audience is usually spread across the country. With Tagly your own clients share you with their own followers, and you pay per story, based on the reach it actually got and how much of that reach was near your salon. Follower counts are not what you are buying, and what a single story can cost is capped."
+      }
+    ],
+    "costInline": "There are two ways to fund it, and neither one is a contract or a subscription. Pay as you go: link a card and you are live straight away. Nothing is charged until a story has actually been paid out, and then only for the part your credits do not cover, plus $0.30 per charge. No deposit, no minimum. Or buy credits up front: 1 credit is $1, the minimum purchase is $50, and credits never expire. Credits work out slightly cheaper because there is no per-charge fee, and with at least $15 in available credits you stay visible in the app. Either way you pay per story once it is paid, and what a single story can cost is capped, so no story can ever drain your whole budget. See <link>how pricing works</link>.",
+    "influencerInline": "An influencer charges a flat fee whatever happens, and their audience is usually spread across the country. With Tagly your own clients share you with their own followers, and you pay per story, based on the reach it actually got and how much of that reach was near your salon. Follower counts are not what you are buying, and what a single story can cost is capped. Read the <link>full comparison</link>."
+  },
+  "internalLinks": {
+    "compareHeading": "How Tagly compares",
+    "instagramAds": "Instagram ads",
+    "influencerMarketing": "Influencer marketing",
+    "marketingAgencies": "Marketing agencies",
+    "learnMoreHeading": "Learn more",
+    "howItWorks": "How it works",
+    "pricing": "Pricing",
+    "faq": "FAQ"
+  },
+  "cta": {
+    "heading": "Ready to let your clients promote your salon?",
+    "description": "Join Tagly and let the results your clients already photograph do the marketing for you."
+  }
+}

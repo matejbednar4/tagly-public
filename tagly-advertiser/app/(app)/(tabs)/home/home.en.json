@@ -1,0 +1,14 @@
+{
+  "//": "Used in: app/(app)/(tabs)/home/index.tsx (home namespace). Account-card strings live in the budgetCard/noBusinessCard namespaces.",
+  "title": "Home",
+  "manageWallet": "Manage wallet",
+  "payBalance": "Pay balance",
+  "toRate": {
+    "title": "Shares to rate",
+    "rate": "Rate share"
+  },
+  "recent": {
+    "title": "Recent shares",
+    "empty": "No shares yet. Shares from your customers will show up here."
+  }
+}

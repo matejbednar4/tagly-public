@@ -1,0 +1,33 @@
+{
+  "//": "Used in: app/(app)/settings/index.tsx + the settings/* sub-screen top bars (settingsAdvertiser namespace). The advertiser settings hub, reached from the drawer.",
+  "title": "Nastavení",
+
+  "accountSection": "Účet a zabezpečení",
+  "email": "E-mail",
+  "security": "Zabezpečení",
+  "referrals": "Pozvánky",
+  "referralsSub": "Tvůj kód a kdo tě pozval",
+
+  "businessSection": "Podnik",
+  "businessPages": "Stránky podniku",
+  "businessPagesSubtitle": "Uprav nebo odeber své stránky",
+
+  "preferencesSection": "Předvolby",
+  "language": "Jazyk",
+
+  "notificationsSection": "Oznámení",
+  "pushNotifications": "Push notifikace",
+  "emailNotifications": "E-mail",
+
+  "legalSection": "Právní informace",
+  "privacyPolicy": "Zásady ochrany osobních údajů",
+  "termsOfService": "Obchodní podmínky",
+
+  "dangerSection": "Nebezpečná zóna",
+  "deleteAccount": "Smazat účet",
+
+  "//titles": "Sub-screen top-bar titles.",
+  "pushTitle": "Push notifikace",
+  "emailTitle": "E-mailová oznámení",
+  "deleteTitle": "Smazat účet"
+}

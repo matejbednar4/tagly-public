@@ -1,0 +1,12 @@
+{
+  "//": "Used in: tagly-advertiser/components/onboarding/SignIn/index.tsx (signIn namespace)",
+  "heading": "Přihlas se nebo si vytvoř účet",
+  "emailPlaceholder": "E-mailová adresa",
+  "invalidEmail": "Zadej platnou e-mailovou adresu",
+  "continue": "Pokračovat",
+  "orSeparator": "nebo",
+  "continueWithApple": "Pokračovat přes Apple",
+  "continueWithGoogle": "Pokračovat přes Google",
+  "terms": "Pokračováním souhlasíš s našimi <tos>Obchodními podmínkami</tos> a <pp>Zásadami ochrany osobních údajů</pp>.",
+  "infoA11y": "Přehrát úvod znovu"
+}

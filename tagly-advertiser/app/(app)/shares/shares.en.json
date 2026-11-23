@@ -1,0 +1,12 @@
+{
+  "//": "Used in: app/(app)/shares/index.tsx (advertiserShares namespace).",
+  "title": "Shares",
+  "sortBy": "Sort by",
+  "sortNewest": "Newest",
+  "sortOldest": "Oldest",
+  "sortHighest": "Highest price",
+  "sortLowest": "Lowest price",
+  "done": "Done",
+  "empty": "No shares yet",
+  "emptyHint": "When customers post about your business, their shares show up here."
+}

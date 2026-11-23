@@ -1,0 +1,6 @@
+export const LATEST_TERMS_OF_SERVICE_RELEASE_DATE = new Date(
+  "2026-08-13T00:00:00Z",
+);
+export const LATEST_PRIVACY_POLICY_RELEASE_DATE = new Date(
+  "2026-08-13T00:00:00Z",
+);

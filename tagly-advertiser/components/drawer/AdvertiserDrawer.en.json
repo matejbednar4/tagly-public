@@ -1,0 +1,19 @@
+{
+  "//": "Used in: components/drawer/AdvertiserDrawer.tsx (advertiserDrawer namespace). Profile + visibility glance + main nav (invite, settings) + 'more' overline over the secondary rows (howItWorks, pricing, support, feedback, about) + log out.",
+  "memberSince": "On Tagly since {{date}}",
+  "visibility": "Visibility",
+  "visible": "Visible",
+  "notVisible": "Not visible",
+  "invite": "Invite & earn",
+  "settings": "Settings",
+  "more": "More",
+  "howItWorks": "How it works",
+  "pricing": "About pricing",
+  "support": "Write to support",
+  "feedback": "Send feedback",
+  "about": "About us",
+  "logOut": "Log out",
+  "logOutConfirmTitle": "Log out?",
+  "logOutConfirmBody": "You'll need to sign in again to get back in.",
+  "cancel": "Cancel"
+}

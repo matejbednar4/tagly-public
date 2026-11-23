@@ -1,0 +1,12 @@
+{
+  "//": "Used in: components/shares/SharePreviewCard.tsx (shareCard namespace). Share preview status + labels.",
+  "statusPaid": "Zaplaceno",
+  "statusPending": "Zpracovává se",
+  "statusUnderReview": "Kontrolujeme",
+  "statusReported": "Nahlášeno",
+  "statusRejected": "Zamítnuto",
+  "statusUnpayable": "Selhalo",
+  "estReward": "cca {{amount}} za dosah {{reach}}",
+  "estRewardNoReach": "cca {{amount}}",
+  "deletedBusiness": "Smazaná stránka"
+}

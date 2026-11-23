@@ -1,0 +1,5 @@
+{
+  "//": "Used in: tagly-shared/client/components/lists/GeneralVerticalList (generalList namespace). Default empty/end-of-list copy; screens can override via props.",
+  "empty": "Zatím tu nic není",
+  "endReached": "To je vše, co tu máme"
+}

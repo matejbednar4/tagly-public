@@ -1,0 +1,7 @@
+{
+  "//": "Used in: tagly-shared/client/components/overlays/AcceptLatestTosModal (acceptTos namespace). Blocking app-open modal shown when the Terms of Service have been updated.",
+  "title": "Aktualizovali jsme Obchodní podmínky",
+  "body": "Provedli jsme změny v našich Obchodních podmínkách. Přečtěte si je prosím a odsouhlaste, abyste mohli Tagly dál používat.",
+  "agreeLine": "Přečetl/a jsem si <terms>Obchodní podmínky</terms> a souhlasím s nimi.",
+  "agree": "Souhlasím a pokračovat"
+}

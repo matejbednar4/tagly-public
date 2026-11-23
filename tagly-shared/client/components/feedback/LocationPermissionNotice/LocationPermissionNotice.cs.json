@@ -1,0 +1,5 @@
+{
+  "//": "Used in: tagly-shared/client/components/feedback/LocationPermissionNotice (locationPermission namespace). Shown on the map + Discover when location permission is denied; tapping opens the OS Settings app.",
+  "title": "Přístup k poloze je zakázán",
+  "subtitle": "Klepnutím otevřeš nastavení, abysme ti mohli ukázat místa poblíž."
+}

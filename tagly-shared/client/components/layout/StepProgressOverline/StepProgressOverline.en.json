@@ -1,0 +1,5 @@
+{
+  "//": "Used in: components/layout/StepProgressOverline (stepProgressOverline namespace). Onboarding step counter.",
+  "label": "Setup · {{step}} of {{total}}",
+  "labeled": "{{label}} · {{step}} of {{total}}"
+}

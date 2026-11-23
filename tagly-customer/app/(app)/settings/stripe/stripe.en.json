@@ -1,0 +1,20 @@
+{
+  "//": "Used in: app/(app)/settings/stripe/index.tsx (settingsStripe namespace).",
+  "title": "Stripe",
+
+  "notConnectedTitle": "Payouts not set up",
+  "notConnectedBody": "Connect a Stripe account to withdraw your earnings to your bank.",
+  "setUpCta": "Set up payouts",
+
+  "accountRow": "Stripe account",
+  "accountConnected": "Connected",
+  "payoutsRow": "Payouts",
+  "payoutsEnabled": "Enabled",
+  "payoutsPending": "Pending",
+
+  "pendingBody": "Your Stripe account needs a few more details before you can withdraw.",
+  "finishSetupCta": "Finish setup",
+
+  "manageBody": "View your payout history and update your bank details in Stripe.",
+  "manageCta": "Manage in Stripe"
+}
